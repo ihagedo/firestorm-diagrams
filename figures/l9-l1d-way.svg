@@ -1,0 +1,281 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2550 990" width="2550" height="990" role="img" aria-label="L9  L1D way prediction lineage: a micro tag folded from the virtual address, after AMD" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" data-kinds="structure"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker><marker id="arrowrev" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M10,0 L0,5 L10,10 z" fill="#1f2937"/></marker></defs><rect x="0" y="0" width="2550" height="990" fill="#ffffff"/><text x="20" y="30" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#1f2937">L9  L1D way prediction lineage: a micro tag folded from the virtual address, after AMD</text><text x="20" y="48" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#4b5563">Left, the published mechanism redrawn. Right, the M1 L1D from the measurements. Between them, what was kept, changed and added.</text><rect x="30.0" y="105.0" width="1050.0" height="810.0" rx="9" fill="#fbfbfc" stroke="#bec4cc" stroke-width="1"/>
+<text x="40.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#9ca3af" text-anchor="start">Lipp et al. 2020, Fig. 1 and 3a; Inoue 1999, Fig. 2; Kessler 1989, Fig. 2b</text>
+<text x="1070.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">redrawn</text>
+<rect x="1470.0" y="105.0" width="1050.0" height="810.0" rx="9" fill="#fefcf5" stroke="#dac991" stroke-width="1"/>
+<text x="1480.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#eab308" text-anchor="start">M1 L1D, 128 KiB, 8 ways, 64 B lines</text>
+<text x="2510.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">measured, Augury and PACMAN; the page hash one experiment</text>
+<rect x="60.0" y="165.0" width="660.0" height="36.0" rx="2" fill="#fcfcfd" stroke="#c1c6ce" stroke-width="1"/>
+<rect x="60.0" y="165.0" width="275.0" height="36.0" rx="2" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
+<rect x="335.0" y="165.0" width="220.0" height="36.0" rx="2" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
+<rect x="555.0" y="165.0" width="82.5" height="36.0" rx="2" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
+<rect x="637.5" y="165.0" width="82.5" height="36.0" rx="2" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
+<circle cx="375.0" cy="300.0" r="11" fill="#ffffff" stroke="#1f2937" stroke-width="1.1"/>
+<polyline points="368.4,300.0 381.6,300.0" fill="none" stroke="#1f2937" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="375.0,293.4 375.0,306.6" fill="none" stroke="#1f2937" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="495.0" y="240.0" width="300.0" height="120.0" rx="4" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
+<rect x="499.0" y="276.8" width="71.8" height="19.7" rx="1" fill="#f7f8f9" stroke="#bcc1c9" stroke-width="0.5"/>
+<rect x="572.0" y="276.8" width="71.8" height="19.7" rx="1" fill="#f7f8f9" stroke="#bcc1c9" stroke-width="0.5"/>
+<rect x="645.0" y="276.8" width="71.8" height="19.7" rx="1" fill="#f7f8f9" stroke="#bcc1c9" stroke-width="0.5"/>
+<rect x="718.0" y="276.8" width="71.8" height="19.7" rx="1" fill="#f7f8f9" stroke="#bcc1c9" stroke-width="0.5"/>
+<rect x="499.0" y="297.7" width="71.8" height="19.7" rx="1" fill="#f7f8f9" stroke="#bcc1c9" stroke-width="0.5"/>
+<rect x="572.0" y="297.7" width="71.8" height="19.7" rx="1" fill="#f7f8f9" stroke="#bcc1c9" stroke-width="0.5"/>
+<rect x="645.0" y="297.7" width="71.8" height="19.7" rx="1" fill="#f7f8f9" stroke="#bcc1c9" stroke-width="0.5"/>
+<rect x="718.0" y="297.7" width="71.8" height="19.7" rx="1" fill="#f7f8f9" stroke="#bcc1c9" stroke-width="0.5"/>
+<rect x="499.0" y="318.6" width="71.8" height="19.7" rx="1" fill="#f7f8f9" stroke="#bcc1c9" stroke-width="0.5"/>
+<rect x="572.0" y="318.6" width="71.8" height="19.7" rx="1" fill="#f7f8f9" stroke="#bcc1c9" stroke-width="0.5"/>
+<rect x="645.0" y="318.6" width="71.8" height="19.7" rx="1" fill="#f7f8f9" stroke="#bcc1c9" stroke-width="0.5"/>
+<rect x="718.0" y="318.6" width="71.8" height="19.7" rx="1" fill="#f7f8f9" stroke="#bcc1c9" stroke-width="0.5"/>
+<polygon points="840.0,282.0 894.0,300.0 840.0,318.0" fill="#ffffff" stroke="#1f2937" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="960.0" y="240.0" width="105.0" height="75.0" rx="5" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
+<rect x="960.0" y="360.0" width="105.0" height="75.0" rx="5" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
+<rect x="60.0" y="477.0" width="330.0" height="69.0" rx="5" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
+<line x1="65.0" y1="509.0" x2="385.0" y2="509.0" stroke="#c4c8d0" stroke-width="1"/>
+<rect x="450.0" y="477.0" width="450.0" height="69.0" rx="4" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
+<rect x="454.0" y="481.0" width="219.5" height="44.5" rx="1.5" fill="#d7dadf" stroke="#b9bec7" stroke-width="0.6"/>
+<rect x="675.0" y="481.0" width="219.5" height="44.5" rx="1.5" fill="#f7f8f9" stroke="#b9bec7" stroke-width="0.6"/>
+<rect x="60.0" y="630.0" width="330.0" height="90.0" rx="5" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
+<line x1="65.0" y1="662.0" x2="385.0" y2="662.0" stroke="#c4c8d0" stroke-width="1"/>
+<rect x="450.0" y="630.0" width="450.0" height="90.0" rx="4" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
+<rect x="454.0" y="653.0" width="109.0" height="46.5" rx="1.5" fill="#f5f6f7" stroke="#b9bec7" stroke-width="0.6"/>
+<rect x="564.5" y="653.0" width="109.0" height="46.5" rx="1.5" fill="#f5f6f7" stroke="#b9bec7" stroke-width="0.6"/>
+<rect x="675.0" y="653.0" width="109.0" height="46.5" rx="1.5" fill="#f5f6f7" stroke="#b9bec7" stroke-width="0.6"/>
+<rect x="785.5" y="653.0" width="109.0" height="46.5" rx="1.5" fill="#f5f6f7" stroke="#b9bec7" stroke-width="0.6"/>
+<rect x="1110.0" y="171.0" width="330.0" height="108.2" rx="5" fill="#f2faf8" stroke="#8abfb3" stroke-width="1"/>
+<line x1="1115.0" y1="203.0" x2="1435.0" y2="203.0" stroke="#9ec5be" stroke-width="1"/>
+<rect x="1110.0" y="300.2" width="330.0" height="108.2" rx="5" fill="#fff8f3" stroke="#dfb396" stroke-width="1"/>
+<line x1="1115.0" y1="332.2" x2="1435.0" y2="332.2" stroke="#dbbcaa" stroke-width="1"/>
+<rect x="1110.0" y="429.5" width="330.0" height="90.8" rx="5" fill="#fcf4fd" stroke="#cb98d8" stroke-width="1"/>
+<line x1="1115.0" y1="461.5" x2="1435.0" y2="461.5" stroke="#cda9d9" stroke-width="1"/>
+<rect x="1500.0" y="165.0" width="660.0" height="36.0" rx="2" fill="#fefdf8" stroke="#d8cb9c" stroke-width="1"/>
+<rect x="1500.0" y="165.0" width="467.5" height="36.0" rx="2" fill="#faecc1" stroke="#eab308" stroke-width="1.4"/>
+<rect x="1967.5" y="165.0" width="110.0" height="36.0" rx="2" fill="#f7e4a6" stroke="#eab308" stroke-width="2.2"/>
+<rect x="2077.5" y="165.0" width="82.5" height="36.0" rx="2" fill="#f7e4a6" stroke="#eab308" stroke-width="2.2"/>
+<circle cx="1770.0" cy="300.0" r="11" fill="#ffffff" stroke="#1f2937" stroke-width="1.1"/>
+<polyline points="1763.4,300.0 1776.6,300.0" fill="none" stroke="#1f2937" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1770.0,293.4 1770.0,306.6" fill="none" stroke="#1f2937" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="1905.0" y="240.0" width="300.0" height="120.0" rx="4" fill="#f7e4a6" stroke="#eab308" stroke-width="2.2"/>
+<rect x="1909.0" y="276.8" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="1945.5" y="276.8" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="1982.0" y="276.8" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2018.5" y="276.8" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2055.0" y="276.8" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2091.5" y="276.8" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2128.0" y="276.8" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2164.5" y="276.8" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="1909.0" y="297.7" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="1945.5" y="297.7" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="1982.0" y="297.7" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2018.5" y="297.7" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2055.0" y="297.7" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2091.5" y="297.7" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2128.0" y="297.7" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2164.5" y="297.7" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="1909.0" y="318.6" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="1945.5" y="318.6" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="1982.0" y="318.6" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2018.5" y="318.6" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2055.0" y="318.6" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2091.5" y="318.6" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2128.0" y="318.6" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<rect x="2164.5" y="318.6" width="35.3" height="19.7" rx="1" fill="#fdf9eb" stroke="#dbc787" stroke-width="0.5"/>
+<polygon points="2250.0,282.0 2304.0,300.0 2250.0,318.0" fill="#ffffff" stroke="#1f2937" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="2370.0" y="240.0" width="135.0" height="75.0" rx="5" fill="#f7e4a6" stroke="#eab308" stroke-width="2.2"/>
+<line x1="2375.0" y1="272.0" x2="2500.0" y2="272.0" stroke="#d7cca6" stroke-width="1"/>
+<rect x="2370.0" y="360.0" width="135.0" height="75.0" rx="5" fill="#fefcf5" stroke="#f0ca52" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="2375.0" y1="392.0" x2="2500.0" y2="392.0" stroke="#d7cca6" stroke-width="1"/>
+<rect x="2370.0" y="480.0" width="135.0" height="66.0" rx="5" fill="#fefcf5" stroke="#f0ca52" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="2375.0" y1="512.0" x2="2500.0" y2="512.0" stroke="#d7cca6" stroke-width="1"/>
+<rect x="1500.0" y="477.0" width="345.0" height="90.0" rx="5" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
+<line x1="1505.0" y1="509.0" x2="1840.0" y2="509.0" stroke="#d7cca6" stroke-width="1"/>
+<rect x="1500.0" y="600.0" width="345.0" height="90.0" rx="5" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
+<line x1="1505.0" y1="632.0" x2="1840.0" y2="632.0" stroke="#d7cca6" stroke-width="1"/>
+<rect x="1890.0" y="477.0" width="300.0" height="135.0" rx="4" fill="#f7e4a6" stroke="#eab308" stroke-width="2.2"/>
+<polyline points="2040.0,505.0 1965.0,536.7" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2040.0,505.0 2115.0,536.7" fill="none" stroke="#eab308" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1965.0,536.7 1927.5,568.3" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1965.0,536.7 2002.5,568.3" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2115.0,536.7 2077.5,568.3" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2115.0,536.7 2152.5,568.3" fill="none" stroke="#eab308" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1927.5,568.3 1908.8,596.0" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1927.5,568.3 1946.2,596.0" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2002.5,568.3 1983.8,596.0" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2002.5,568.3 2021.2,596.0" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2077.5,568.3 2058.8,596.0" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2077.5,568.3 2096.2,596.0" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2152.5,568.3 2133.8,596.0" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="2152.5,568.3 2171.2,596.0" fill="none" stroke="#eab308" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="2040.0" cy="505.0" r="6" fill="#faecc1" stroke="#eab308" stroke-width="0.9"/>
+<circle cx="1965.0" cy="536.7" r="6" fill="#fdf9eb" stroke="#eab308" stroke-width="0.9"/>
+<circle cx="2115.0" cy="536.7" r="6" fill="#faecc1" stroke="#eab308" stroke-width="0.9"/>
+<circle cx="1927.5" cy="568.3" r="6" fill="#fdf9eb" stroke="#eab308" stroke-width="0.9"/>
+<circle cx="2002.5" cy="568.3" r="6" fill="#fdf9eb" stroke="#eab308" stroke-width="0.9"/>
+<circle cx="2077.5" cy="568.3" r="6" fill="#fdf9eb" stroke="#eab308" stroke-width="0.9"/>
+<circle cx="2152.5" cy="568.3" r="6" fill="#faecc1" stroke="#eab308" stroke-width="0.9"/>
+<rect x="1901.8" y="593.0" width="14.0" height="9.0" rx="1.5" fill="#fdf9eb" stroke="#f2d16b" stroke-width="0.6"/>
+<rect x="1939.2" y="593.0" width="14.0" height="9.0" rx="1.5" fill="#fdf9eb" stroke="#f2d16b" stroke-width="0.6"/>
+<rect x="1976.8" y="593.0" width="14.0" height="9.0" rx="1.5" fill="#fdf9eb" stroke="#f2d16b" stroke-width="0.6"/>
+<rect x="2014.2" y="593.0" width="14.0" height="9.0" rx="1.5" fill="#fdf9eb" stroke="#f2d16b" stroke-width="0.6"/>
+<rect x="2051.8" y="593.0" width="14.0" height="9.0" rx="1.5" fill="#fdf9eb" stroke="#f2d16b" stroke-width="0.6"/>
+<rect x="2089.2" y="593.0" width="14.0" height="9.0" rx="1.5" fill="#fdf9eb" stroke="#f2d16b" stroke-width="0.6"/>
+<rect x="2126.8" y="593.0" width="14.0" height="9.0" rx="1.5" fill="#fdf9eb" stroke="#f2d16b" stroke-width="0.6"/>
+<rect x="2164.2" y="593.0" width="14.0" height="9.0" rx="1.5" fill="#f6dd90" stroke="#f2d16b" stroke-width="0.6"/>
+<rect x="1890.0" y="630.0" width="315.0" height="90.0" rx="5" fill="#f7e4a6" stroke="#eab308" stroke-width="2.2"/>
+<line x1="1895.0" y1="662.0" x2="2200.0" y2="662.0" stroke="#d7cca6" stroke-width="1"/>
+<polyline points="324.0,216.0 324.0,258.0 375.0,258.0 375.0,289.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="0" data-src="p_va" data-dst="p_hash"/>
+<polyline points="386.0,300.0 495.0,300.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="1" data-src="p_hash" data-dst="p_utag"/>
+<polyline points="795.0,300.0 840.0,300.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="2" data-src="p_utag" data-dst="p_cmp"/>
+<polyline points="894.0,300.0 960.0,300.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="3" data-src="p_cmp" data-dst="p_l1"/>
+<polyline points="867.0,309.0 867.0,397.5 960.0,397.5" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="4" data-src="p_cmp" data-dst="p_l2"/>
+<polyline points="390.0,511.5 450.0,511.5" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="5" data-src="p_mru" data-dst="p_cyc"/>
+<polyline points="390.0,675.0 450.0,675.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="6" data-src="p_partial" data-dst="p_ways"/>
+<polyline points="1698.0,216.0 1698.0,258.0 1770.0,258.0 1770.0,289.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="7" data-src="m_va" data-dst="m_hash"/>
+<polyline points="1781.0,300.0 1905.0,300.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="8" data-src="m_hash" data-dst="l1d_utag_way_predictor"/>
+<polyline points="2205.0,300.0 2250.0,300.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="9" data-src="l1d_utag_way_predictor" data-dst="m_cmp"/>
+<polyline points="2304.0,300.0 2370.0,300.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="10" data-src="m_cmp" data-dst="m_data"/>
+<polyline points="2437.5,315.0 2437.5,360.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="11" data-src="m_data" data-dst="m_pa"/>
+<polyline points="2437.5,435.0 2437.5,480.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="12" data-src="m_pa" data-dst="m_replay"/>
+<polyline points="1440.0,225.1 1590.0,225.1 1590.0,300.0 1759.0,300.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="13" data-src="kept" data-dst="m_hash"/>
+<polyline points="1440.0,456.7 1462.5,456.7 1462.5,522.0 1500.0,522.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="14" data-src="added" data-dst="l1d_hashed_way"/>
+<text x="197.5" y="186.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">VA 47:28</text>
+<text x="62.0" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">47</text>
+<text x="333.0" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="end">28</text>
+<text x="445.0" y="186.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">27:12, folded</text>
+<text x="337.0" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">27</text>
+<text x="553.0" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="end">12</text>
+<text x="596.2" y="186.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">set 11:6</text>
+<text x="557.0" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">11</text>
+<text x="635.5" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="end">6</text>
+<text x="678.8" y="186.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">byte</text>
+<text x="639.5" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">5</text>
+<text x="718.0" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="end">0</text>
+<text x="391.0" y="252.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="0">16 bits to 8</text>
+<text x="535.5" y="274.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w1</text>
+<text x="608.5" y="274.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w2</text>
+<text x="681.5" y="274.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w3</text>
+<text x="754.5" y="274.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">wn</text>
+<text x="645.0" y="257.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">micro tag table</text>
+<text x="645.0" y="355.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">one 8-bit tag per way</text>
+<text x="859.4" y="303.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="middle">=</text>
+<text x="967.0" y="262.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">L1D</text>
+<text x="967.0" y="382.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">L2</text>
+<text x="913.2" y="285.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="3">way</text>
+<text x="754.0" y="393.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="4">early miss</text>
+<text x="60.0" y="405.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">tag read before the TLB answers</text>
+<text x="60.0" y="422.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">the way is picked without the physical address</text>
+<text x="67.0" y="499.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">MRU flags per set</text>
+<text x="67.0" y="523.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">two bits pick a way first</text>
+<text x="564.5" y="493.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">predicted way</text>
+<text x="785.5" y="493.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">other ways</text>
+<text x="675.0" y="541.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">cycle 1, the rest on a miss</text>
+<text x="60.0" y="588.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="p-note2">Inoue 1999: one way read, all ways only on a miss</text>
+<text x="67.0" y="652.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Partial compares</text>
+<text x="67.0" y="676.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">k tag bits first</text>
+<text x="67.0" y="694.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">the full tag second</text>
+<text x="675.0" y="647.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">a ways probed by k bits</text>
+<text x="675.0" y="715.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">a false match costs one probe</text>
+<text x="60.0" y="765.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="p-note3">Kessler 1989: a few bits of every way, then the survivors in full</text>
+<text x="60.0" y="810.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start" data-owner="p-note4">Calder, Grunwald and Emer 1996: PDF not in hand, figure to come</text>
+<rect x="1217.3" y="124.2" width="115.5" height="20.8" rx="3" fill="#fcf4dc" stroke="none" stroke-width="1"/>
+<text x="1221.3" y="141.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="lineage">lineage: likely</text>
+<text x="1117.0" y="193.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">kept</text>
+<text x="1117.0" y="217.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">micro tag from the virtual address</text>
+<text x="1117.0" y="235.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">an XOR fold of the page bits</text>
+<text x="1117.0" y="252.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">one data way read per load</text>
+<text x="1117.0" y="270.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">early miss straight to the L2</text>
+<text x="1117.0" y="322.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">changed</text>
+<text x="1117.0" y="346.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">fold spans VA 47:14, not 27:12</text>
+<text x="1117.0" y="364.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">8 ways of 128 KiB</text>
+<text x="1117.0" y="381.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">tag confirmed at 3 cycles</text>
+<text x="1117.0" y="399.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">a wrong tag replays the load</text>
+<text x="1117.0" y="451.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">added</text>
+<text x="1117.0" y="476.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">way fixed by physical page bits</text>
+<text x="1117.0" y="493.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">no mispredict shows</text>
+<text x="1117.0" y="511.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">tree PLRU victims</text>
+<text x="1733.8" y="186.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">VA 47:14, page</text>
+<text x="1502.0" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">47</text>
+<text x="1965.5" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="end">14</text>
+<text x="2022.5" y="186.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">set 13:6</text>
+<text x="1969.5" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">13</text>
+<text x="2075.5" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="end">6</text>
+<text x="2118.8" y="186.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">byte</text>
+<text x="2079.5" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">5</text>
+<text x="2158.0" y="213.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="end">0</text>
+<text x="1786.0" y="252.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="7">34 bits to 8</text>
+<text x="1927.2" y="274.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w0</text>
+<text x="1963.8" y="274.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w1</text>
+<text x="2000.2" y="274.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w2</text>
+<text x="2036.8" y="274.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w3</text>
+<text x="2073.2" y="274.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w4</text>
+<text x="2109.8" y="274.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w5</text>
+<text x="2146.2" y="274.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w6</text>
+<text x="2182.8" y="274.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w7</text>
+<text x="2055.0" y="257.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">micro tags, 8 ways</text>
+<text x="2055.0" y="355.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">8-bit fold of VA 47:14</text>
+<text x="2269.4" y="303.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="middle">=</text>
+<text x="2377.0" y="262.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Data</text>
+<text x="2377.0" y="286.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="2389.1" y="286.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">3 cycles</text>
+<text x="2377.0" y="382.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">PA tag</text>
+<text x="2377.0" y="406.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
+<text x="2389.1" y="406.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">34 bits confirm</text>
+<text x="2377.0" y="502.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Replay</text>
+<text x="2377.0" y="526.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
+<text x="2389.1" y="526.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">tag differs</text>
+<text x="2323.2" y="285.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="10">way</text>
+<text x="2452.0" y="465.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="12">no match</text>
+<text x="1500.0" y="405.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">set and micro tag from the virtual address</text>
+<text x="1500.0" y="422.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">the way is read before the dTLB answers</text>
+<text x="1507.0" y="499.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">Way from physical page bits</text>
+<text x="1507.0" y="523.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
+<text x="1519.1" y="523.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">a hash fixes the way</text>
+<text x="1507.0" y="541.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
+<text x="1519.1" y="541.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">one experiment, one group</text>
+<text x="1507.0" y="622.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">No mispredict visible</text>
+<text x="1507.0" y="646.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
+<text x="1519.1" y="646.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">random ways run at 3 cycles</text>
+<text x="1507.0" y="664.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
+<text x="1519.1" y="664.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">same as a fixed page</text>
+<text x="2040.0" y="489.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">tree PLRU, per set</text>
+<text x="2040.0" y="508.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#1f2937" text-anchor="middle">1</text>
+<text x="1965.0" y="539.7" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<text x="2115.0" y="539.7" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#1f2937" text-anchor="middle">1</text>
+<text x="1927.5" y="571.3" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#1f2937" text-anchor="middle">1</text>
+<text x="2002.5" y="571.3" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<text x="2077.5" y="571.3" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#1f2937" text-anchor="middle">0</text>
+<text x="2152.5" y="571.3" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#1f2937" text-anchor="middle">1</text>
+<text x="1897.0" y="652.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">128 KiB in 16 banks</text>
+<text x="1897.0" y="676.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="1909.1" y="676.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">16 B a bank, 48 B a cycle</text>
+<text x="1897.0" y="694.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
+<text x="1909.1" y="694.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">write back, write allocate</text>
+<text x="1500.0" y="765.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">open: micro tag and page hash, one mechanism or two</text>
+<text x="1500.0" y="782.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">test: micro tag aliases must conflict</text>
+<text x="1500.0" y="800.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">test: a 2^k + 64 B chain fills one way</text>
+<rect x="60.0" y="951.0" width="16.0" height="11.0" rx="2" fill="#f7e4a6" stroke="#eab308" stroke-width="2.2"/>
+<text x="80.0" y="960.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">● 3+ measurements</text>
+<rect x="230.9" y="951.0" width="16.0" height="11.0" rx="2" fill="#faecc1" stroke="#eab308" stroke-width="1.4"/>
+<text x="250.9" y="960.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">◆ 2 sources</text>
+<rect x="347.0" y="951.0" width="16.0" height="11.0" rx="2" fill="#fcf4dc" stroke="#f0ca52" stroke-width="1"/>
+<text x="367.0" y="960.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">○ one source</text>
+<rect x="470.5" y="951.0" width="16.0" height="11.0" rx="2" fill="#fdf9eb" stroke="#f0ca52" stroke-width="1" stroke-dasharray="9 3"/>
+<text x="490.5" y="960.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">◇ derived</text>
+<rect x="570.0" y="951.0" width="16.0" height="11.0" rx="2" fill="#fefcf5" stroke="#f0ca52" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="590.0" y="960.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">~ patent or analogy</text>
+<rect x="736.5" y="951.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
+<text x="756.5" y="960.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? KB conjecture</text>
+<rect x="881.7" y="951.0" width="16.0" height="11.0" rx="2" fill="#fbf2fc" stroke="#c026d3" stroke-width="1.2" stroke-dasharray="6 2"/>
+<text x="901.7" y="960.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">+ proposed here</text>
+<rect x="1025.9" y="951.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="1045.9" y="960.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? unknown</text>
+<polyline points="60.0,973.0 86.0,973.0" fill="none" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="92.0" y="977.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">instruction flow</text>
+<polyline points="227.0,973.0 253.0,973.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="259.0" y="977.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">control</text>
+<polyline points="333.2,973.0 359.2,973.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="365.2" y="977.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">data</text>
+<polyline points="422.0,973.0 448.0,973.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="2 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="454.0" y="977.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">allocate / release</text>
+<polyline points="603.2,973.0 629.2,973.0" fill="none" stroke="#1f2937" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="635.2" y="977.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">wire</text>
+<polyline points="693.7,973.0 719.7,973.0" fill="none" stroke="#1f2937" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="725.7" y="977.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">signal</text><g class="hot-layer"><rect class="hot" data-bid="p_va" x="60.0" y="165.0" width="660.0" height="51.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="p_hash" x="364.0" y="289.0" width="22.0" height="22.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="p_utag" x="495.0" y="240.0" width="300.0" height="120.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="p_cmp" x="840.0" y="282.0" width="54.0" height="36.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="p_l1" x="960.0" y="240.0" width="105.0" height="75.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="p_l2" x="960.0" y="360.0" width="105.0" height="75.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="p_mru" x="60.0" y="477.0" width="330.0" height="69.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="p_cyc" x="450.0" y="477.0" width="450.0" height="69.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="p_partial" x="60.0" y="630.0" width="330.0" height="90.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="p_ways" x="450.0" y="630.0" width="450.0" height="90.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="kept" x="1110.0" y="171.0" width="330.0" height="108.2" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="changed" x="1110.0" y="300.2" width="330.0" height="108.2" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="added" x="1110.0" y="429.5" width="330.0" height="90.8" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="m_va" x="1500.0" y="165.0" width="660.0" height="51.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="m_hash" x="1759.0" y="289.0" width="22.0" height="22.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="l1d_utag_way_predictor" data-mech="l1d_utag_way_predictor" x="1905.0" y="240.0" width="300.0" height="120.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="m_cmp" x="2250.0" y="282.0" width="54.0" height="36.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="m_data" x="2370.0" y="240.0" width="135.0" height="75.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="m_pa" x="2370.0" y="360.0" width="135.0" height="75.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="m_replay" x="2370.0" y="480.0" width="135.0" height="66.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="l1d_hashed_way" data-mech="l1d_hashed_way" x="1500.0" y="477.0" width="345.0" height="90.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="l1d_way_lookup" data-mech="l1d_way_lookup" x="1500.0" y="600.0" width="345.0" height="90.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="l1d_tree_plru" data-mech="l1d_tree_plru" x="1890.0" y="477.0" width="300.0" height="135.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="m_sizes" x="1890.0" y="630.0" width="315.0" height="90.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot hot-frame" data-bid="fp" x="30.0" y="105.0" width="1050.0" height="810.0" fill="transparent" stroke="none" pointer-events="none"/><rect class="hot hot-frame" data-bid="fm" x="1470.0" y="105.0" width="1050.0" height="810.0" fill="transparent" stroke="none" pointer-events="none"/></g></svg>
