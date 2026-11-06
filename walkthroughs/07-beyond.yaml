@@ -1,0 +1,88 @@
+# 07-beyond.yaml
+# The 07-beyond figure read step by step.
+figure: 07-beyond
+steps:
+- n: 1
+  title: Four cores, one L2, 32 bytes each way
+  say: Each core keeps its own L1 caches and TLBs and talks to the shared L2 over a 32 byte path each direction. The L2's
+    size, ways, line and latency are measured; the path width is derived from the measured bandwidths. The L2 is physically
+    indexed with two of its index bits hashed, and it is inclusive of the data caches.
+  rests_on: confirmed
+  targets:
+  - pcl
+  - core0
+  - core1
+  - core2
+  - core3
+  - l2
+  status: draft
+- n: 2
+  title: What one core sees of the L2
+  say: The L2 behaves as four 3 MiB cachelets, one beside each core, so one core measures about 7.5 MiB of usable capacity
+    and 85 GB/s of loads. Replacement is LRU among one core's lines and spares lines an L1 still holds. The three separately
+    powered way groups are inferred from patents.
+  ask: If a core can only use 7.5 MiB, why build 12?
+  rests_on: single
+  targets:
+  - l2
+  status: draft
+- n: 3
+  title: AMX hangs off the L2 bus
+  say: The cluster's one AMX unit keeps a register set per core and is fed through the store queue over the L2 bus, up to
+    two instructions a cycle. Its FMA takes four cycles and it reorders within a thirty operation window without renaming
+    its accumulators, so back to back work into one accumulator waits out the latency.
+  rests_on: single
+  targets:
+  - amx
+  status: draft
+- n: 4
+  title: The other clusters and the power manager
+  say: The E cluster has its own L2, clock domain and AMX unit; the GPU shares the SLC and DRAM. Clocks and power are managed
+    per cluster, with a ramp from idle of 40 to 100 milliseconds measured and a core power up of about ten microseconds inferred.
+    The closed loop performance controller and the power estimator that throttles vector and AMX issue are conjecture from
+    patents.
+  rests_on: single
+  targets:
+  - others
+  - ecl
+  - gpu
+  - pwr
+  status: draft
+- n: 5
+  title: The fabric orders and shields
+  say: Cluster requests enter a coherent fabric with one port per cluster. A coherence point before the SLC holds duplicate
+    L2 tags and orders same address requests; the protocol is read as MOESI. Five quality of service classes on six virtual
+    channels are gated by credits, and device traffic runs on a separate PIO network. These are patent readings, consistent
+    with what is measured but not measured themselves.
+  ask: What would you measure to tell duplicate tags from a directory?
+  rests_on: inferred
+  targets:
+  - fab
+  status: draft
+- n: 6
+  title: The SLC fills from victims only
+  say: The system level cache is 8 MiB in sixteen ways, memory side and exclusive of the CPU caches, filled only by L2 victims,
+    with every index bit hashed from physical address bit seven up. Its hit latency, about ninety cycles, is reported in passing,
+    and its replacement, pseudo random, is disputed.
+  rests_on: corroborated
+  targets:
+  - slc
+  status: draft
+- n: 7
+  title: Memory controllers and DRAM
+  say: Eight channels of LPDDR4X answer in 91 nanoseconds and give about 68 GB/s peak, of which one core draws 64. Reads and
+    writes share one path, so mixing them buys nothing; the DRAM clock scaling with demand is inferred from the latency spread.
+  rests_on: single
+  targets:
+  - mc
+  status: draft
+- n: 8
+  title: The latency ladder, with its confidence
+  say: From one core, a hit is 3 cycles in the L1D, 17 in the L2, about 90 in the SLC and about 291 for DRAM at 3.2 GHz. The
+    first is measured by several groups, the second by one, the SLC figure is a passing remark, and the DRAM figure is one
+    group's measurement converted to cycles. Read the glyphs as part of the number.
+  ask: Which rung would you measure first, and how?
+  rests_on: corroborated
+  targets:
+  - ladder
+  status: draft

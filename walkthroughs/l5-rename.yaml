@@ -1,0 +1,65 @@
+# l5-rename.yaml
+# The l5-rename figure read step by step.
+figure: l5-rename
+steps:
+- n: 1
+  title: The R10000 rename stage, Yeager 1996
+  say: A map table from architectural names to physical registers, a free list that is a FIFO of register numbers, busy bits
+    per register, and an active list that logs the old destination so it can be freed when the instruction graduates in order.
+    Four a cycle, thirty two registers per file.
+  rests_on: corroborated
+  targets:
+  - paper
+  - r10k_instr
+  - r10k_map
+  - r10k_free
+  - r10k_busy
+  - r10k_queue
+  - r10k_active
+  - r10k_grad
+  status: draft
+- n: 2
+  title: RENO and the history buffer
+  say: 'Petric, Sha and Roth made the map table do work: a move points two names at one register and never issues. Smith and
+    Pleszkun kept the old values in a history buffer for precise interrupts; the paper is not in hand and is drawn as a figure
+    to come.'
+  rests_on: corroborated
+  targets:
+  - reno
+  - reno_map
+  - reno_rob
+  - sp85
+  status: draft
+- n: 3
+  title: 'The M1: the same skeleton, eight wide'
+  say: Eight uops a cycle through three maps and three free lists into 380, 432 and 128 registers. The old mapping goes to
+    a 623 entry rename retire queue that frees sixteen a cycle when the group retires. The group map resolves dependences
+    inside the eight before rename.
+  ask: Why keep a queue of map changes instead of a copy of the map per branch?
+  rests_on: confirmed
+  targets:
+  - m1
+  - m1_group
+  - group_map
+  - m1_map
+  - m1_free
+  - rename
+  - rename_retire_queue
+  - retire
+  status: draft
+- n: 4
+  title: 'Added at rename, and the verdict: likely'
+  say: 'Move elimination and zero idioms, an immediate pool of about thirty six registers, macro op fusion and a security
+    tag per mapping all finish at rename. Kept: map, free list, logged old destination, freed at retire. Changed: width and
+    scale, two structures for one active list. Likely: field for field the R10000.'
+  rests_on: corroborated
+  targets:
+  - fusion
+  - move_elimination
+  - immediate_regs
+  - register_security_tag
+  - dispatch
+  - kept
+  - changed
+  - added
+  status: draft

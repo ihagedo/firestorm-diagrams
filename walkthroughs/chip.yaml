@@ -1,0 +1,121 @@
+# chip.yaml
+# The chip figure read step by step.
+figure: chip
+steps:
+- n: 1
+  title: Four Firestorm cores in one cluster
+  say: The P cluster holds four Firestorm cores on one clock domain, up to 3.2 GHz. Each core is eight wide with a window
+    of roughly six hundred and thirty instructions, and has its own 192 KiB instruction cache and 128 KiB data cache. The
+    cores are the subject of Maps 2 through 8; this map only places them.
+  ask: What does one clock domain for four cores cost when only one of them is busy?
+  rests_on: confirmed
+  targets:
+  - pcl
+  - core0
+  - core1
+  - core2
+  - core3
+  status: draft
+- n: 2
+  title: One L2, shared by the four
+  say: Below the cores sits one 12 MiB L2, twelve ways, 128 byte lines, inclusive of the data caches, and seventeen cycles
+    away. The size, the ways, the line and the latency are all measured by more than one group. It is the subject of Map 8
+    lectures 2 and 4.
+  rests_on: confirmed
+  targets:
+  - l2
+  status: draft
+- n: 3
+  title: AMX, a matrix unit beside the L2
+  say: The cluster also owns one AMX unit, a matrix coprocessor with an eight by eight grid of multiply adders and four register
+    sets, one per core. A core reaches it through its own store queue and the L2 bus, so AMX instructions look like stores
+    to the core. The grid is inferred from patents; the register sets, the four cycle FMA and the thirty operation window
+    are measured.
+  ask: Why would a coprocessor be fed through the store queue rather than its own issue port?
+  rests_on: single
+  targets:
+  - amx
+  - core3
+  status: draft
+- n: 4
+  title: Clocks and power are per cluster
+  say: Each cluster changes voltage and frequency as a unit. From idle the P cluster clock takes tens of milliseconds to reach
+    its maximum, and a core powers up in about ten microseconds. A closed loop performance controller picks the level; that
+    controller and the power estimator that throttles vector issue are patent readings. Cores signal each other with fast
+    interprocessor interrupts through system registers.
+  rests_on: inferred
+  targets:
+  - pwr
+  - epwr
+  status: draft
+- n: 5
+  title: The E cluster, four Icestorm cores
+  say: The second cluster holds four Icestorm cores with their own 4 MiB L2 and their own clock domain. The knowledge base
+    has almost nothing measured about them, so every number here is drawn as unknown. One patent says the P cores' L2 can
+    back the E cores, and the reverse, when a cluster sleeps.
+  ask: Why does this course leave the E cores as a hole rather than guess?
+  rests_on: conjecture
+  targets:
+  - ecl
+  - ecore0
+  - ecore1
+  - ecore2
+  - ecore3
+  - el2
+  status: draft
+- n: 6
+  title: The other clients share the memory side
+  say: The GPU, the neural engine and the media, display and IO blocks sit on the same fabric and reach memory through the
+    system level cache. They are not in the knowledge base; the IO caches behind the SLC and the separate PIO network are
+    patent readings. They matter here only because they compete for the SLC and DRAM.
+  rests_on: inferred
+  targets:
+  - clients
+  - gpu
+  - npu
+  - io
+  status: draft
+- n: 7
+  title: The fabric and the coherence point
+  say: Everything meets at the fabric. Each cluster has one port onto it, addresses are hashed across the pipelines behind
+    it, and a coherence point with duplicate L2 tags sits before the SLC, ordering same address requests. Requests carry quality
+    of service classes and are gated by credits. All of this is read from patents, and the course treats it as the most likely
+    shape, not a measurement.
+  ask: Where would you put the coherence point if you wanted the SLC to stay simple?
+  rests_on: inferred
+  targets:
+  - fab
+  status: draft
+- n: 8
+  title: The system level cache is on the memory side
+  say: Behind the fabric sits an 8 MiB system level cache, sixteen ways, four planes, 4096 sets, 128 byte lines. It is exclusive
+    of the CPU caches and fills only from L2 victims, so a CPU miss does not allocate there. Its set index is a hash of physical
+    address bits from bit seven up; its latency, about ninety cycles, is reported in passing by one group. Map 9 opens it.
+  rests_on: corroborated
+  targets:
+  - mem
+  - slc
+  status: draft
+- n: 9
+  title: Eight channels of LPDDR4X
+  say: The memory controllers drive eight channels of LPDDR4X, 16 GB on this part, at 91 nanoseconds loaded latency and about
+    68 GB/s peak. One core alone draws 64 GB/s, nearly all of it, so more cores add no bandwidth. The bank scheduler, the
+    read and write turns and the refresh placement are patent readings.
+  ask: What does it mean for a shared system when one core can saturate DRAM?
+  rests_on: single
+  targets:
+  - mc
+  - dram
+  status: draft
+- n: 10
+  title: The paths a miss can take
+  say: Read the arrows. The L2 talks to the fabric at two 32 byte paths per cycle, one each way. The fabric talks to the SLC
+    at the 64 GB/s one core measures, and the SLC to the controllers. Uncached and device traffic skips the SLC on a control
+    path to the controllers. The bandwidths on this map are what one core sees, not the chip's totals.
+  rests_on: corroborated
+  targets:
+  - l2
+  - fab
+  - slc
+  - mc
+  status: draft

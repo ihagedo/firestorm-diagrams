@@ -1,0 +1,58 @@
+# l12-slc.yaml
+# The l12-slc figure read step by step.
+figure: l12-slc
+steps:
+- n: 1
+  title: The victim cache, Jouppi 1990
+  say: A few fully associative lines beside a direct mapped cache, filled only by its victims, with no line in both. A miss
+    in the main cache that hits the victim cache swaps the two.
+  rests_on: corroborated
+  targets:
+  - fp
+  - p_dm
+  - p_vc
+  - p_cpu
+  - p_mem
+  status: draft
+- n: 2
+  title: Skewed associativity, Seznec 1993
+  say: Each way has its own index function, so two addresses that conflict in one way need not conflict in another. The root
+    of the hashed index.
+  rests_on: corroborated
+  targets:
+  - p_addr
+  - p_f0
+  - p_f1
+  - p_b0
+  - p_b1
+  status: draft
+- n: 3
+  title: 'The SLC: victim filled, hashed, shared by everyone'
+  say: Filled by L2 victims and exclusive of the CPU caches, so a CPU miss goes past it to DRAM and does not allocate. 8 MiB
+    in 16 ways and 4096 sets at the memory side, behind the coherence point, shared by the GPU and the E cluster whose reads
+    do allocate. Every index bit is an XOR of physical address bits, but all sixteen ways share one set.
+  ask: Why would a memory side cache let the GPU allocate but not the CPU?
+  rests_on: corroborated
+  targets:
+  - fm
+  - m_l2
+  - slc_victim_fill
+  - m_gpu
+  - m_mc
+  - m_pa
+  - slc_hashed_index
+  - m_sets
+  status: draft
+- n: 4
+  title: 'Patents and the verdict: contrast'
+  say: 'Planes and slices, group quotas and sticky lines, and the DRAM read issued beside the lookup are patents. Replacement
+    is disputed and the ninety cycle latency is a passing remark. Contrast: the victim idea survives, the structure does not.'
+  rests_on: inferred
+  targets:
+  - slc_slices
+  - slc_sticky_quota
+  - slc_speculative_read
+  - kept
+  - changed
+  - added
+  status: draft

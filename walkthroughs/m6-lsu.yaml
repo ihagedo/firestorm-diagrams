@@ -1,0 +1,126 @@
+# m6-lsu.yaml
+# The m6-lsu figure read step by step.
+figure: m6-lsu
+steps:
+- n: 1
+  title: The address bits the L1D path uses
+  say: The L1D reads the virtual address before the dTLB has answered. Bits 13 to 6 pick the set and sit inside the 16 KiB
+    page offset, so they never change under translation; bits 7 to 4 pick the bank, derived from sixteen banks of 16 bytes;
+    the bits above 14 feed the micro tag and the dTLB tag. The set placement is measured, the bank split is arithmetic.
+  ask: Which of these fields would move if Apple had chosen 4 KiB pages?
+  rests_on: confirmed
+  targets:
+  - l1d_page_offset_index
+  - va
+  status: draft
+- n: 2
+  title: Cycle 0, the oldest ready load is picked
+  say: The load store scheduler holds 48 entries in four queues; the oldest ready operation in each queue is selected. The
+    size is measured by two groups, the four queue split is derived from the dispatch rate.
+  rests_on: corroborated
+  targets:
+  - lsq0
+  - load-1
+  status: draft
+- n: 3
+  title: Cycle 1, the address, and the pair that says wait
+  say: The address generator adds base and offset and, from a patent, guesses whether the result stays in the page before
+    the add is done. In the same cycle the dependence predictor looks up the load's PC against about 74 store and load pairs;
+    a match holds the load until its store has an address. A load let through wrongly costs a 25 cycle flush, measured.
+  ask: What breaks if the same page guess is wrong?
+  rests_on: single
+  targets:
+  - agu_same_page_check
+  - store_load_dep_predictor
+  - load-2
+  status: draft
+- n: 4
+  title: Cycles 1 to 2, eight bits pick the way
+  say: An eight bit micro tag from the upper virtual address bits is compared against the eight ways of the set, and the one
+    that matches is the predicted way. Only that way's data is read, which is what makes an eight way cache answer in three
+    cycles. The micro tag's width and source are measured by the Augury and iLeakage work.
+  ask: What happens when two different physical lines share a micro tag?
+  rests_on: single
+  targets:
+  - l1d_utag_way_predictor
+  - load-3
+  status: draft
+- n: 5
+  title: Cycle 2, the bank, the store queue and the dTLB at once
+  say: Three things happen together. The predicted way's bank delivers 16 bytes; the store queue is searched for an older
+    store to the same address, which forwards in six cycles; and the dTLB produces the physical address for the check that
+    follows. Two loads to one element share a bank access, inferred from bandwidth, and the forwarding latency is measured
+    by two groups.
+  rests_on: corroborated
+  targets:
+  - l1d_banked_piggyback
+  - sq_partial_forwarding
+  - dtlb3
+  - load-4
+  status: draft
+- n: 6
+  title: Cycle 3, the physical tag confirms and a chase gets its address
+  say: The 34 bit physical tag of the predicted way is compared with the dTLB's answer. On a hit the data has already left
+    for a pointer chase, three cycles after the load issued, and a load whose address depends on it can be bypassed straight
+    into address generation, inferred from chase latencies.
+  ask: Why can the data leave before the tag compare finishes?
+  rests_on: inferred
+  targets:
+  - lsu_load_to_load_bypass
+  - cmp4
+  - load-5
+  status: draft
+- n: 7
+  title: Cycles 4 and 5, consumers, and the late store that forces a replay
+  say: An ALU consumer sees the value at cycle four and a SIMD register at cycle five, both measured. If a store address arrives
+    late and overlaps the load, the late ordering check catches it and the load replays from the scheduler; the check is measured
+    through the ordering flush, the replay path is our reading.
+  rests_on: confirmed
+  targets:
+  - late_ordering_check
+  - alu5
+  - simd5
+  - load-6
+  status: draft
+- n: 8
+  title: A store is two uops into 32 byte slots
+  say: A store issues as an address uop and a data uop, inferred from the issue counts. The address claims a 32 byte slot
+    in the 60 entry queue and wakes any load waiting on it; the data lands later in 16 byte lanes, and a store that straddles
+    two slots takes both.
+  ask: Why size a slot at 32 bytes when the store paths are 16?
+  rests_on: inferred
+  targets:
+  - sta0
+  - std0
+  - sq_32b_slots
+  - store-1
+  - store-2
+  status: draft
+- n: 9
+  title: Retire writes the slot, a miss fetches ownership
+  say: After the group retires, the oldest slot writes to the L1D over two 16 byte paths, two stores a cycle. On a miss the
+    line is fetched for ownership from the L2 while younger hits keep writing ahead; a full line write needs no fetch. Write
+    allocate with store miss entries is our proposal, drawn as such.
+  rests_on: corroborated
+  targets:
+  - sq2
+  - l1d2
+  - l23
+  - l1d3
+  - store-3
+  - store-4
+  status: draft
+- n: 10
+  title: Splits, monitors and the TSO switch
+  say: A line crossing costs one more cycle, a page crossing 28 to 31 with a microcode assist, both measured. A vector load
+    pair is one uop split into two 16 byte halves at the cache. The exclusive monitor is one per core on a 64 byte granule
+    and clears on eviction, and the memory model can be switched to total store order for Rosetta, both measured.
+  rests_on: corroborated
+  targets:
+  - split_access_handling
+  - split-page
+  - ldpq_lsu_split
+  - exclusive_monitor_l1
+  - tso_mode
+  - splits
+  status: draft

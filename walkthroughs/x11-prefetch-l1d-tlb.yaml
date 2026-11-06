@@ -1,0 +1,151 @@
+# x11-prefetch-l1d-tlb.yaml
+# The x11-prefetch-l1d-tlb figure read step by step.
+figure: x11-prefetch-l1d-tlb
+steps:
+- n: 1
+  title: The prefetchers train at the LSU, on virtual addresses
+  say: The prefetchers do not watch the stream of L1 misses; they sit at the LSU and see every load and store virtual address,
+    up to four a cycle. Training on virtual addresses is why a pointer chase that crosses a 16 KiB page keeps its three-cycle
+    L1 latency all the way out to DRAM, where a physical-address prefetcher would have to restart at every page. This is measured
+    by one group and matches Apple's patents; the trainer box itself is inferred from those two.
+  ask: What does a prefetcher lose by training on L1 misses instead of every address?
+  rests_on: inferred
+  targets:
+  - lsu
+  - va
+  - lsu_virtual_prefetch
+  - pg0
+  - pg1
+  - pg2
+  status: draft
+- n: 2
+  title: A temporal history a little under 256 entries deep
+  say: Random accesses inside a 15 KiB region are covered, inside a 16 KiB region they are not. The sharp edge between those
+    two sizes is read as a GHB-like temporal history of a little under 256 entries, 240 lines of 64 B. One group measured
+    it; nobody has published the table. Beside it sit the access-map prefetcher that detects strides and dense regions and
+    a content-directed prefetcher that follows pointers; those have their own figures.
+  ask: Why would a 15 KiB box fit and a 16 KiB box not, if the history is counted in lines?
+  rests_on: inferred
+  targets:
+  - temporal_prefetch
+  status: draft
+- n: 3
+  title: A deny list stops prefetches that were never used
+  say: A prefetched line carries a bit that demand use clears. If the line is evicted with the bit still set, its address
+    goes into a small hashed table with a partial tag and a count; later prefetches to a counted address go to the back of
+    the queue or are dropped. This comes from a 2022 patent, not a measurement; the test that would show it is a pattern whose
+    prefetches are never used, which should stop adding DRAM traffic after a few repetitions.
+  ask: How would you tell a deny list from a prefetcher that simply lost confidence?
+  rests_on: conjecture
+  targets:
+  - prefetch_deny_list
+  - l1d_a
+  status: draft
+- n: 4
+  title: The L2 rates the prefetch queues every 32 cycles
+  say: Every 32 cycles the L2 looks at how busy each core's prefetch queue is and sets a throttle level from the recent history;
+    the L1 prefetchers then hold back or push on. Credits cap a region at about four prefetches in flight. A separate patent
+    has the prefetchers turn bolder when misses come back later than expected, which is the misses-late arc. All of this is
+    read from patents; the measured side is only that prefetch does not run away.
+  ask: Why rate the queues at the L2 rather than at each core?
+  rests_on: conjecture
+  targets:
+  - prefetch_throttle
+  - pf_credits
+  - t0
+  - t1
+  - t2
+  status: draft
+- n: 5
+  title: Non-temporal loads skip the L1 fill
+  say: A load with the non-temporal hint that hits in the L1 behaves like any other load. In the L2 range it is slower and
+    misses the L1 far more often, so its lines are not prefetched into the L1 and may not fill it at all; in DRAM it gains
+    about ten percent. That is why the system memcpy uses non-temporal loads between 128 KiB and about 1.5 MiB. The boot loader
+    keeps a load non-temporal widget switched off, so the exact mechanism is partly hidden.
+  ask: What does a copy loop gain by not filling the L1 with the source?
+  rests_on: inferred
+  targets:
+  - l2_a
+  - nt_load_handling
+  - core_a
+  status: draft
+- n: 6
+  title: The L1D way seems fixed by a hash of physical page bits
+  say: Pointer chases with nodes spaced two to the k plus 64 bytes apart reach the full line count for some k and only one
+    way per set for others. The reading is that a line's way is not free; it is chosen from low physical page bits hashed
+    with index bits, so the eight-way cache behaves like a direct-mapped one with a two-stage lookup. This is one group's
+    conjecture from one experiment; the alternative, an ordinary tag-matched placement, would not show the one-way-per-set
+    collapse.
+  ask: If the way is fixed by address bits, what does the cache lose, and what does it gain?
+  rests_on: conjecture
+  targets:
+  - pa
+  - l1d_hashed_way
+  - ways
+  status: draft
+- n: 7
+  title: No way misprediction shows
+  say: Loads that pick one of eight pages 16 KiB apart at random on every access run as fast as loads to a fixed page, once
+    bank collisions are removed. A set-indexed way predictor would miss on a random stream; either the L1D has none, or its
+    predictor stays perfect. That fits the hashed way of the previous step, where the way is known from the address and nothing
+    needs predicting.
+  ask: How is this different from the micro-tag way predictor we drew in Lecture 1?
+  rests_on: conjecture
+  targets:
+  - l1d_way_lookup
+  status: draft
+- n: 8
+  title: Sub arrays sleep on their own supply
+  say: The caches are built from many small SRAM sub arrays on a supply separate from the logic, and idle ones power down
+    with their bit lines floating. An access to a sleeping sub array precharges it first, which may reject an L1D load for
+    a cycle. The measured sign is a fall-off inside the L1 range with no L1 misses while the load-unit uop count rises; the
+    mechanism is read from Apple's SRAM patents.
+  ask: Why would a designer trade a cycle of latency for a sleeping array?
+  rests_on: inferred
+  targets:
+  - cache_subarray_power
+  - p0
+  - p1
+  - p2
+  status: draft
+- n: 9
+  title: Coherence work caps mixed traffic
+  say: The L1 to L2 path moves 32 B a cycle, yet an L1 copy tops out near 150 GB/s and mixed load and store traffic in the
+    L2 near 100 GB/s. The best hypothesis, and the one measuring group calls it weak, is coherence work between the two caches
+    running about one line every other cycle, because a line crosses the 32 B path in two beats. Nothing in a patent confirms
+    it.
+  ask: What experiment would separate a coherence limit from a bandwidth limit?
+  rests_on: inferred
+  targets:
+  - l1d_b
+  - l2_b
+  - l1_l2_coherence_limit
+  status: draft
+- n: 10
+  title: One TLB holds several page sizes
+  say: Apple's TLB patents put a page-size field in every entry so one TLB can hold up to five sizes, and keep a per-context
+    presence vector so a lookup tries only the sizes in use. On the M1 only 16 KiB pages ever appear; range registers cover
+    the cases where other designs use large pages. The field widths in the figure are illustrative.
+  ask: Why might a designer with range registers skip large pages altogether?
+  rests_on: conjecture
+  targets:
+  - tlb_mixed_page_sizes
+  - sizes
+  status: draft
+- n: 11
+  title: Invalidation takes the cheaper route
+  say: For a range invalidation the hardware estimates the cycles to walk every entry against looking up every page in the
+    range, and takes the faster. ASID and VMID fields are striped across the SRAMs so an invalidation by context compares
+    four entries at once. Invalidations sent to accelerator TLBs over the fabric are bundled, about eight a request, and dropped
+    if the accelerator is powered down. All three are patent readings.
+  ask: When would walking every entry beat looking up each page?
+  rests_on: conjecture
+  targets:
+  - tlb_invalidation_shortcuts
+  - inv_cmp
+  - scan
+  - lookup
+  - stripes
+  - acc_inv
+  - bundle
+  status: draft

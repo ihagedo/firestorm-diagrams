@@ -1,0 +1,166 @@
+# p1-pipeline.yaml
+# The p1-pipeline figure read step by step.
+figure: p1-pipeline
+steps:
+- n: 1
+  title: Ten bands, nine latches
+  say: This is the five-stage drawing turned on its side and stretched. Each band is a stage, each dark bar between bands
+    is the latch that holds a stage's results for the next, and the blocks inside a band are what works in that stage. Nobody
+    has published how many clock cycles Firestorm spends in each band, so the latches show the structure, not a cycle count;
+    the three measured spans are drawn as loops up the margins.
+  ask: In a five-stage MIPS the latches are named IF/ID, ID/EX and so on. What is different about naming them here?
+  rests_on: inferred
+  targets:
+  - l_predict_fetch
+  - l_fetch_decode
+  - l_decode_rename
+  - l_rename_dispatch
+  - l_dispatch_issue
+  - l_issue_registerread
+  - l_registerread_execute
+  - l_execute_writeback
+  - l_writeback_retire
+  status: draft
+- n: 2
+  title: Predict, before anything is fetched
+  say: The top band runs a cycle ahead of fetch. The next PC logic takes one taken branch a cycle; the target buffer answers
+    from 1024 entries with no bubble and from a second level, read as 8192 entries, with two; direction comes from a TAGE-like
+    predictor with a 100-branch history; indirect targets and returns from their own tables. We infer there is no fetch target
+    queue decoupling this band from fetch, which is why the box is dashed.
+  ask: What would a fetch target queue buy, and what evidence would show one is there?
+  rests_on: corroborated
+  targets:
+  - pc
+  - btb
+  - dirpred
+  - indpred
+  - ras
+  - ftq
+  status: draft
+- n: 3
+  title: Fetch eight from a 192 KiB cache
+  say: The predicted address crosses the first latch into fetch. The instruction TLB translates it, 192 entries, and the L1
+    instruction cache returns up to eight instructions a cycle from 192 KiB in six ways. The cache is virtually indexed and
+    physically tagged, so the TLB and the cache arrays are read in the same band.
+  ask: Why can the instruction cache afford to be six times the size of a typical x86 L1I?
+  rests_on: confirmed
+  targets:
+  - fetch
+  - itlb
+  - l1i
+  - l_predict_fetch
+  status: draft
+- n: 4
+  title: Decode eight, through a queue of unknown depth
+  say: Fetched instructions land in an instruction queue whose depth nobody has measured, drawn dotted, and decode takes eight
+    a cycle. Decode is where pairs are marked for fusion, a flag-setting ALU op with its branch, for example, so that rename
+    sees fewer uops than there were instructions.
+  ask: Which fusions would you expect to matter most in compiled ARM code?
+  rests_on: confirmed
+  targets:
+  - iq
+  - decode
+  - l_fetch_decode
+  status: draft
+- n: 5
+  title: Rename, and the queue that remembers every rename
+  say: The decode-to-rename latch is drawn in the handoff colour because this is where the in-order front end ends. Rename
+    maps eight uops a cycle through the map tables and free lists, removes moves and zero idioms, and allocates an entry in
+    the rename retire queue in the right margin, 623 entries that are released sixteen a cycle at retire. That queue, not
+    a reorder buffer, is what bounds how many renames can be in flight.
+  ask: What happens to the pipeline when the rename retire queue is full but the retire groups are not?
+  rests_on: confirmed
+  targets:
+  - freelists
+  - maps
+  - rename
+  - rrq
+  - l_decode_rename
+  status: draft
+- n: 6
+  title: Dispatch buffers absorb the width
+  say: Rename is eight wide, each scheduler queue accepts one uop a cycle, and the dispatch buffers sit between them to absorb
+    the difference. Two of 24 for the integer side, 12 for multiply, 12 for FP and SIMD, 10 for loads and stores. Measured
+    by filling them one class at a time and watching when rename stalls.
+  ask: Why are the integer buffers paired rather than one buffer of 48?
+  rests_on: corroborated
+  targets:
+  - disp_int
+  - disp_mul
+  - disp_fp
+  - disp_ls
+  - l_rename_dispatch
+  status: draft
+- n: 7
+  title: Issue out of order from three groups of queues
+  say: The schedulers pick the oldest ready uop in each queue. The integer side is six queues with 134 entries in all, inferred
+    to work in pairs; the FP and SIMD side holds 36 per queue; the load-store scheduler 48 entries, derived as four queues
+    of twelve. A uop that issues leaves its queue but keeps its rename retire entry until retire.
+  ask: Oldest-ready is cheap for a 13-entry queue and expensive for a 134-entry one. What does splitting into queues cost?
+  rests_on: corroborated
+  targets:
+  - sched_int
+  - sched_fp
+  - sched_ls
+  - l_dispatch_issue
+  status: draft
+- n: 8
+  title: Register read, with the bypass coming back up
+  say: Operands are read from three physical register files, 380 integer in four banks, 432 FP and SIMD, 128 flags, plus the
+    36-register immediate pool. The bypass from writeback runs back up the right margin into the integer file so a result
+    can feed the next uop without waiting a full round trip. The banking is inferred from port conflicts, the sizes are measured.
+  ask: How would you measure how many banks a register file has from software?
+  rests_on: corroborated
+  targets:
+  - flags_prf
+  - fp_prf
+  - int_prf
+  - fwd
+  - l_issue_registerread
+  status: draft
+- n: 9
+  title: Execute, and the 13-cycle loop a wrong branch costs
+  say: Six integer units and four FP and SIMD units. Branches resolve on integer units one and two, and a mispredict goes
+    back up the left margin to the next PC logic; that loop is measured at 13 cycles, which is the one number we have for
+    the depth of the front half of the pipeline. Everything from predict to here, flushed and refetched, is 13 cycles.
+  ask: If the mispredict loop is 13 cycles and fetch is eight wide, how many instructions does one wrong branch throw away?
+  rests_on: corroborated
+  targets:
+  - bru
+  - eu_int
+  - eu_fp
+  - l_registerread_execute
+  status: draft
+- n: 10
+  title: The load-store side, and the 25-cycle ordering flush
+  say: Loads and stores take entries in the 130-entry load queue and 60-entry store queue at issue, run down four pipes that
+    do three loads or two stores a cycle, translate in a 160-entry TLB and hit the 128 KiB L1D in three cycles, or the shared
+    L2 in 17. A load that ran too early, before an older store to the same address, is caught at the load queue and the machine
+    flushes back to fetch; that loop is measured at 25 cycles.
+  ask: Why is the ordering flush almost twice the mispredict loop?
+  rests_on: confirmed
+  targets:
+  - lq
+  - sq
+  - ls_pipes
+  - dtlb
+  - l1d
+  - l2
+  status: draft
+- n: 11
+  title: Writeback, then retire in groups
+  say: Results write the register files and feed the bypass; a load that hits an older store takes its data from the store
+    queue, or in zero cycles through the register file when both use the same address register. Retire keeps 330 groups of
+    up to seven uops and retires eight groups a cycle, which with the rename retire queue gives a window of about 2277 instructions,
+    144 of them branches.
+  ask: Retire groups and a rename queue instead of one reorder buffer. Which structure limits which measurement?
+  rests_on: corroborated
+  targets:
+  - stl
+  - wb
+  - fwd
+  - window
+  - retire
+  - l_execute_writeback
+  - l_writeback_retire
+  status: draft

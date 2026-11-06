@@ -1,0 +1,121 @@
+# x6-lsu-queues.yaml
+# The x6-lsu-queues figure read step by step.
+figure: x6-lsu-queues
+steps:
+- n: 1
+  title: A load queue of 130, drawn as two banks
+  say: The load queue holds about 130 loads, measured by several groups. How it is built is a patent reading, not a measurement.
+    Apple describes a queue split into two banks that software still sees as one, with loads alternating between them and
+    each bank retiring one entry a cycle.
+  ask: Why would a designer split one queue into two banks rather than build one wider queue?
+  rests_on: conjecture
+  targets:
+  - lq_alloc
+  - banked_lsq
+  - lq_b1
+  - lq_ret
+  status: draft
+- n: 2
+  title: Stores fill one bank while the other drains
+  say: The store queue holds about 60 stores. In the same patent the store side works differently from the loads. One bank
+    fills with a contiguous run of stores while the other drains in order to the L1D, and the two banks exchange pointers
+    so that order is kept across them. A probe that drains a full queue would see at most two entries leave per cycle, however
+    many are ready.
+  ask: What would the drain rate look like if the queue were one bank with a two-wide retire port instead?
+  rests_on: conjecture
+  targets:
+  - sq_alloc
+  - sq_a
+  - sq_b
+  - sq_commit
+  - lsq_test
+  status: draft
+- n: 3
+  title: One LDP Q is one instruction and two requests
+  say: A load pair of vector registers is one instruction through rename and the retire queue and takes one scheduler slot,
+    but counters show two trips through the load unit. The split happens late, at the cache access, after address generation
+    and the TLB. A load pair of integer registers stays one 16 byte request all the way. This is read from Handley's counters,
+    so it is inferred.
+  ask: Why split as late as the cache access rather than at decode, where splitting is easy?
+  rests_on: inferred
+  targets:
+  - ldpq
+  - rob1
+  - sch1
+  - ldpq_lsu_split
+  - bk1
+  - ldpx
+  - rob2
+  - sch2
+  - one_req
+  - bk2
+  status: draft
+- n: 4
+  title: Crossing a line costs a cycle, crossing a page costs thirty
+  say: An access that straddles two cache lines stays one operation that sends two line requests and pays about one extra
+    cycle. An access that straddles two pages pays 28 to 31 extra cycles, which looks like a microcode assist. Three groups
+    measured the line crossing and two the page crossing.
+  ask: What has to happen twice on a page crossing that happens once on a line crossing?
+  rests_on: confirmed
+  targets:
+  - lines
+  - split_access_handling
+  - pages
+  - pg_assist
+  status: draft
+- n: 5
+  title: The load that never reaches the cache
+  say: When a load reads an address that a recent store wrote through the same base register, the rename stage can map the
+    load's destination straight onto the physical register that holds the stored value. The load costs nothing and never touches
+    the cache. Apple's 2012 patent describes it and Handley's chain test shows it, but only when the load uses the same base
+    register as the store. The same address through a different register goes to the L1D and takes three cycles.
+  ask: Why does the trick depend on the base register rather than on the address?
+  rests_on: inferred
+  targets:
+  - st
+  - ld
+  - ld2
+  - sqe
+  - zero_cycle_loads
+  - l1d_c
+  - prf
+  - zcl_test
+  status: draft
+- n: 6
+  title: A load behind a failed pointer check is never performed
+  say: When a pointer fails its authentication check, a load through it under speculation leaves no trace, no TLB fill and
+    no cache fill. PACMAN measured this directly and iLeakage found no Meltdown style reads across address spaces. Two groups
+    measured it, so it is as solid as a negative result gets.
+  ask: Which is cheaper for the core, to squash the load or to let it run and discard the result?
+  rests_on: corroborated
+  targets:
+  - d0
+  - d1
+  - d2
+  - d3
+  - spec_fault_no_access
+  - melt
+  status: draft
+- n: 7
+  title: Identical loads all execute
+  say: Back to back identical loads, or identical stores, are not merged. Three loads of the same address take three cache
+    accesses. Handley measured it on the M1; later cores change this.
+  rests_on: confirmed
+  targets:
+  - redundant_mem_op_elim
+  - l1d_e
+  status: draft
+- n: 8
+  title: Address and value prediction arrive on later cores
+  say: A load address predictor that guesses the next strided address appears on the M2, and a load value predictor that hands
+    a load's last constant value to its dependents appears on the M3. Both were measured absent on the M1. The tests are simple,
+    a 32 byte strided chain that runs no faster than a random one, and a dependent chain of byte loads that runs the same
+    speed whether the values are constant or random.
+  ask: Why would a value predictor be worth building when a correctly predicted address already hides most of the latency?
+  rests_on: confirmed
+  targets:
+  - load_address_prediction
+  - lap_test
+  - load_value_prediction
+  - lvp_test
+  status: draft

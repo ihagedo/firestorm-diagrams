@@ -1,0 +1,120 @@
+# 01-core-overview.yaml
+# The 01-core-overview figure read step by step.
+figure: 01-core-overview
+steps:
+- n: 1
+  title: Four regions, one core
+  say: The core is drawn as four regions. The front end predicts, fetches and decodes; the backend renames, issues out of
+    order and retires in order; the load-store unit sits below the backend with its queues and the L1 data cache; and the
+    strip at the bottom is what the core shares with the rest of the chip. Every number on the figure is a knowledge base
+    parameter, and the glyph beside it says how well it is known.
+  ask: Which of the four regions would you expect a black-box measurement to see most clearly, and why?
+  rests_on: confirmed
+  targets:
+  - frontend
+  - backend
+  - lsu
+  - beyond
+  status: draft
+- n: 2
+  title: Four predictors feed one fetch address
+  say: Four predictors vote on the next fetch address. The target buffer has a small first level of 1024 entries that redirects
+    with no bubble and a second level, read as 8192 entries, that costs two. Direction comes from a TAGE-like predictor with
+    six tables and a history of about a hundred branches; indirect targets from a 1024-entry table; returns from a 50-entry
+    stack. The 13-cycle mispredict loop at the top of the figure is what a wrong vote costs.
+  ask: Why does a two-level target buffer make sense when the first level already covers most hot loops?
+  rests_on: corroborated
+  targets:
+  - btb
+  - dirpred
+  - indpred
+  - ras
+  status: draft
+- n: 3
+  title: Fetch and decode eight a cycle
+  say: The instruction cache is 192 KiB in six ways, unusually large, with a 192-entry instruction TLB beside it. Fetch takes
+    eight instructions a cycle and one taken branch a cycle, and we infer there is no decoupling queue between prediction
+    and fetch. Decode is also eight wide and splits or fuses operations on the way in; the depth of the queue between fetch
+    and decode is open.
+  ask: What does a 192 KiB instruction cache buy that a 32 KiB one does not, for the code Apple cares about?
+  rests_on: confirmed
+  targets:
+  - l1i
+  - itlb
+  - fetch
+  - decode
+  status: draft
+- n: 4
+  title: Rename eight a cycle into three register files
+  say: Rename maps eight uops a cycle onto 380 integer, 432 FP and SIMD, and 128 flag registers. Moves and zero idioms are
+    removed here without a unit, some pairs are fused at the map, and small immediates get their own pool of 36 registers.
+    The register files are freed again at retire, which is the dotted loop along the bottom of the backend.
+  ask: Why would a designer give the flags their own register file rather than renaming them with the integer registers?
+  rests_on: corroborated
+  targets:
+  - rename
+  - int_prf
+  - fp_prf
+  - flags_prf
+  status: draft
+- n: 5
+  title: Dispatch buffers in front of three groups of schedulers
+  say: Between rename and the schedulers sit dispatch buffers, two of 24 for the integer side and smaller ones for multiply,
+    load-store and FP, that smooth an eight-wide rename into schedulers that each take one uop a cycle. The integer side has
+    six queues with 134 entries in all, read as working in pairs; the FP side 36 per queue; the load-store scheduler 48 entries
+    in four queues.
+  ask: What breaks if you remove the dispatch buffers and let rename write the schedulers directly?
+  rests_on: corroborated
+  targets:
+  - dispatch
+  - sched_int
+  - sched_fp
+  - sched_ls
+  status: draft
+- n: 6
+  title: Fourteen pipes, then retire in order
+  say: Six integer units, four 128-bit FP and SIMD units, and four load-store pipes that together do three loads or two stores
+    a cycle. Completion reports to retire, which keeps 330 groups of up to seven uops and retires eight groups a cycle, with
+    a separate 623-entry rename retire queue that drains sixteen a cycle. About 2277 instructions and 144 branches can be
+    in flight.
+  ask: Two retire structures instead of one reorder buffer. What is each one for?
+  rests_on: corroborated
+  targets:
+  - eu_int
+  - eu_fp
+  - eu_ls
+  - retire
+  status: draft
+- n: 7
+  title: The load-store unit and its L1D
+  say: Loads and stores take their queue entries at issue, not at dispatch, into a 130-entry load queue and a 60-entry store
+    queue; a predictor of 74 store-load PC pairs decides who waits for whom. The L1 data cache is 128 KiB in eight ways, answers
+    a pointer chase in three cycles and an ALU in four, and is backed by a 160-entry L1 TLB and a 3072-entry L2 TLB. The prefetchers
+    cover strides, regions and pointer chasing; how many misses the cache can hold outstanding is still open.
+  ask: Why take queue entries at issue rather than at dispatch, and what does it cost?
+  rests_on: confirmed
+  targets:
+  - lq
+  - sq
+  - lsdp
+  - l1d
+  - dtlb
+  - mshr
+  - prefetch
+  status: draft
+- n: 8
+  title: Beyond the core
+  say: What a core shares. The 12 MiB L2 is shared by the four cores of the cluster, answers in 17 cycles and holds a 3 MiB
+    inner slice per core; the AMX unit hangs off it and is fed through the store queue. Past the L2 the fabric carries lines
+    to the 8 MiB system level cache at about 90 cycles and to eight LPDDR4X channels at 91 nanoseconds. The cluster runs at
+    up to 3.2 GHz with its own voltage and frequency.
+  ask: Which of these numbers would change first if Apple moved the core to a new process?
+  rests_on: confirmed
+  targets:
+  - power
+  - amx
+  - l2
+  - fabric
+  - slc
+  - memctrl
+  status: draft

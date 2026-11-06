@@ -1,0 +1,93 @@
+# d3-slc.yaml
+# The d3-slc figure read step by step.
+figure: d3-slc
+steps:
+- n: 1
+  title: The physical address, tag above bit 33
+  say: The request arrives with a 40 bit physical address. Bits 32 down to 7 are the input to the index hash, bits 39 to 33
+    are the tag proper, and the low seven bits pick a byte in the 128 byte line. Because the hash consumes bits 32 to 7, the
+    stored tag has to keep them as well, so the real tag is wider than the drawn field suggests.
+  rests_on: single
+  targets:
+  - pa
+  - pab
+  status: draft
+- n: 2
+  title: Victims and misses arrive at the coherence point
+  say: The P cluster L2 sends its victims down and takes its fills up, the E cluster L2 does the same, and the GPU's reads
+    allocate directly. All three meet at the coherence point, which holds duplicate L2 tags for every cluster and orders requests
+    to the same address. Both of those are patent readings.
+  ask: Which of the three clients can create a line in the SLC without a miss first?
+  rests_on: inferred
+  targets:
+  - pl2
+  - el2
+  - gpu
+  - coh
+  status: draft
+- n: 3
+  title: Twelve hashes pick the set
+  say: Twelve XOR trees, each fed by several of the bits 32 to 7, produce the twelve index bits. The figure draws six of them.
+    SLAC recovered the fact of the hashing and the set count by grouping lines according to which GPU filled lines they evict,
+    which gave 4096 groups.
+  ask: How would you recover the hash function itself, not just that one exists?
+  rests_on: single
+  targets:
+  - x0
+  - x1
+  - x2
+  - x3
+  - x4
+  - x5
+  status: draft
+- n: 4
+  title: Sixteen ways of tags and data
+  say: The set's sixteen ways are read and the tag compared. There is no way prediction or partial tag filter published for
+    the SLC, so the figure draws the plain sixteen way compare. The array is 8 MiB, which several groups measured, in 128
+    byte lines, measured once.
+  rests_on: confirmed
+  targets:
+  - arr
+  status: draft
+- n: 5
+  title: Three policies beside the array
+  say: Beside the array sit the three policies the patents and the papers give us. The speculative read lets a latency sensitive
+    request start at the controller while the tags are checked and kills it on a hit. The quotas use a group id, a sticky
+    bit and address ranges to carve the cache between clients. Replacement is the open dispute, random by EXAM's probe and
+    LRU by SLAC's.
+  ask: Which of these three would you expect a security paper to find first, and why?
+  rests_on: inferred
+  targets:
+  - spec
+  - quota
+  - repl
+  status: draft
+- n: 6
+  title: A miss goes to the controllers
+  say: A CPU miss that the SLC does not hold goes on to the memory controllers, eight channels of LPDDR4X. The loaded latency
+    is 91 nanoseconds beyond the L2, measured by 7-cpu, and the eight channels give a derived peak of 68 gigabytes a second.
+    Write backs from the SLC take the same path down.
+  rests_on: corroborated
+  targets:
+  - mc
+  - dram
+  status: draft
+- n: 7
+  title: A hit returns the line and gives it up
+  say: On a hit the line goes back up to the coherence point and the requesting L2, and because the SLC is exclusive of the
+    CPU caches the copy in the SLC is invalidated as it leaves. EXAM measured that directly, a line the CPU takes back is
+    gone from the SLC at once. The SLC saves the CPU the DRAM trip only for lines the L2 has already given up.
+  ask: Why would a designer choose exclusion here when the L2 chose inclusion?
+  rests_on: single
+  targets:
+  - ret
+  status: draft
+- n: 8
+  title: What the line carried
+  say: The line format, from patents, with widths of our choosing. Three states, invalid, valid and modified, a group id and
+    sticky bit for the quotas, sixteen sector valid bits and a byte mask so a partial write need not read the rest of the
+    line first. Later designs track dirtiness per 64 byte half.
+  rests_on: inferred
+  targets:
+  - line
+  status: draft

@@ -1,0 +1,105 @@
+# f1-fsm.yaml
+# The f1-fsm figure read step by step.
+figure: f1-fsm
+steps:
+- n: 1
+  title: A load on the common path
+  say: A load waits queued until its operands are ready, or longer if the dependence predictor says an older store will hit
+    its address. Then it forms its address, the micro tag picks a way, the data comes out at three cycles, and the physical
+    tag confirms it a cycle or two later. The latencies on this path are measured; the order of utag before tag is from one
+    group's experiments.
+  ask: Why does the data come out before the physical tag has been compared?
+  rests_on: confirmed
+  targets:
+  - fa
+  - a0
+  - a1
+  - a2
+  - a3
+  - a4
+  status: draft
+- n: 2
+  title: A load off the common path
+  say: Three ways off the path. If the store queue holds the bytes, the load takes them from there and skips the cache. If
+    the physical tag disagrees with the utag's way, the load waits for a fill and is woken as the line arrives, which we infer
+    from a load to use latency below L2 latency plus an L1 hit. If the utag misses, or a store turns out to be older and overlapping,
+    the load replays from the queue; the late store case is the 25 cycle flush.
+  ask: Which of the three detours is cheapest, and which is a whole pipeline flush?
+  rests_on: inferred
+  targets:
+  - a7
+  - a5
+  - a6
+  status: draft
+- n: 3
+  title: Fetch and its redirect tiers
+  say: The fetch predictor redirects on its own every cycle when the zero bubble BTB of 1024 entries hits. When only the next
+    tier hits, the instruction cache's own line metadata, fetch restarts two cycles later; when decode finds a branch the
+    predictor missed it redirects again; and a mispredict found at execute costs 13 cycles. Retiring the branch trains the
+    direction predictor. The bubbles are measured; the staging of the tiers is our reading.
+  ask: Why have three places that can redirect fetch instead of one?
+  rests_on: corroborated
+  targets:
+  - fb
+  - b0
+  - b1
+  - b2
+  - b3
+  - b4
+  status: draft
+- n: 4
+  title: A retire group fills, closes and waits
+  say: A group opens on a memory operation and fills until it holds seven slots or a branch arrives, then it closes and waits
+    until all its uops are done. Eight groups can retire per cycle. The group rule is inferred from the window measurements,
+    the group count and retire rate are measured.
+  ask: What kind of code makes the groups small, and what does that do to the window?
+  rests_on: inferred
+  targets:
+  - fc
+  - c0
+  - c1
+  - c2
+  - c3
+  - c4
+  status: draft
+- n: 5
+  title: A flushed group restores the map
+  say: If an older branch turns out mispredicted, the closed group is flushed and the rename retire queue restores the old
+    register mappings before the group slot goes back to the pool. This is the recovery path the 623 entry queue exists for.
+  rests_on: single
+  targets:
+  - c5
+  - c2
+  status: draft
+- n: 6
+  title: An L2 half line, from fill to the SLC
+  say: Each 64 byte half of a 128 byte L2 line has its own state. It fills invalid to valid, goes modified on a dirty write
+    back from the L1, and when it is a victim it either drops, if no L1 still holds it and the SLC does not take it, or moves
+    to the SLC, which allocates on L2 victims and is exclusive of the core caches. A reload brings it back; an SLC victim
+    leaves it invalid. The states and the SLC policy are measured; whether the SLC takes every victim is read from the measurements
+    as a single source.
+  ask: Why would a victim that an L1 still holds be kept rather than dropped?
+  rests_on: corroborated
+  targets:
+  - fd
+  - d0
+  - d1
+  - d2
+  - d3
+  status: draft
+- n: 7
+  title: A load PC learns to wait
+  say: A load with no entry issues as soon as it can. If an older store then hits its address, the core flushes 25 cycles
+    of work and writes the store and load PC pair into a table of about 74 entries. From then on that load waits until its
+    store has issued. Entries are replaced round robin, so a load can forget and go back to issuing early. The table size
+    and the flush cost are measured; the states are inferred from them.
+  ask: What happens to a load whose store only sometimes aliases?
+  rests_on: inferred
+  targets:
+  - fe
+  - e0
+  - e1
+  - e2
+  - e3
+  - e4
+  status: draft

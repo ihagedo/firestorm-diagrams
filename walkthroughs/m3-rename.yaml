@@ -1,0 +1,109 @@
+# m3-rename.yaml
+# The m3-rename figure read step by step.
+figure: m3-rename
+steps:
+- n: 1
+  title: Eight instructions, four fates
+  say: The group is a load, an add that needs the load, a move, a move of an immediate, a compare, a branch, a nop and a store.
+    Only four of the eight will reach a scheduler as ordinary uops. The move is eliminated, the immediate goes to the pool,
+    the compare and branch fuse into one uop, and the nop only retires. The shaded cells are the ones rename handles without
+    issuing anything.
+  ask: Count the uops that will actually issue.
+  rests_on: confirmed
+  targets:
+  - group
+  status: draft
+- n: 2
+  title: Map, the group compared with itself
+  say: Each slot's sources are checked against every earlier slot's destination. The add reads x1 from the load, the move
+    reads x3 from the add, the compare reads both x4 and x5 from the two moves, and the store reads x3 from the add. The matrix
+    is the picture of those hits; it is inferred from the way eliminated move chains resolve in one cycle.
+  ask: Which slot depends on an eliminated move, and how does the map stage keep that working?
+  rests_on: inferred
+  targets:
+  - sb-1
+  - group_map
+  - srcs
+  status: draft
+- n: 3
+  title: Eliminate the move
+  say: The add's destination x3 gets physical register forty. The move of x3 into x4 then simply maps x4 to the same register
+    forty; no uop is created and no register is spent. Full width move elimination is measured by several groups.
+  ask: What happens when x3 and x4 later diverge?
+  rests_on: confirmed
+  targets:
+  - sb-2
+  - e_add
+  - move_elimination
+  status: draft
+- n: 4
+  title: The immediate goes to the pool
+  say: The move of the constant seven is also finished at rename. The constant goes into a pool of about thirty six immediate
+    registers and x5 is mapped to it. At most two such moves per eight instructions are handled this way; the rest execute
+    in the integer units, which is why one group that measured eight per cycle saw no conflict with the two per eight limit.
+  rests_on: corroborated
+  targets:
+  - immediate_regs
+  - e_imm
+  status: draft
+- n: 5
+  title: Fuse the compare and the branch
+  say: The compare and the conditional branch after it become one uop that sets the flags and branches on them. The limit
+    is register reads, four per six instructions; beyond it the pair stays separate. One source for the rule.
+  ask: Why would fusion be limited by register reads rather than by decoder slots?
+  rests_on: single
+  targets:
+  - sb-3
+  - f_cmp
+  - f_b
+  - fuse
+  - macro_op_fusion
+  status: draft
+- n: 6
+  title: Rename, free list in, history out
+  say: For each uop that writes a register a free physical register comes off the free list and into the map, and the old
+    mapping goes into the history, which is the rename retire queue. Eight map changes a cycle in, sixteen a cycle out at
+    retire. The free list is inferred as the usual structure; the map width and the history size are measured.
+  rests_on: corroborated
+  targets:
+  - sb-4
+  - freelist
+  - rename_map
+  - history
+  status: draft
+- n: 7
+  title: What a map entry and a history entry hold
+  say: A map entry carries the physical register number, the security tag that says this process wrote it, and, as our proposal,
+    a valid bit that lets a zero idiom hold no physical register at all. A history entry carries the architectural register
+    with its old and new physical numbers. The field widths are drawn to be read, not measured; the tag is one group's reading
+    of a slowdown, the valid bit is ours.
+  ask: What would you measure to tell a zero idiom with no register from one that takes a register?
+  rests_on: inferred
+  targets:
+  - map_entry
+  - hist_entry
+  status: draft
+- n: 8
+  title: In at eight, out at sixteen, and the walk back
+  say: The history fills at eight entries a cycle and drains at sixteen when groups retire. Nops, branches, stores and compares
+    that write no register make no entry, which is why the NOP window is larger than the writer window. On a mispredict the
+    tail is walked back to the branch at sixteen a cycle, restoring the old mappings and returning the new registers, up to
+    thirty nine cycles for a full queue.
+  rests_on: corroborated
+  targets:
+  - hist_in
+  - hist_out
+  status: draft
+- n: 9
+  title: Three measured limits and one proposed cause
+  say: Two immediates per eight instructions, four register reads per six for fusion, and two pairs that never fuse are all
+    measured. Our proposal is that one cause sits behind the read limit, sixteen read ports for eight uops with two sources
+    each. The test is simple, fewer sources per instruction should allow more fusion.
+  ask: Design the microbenchmark that separates a read port limit from a decoder slot limit.
+  rests_on: proposed
+  targets:
+  - lim1
+  - lim2
+  - lim3
+  - ports
+  status: draft

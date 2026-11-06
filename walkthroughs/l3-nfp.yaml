@@ -1,0 +1,61 @@
+# l3-nfp.yaml
+# The l3-nfp figure read step by step.
+figure: l3-nfp
+steps:
+- n: 1
+  title: The 21264 fetch loop, Kessler 1999
+  say: Every instruction cache line carries a guess for the next line and way. The guess feeds the next fetch in the same
+    cycle with no bubble; the real predictor, decode and execute check it afterwards, and an entry is retrained only after
+    it has been wrong twice.
+  rests_on: corroborated
+  targets:
+  - p_21264
+  - p_pcgen
+  - p_pc
+  - p_line
+  - p_way
+  - p_next
+  - p_hit
+  status: draft
+- n: 2
+  title: 'The contrast: a decoupled front end'
+  say: 'Reinman, Calder and Austin put a fetch target queue between the predictor and the cache so the predictor could run
+    ahead and drive prefetch. The M1 shows no such queue: fetch is not decoupled.'
+  ask: What does a decoupled front end buy, and what does it cost?
+  rests_on: inferred
+  targets:
+  - p_fdp
+  - p_bp
+  - p_ftq
+  - p_if
+  - p_piq
+  - p_l2pf
+  status: draft
+- n: 3
+  title: 'The M1: a tagged table in two tiers'
+  say: A 1024 entry table, 512 sets by two ways indexed by PC bits 10:2, gives the next fetch group with no bubble over about
+    4 KiB of code. A second tier of about 8192 entries costs two bubbles. The entry carries target, group length and the ending
+    branch type.
+  rests_on: corroborated
+  targets:
+  - m_nfp
+  - m_pc
+  - m_l0
+  - m_l1
+  - m_entry
+  - m_cost
+  status: draft
+- n: 4
+  title: Checked by slower tiers; phantom fetch; likely
+  say: 'TAGE, ITTAGE and decode check the guess and refetch within a few cycles; a mispredict costs thirteen. Phantom fetch,
+    where a non branch at a trained address redirects fetch, is the same loop seen from outside. Kept: guess then check, no
+    bubble, retrain after two wrongs. Changed: a tagged table in two tiers. Likely.'
+  rests_on: corroborated
+  targets:
+  - m_check
+  - m_phantom
+  - m_ftq
+  - col_kept
+  - col_changed
+  - col_added
+  status: draft

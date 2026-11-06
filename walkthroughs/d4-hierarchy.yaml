@@ -1,0 +1,70 @@
+# d4-hierarchy.yaml
+# The d4-hierarchy figure read step by step.
+figure: d4-hierarchy
+steps:
+- n: 1
+  title: The core and its two first level caches
+  say: The core takes three loads and two stores a cycle from the L1D, 48 bytes of load and 32 bytes of store, and 64 bytes
+    of instructions a cycle from the L1I. The L1D is 128 KiB in eight ways and sixteen banks and answers in three cycles.
+    The L1I is 192 KiB in six ways. Both have 64 byte lines.
+  rests_on: confirmed
+  targets:
+  - core
+  - l1d
+  - l1i
+  status: draft
+- n: 2
+  title: Into the L2, both ways, and inclusion
+  say: The L1D and the L2 exchange data at 32 bytes a cycle each way, fills up and write backs down, and the L1I takes its
+    fills from the same L2. The dotted arrow is the inclusion relation, the L2 holds a copy of every L1 line, and that is
+    what the L2's copy bits track. The L2 is 12 MiB in twelve ways with 128 byte lines in two 64 byte halves, 17 cycles away.
+  ask: What happens to an L1D line when the L2 evicts the line that contains it?
+  rests_on: confirmed
+  targets:
+  - l1d
+  - l1i
+  - l2
+  status: draft
+- n: 3
+  title: Victims down, hits up and out
+  say: An L2 victim goes down to the SLC. A later hit in the SLC comes back up and the SLC gives the line up, because above
+    the L2 the hierarchy is exclusive. The SLC is 8 MiB in sixteen ways, 128 byte lines, and about 90 cycles away, a number
+    reported once and never pinned.
+  rests_on: corroborated
+  targets:
+  - l2
+  - slc
+  status: draft
+- n: 4
+  title: A miss goes to DRAM past the SLC
+  say: An L2 miss that the SLC does not hold goes to DRAM and comes back to the L2 without stopping in the SLC. DRAM is eight
+    channels of LPDDR4X, 91 nanoseconds beyond the L2, about 290 cycles, with a derived peak of 68 gigabytes a second that
+    one core can nearly saturate on its own.
+  ask: If one core can saturate DRAM, what do the other three cores add to a bandwidth bound program?
+  rests_on: single
+  targets:
+  - l2
+  - dram
+  status: draft
+- n: 5
+  title: The other clients
+  say: The E cluster's L2, the GPU and the coherence point with its duplicate L2 tags share the SLC and DRAM with the P cores.
+    GPU reads allocate in the SLC where CPU reads do not, and snoops from the other clients reach the L2 through the coherence
+    point. Write backs from the SLC go to DRAM.
+  rests_on: single
+  targets:
+  - other
+  - slc
+  status: draft
+- n: 6
+  title: The two ladders
+  say: Beside the hierarchy sit the two ladders. Latency 3, 17, about 90 and about 291 cycles, each with its own glyph, the
+    SLC's the weakest. Capacity 128 KiB in the L1D, 3 MiB of L2 near one core and 12 MiB in all, 8 MiB of SLC, drawn with
+    bar width proportional to the square root of capacity so the small ones stay visible.
+  rests_on: corroborated
+  targets:
+  - l1d
+  - l2
+  - slc
+  - dram
+  status: draft

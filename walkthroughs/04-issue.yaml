@@ -1,0 +1,119 @@
+# 04-issue.yaml
+# The 04-issue figure read step by step.
+figure: 04-issue
+steps:
+- n: 1
+  title: Five dispatch buffers take eight uops a cycle
+  say: Rename hands its eight uops to dispatch buffers, not straight to the scheduler queues. Two integer buffers of 24, a
+    multiply buffer of 12, a load and store buffer of 10 and an FP buffer of 12, measured by filling one class of instruction
+    until rename stalls. The buffers are unordered and each feeds the queues of its own units, which is the inferred part.
+  ask: Why would a core put a buffer between an 8 wide rename and queues that take 1 uop a cycle each?
+  rests_on: corroborated
+  targets:
+  - dispatch_int_a
+  - dispatch_int_b
+  - dispatch_mul
+  - dispatch_ls
+  - dispatch_fp
+  status: draft
+- n: 2
+  title: Fourteen scheduler queues, one per pipe
+  say: Every pipe has its own queue and each queue accepts one uop a cycle from its buffer. The integer queues are drawn at
+    13 entries, the load and store queues share 48, and the FP queues hold 36 each on one source. The 134 integer entries
+    in total is the measured number; how they split is the argument on the next slide.
+  rests_on: corroborated
+  targets:
+  - q1
+  - q2
+  - q3
+  - q4
+  - q5
+  - q6
+  - q7
+  - q8
+  - q9
+  - q10
+  - q11
+  - q12
+  - q13
+  - q14
+  status: draft
+- n: 3
+  title: Paired queues and the 13 versus 24 dispute
+  say: The integer queues come in pairs, Q1 with Q2 and so on, and a queue with nothing ready issues from its partner; that
+    is inferred from how the measured sizes come out. Johnson counted 24 to 28 entries per unit; Handley argues each pair
+    was counted twice, which gives about 13 per queue. We draw 13 and keep the measured 134 as the hard number.
+  ask: What experiment would tell a 24 entry queue from two paired 13 entry queues?
+  rests_on: derived
+  targets:
+  - q1
+  - q2
+  - q3
+  - q4
+  - q5
+  - q6
+  - eu_int
+  status: draft
+- n: 4
+  title: The load and store side, 48 entries and four pipes
+  say: The load and store scheduler measures at 48 entries and takes 4 uops a cycle. Whether that is four queues of 12 or
+    one shared queue of 48 is disputed; the four pipes are not, two load only, one store only and one that does either, giving
+    three loads or two stores a cycle.
+  rests_on: corroborated
+  targets:
+  - q7
+  - q8
+  - q9
+  - q10
+  - ls_units
+  status: draft
+- n: 5
+  title: Six integer units, and what each can do
+  say: All six do simple ALU work in a cycle. Units 1 to 3 write flags, units 1 and 2 take branches, unit 2 handles indirect
+    branches and pointer authentication, units 5 and 6 multiply, unit 5 owns the divider and unit 6 the multiply add and the
+    bit field work. The roles come from Johnson's port map and are backed by Handley.
+  ask: Why give branches to only two of the six units?
+  rests_on: corroborated
+  targets:
+  - u1
+  - u2
+  - u3
+  - u4
+  - u5
+  - u6
+  status: draft
+- n: 6
+  title: Four load and store pipes, four FP and SIMD units
+  say: Pipes 7 to 10 are store, load or store, load and load. Units 11 to 14 are all 128 bit FP and SIMD; 13 and 14 add selects
+    and moves to the general registers, and 14 alone holds the divider, the compare and the conversions and hashing.
+  rests_on: corroborated
+  targets:
+  - u7
+  - u8
+  - u9
+  - u10
+  - u11
+  - u12
+  - u13
+  - u14
+  - eu_fp
+  status: draft
+- n: 7
+  title: The latencies, one cell a cycle
+  say: ALU ops take a cycle, a multiply add feeds the next addend in a cycle, a load reaches an ALU in 4 and a pointer chase
+    in 3, FADD takes 3 and FMUL 4. Crossing between the integer and SIMD domains costs about 6 either way, flags across the
+    two files 6, a store to a dependent load 6. The fused FADD pair at 5 is an inference from the M3 that may not hold here.
+  ask: Which of these would you measure first on the Mac mini, and how?
+  rests_on: confirmed
+  targets:
+  - fd
+  status: draft
+- n: 8
+  title: What the patents add
+  say: The patents describe a matrix scheduler whose queues do not shift, an age matrix that picks the oldest ready uop, a
+    two level reservation station, and dependents that issue behind a load under a shadow window. Only the operands read at
+    issue are measured; the rest is patent reading, and the next figure takes them apart.
+  rests_on: conjecture
+  targets:
+  - fe
+  status: draft

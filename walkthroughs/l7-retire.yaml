@@ -1,0 +1,66 @@
+# l7-retire.yaml
+# The l7-retire figure read step by step.
+figure: l7-retire
+steps:
+- n: 1
+  title: Saved maps on the 21264, Kessler 1999
+  say: The 21264 kept a copy of the register map for every instruction in flight, eighty copies, so a mispredict restored
+    the map in one step. The map history lives apart from retirement.
+  rests_on: corroborated
+  targets:
+  - kessler
+  - k_map
+  - k_saved
+  - k_queue
+  status: draft
+- n: 2
+  title: Checkpoints instead of a reorder buffer, Akkary 2003
+  say: 'No reorder buffer: a checkpoint is taken at low confidence branches, a counter tracks its outstanding uops, and the
+    checkpoint retires as a group when the counter reaches zero.'
+  rests_on: corroborated
+  targets:
+  - akkary
+  - a_ckpt
+  - a_count
+  - a_conf
+  status: draft
+- n: 3
+  title: Fused entries, Pentium M 2003
+  say: A store is two uops, address and data, but one entry in the reorder buffer; the pair retires together. One entry per
+    pair is what the M1 groups generalise.
+  rests_on: corroborated
+  targets:
+  - pentium
+  - f_fused
+  - f_addr
+  - f_data
+  - f_retire
+  status: draft
+- n: 4
+  title: 'The M1: 330 groups of up to seven'
+  say: About 330 retire groups of up to seven uops, opened by a memory op and closed by a branch, eight retired a cycle; a
+    623 entry queue of map changes freed sixteen a cycle; 144 branches in flight as their own limit. The 2277 instruction
+    window is the group slots.
+  ask: Which filler instruction moves which knee, and why?
+  rests_on: corroborated
+  targets:
+  - m1
+  - retire_groups
+  - group_rule
+  - retire_rate
+  - rename_retire_queue
+  - branches
+  - windows
+  status: draft
+- n: 5
+  title: 'Our entry, and the verdict: plausible'
+  say: 'What a group entry holds, seven slots with done bits, a map change count and a branch flag, is our proposal with a
+    probe in the note. Kept: map history apart from retirement, group retirement, fused entries. Changed: a queue of changes
+    instead of whole copies; groups closed by a branch, not by confidence. Plausible: three parents, no single one.'
+  rests_on: proposed
+  targets:
+  - group_entry
+  - kept
+  - changed
+  - added
+  status: draft

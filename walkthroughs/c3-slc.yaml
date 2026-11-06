@@ -1,0 +1,102 @@
+# c3-slc.yaml
+# The c3-slc figure read step by step.
+figure: c3-slc
+steps:
+- n: 1
+  title: The address arrives physical, and every index bit is a hash
+  say: By the time a request reaches the system level cache it has been through the L2 and the coherence point, so the address
+    is physical. The twelve index bits are not taken from the address directly. Each one is an XOR of several bits between
+    7 and 32, which SLAC measured by grouping lines by which GPU filled lines they evict. The point of hashing every bit is
+    that no power of two stride piles into a few sets, and the cost is that the tag must keep every bit the hash consumed.
+  ask: What does a fully hashed index cost in tag bits, and why is the SLC willing to pay it when the L1D is not?
+  rests_on: single
+  targets:
+  - fa
+  status: draft
+- n: 2
+  title: Three kinds of client, one coherence point
+  say: The P cluster's 12 MiB L2, the E cluster's own L2 and the GPU all reach the SLC through the coherence point. The coherence
+    point holds a duplicate of every cluster's L2 tags, a tag only pseudo L3, and orders requests to the same address. That
+    it exists is a patent reading, and MOESI is an inference from the duplicate tag design, so the whole box is drawn inferred.
+  ask: Why keep copies of every L2's tags in one place instead of broadcasting a snoop to every cluster?
+  rests_on: inferred
+  targets:
+  - pl2
+  - el2
+  - gpu
+  - coherence_duplicate_tags
+  status: draft
+- n: 3
+  title: Memory side, victim filled, exclusive of the CPU caches
+  say: The SLC sits behind coherence, as a front end owned by the memory controller, so a write that reaches it counts as
+    written to DRAM. For the CPU it is a victim cache. A line enters only when a full L2 set evicts it, which SLAC and EXAM
+    both measured, and a CPU miss does not allocate. It is exclusive of the CPU caches in the strong sense EXAM measured,
+    a line the CPU takes back leaves the SLC at once. Handley reads the same measurements as neither inclusive nor exclusive,
+    with the SLC keeping the L2's tags but not its data, which is the duplicate tag point described a different way.
+  ask: If a CPU miss does not allocate here, what traffic does the SLC actually save the CPU?
+  rests_on: corroborated
+  targets:
+  - slc
+  status: draft
+- n: 4
+  title: Below it the controllers, and a read that starts before the lookup ends
+  say: Under the SLC sit eight channels of LPDDR4X, 91 nanoseconds loaded and 68 gigabytes a second at peak, of which one
+    Firestorm core can draw about 64. A patent describes a latency sensitive read entering the memory controller pipeline
+    while the coherence and SLC tag checks are still running, and being killed if either hits. That is the dashed bypass around
+    the SLC, inferred from the patent, not measured.
+  ask: What does a speculative DRAM read cost when it is killed, and who pays?
+  rests_on: inferred
+  targets:
+  - mc
+  - slc_speculative_read
+  status: draft
+- n: 5
+  title: What one line holds
+  say: The line format is read from patents and the widths are illustrative. A line has only three states, invalid, valid
+    and modified, because nothing above the SLC is snooped through it, so there is no shared or owned state to keep. Sixteen
+    sector valid bits cover the 128 bytes in 8 byte pieces and a byte mask records partial writes. A group id and a sticky
+    bit let drivers set quotas per client and keep lines that must not be replaced, and range registers can map an address
+    range into SLC lines as memory, for a camera or display frame.
+  ask: Why can a memory side cache get away with three states when the L2 needs MOESI?
+  rests_on: inferred
+  targets:
+  - line
+  - slc_line_states
+  - slc_sticky_quota
+  status: draft
+- n: 6
+  title: Replacement is disputed, and the cache is sliced
+  say: Two measurements disagree on replacement. EXAM loaded two equal buffers in turn and probed them in reverse and saw
+    the same hit count at every size, which is what a random policy gives. SLAC had GPU kernels touch a set's ways in controlled
+    orders and saw eviction follow access order, which is LRU. Our proposed reconciliation is that the insertion position
+    depends on the client group, so a CPU victim and a GPU read land in different places in the stack and each side's probe
+    sees a different policy. The cache is also sliced, two slices by even and odd line in a 2012 patent or four planes in
+    the Asahi register map, each behind its own arbiter.
+  ask: Design a probe that both EXAM and SLAC would accept as deciding between random and LRU.
+  rests_on: single
+  targets:
+  - repl
+  - slc_slices
+  status: draft
+- n: 7
+  title: About 90 cycles, and nobody has pinned it
+  say: The hit latency of about 90 cycles comes from a passing remark in Handley's first volume, and no measurement has been
+    published that isolates it. Our proposed split is 17 cycles to detect the L2 miss, about 20 to the coherence point and
+    its tag check, about 30 in the SLC array at its lower clock and about 20 back over the fabric. The test is a pointer chase
+    sized between 12 and 20 MiB once the L2 is thrashed. On power, the patents describe ways shutting down to match the share
+    in use, idle SRAM held at retention voltage, and low QoS requests batched until the array wakes.
+  rests_on: inferred
+  targets:
+  - lat
+  - slc_power_gating
+  status: draft
+- n: 8
+  title: The design issues, in the textbook order
+  say: Read down the textbook list. Associativity 16 ways in 4096 sets, confirmed. Indexing fully hashed, one source. A 128
+    byte block with sectors and a byte mask, line measured, sectors from a patent. Replacement disputed. Write back and memory
+    side, inferred. Exclusive of the CPU caches and filled by victims, corroborated. Partitioning by group quota, sticky line
+    and mapped range, from patents.
+  rests_on: corroborated
+  targets:
+  - fd
+  status: draft

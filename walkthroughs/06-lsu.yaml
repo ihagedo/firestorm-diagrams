@@ -1,0 +1,114 @@
+# 06-lsu.yaml
+# The 06-lsu figure read step by step.
+figure: 06-lsu
+steps:
+- n: 1
+  title: Four pipes, three loads and two stores a cycle
+  say: Four address generation pipes feed the memory side. Two take only loads, one takes only stores, and one takes either,
+    so the unit sustains three loads or two stores in a cycle but never five memory operations. The pipe count and the roles
+    are measured, by three groups.
+  ask: Why would a designer give one pipe both roles instead of adding a fifth pipe?
+  rests_on: confirmed
+  targets:
+  - pipe7
+  - pipe8
+  - pipe9
+  - pipe10
+  - agen
+  status: draft
+- n: 2
+  title: The checks on the way to the cache
+  say: Before the full address add finishes, a masked compare guesses whether the access stays in its page, which is read
+    from a patent. A load whose address comes from a just finished load can be bypassed in three cycles, which is inferred
+    from latency chains. The dependence predictor holds about 74 store and load PC pairs and makes a matching load wait for
+    its store; a load that guessed wrong costs a 25 cycle ordering flush. The pair count and the flush are each measured once.
+  ask: What would you see in a latency sweep if the same page guess were wrong often?
+  rests_on: single
+  targets:
+  - checks
+  - store_load_dep_predictor
+  status: draft
+- n: 3
+  title: A load queue of 130 and a store queue of 60
+  say: The queues are the window for memory operations. The load queue measures at 130 entries, though two later measurements
+    say 148 to 154, and the store queue at 60. Entries are taken at issue and given back before retire, which is inferred
+    from where the window knees fall. Two interleaved banks, a poison bit for snoops and a secondary store queue are patent
+    readings.
+  ask: If entries are released before retire, what does a window probe count?
+  rests_on: corroborated
+  targets:
+  - lq
+  - sq
+  - queues
+  status: draft
+- n: 4
+  title: Store to load forwarding in six cycles
+  say: A load that hits an older store in the queue gets its bytes in six cycles, measured by two groups. A partial overlap
+    is served from the queue and the L1 together at full rate, and when two stores overlap it costs one more cycle. When the
+    store and the load use the same address register the load is zero cycles, a register file trick. There is no load value
+    prediction and no address prediction on this core.
+  ask: Why does the same address register case not need the cache at all?
+  rests_on: corroborated
+  targets:
+  - fwd
+  status: draft
+- n: 5
+  title: Translation, 160 entries then 3072 then a walk
+  say: The L1 dTLB has 160 entries in five ways indexed by virtual address bits 18 to 14, one lookup a cycle; a miss costs
+    six cycles. The L2 TLB has 3072 entries in twelve ways and costs 25 cycles; whether it is shared by the cluster is a patent
+    reading. Pages are 16 KiB in three levels, with a walk cache for the upper levels, inferred from walk latencies.
+  ask: Why index the L1 dTLB from bit 14 rather than bit 12?
+  rests_on: confirmed
+  targets:
+  - dtlb
+  - l2tlb
+  - walk
+  - xlat
+  status: draft
+- n: 6
+  title: The L1D, 128 KiB in 16 banks with a predicted way
+  say: The data cache is 128 KiB, eight ways, 64 byte lines, measured many times. The set comes from virtual address bits
+    13 to 6, inside the page offset, so the lookup starts before translation. An eight bit micro tag from the upper virtual
+    bits picks the way, and the sixteen banks of 16 bytes let three loads proceed when they fall in different banks; two loads
+    to one element share an access. Fills steal about one bank cycle in seven, inferred from bandwidth under misses.
+  ask: What happens when two of the three loads land in the same bank?
+  rests_on: confirmed
+  targets:
+  - banks
+  - lookup
+  - l1d
+  status: draft
+- n: 7
+  title: Three cycles, 48 bytes a cycle
+  say: A pointer chase sees three cycles, an ALU consumer four, a SIMD register five, each measured. A line crossing adds
+    a cycle and a page crossing 28 to 31. Loads move 48 bytes a cycle on three 16 byte paths and stores 32 on two; a copy
+    runs about 150 gigabytes a second, and the path to the L2 is 32 bytes each way, derived from the bandwidth curves.
+  rests_on: confirmed
+  targets:
+  - latency
+  - bandwidth
+  status: draft
+- n: 8
+  title: Miss handling, the number nobody has measured
+  say: How many L1D misses can be outstanding is still open; nothing in the knowledge base measures it. The shape is our reading
+    of the patents, a fill buffer per line with later misses merging into it, a waiting load woken as the fill passes, and
+    a replay when the buffers are full. Streaming stores turning non temporal is inferred from bandwidth.
+  ask: How would you measure the number of outstanding misses with a pointer chase?
+  rests_on: conjecture
+  targets:
+  - mshr
+  status: draft
+- n: 9
+  title: Three prefetchers trained on virtual addresses
+  say: An access map prefetcher follows strides and dense regions with sixteen streams at once, inferred from stride sweeps.
+    A pointer chasing prefetcher dereferences one level after three accesses and reaches 64 KiB past the array, measured by
+    the Augury work. A temporal history just under 256 entries deep and an L2 throttle that rates each core every 32 cycles
+    are inferred and read from patents.
+  ask: Why would a prefetcher that follows pointers be a security problem?
+  rests_on: inferred
+  targets:
+  - ampm_prefetcher
+  - content_directed_prefetch
+  - temporal_prefetch
+  - pf
+  status: draft

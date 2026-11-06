@@ -1,0 +1,62 @@
+# l13-tlb.yaml
+# The l13-tlb figure read step by step.
+figure: l13-tlb
+steps:
+- n: 1
+  title: The radix walk, Barr 2010
+  say: A virtual address is split into indices, one per page table level; each level is a memory access. Four levels on x86
+    with 4 KiB pages and nine bit indices.
+  rests_on: corroborated
+  targets:
+  - fp
+  - p_va
+  - p_L4
+  - p_L3
+  - p_L2
+  - p_L1
+  - p_page
+  status: draft
+- n: 2
+  title: Caching the upper levels, Barr 2010 and Bhattacharjee 2013
+  say: A TLB holds leaf entries; an MMU cache holds the upper levels tagged by the virtual prefix, or by the page table address
+    in the unified form, so most walks resolve in one access.
+  ask: Why cache the upper levels separately from the leaves?
+  rests_on: corroborated
+  targets:
+  - p_uptc
+  - p_psc
+  - p_tlb
+  - p_mmuc
+  - p_l2d
+  status: draft
+- n: 3
+  title: 'The M1: two TLB levels and a walk cache'
+  say: 'A 160 entry L1 dTLB in five ways indexed by VA 18:14, a 3072 entry L2 TLB in twelve ways and 256 sets, six cycles
+    to miss the first and twenty five to miss the second, all measured. Three levels of 16 KiB pages with eleven bit indices,
+    walked through an MMU walk cache with leaf entries read from the L2 cache; the walk cache is a patent reading. L1 replacement
+    looks random: the latency ramps with no step.'
+  rests_on: confirmed
+  targets:
+  - fm
+  - m_va
+  - m_l1tlb
+  - m_l2tlb
+  - mmu_walk_cache
+  - m_repl
+  status: draft
+- n: 4
+  title: 'Patents and inferences; the verdict: likely'
+  say: 'Inferred: one lookup a cycle piggybacked, iTLB victims landing in the dTLB. Patents: the L2 TLB shared by the cluster,
+    a page size field per entry, the range invalidation shortcut. Likely: two levels in front of a walk cache, with ARM page
+    sizes in place of x86 ones.'
+  rests_on: inferred
+  targets:
+  - itlb_victims_to_dtlb
+  - cluster_l2_tlb
+  - dtlb_piggyback
+  - tlb_mixed_page_sizes
+  - tlb_invalidation_shortcuts
+  - kept
+  - changed
+  - added
+  status: draft

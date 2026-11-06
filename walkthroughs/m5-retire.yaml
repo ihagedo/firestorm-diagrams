@@ -1,0 +1,96 @@
+# m5-retire.yaml
+# The m5-retire figure read step by step.
+figure: m5-retire
+steps:
+- n: 1
+  title: A uop stream in program order
+  say: Twenty four uops as the renamer sees them. The shaded ones issue to a scheduler; the NOPs and the unconditional branch
+    take a retire slot but never an issue slot, which is measured and is the whole reason the NOP window is so large.
+  ask: Which of these uops could still fail after it has been renamed?
+  rests_on: confirmed
+  targets:
+  - stream
+  status: draft
+- n: 2
+  title: The rule applied, groups one to three
+  say: The first load opens group one, which takes the add, the sub and two NOPs until the conditional branch closes it, four
+    issuing uops in six slots. The two adds that follow are closed early by the store, because a memory op must open a group
+    of its own. The store opens group three and the compare and branch closes it.
+  ask: Why must a memory op open a group rather than join the one before it?
+  rests_on: inferred
+  targets:
+  - g1
+  - g2
+  - g3
+  - rule
+  status: draft
+- n: 3
+  title: Groups four to six, the seven slot limit
+  say: The second load opens group four and six NOPs fill it to seven slots, so the seventh NOP starts group five on its own.
+    The last load opens group six, which the unconditional branch closes. Six groups for twenty four uops; in a NOP stream
+    it would be four slots per group fewer.
+  rests_on: inferred
+  targets:
+  - g4
+  - g5
+  - g6
+  status: draft
+- n: 4
+  title: The rival reading, and the probe that decides
+  say: Handley reads the knees as rows with one failable slot each, where a failable uop is a load, a store or a branch, so
+    two memory ops never share a row. The two readings agree on every published probe and disagree on one we can run, a stream
+    of ldr ldr and five NOPs. One memory op per row gives a window of 330 times seven; each load in its own row gives 330
+    times three and a half.
+  ask: What else, besides the window, would differ between the two readings?
+  rests_on: proposed
+  targets:
+  - alt
+  - test
+  status: draft
+- n: 5
+  title: What a group holds, and what holds it open
+  say: Our proposed entry is seven slots with done bits, a count of map changes to pop from the history file, an exception
+    slot and a branch flag; retire pops up to eight groups a cycle, which is measured. Load and store queue entries are given
+    back before retire, which is inferred from the knees moving with the delay, so it is the done bits, not the queues, that
+    keep a group open.
+  rests_on: proposed
+  targets:
+  - entry
+  - lsq_release
+  status: draft
+- n: 6
+  title: Where the arithmetic fits
+  say: Three hundred and thirty groups of seven is 2310 and the NOP probe measures 2277, the difference being the slots the
+    probe loop itself occupies. The register writing probe stops at 623, which is the second queue exactly, retired sixteen
+    a cycle.
+  rests_on: confirmed
+  targets:
+  - a_nop
+  - a_regwrite
+  status: draft
+- n: 7
+  title: Where it does not fit, the open item
+  say: Three hundred and thirty groups of four issuing uops would be 1320, but the issuing probe measures about 1000, which
+    is three per group. Either groups hold three issuing uops rather than four, or a separate structure of about a thousand
+    entries limits issuing uops; the schedulers and dispatch buffers together hold 254, far short, so we lean to three per
+    group.
+  ask: What filler would separate a per group limit from a separate thousand entry structure?
+  rests_on: proposed
+  targets:
+  - a_issuing
+  - open
+  status: draft
+- n: 8
+  title: The other knees, each its own structure
+  say: One hundred and forty four branches fits a checkpoint table of that size, which is our proposal. The load knee moves
+    with the delay used, 125 under DRAM and 188 under a store address, the signature of allocation at issue. Stores stop at
+    60, and AnandTech's 106 is 60 plus the 48 entry load store scheduler less one. The integer knee at 362 is the register
+    file less what the probe keeps live.
+  ask: Why does the load knee move with the delay when the NOP knee does not?
+  rests_on: corroborated
+  targets:
+  - a_branches
+  - a_loads
+  - a_stores
+  - a_intreg
+  status: draft

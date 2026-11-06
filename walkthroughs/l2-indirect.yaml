@@ -1,0 +1,64 @@
+# l2-indirect.yaml
+# The l2-indirect figure read step by step.
+figure: l2-indirect
+steps:
+- n: 1
+  title: ITTAGE, Seznec 2011
+  say: 'The indirect form of TAGE: the same tagged tables on geometric history lengths, but the entry carries a target instead
+    of a counter, and target bits are shifted into the history. The longest history that hits provides the target.'
+  rests_on: corroborated
+  targets:
+  - p_ittage
+  - p_hist
+  - p_t0
+  - p_t1
+  - p_t2
+  - p_t3
+  - p_pred
+  - p_entry
+  status: draft
+- n: 2
+  title: 'The earlier form: a tagged target cache'
+  say: Chang, Hao and Patt indexed a target cache by the branch address hashed with a history of partial targets, with a tag
+    per entry. ITTAGE is that idea with several history lengths.
+  rests_on: corroborated
+  targets:
+  - p_ttc
+  - p_ba
+  - p_hi
+  - p_if
+  - p_tc
+  - p_tcmp
+  - p_bt
+  status: draft
+- n: 3
+  title: 'The M1: 1024 targets on the shared path record'
+  say: The M1 holds 1024 indirect targets, measured, indexed by the same 100 branch path record the direction tables use.
+    Table count and history lengths are ours; a target survives one miss and is replaced on the second.
+  ask: Why share one history between direction and target prediction?
+  rests_on: single
+  targets:
+  - m_ind
+  - m_pc
+  - m_path
+  - m_t1
+  - m_t2
+  - m_t3
+  - m_tgt
+  - m_cap
+  - m_entry
+  status: draft
+- n: 4
+  title: No context tag, and the verdict
+  say: 'Entries carry no process or privilege tag: a target trained in another process is fetched but not executed. The method
+    cache for objc_msgSend is absent on the M1 and appears in later cores. Kept: tables, target in the entry, target bits
+    in history, hysteresis. Changed: capacity and the shared history. Likely.'
+  rests_on: confirmed
+  targets:
+  - m_ctx
+  - m_hys
+  - m_objc
+  - col_kept
+  - col_changed
+  - col_added
+  status: draft

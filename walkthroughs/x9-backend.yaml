@@ -1,0 +1,131 @@
+# x9-backend.yaml
+# The x9-backend figure read step by step.
+figure: x9-backend
+steps:
+- n: 1
+  title: Reuse past the reconvergence point
+  say: After a mispredicted short forward branch, the instructions past the point where both paths rejoin are the same either
+    way. A patent describes keeping loads there that do not depend on the wrong path, and passing the branch outcomes to fetch;
+    only work that depended on the wrong path is redone. Nothing has measured this on the M1.
+  ask: Which instruction in the stream has to be redone, and why?
+  rests_on: conjecture
+  targets:
+  - ci_stream
+  - control_independence
+  status: draft
+- n: 2
+  title: Special registers without a serialising stall
+  say: Flag moves are handled at the rename map like any register, and other special register writes go out of order into
+    speculative storage that retire makes permanent. That is why an MSR does not drain the machine here, where on many cores
+    it would; patent reading, not measured.
+  rests_on: conjecture
+  targets:
+  - ssr_map
+  - speculative_special_regs
+  - ssr_retire
+  status: draft
+- n: 3
+  title: Four banks that sleep, and an overflow pool for results
+  say: A patent gives the integer file four banks that power down separately, with a two to three cycle wake. Another describes
+    results beyond the write ports going to a temporary pool that drains later instead of stalling issue. Both are patent
+    readings; the 380 registers are measured.
+  ask: How would you detect a bank waking up from software?
+  rests_on: conjecture
+  targets:
+  - banked_prf_power
+  - wb_units
+  - wb_ports
+  - writeback_overflow_pool
+  status: draft
+- n: 4
+  title: Two flag files, six cycles apart
+  say: Scalar code and SIMD code keep their own condition flag files. A flag chain inside one domain costs nothing extra,
+    while moving flags across costs about six cycles; this one is measured.
+  rests_on: confirmed
+  targets:
+  - split_flag_files
+  - flags_simd
+  status: draft
+- n: 5
+  title: One branch a cycle, and age bits for the flush
+  say: One possibly mispredicting op issues each cycle, and every scheduler entry carries a short age offset. When a branch
+    resolves wrong, recovery compares ages and flushes only the younger work in each pipeline. Patent reading.
+  rests_on: conjecture
+  targets:
+  - issue_age_flush
+  - br_issue
+  - flush_pipes
+  status: draft
+- n: 6
+  title: The divider is a side pipe
+  say: Divides issue from the unit 5 queue into their own pipeline, one every other cycle, while other work on unit 5 keeps
+    flowing; the measured throughput is what tells us the divider sits beside the pipe rather than in it.
+  rests_on: inferred
+  targets:
+  - div_q
+  - div_r1
+  - div_r2
+  - divider_pipe
+  status: draft
+- n: 7
+  title: Idle integer pipes lose their clock
+  say: The integer execution clocks and the prefetch training pipe are gated when idle, and tunables exist to force the clocks
+    on or limit the gating. The visible effect is the first integer op after a long stretch without one arriving a cycle or
+    more late; inferred from the tunables and that delay.
+  rests_on: inferred
+  targets:
+  - exec_clock_gating
+  - iex_pipes
+  - pf_train
+  - gate_tune
+  status: draft
+- n: 8
+  title: Crossing domains, and the multiply add bypass
+  say: An integer value reaches the SIMD file through a load slot, as a fake load, in about six cycles; the reverse has a
+    dedicated path of about six. A multiply add feeds its result into the next addend in one cycle, so the multiplier has
+    an accumulate bypass. All measured.
+  ask: Why would a designer route an integer to SIMD move through the load pipes?
+  rests_on: confirmed
+  targets:
+  - fw_int
+  - fw_simd
+  - exec_forwarding
+  - madd
+  - madd_u
+  status: draft
+- n: 9
+  title: A fused pair of FADDs
+  say: A dependent FADD pair takes six cycles unfused; Handley saw the chain run faster on the M3 and reads it as back to
+    back fusion that takes five. For the M1 this is inferred and not yet seen.
+  rests_on: inferred
+  targets:
+  - fp_back_to_back_fusion
+  - fadd1
+  status: draft
+- n: 10
+  title: The SIMD unit powers down
+  say: After a long stretch without SIMD work, the SIMD registers move to a low leakage store and the unit loses power; the
+    first SIMD op afterwards pays a fixed extra delay, and that delay recurs after every idle stretch. Patent reading, with
+    a test that would show it.
+  rests_on: conjecture
+  targets:
+  - sp0
+  - sp1
+  - simd_power_down
+  status: draft
+- n: 11
+  title: Two retire side guards
+  say: Prefetches, instruction fetches and speculative loads carry an abandonable bit, so on an interrupt the caches may drop
+    them and the core drains faster; demand loads and stores are kept. Separately, control bits stop the core speculating
+    past an HVC or a guarded call, while single stepping, or when the flush pointer is invalid, for a time set by a timer.
+    The first is a patent reading, the second inferred from the tunables.
+  rests_on: inferred
+  targets:
+  - abandonable_requests
+  - ab_demand
+  - ab_caches
+  - ab_drain
+  - fn0
+  - forced_nonspec_mode
+  - fn2
+  status: draft

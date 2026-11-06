@@ -1,0 +1,110 @@
+# x3-memctrl.yaml
+# The x3-memctrl figure read step by step.
+figure: x3-memctrl
+steps:
+- n: 1
+  title: One path from a core to DRAM, every hop shared
+  say: A load and a store from a Firestorm core take the same hops, the shared L2, the fabric port, the system level cache,
+    a memory controller and then LPDDR4X at 91 nanoseconds. The links are drawn as pairs because traffic flows both ways on
+    each. The hop list is confirmed; the single port per cluster is inferred.
+  rests_on: confirmed
+  targets:
+  - core
+  - l2
+  - noc
+  - slc
+  - mc
+  - dram
+  status: draft
+- n: 2
+  title: Mixing loads and stores adds no bandwidth, and one core takes it all
+  say: Measured, loads and stores mixed reach the same bandwidth as either alone, so they share one path all the way down
+    and the read write turnaround stays hidden. Measured too, a single core draws nearly all of the chip's 68 gigabytes a
+    second, more cores add nothing and congestion lowers the total.
+  ask: What does it tell you about the controller that one core can saturate eight channels?
+  rests_on: corroborated
+  targets:
+  - shared_rw_memory_path
+  - one_core_dram_saturation
+  status: draft
+- n: 3
+  title: Page compression engines at the L2
+  say: Each cluster has two page compression engines at its L2, one for the WKDM scheme and one for LZ, fed through a core's
+    store pipeline the way AMX is. The OS turns to them under a memory backlog or to save power or heat. Patent reading, nothing
+    measured.
+  rests_on: conjecture
+  targets:
+  - cluster_compression_engines
+  - lz
+  - ccef
+  status: draft
+- n: 4
+  title: A pattern index crosses the fabric instead of the data
+  say: Caches track a few common data patterns, an all zero line above all, and when a line matches one they send a small
+    pattern index over the fabric instead of the 128 bytes. Patent reading. It pairs with the all zero tag bit in the L2 from
+    Map 8.
+  ask: Which workloads would show this as higher effective bandwidth?
+  rests_on: conjecture
+  targets:
+  - zline
+  - ptab
+  - pattern_index_transfer
+  status: draft
+- n: 5
+  title: Inside the controller, writes merge by byte enable
+  say: The controller keeps a write queue and a read queue. Writes to the same address merge by byte enable into one entry.
+    A read that overlaps a queued partial write goes first and picks up the write's bytes on its way out, and a read modify
+    write read ends the read turn. Patent reading.
+  rests_on: conjecture
+  targets:
+  - wq
+  - rq
+  - mc_write_merge
+  status: draft
+- n: 6
+  title: Read turns and write turns
+  say: DRAM is turned between reading and writing in turns. The controller enters a write turn when the write queue passes
+    a high watermark and leaves at a low one, or earlier when a low latency read is waiting, and it sizes the turns against
+    an access efficiency target. Patent reading, consistent with the measurement that mixing costs nothing.
+  ask: Why does turning the bus cost bandwidth at all?
+  rests_on: conjecture
+  targets:
+  - dram_rw_turns
+  - wturn
+  status: draft
+- n: 7
+  title: Refresh slips inside its window
+  say: A bank refresh may slip anywhere inside its window. The controller places it first into a write turn, failing that
+    into a read turn, and only when time runs short does it force the refresh with a shorter window and lookahead. Patent
+    reading.
+  rests_on: conjecture
+  targets:
+  - dram_refresh_scheduling
+  status: draft
+- n: 8
+  title: Each bank picks its highest category request
+  say: Each DRAM bank chooses from per page and per channel lists, taking the highest category first and favouring page hits
+    up to a streak cap so one stream cannot hold the bank. Requests that wait gain priority with age or when a merge joins
+    them. Patent reading.
+  rests_on: conjecture
+  targets:
+  - pp0
+  - pp1
+  - pc
+  - pick
+  - bank
+  status: draft
+- n: 9
+  title: The DRAM clock follows demand
+  say: When quiet, the controller and DRAM drop to half clock and then to self refresh with writes held, and the state is
+    revisited every 50 microseconds to 20 milliseconds while the PHY recalibrates. Measured, the DRAM latency falls as load
+    rises, which is read as the clock rising with demand. The states are patent reading; the latency curve is one group's
+    measurement.
+  ask: How would you separate a faster DRAM clock from a shorter queue in a latency curve?
+  rests_on: inferred
+  targets:
+  - dram_power_states
+  - half
+  - selfref
+  - dram_clock_scaling
+  status: draft

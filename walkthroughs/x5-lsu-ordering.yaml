@@ -1,0 +1,156 @@
+# x5-lsu-ordering.yaml
+# The x5-lsu-ordering figure read step by step.
+figure: x5-lsu-ordering
+steps:
+- n: 1
+  title: Barriers colour the requests, the check sits between L1 and L2
+  say: A 2012 patent describes barriers as a colour. Every memory request carries the current colour, a barrier advances it,
+    and no request of a later colour completes until every request of the earlier colour has. Handley reads the enforcement
+    point as the boundary between the L1D and the L2, so hits in the L1D pass and only misses wait in colour order. Kernel
+    settings on later cores mention colour optimisations, which is the only trace outside the patent.
+  ask: What would it cost to enforce the barrier inside the load-store unit instead?
+  rests_on: conjecture
+  targets:
+  - lsu_a
+  - creq
+  - dmb_a
+  - l1d_a
+  - barrier_colors
+  - l2_a
+  status: draft
+- n: 2
+  title: A store exclusive and its barrier fuse
+  say: A 2010 patent fuses a store exclusive and the barrier that follows it into one operation, so the pair needs a single
+    trip to the point of coherency instead of two. Nothing has measured it; it is drawn because the lock release sequence
+    is exactly this pair.
+  rests_on: conjecture
+  targets:
+  - stxr_a
+  - dmb_b
+  - fuse
+  - stxr_barrier_fusion
+  - poc
+  status: draft
+- n: 3
+  title: ISB and DSB finish early
+  say: Two patents let an ISB or DSB complete before it reaches the head of the retire queue. At decode the barrier flushes
+    everything younger and stops fetch; it then waits only for the older memory and system register work it cares about, and
+    if a rare conflicting instruction turns up it is poisoned rather than waited for. The test would be that a barrier costs
+    little more than a refetch when nothing older is pending, and grows with older loads and stores rather than with older
+    arithmetic.
+  ask: Why is it safe to complete a barrier before everything older has retired?
+  rests_on: conjecture
+  targets:
+  - e0
+  - e1
+  - early_barrier_completion
+  - e3
+  status: draft
+- n: 4
+  title: The exclusive monitor lives in the L1D
+  say: A load exclusive reserves one 64 byte line, and the reservation lasts exactly as long as the line stays in the L1D.
+    S2C showed that walking an eight address eviction set between the load exclusive and the store exclusive makes the store
+    fail, and never when the line stays. Each core holds one reservation; a younger load exclusive replaces the older one.
+  ask: What does binding the reservation to L1D residency buy the designer, and what does it cost software?
+  rests_on: corroborated
+  targets:
+  - x0
+  - exclusive_monitor_l1
+  - x2
+  - x3
+  - xl1
+  status: draft
+- n: 5
+  title: One privileged bit switches the memory model
+  say: A bit in a control register puts the core in x86 total store order for Rosetta. Loads still issue out of order; what
+    changes is what the unit allows to complete and when. With the bit set, cache hitting loads wider than 16 bytes run more
+    than ten times slower on the M1, and an 8 byte load forwarded from a 4 byte store slows several times. Boot code also
+    serialises the micro-ops of vector loads in this mode on the M1 and not on the M2.
+  ask: Why would wide loads in particular get slower under a stronger ordering model?
+  rests_on: confirmed
+  targets:
+  - ord_arm
+  - ord_tso
+  - tsomux
+  - tso_mode
+  - ord_out
+  status: draft
+- n: 6
+  title: Two store queue tiers, the fast one in front
+  say: Handley reads the store queue as two tiers. A primary queue holds the oldest stores, is searched by three loads at
+    once and writes to the L1D; a secondary queue holds the younger stores, serves one load search at a time and can only
+    pass stores on to the primary queue. A matching store in the primary queue is found in about four cycles, helped by a
+    hash index; the test is that forwarding from one of the youngest stores with many older ones in flight takes about eleven.
+  ask: Why search the old stores with three ports and the young ones with one?
+  rests_on: conjecture
+  targets:
+  - sq2
+  - hierarchical_store_queue
+  - loads_c
+  status: draft
+- n: 7
+  title: A merge buffer and a streaming detector in front of the cache
+  say: Committed stores leave the queue for a merge buffer that drains by a programmable threshold, so a burst of stores to
+    one chunk of a line writes the L1D fewer times than it has stores. Kernel settings for the E cores name the buffer and
+    its threshold; two patents describe the merging. A streaming detector turns full line store streams into non temporal
+    stores without a software hint, so they go straight out as full lines with no read for ownership and no L1 fill.
+  rests_on: inferred
+  targets:
+  - store_merge_buffer
+  - drain_c
+  - l1d_c
+  - l2_c
+  - streaming_store_nt
+  status: draft
+- n: 8
+  title: Load poison keeps loads ordered against other cores
+  say: A load that has executed but is not yet the oldest carries a poison bit. If another core writes the line before the
+    load becomes non speculative, the bit is set and the load is replayed or the pipeline flushed. This is how a core that
+    issues loads out of order still shows other cores a legal order. It comes from a 2013 patent and the bit names in the
+    boot code; the measured side of ordering is the 25 cycle flush when a load runs ahead of an aliasing store, which the
+    74 entry load store predictor exists to avoid.
+  ask: What is the difference between a replay and a flush here, and when is each enough?
+  rests_on: conjecture
+  targets:
+  - lq_d
+  - core_d
+  - p0
+  - p1
+  - load_poison_bits
+  status: draft
+- n: 9
+  title: A CPU access waits for the coprocessor on the same page
+  say: AMX stores leave through the store queue and complete at the L2, so a CPU load after them could overtake. A patent
+    gives the load store unit a small table of pages with coprocessor accesses outstanding, counted up as each issues and
+    down as the L2 reports it done. A CPU load or store to a page in the table waits, even to a different address in the page;
+    to any other page it issues. The granularity is coarse because the case is rare.
+  ask: Why match on the page rather than the address, when the address is known?
+  rests_on: inferred
+  targets:
+  - coprocessor_ordering_table
+  - amx_e
+  - l2_e
+  - load_e
+  - pgcmp
+  - w0
+  - w1
+  status: draft
+- n: 10
+  title: What breaks a livelock
+  say: The boot code names the widgets. Counters watch for a locked line that keeps being victimised and for the oldest load
+    or store that keeps replaying, and step in by stalling issue. A random number generator adds occasional stalls at issue,
+    replay, retire and drain. Together they turn a livelock into timing noise rather than a hang. Inferred from the bit names;
+    nothing has measured them.
+  ask: Why is randomness the right tool against a livelock when it is the wrong tool for almost everything else?
+  rests_on: inferred
+  targets:
+  - fp_lock
+  - fp_replay
+  - fp_lfsr
+  - lsu_forward_progress
+  - pt_issue
+  - pt_replay
+  - pt_retire
+  - pt_drain
+  - livelock
+  status: draft

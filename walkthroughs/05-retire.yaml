@@ -1,0 +1,92 @@
+# 05-retire.yaml
+# The 05-retire figure read step by step.
+figure: 05-retire
+steps:
+- n: 1
+  title: Uops retire in groups, in program order
+  say: The retire queue does not hold one instruction per entry. It holds about 330 groups, each of up to seven uops, and
+    retires up to eight groups a cycle in program order. Three groups measured the 330 independently, so the size is solid;
+    what a group is made of is the inference.
+  ask: Why would a core that renames eight a cycle want to retire in groups rather than one entry per uop?
+  rests_on: corroborated
+  targets:
+  - crq
+  - commit
+  status: draft
+- n: 2
+  title: What opens and closes a group
+  say: The packing rule as read from the knees is that a memory op opens a group, a branch closes one, a group holds at most
+    seven slots, and only about four of them can be uops that issue. Groups of seven are only seen for eliminated instructions,
+    which is one source's measurement.
+  ask: Which uops can fail before they retire, and which can fail only after?
+  rests_on: inferred
+  targets:
+  - rule
+  status: draft
+- n: 3
+  title: Two readings of the same knees, and our entry
+  say: Handley reads the same data as one failable slot per row, where loads, stores and branches are failable and the rest
+    of the row may be just a count. Johnson reads it as groups with open and close rules. We propose an entry with seven slots
+    and done bits, a count of map changes to pop, an exception slot and a branch flag; that is ours, drawn in magenta.
+  ask: What single probe would tell one row per memory op from one row per group?
+  rests_on: proposed
+  targets:
+  - alt
+  - group_entry
+  status: draft
+- n: 4
+  title: A second queue for the uops that change the map
+  say: Every uop that writes a register also takes an entry in the rename retire queue, about 623 of them, recording the old
+    and the new physical register for that architectural name. Nine measurements from four groups agree on the size; that
+    it is a history file is the reading.
+  ask: Why does a MOV that uses no physical register still take one of these entries?
+  rests_on: confirmed
+  targets:
+  - rename
+  - rrq
+  - rrq_entry
+  status: draft
+- n: 5
+  title: A flush walks the map back from the tail
+  say: On a mispredict or an ordering flush the queue is read backwards from the tail, restoring the old mapping of each entry
+    until the flushed point. The 13 cycle mispredict penalty and the 25 cycle ordering penalty are measured; that the walk
+    is what fills them is our reading.
+  ask: What limits how fast the walk can go, and what would you measure to find out?
+  rests_on: inferred
+  targets:
+  - walkback
+  status: draft
+- n: 6
+  title: At retire the old register is freed
+  say: When an entry retires its old physical register goes back to the free list, sixteen entries a cycle, measured two ways.
+    This is why a program that writes registers fast sees a different window from one that only fills retire slots.
+  rests_on: corroborated
+  targets:
+  - free
+  status: draft
+- n: 7
+  title: Three windows from two queues
+  say: Fill the gap behind a long load with NOPs and the window is about 2277, which is 330 groups of seven less the loop.
+    Fill it with ALU uops that issue and it is about 1000, which fits three issuing uops per group better than four. Fill
+    it with register writers and it is 623, the second queue.
+  ask: Which of the three would an ordinary program hit first?
+  rests_on: confirmed
+  targets:
+  - w_nop
+  - w_issuing
+  - w_regwrite
+  status: draft
+- n: 8
+  title: Five more windows, five more structures
+  say: The same probe with other fillers finds 362 free integer registers, 382 free FP registers, 144 branches, 130 loads
+    and 60 stores. Each knee is a different structure, and the lesson of the figure is that there is no single reorder buffer
+    size to quote.
+  ask: Why do the free register counts fall short of the register file sizes?
+  rests_on: corroborated
+  targets:
+  - w_intreg
+  - w_fpreg
+  - w_branches
+  - w_loads
+  - w_stores
+  status: draft

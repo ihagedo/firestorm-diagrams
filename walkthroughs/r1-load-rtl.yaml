@@ -1,0 +1,85 @@
+# r1-load-rtl.yaml
+# The r1-load-rtl figure read step by step.
+figure: r1-load-rtl
+steps:
+- n: 1
+  title: Select, the oldest ready load and the pair check
+  say: The load store queue holds 48 entries, measured by two groups; a selector picks the oldest ready one, which is our
+    reading of the scheduling order. The dependence predictor, about 74 store and load PC pairs, can hold a load back before
+    it crosses the first latch. The latch between select and address generation carries the chosen operation.
+  ask: Why check the predictor before the address is known?
+  rests_on: corroborated
+  targets:
+  - sched
+  - sel
+  - dep
+  - r1
+  status: draft
+- n: 2
+  title: Address, a 64 bit base plus an immediate
+  say: The base register is read from the integer file over one read port, 64 bits wide, and added to the immediate to make
+    a 48 bit virtual address. Beside the adder, a same page compare on the base guesses whether the sum stays inside the page,
+    which a patent describes. The address latch carries 48 bits of address and the same page flag.
+  rests_on: confirmed
+  targets:
+  - prf
+  - add
+  - samepage
+  - r2
+  status: draft
+- n: 3
+  title: Lookup, eight bits of micro tag pick one of eight ways
+  say: The upper virtual address bits are folded into an eight bit micro tag, compared against the eight stored micro tags
+    of the set, 64 bits in all, and the matching way is chosen. The width of the micro tag is measured by two security papers;
+    the fold itself is our reading.
+  ask: How many different lines can share one micro tag?
+  rests_on: single
+  targets:
+  - h
+  - utag
+  - c8
+  status: draft
+- n: 4
+  title: Lookup, the dTLB and the physical tags in parallel
+  say: While the way is chosen, the dTLB turns 34 bits of virtual page number into 34 bits of physical, 160 entries in five
+    ways, and the tag array reads all eight 34 bit physical tags of the set indexed by bits 13 to 6. The latch into the data
+    stage carries the way, the physical address and the eight tags, which is why it is the widest in the figure.
+  rests_on: confirmed
+  targets:
+  - dtlb
+  - tagarr
+  - r3
+  status: draft
+- n: 5
+  title: Data, one bank of sixteen through a mux
+  say: The chosen way is read from one of sixteen 16 byte banks, selected by address bits 7 to 4, and the 128 bit result crosses
+    into the confirm stage with the physical address and the tags still beside it. Sixteen banks is measured once; the bank
+    select bits follow from it.
+  ask: What does the 16 by 128 bus cost compared with a single wide array?
+  rests_on: single
+  targets:
+  - banks
+  - m1
+  - r4
+  status: draft
+- n: 6
+  title: Confirm, 34 bits must match or the load replays
+  say: The 34 bit physical tag of the predicted way is compared with the translated address. A match writes back to the register
+    file and the bypass network, three 128 bit results a cycle; a mismatch with a line present means the micro tag guessed
+    wrong and the load replays from the scheduler, our reading of the Augury aliasing result.
+  rests_on: inferred
+  targets:
+  - c34
+  - wb
+  - replay
+  status: draft
+- n: 7
+  title: The store queue answers and the fill buffer waits
+  say: In the same stage the store queue CAM can answer with the bytes of an older store, six cycles after issue, measured
+    by two groups. A true miss takes a fill buffer entry; how many there are is not measured, the figure says at least seven
+    from Little's law on the measured bandwidth and latency to the L2.
+  rests_on: corroborated
+  targets:
+  - sqcam
+  - fill
+  status: draft

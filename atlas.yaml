@@ -1,0 +1,4373 @@
+# atlas.yaml
+# The atlas index: the maps in reading order, each with its figures and block sheets.
+atlas: Firestorm Atlas
+core: firestorm
+subtitle: the Apple M1 Firestorm core, drawn from measurements
+kinds:
+- structure
+- dataflow
+- rtl
+- fsm
+- storyboard
+- lineage
+levels:
+- chip
+- core
+- region
+- block
+- mechanism
+maps:
+- n: 1
+  id: die
+  name: The Die
+  subtitle: two clusters, one memory side, the fabric between
+  blocks:
+  - chip
+  - pcluster
+  - ecluster
+  figures:
+  - id: chip
+    title: Apple M1, the die as a block diagram
+    subtitle: ''
+    file: figures/chip.svg
+    level: chip
+    up: null
+    kinds:
+    - dataflow
+    - structure
+    blocks:
+    - chip
+    - pcluster
+    - ecluster
+    - core
+    - l2
+    - amx
+    - slc
+    - memctrl
+    - fabric
+    - power
+    mechanisms: []
+    hot:
+    - amx
+    - clients
+    - core0
+    - core1
+    - core2
+    - core3
+    - dram
+    - ecl
+    - ecore0
+    - ecore1
+    - ecore2
+    - ecore3
+    - el2
+    - epwr
+    - fab
+    - gpu
+    - io
+    - l2
+    - mc
+    - mem
+    - npu
+    - pcl
+    - pwr
+    - slc
+    drawio:
+      file: drawio/chip.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/chip.yaml
+      steps: 10
+      agreed: 0
+  - id: 07-beyond
+    title: Beyond the core, the cache hierarchy and memory
+    subtitle: ''
+    file: figures/07-beyond.svg
+    level: region
+    up: chip
+    kinds:
+    - dataflow
+    blocks:
+    - l2
+    - slc
+    - memctrl
+    - fabric
+    - amx
+    - ecluster
+    - power
+    mechanisms: []
+    hot:
+    - amx
+    - core0
+    - core1
+    - core2
+    - core3
+    - ecl
+    - fab
+    - gpu
+    - l2
+    - ladder
+    - mc
+    - others
+    - pcl
+    - pwr
+    - slc
+    - uncore
+    drawio:
+      file: drawio/port-07.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/07-beyond.yaml
+      steps: 8
+      agreed: 0
+  sheets:
+  - block: chip
+    name: Apple M1
+    file: sheets/chip.svg
+    parent: null
+    figures:
+    - chip
+  - block: pcluster
+    name: P-cluster
+    file: sheets/pcluster.svg
+    parent: chip
+    figures:
+    - chip
+    - x1-fabric
+    - x2-power
+  - block: ecluster
+    name: E-cluster (Icestorm)
+    file: sheets/ecluster.svg
+    parent: chip
+    figures:
+    - chip
+    - poster
+    - 07-beyond
+    - x1-fabric
+    - x4-l2-more
+- n: 2
+  id: core
+  name: The Core
+  subtitle: Firestorm end to end, and the machines that decide
+  blocks:
+  - core
+  - frontend
+  - backend
+  figures:
+  - id: poster
+    title: Apple M1 Firestorm core, the whole machine as we think it is
+    subtitle: ''
+    file: figures/poster.svg
+    level: core
+    up: chip
+    kinds:
+    - dataflow
+    - structure
+    blocks:
+    - core
+    - frontend
+    - backend
+    - lsu
+    - btb
+    - dirpred
+    - ras
+    - indpred
+    - l1i
+    - itlb
+    - fetch
+    - iq
+    - decode
+    - rename
+    - int_prf
+    - fp_prf
+    - flags_prf
+    - retire
+    - lq
+    - sq
+    - l1d
+    - dtlb
+    - prefetch
+    - mshr
+    - power
+    - ecluster
+    - amx
+    - l2
+    - fabric
+    - slc
+    - memctrl
+    mechanisms: []
+    hot:
+    - agu
+    - amx
+    - bar
+    - be1
+    - branches
+    - btb
+    - by
+    - dA
+    - dB
+    - dF
+    - dL
+    - dM
+    - decode
+    - dep
+    - dirpred
+    - dram
+    - dtlb
+    - ecl
+    - ex
+    - exc
+    - fab
+    - fe
+    - fetch
+    - fill
+    - flags
+    - fp_prf
+    - fwd
+    - gpu
+    - groups
+    - imm
+    - indpred
+    - int_prf
+    - iq
+    - itlb
+    - l1d
+    - l1i
+    - l2
+    - l2tlb
+    - leq
+    - lq
+    - ls
+    - map
+    - mc
+    - mshr
+    - nfp
+    - order
+    - path
+    - pf1
+    - pf2
+    - pf3
+    - pf4
+    - plru
+    - power
+    - q1
+    - q10
+    - q11
+    - q12
+    - q13
+    - q14
+    - q2
+    - q3
+    - q4
+    - q5
+    - q6
+    - q7
+    - q8
+    - q9
+    - ras
+    - rename
+    - ret
+    - rrq
+    - slc
+    - split
+    - sq
+    - u1
+    - u10
+    - u11
+    - u12
+    - u13
+    - u14
+    - u2
+    - u3
+    - u4
+    - u5
+    - u6
+    - u7
+    - u8
+    - u9
+    - uops
+    - utag
+    - zcl
+    drawio:
+      file: drawio/poster.drawio
+      page: ''
+  - id: 01-core-overview
+    title: Firestorm core, block diagram
+    subtitle: ''
+    file: figures/01-core-overview.svg
+    level: core
+    up: core
+    kinds:
+    - dataflow
+    - structure
+    blocks:
+    - core
+    - frontend
+    - backend
+    - lsu
+    - btb
+    - dirpred
+    - indpred
+    - ras
+    - l1i
+    - itlb
+    - fetch
+    - decode
+    - rename
+    - int_prf
+    - fp_prf
+    - flags_prf
+    - dispatch
+    - sched_int
+    - sched_fp
+    - sched_ls
+    - eu_int
+    - eu_fp
+    - retire
+    - lq
+    - sq
+    - l1d
+    - dtlb
+    - mshr
+    - prefetch
+    - power
+    - amx
+    - l2
+    - fabric
+    - slc
+    - memctrl
+    mechanisms:
+    - move_elimination
+    - macro_op_fusion
+    - immediate_regs
+    - paired_sched_queues
+    - store_load_dep_predictor
+    - l1d_utag_way_predictor
+    - l1d_tree_plru
+    - ampm_prefetcher
+    - content_directed_prefetch
+    - temporal_prefetch
+    hot:
+    - amx
+    - backend
+    - beyond
+    - btb
+    - decode
+    - dirpred
+    - dispatch
+    - dtlb
+    - eu_fp
+    - eu_int
+    - eu_ls
+    - fabric
+    - fetch
+    - flags_prf
+    - fp_prf
+    - frontend
+    - indpred
+    - int_prf
+    - itlb
+    - l1d
+    - l1i
+    - l2
+    - lq
+    - lsdp
+    - lsu
+    - memctrl
+    - mshr
+    - power
+    - prefetch
+    - ras
+    - rename
+    - retire
+    - sched_fp
+    - sched_int
+    - sched_ls
+    - slc
+    - sq
+    drawio:
+      file: drawio/port-01.drawio
+      page: 01 core overview
+    walkthrough:
+      file: walkthroughs/01-core-overview.yaml
+      steps: 8
+      agreed: 0
+  - id: p1-pipeline
+    title: Firestorm core, the pipeline as stacked stages
+    subtitle: ''
+    file: figures/p1-pipeline.svg
+    level: core
+    up: core
+    kinds:
+    - dataflow
+    - rtl
+    - structure
+    blocks:
+    - core
+    - frontend
+    - backend
+    - lsu
+    - fetch
+    - btb
+    - dirpred
+    - indpred
+    - ras
+    - ftq
+    - itlb
+    - l1i
+    - iq
+    - decode
+    - rename
+    - dispatch
+    - sched_int
+    - sched_fp
+    - sched_ls
+    - int_prf
+    - fp_prf
+    - flags_prf
+    - eu_int
+    - eu_fp
+    - lq
+    - sq
+    - dtlb
+    - l1d
+    - l2
+    - retire
+    mechanisms: []
+    hot:
+    - bru
+    - btb
+    - decode
+    - dirpred
+    - disp_fp
+    - disp_int
+    - disp_ls
+    - disp_mul
+    - dtlb
+    - eu_fp
+    - eu_int
+    - fetch
+    - flags_prf
+    - fp_prf
+    - freelists
+    - ftq
+    - fwd
+    - indpred
+    - int_prf
+    - iq
+    - itlb
+    - l1d
+    - l1i
+    - l2
+    - l_decode_rename
+    - l_dispatch_issue
+    - l_execute_writeback
+    - l_fetch_decode
+    - l_issue_registerread
+    - l_predict_fetch
+    - l_registerread_execute
+    - l_rename_dispatch
+    - l_writeback_retire
+    - lq
+    - ls_pipes
+    - maps
+    - pc
+    - ras
+    - rename
+    - retire
+    - rrq
+    - sched_fp
+    - sched_int
+    - sched_ls
+    - sq
+    - st_decode
+    - st_dispatch
+    - st_execute
+    - st_fetch
+    - st_issue
+    - st_predict
+    - st_register_read
+    - st_rename
+    - st_retire
+    - st_writeback
+    - stl
+    - wb
+    - window
+    drawio:
+      file: drawio/pipeline.drawio
+      page: P1 pipeline
+    walkthrough:
+      file: walkthroughs/p1-pipeline.yaml
+      steps: 11
+      agreed: 0
+  - id: 08-lifecycle
+    title: Where a uop takes and gives back its resources
+    subtitle: ''
+    file: figures/08-lifecycle.svg
+    level: core
+    up: chip
+    kinds: []
+    blocks:
+    - core
+    - rename
+    - dispatch
+    - sched_int
+    - retire
+    - lq
+    - sq
+    mechanisms:
+    - lsq_at_issue
+    - lsq_early_release
+    - rename_retire_queue
+    - retire_groups
+    hot:
+    - branch_inflight
+    - dispatch_entry
+    - lsq_entry
+    - preg
+    - retire_slot
+    - rrq_entry
+    - sched_entry
+    - st0
+    - st1
+    - st10
+    - st2
+    - st3
+    - st4
+    - st5
+    - st6
+    - st7
+    - st8
+    - st9
+    - store_commit
+    drawio:
+      file: drawio/port-08.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/08-lifecycle.yaml
+      steps: 9
+      agreed: 0
+  - id: f1-fsm
+    title: Decision state machines
+    subtitle: ''
+    file: figures/f1-fsm.svg
+    level: mechanism
+    up: core
+    kinds:
+    - fsm
+    blocks:
+    - fetch
+    - retire
+    - l2
+    - lsu
+    - l1d
+    mechanisms:
+    - staged_fetch_redirect
+    - retire_groups
+    - l2_half_lines
+    - l2_autolock
+    - store_load_dep_predictor
+    - l1d_utag_way_predictor
+    - fill_forwarding
+    hot:
+    - a0
+    - a1
+    - a2
+    - a3
+    - a4
+    - a5
+    - a6
+    - a7
+    - b0
+    - b1
+    - b2
+    - b3
+    - b4
+    - c0
+    - c1
+    - c2
+    - c3
+    - c4
+    - c5
+    - d0
+    - d1
+    - d2
+    - d3
+    - e0
+    - e1
+    - e2
+    - e3
+    - e4
+    - fa
+    - fb
+    - fc
+    - fd
+    - fe
+    drawio:
+      file: drawio/rtl-fsm.drawio
+      page: F1 state machines
+    walkthrough:
+      file: walkthroughs/f1-fsm.yaml
+      steps: 7
+      agreed: 0
+  sheets:
+  - block: core
+    name: Firestorm core
+    file: sheets/core.svg
+    parent: pcluster
+    figures:
+    - chip
+    - poster
+    - 01-core-overview
+    - 08-lifecycle
+    - p1-pipeline
+  - block: frontend
+    name: Frontend
+    file: sheets/frontend.svg
+    parent: core
+    figures:
+    - poster
+    - 01-core-overview
+    - 02-frontend
+    - p1-pipeline
+  - block: backend
+    name: Backend
+    file: sheets/backend.svg
+    parent: core
+    figures:
+    - poster
+    - 01-core-overview
+    - 03-rename
+    - 04-issue
+    - 05-retire
+    - x9-backend
+    - p1-pipeline
+- n: 3
+  id: frontend
+  name: The Front End
+  subtitle: predict, fetch, decode
+  blocks:
+  - btb
+  - dirpred
+  - indpred
+  - ras
+  - fetch
+  - ftq
+  - l1i
+  - itlb
+  - decode
+  - iq
+  figures:
+  - id: 02-frontend
+    title: Front end, prediction and fetch
+    subtitle: ''
+    file: figures/02-frontend.svg
+    level: region
+    up: poster
+    kinds:
+    - dataflow
+    blocks:
+    - frontend
+    - l1i
+    - itlb
+    - btb
+    - dirpred
+    - ras
+    - indpred
+    - fetch
+    - ftq
+    - decode
+    - iq
+    mechanisms:
+    - next_fetch_groups
+    - speculation_barriers
+    - phantom_fetch
+    - l1i_coupled_btb
+    - ras_overflow_clear
+    - two_level_ras
+    - l1i_tree_plru
+    - l1i_maintenance_only
+    - l1i_predecode
+    - uop_split_merge
+    - fetch_page_split
+    - decoupled_fetch
+    hot:
+    - barriers
+    - btb
+    - decode
+    - dirpred
+    - fcost
+    - fetch
+    - ffetch
+    - fill
+    - fpred
+    - indpred
+    - iq
+    - itlb
+    - l0hit
+    - l1hit
+    - l1i
+    - mispred
+    - nfp
+    - ras
+    - rashit
+    - recovery
+    drawio:
+      file: drawio/port-02.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/02-frontend.yaml
+      steps: 8
+      agreed: 0
+  - id: m1-fetch
+    title: Fetch, cycle by cycle, and the three redirect tiers
+    subtitle: ''
+    file: figures/m1-fetch.svg
+    level: mechanism
+    up: fetch
+    kinds:
+    - structure
+    blocks:
+    - fetch
+    - btb
+    - l1i
+    - itlb
+    - iq
+    - decode
+    - ras
+    mechanisms:
+    - staged_fetch_redirect
+    - wrong_path_redirect
+    - next_fetch_groups
+    - nfp_training
+    - l1i_coupled_btb
+    - l1i_way_prediction
+    - predictor_power_gating
+    - phantom_fetch
+    - iq_bypass_fixup
+    - uop_split_merge
+    - two_level_ras
+    - ras_overflow_clear
+    - ras_pac_check
+    hot:
+    - dec_check
+    - decode
+    - exec_resolve
+    - fdec
+    - fl0
+    - fnfp
+    - ftime
+    - iq
+    - l0_index
+    - l0_look
+    - l0_reading
+    - l1btb_look
+    - l1i_read
+    - l1i_tag
+    - nfp_entry
+    - nfp_look
+    - nfp_training
+    - one_taken
+    - phantom_fetch
+    - slow_look
+    - two_level_ras
+    drawio:
+      file: drawio/port-m1.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/m1-fetch.yaml
+      steps: 9
+      agreed: 0
+  - id: x7-fetch-path
+    title: The fetch path in detail
+    subtitle: ''
+    file: figures/x7-fetch-path.svg
+    level: mechanism
+    up: l1i
+    kinds:
+    - dataflow
+    - fsm
+    - structure
+    blocks:
+    - l1i
+    - itlb
+    - btb
+    - fetch
+    - ftq
+    - iq
+    - dirpred
+    mechanisms:
+    - l1i_vipt
+    - l1i_tree_plru
+    - l1i_predecode
+    - l1i_maintenance_only
+    - cold_start_mode
+    - scan_on_fill_nfp
+    - phantom_fetch
+    - biased_branch_filter
+    - fetch_page_split
+    - decoupled_fetch
+    - iq_bypass_fixup
+    - loop_modes
+    - trace_cache
+    hot:
+    - biased_branch_filter
+    - bj
+    - blu
+    - bm
+    - bn
+    - cold_start_mode
+    - ctag
+    - dec2
+    - decoupled_fetch
+    - fa
+    - fb
+    - fc
+    - fetch
+    - fetch_page_split
+    - fg2
+    - fgrp
+    - iq_bypass_fixup
+    - iqmux
+    - itlb
+    - l1i
+    - l1i_maintenance_only
+    - l1i_predecode
+    - l1i_tree_plru
+    - l2
+    - lm0
+    - lm2
+    - loop_modes
+    - nfp
+    - phbtb
+    - phdec
+    - phfetch
+    - pred
+    - runA
+    - runB
+    - runC
+    - scan
+    - tage
+    - tfetch
+    - trace_cache
+    - va
+    - warm
+    drawio:
+      file: drawio/deep-fetchpath.drawio
+      page: X7 fetch path
+    walkthrough:
+      file: walkthroughs/x7-fetch-path.yaml
+      steps: 11
+      agreed: 0
+  - id: m2-dirpred
+    title: Direction predictor, path history, tables and recovery
+    subtitle: ''
+    file: figures/m2-dirpred.svg
+    level: mechanism
+    up: dirpred
+    kinds:
+    - dataflow
+    - structure
+    blocks:
+    - dirpred
+    - indpred
+    mechanisms:
+    - path_history_shift_xor
+    - tage_tables
+    - path_history_rewind
+    - retire_time_training
+    - loop_predictor
+    - ittage_indirect
+    - bpu_isolation
+    - ibp_context_check
+    - objc_msgsend_predictor
+    hot:
+    - alloc
+    - alt
+    - base
+    - direction
+    - fa
+    - fb
+    - fc
+    - fd
+    - fold
+    - idx_hash
+    - ind_ctx
+    - ind_hist
+    - ittage_indirect
+    - loop_predictor
+    - mark
+    - objc_msgsend_predictor
+    - path_history_rewind
+    - path_history_shift_xor
+    - pc
+    - penalty
+    - phr
+    - provider
+    - rebuild
+    - retire_time_training
+    - squash
+    - tage_t1
+    - tage_t2
+    - tage_t3
+    - tage_t4
+    - tage_t5
+    - tage_t6
+    - xorin
+    drawio:
+      file: drawio/port-m2.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/m2-dirpred.yaml
+      steps: 8
+      agreed: 0
+  - id: x8-predictors-decode
+    title: Predictor companions and decode rules
+    subtitle: ''
+    file: figures/x8-predictors-decode.svg
+    level: mechanism
+    up: ras
+    kinds:
+    - dataflow
+    - fsm
+    - rtl
+    - structure
+    blocks:
+    - ras
+    - dirpred
+    - indpred
+    - decode
+    mechanisms:
+    - ras_overflow_clear
+    - ras_pac_check
+    - return_fetch_table
+    - two_level_ras
+    - loop_predictor
+    - bpu_isolation
+    - objc_msgsend_predictor
+    - ibp_context_check
+    - load_op_fusion
+    - speculation_barriers
+    - uop_split_merge
+    hot:
+    - bpu_isolation
+    - ctx_a
+    - ctx_b
+    - dir_out
+    - fa
+    - fb
+    - fc
+    - fd
+    - ib_sq
+    - ibp_context_check
+    - ibp_exec
+    - ibp_fetch
+    - ittage
+    - ldop_data
+    - ldop_out
+    - load_op_fusion
+    - loop_predictor
+    - lp0
+    - lp1
+    - lp2
+    - m_dir
+    - m_ras
+    - next_pc
+    - objc_hash
+    - objc_msgsend_predictor
+    - objc_redirect
+    - objc_uop
+    - ov0
+    - pac_cmp
+    - ras_main
+    - ras_overflow_clear
+    - ras_pac_check
+    - return_fetch_table
+    - sb0
+    - sb1
+    - speculation_barriers
+    - tage
+    - two_level_ras
+    - uop_split_merge
+    drawio:
+      file: drawio/deep-predictors.drawio
+      page: X8 predictors and decode
+    walkthrough:
+      file: walkthroughs/x8-predictors-decode.yaml
+      steps: 11
+      agreed: 0
+  sheets:
+  - block: btb
+    name: Branch target buffer
+    file: sheets/btb.svg
+    parent: frontend
+    figures:
+    - poster
+    - 01-core-overview
+    - 02-frontend
+    - m1-fetch
+    - x7-fetch-path
+    - l3-nfp
+    - p1-pipeline
+  - block: dirpred
+    name: Direction predictor
+    file: sheets/dirpred.svg
+    parent: frontend
+    figures:
+    - poster
+    - 01-core-overview
+    - 02-frontend
+    - m2-dirpred
+    - l1-branch
+    - x7-fetch-path
+    - p1-pipeline
+    - x8-predictors-decode
+  - block: indpred
+    name: Indirect predictor
+    file: sheets/indpred.svg
+    parent: frontend
+    figures:
+    - poster
+    - 01-core-overview
+    - 02-frontend
+    - m2-dirpred
+    - l1-branch
+    - l2-indirect
+    - p1-pipeline
+    - x8-predictors-decode
+  - block: ras
+    name: Return address stack
+    file: sheets/ras.svg
+    parent: frontend
+    figures:
+    - poster
+    - 01-core-overview
+    - 02-frontend
+    - m1-fetch
+    - l4-ras
+    - l14-trace
+    - p1-pipeline
+    - x8-predictors-decode
+  - block: fetch
+    name: Fetch
+    file: sheets/fetch.svg
+    parent: frontend
+    figures:
+    - poster
+    - 01-core-overview
+    - 02-frontend
+    - m1-fetch
+    - f1-fsm
+    - x7-fetch-path
+    - l3-nfp
+    - l14-trace
+    - p1-pipeline
+  - block: ftq
+    name: Fetch target queue
+    file: sheets/ftq.svg
+    parent: frontend
+    figures:
+    - 02-frontend
+    - x7-fetch-path
+    - l3-nfp
+    - p1-pipeline
+  - block: l1i
+    name: L1 instruction cache
+    file: sheets/l1i.svg
+    parent: frontend
+    figures:
+    - poster
+    - 01-core-overview
+    - 02-frontend
+    - m1-fetch
+    - c4-hierarchy
+    - d4-hierarchy
+    - x7-fetch-path
+    - l3-nfp
+    - l14-trace
+    - p1-pipeline
+  - block: itlb
+    name: Instruction TLB
+    file: sheets/itlb.svg
+    parent: frontend
+    figures:
+    - poster
+    - 01-core-overview
+    - 02-frontend
+    - m1-fetch
+    - m8-tlb
+    - x7-fetch-path
+    - p1-pipeline
+  - block: decode
+    name: Decode
+    file: sheets/decode.svg
+    parent: frontend
+    figures:
+    - poster
+    - 01-core-overview
+    - 02-frontend
+    - m1-fetch
+    - p1-pipeline
+    - x8-predictors-decode
+  - block: iq
+    name: Instruction queue
+    file: sheets/iq.svg
+    parent: frontend
+    figures:
+    - poster
+    - 02-frontend
+    - m1-fetch
+    - x7-fetch-path
+    - l14-trace
+    - p1-pipeline
+- n: 4
+  id: rename
+  name: Rename
+  subtitle: map, rename and the register files
+  blocks:
+  - rename
+  - int_prf
+  - fp_prf
+  - flags_prf
+  figures:
+  - id: 03-rename
+    title: Map, rename and the register files
+    subtitle: ''
+    file: figures/03-rename.svg
+    level: region
+    up: poster
+    kinds:
+    - dataflow
+    - structure
+    blocks:
+    - backend
+    - rename
+    - int_prf
+    - fp_prf
+    - flags_prf
+    - dispatch
+    mechanisms:
+    - group_map
+    - move_elimination
+    - macro_op_fusion
+    - immediate_regs
+    - register_security_tag
+    - rename_retire_queue
+    - banked_prf_power
+    - split_flag_files
+    - speculative_special_regs
+    - dispatch_buffers
+    hot:
+    - decode
+    - dispatch_fp
+    - dispatch_fp_q
+    - dispatch_int
+    - dispatch_int_q
+    - dispatch_ls
+    - dispatch_ls_q
+    - dispatch_mul
+    - dispatch_mul_q
+    - fdis
+    - flags_prf
+    - fmap
+    - fp_prf
+    - fprf
+    - fren
+    - group_map
+    - immediate_regs
+    - int_prf
+    - macro_op_fusion
+    - move_elimination
+    - rename
+    - rename_retire_queue
+    - speculative_special_regs
+    - stall
+    - windows
+    - zero_idiom
+    drawio:
+      file: drawio/port-03.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/03-rename.yaml
+      steps: 9
+      agreed: 0
+  - id: m3-rename
+    title: An 8 wide group through map and rename
+    subtitle: ''
+    file: figures/m3-rename.svg
+    level: mechanism
+    up: rename
+    kinds:
+    - storyboard
+    - structure
+    blocks:
+    - rename
+    - int_prf
+    - fp_prf
+    - flags_prf
+    mechanisms:
+    - group_map
+    - move_elimination
+    - macro_op_fusion
+    - immediate_regs
+    - register_security_tag
+    - store_address_data_uops
+    - lsq_at_issue
+    - rename_retire_queue
+    hot:
+    - e_add
+    - e_imm
+    - f_b
+    - f_cmp
+    - flags_prf
+    - fp_prf
+    - freelist
+    - fuse
+    - group
+    - group_map
+    - grp
+    - hist_entry
+    - hist_in
+    - hist_out
+    - history
+    - imm
+    - immediate_regs
+    - int_prf
+    - lim
+    - lim1
+    - lim2
+    - lim3
+    - macro_op_fusion
+    - map_entry
+    - move_elimination
+    - ports
+    - rename_map
+    - sb-1
+    - sb-2
+    - sb-3
+    - sb-4
+    - srcs
+    - st
+    drawio:
+      file: drawio/port-m3.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/m3-rename.yaml
+      steps: 9
+      agreed: 0
+  sheets:
+  - block: rename
+    name: Rename and map
+    file: sheets/rename.svg
+    parent: backend
+    figures:
+    - poster
+    - 01-core-overview
+    - 08-lifecycle
+    - 03-rename
+    - 05-retire
+    - m3-rename
+    - x9-backend
+    - l5-rename
+    - l7-retire
+    - p1-pipeline
+  - block: int_prf
+    name: Integer register file
+    file: sheets/int_prf.svg
+    parent: backend
+    figures:
+    - poster
+    - 01-core-overview
+    - 03-rename
+    - 05-retire
+    - m3-rename
+    - m4-sched
+    - m5-retire
+    - x9-backend
+    - l5-rename
+    - p1-pipeline
+  - block: fp_prf
+    name: FP/SIMD register file
+    file: sheets/fp_prf.svg
+    parent: backend
+    figures:
+    - poster
+    - 01-core-overview
+    - 03-rename
+    - 05-retire
+    - m3-rename
+    - l5-rename
+    - p1-pipeline
+  - block: flags_prf
+    name: Flags register file
+    file: sheets/flags_prf.svg
+    parent: backend
+    figures:
+    - poster
+    - 01-core-overview
+    - 03-rename
+    - m3-rename
+    - x9-backend
+    - l5-rename
+    - p1-pipeline
+- n: 5
+  id: issue
+  name: Issue and Execute
+  subtitle: dispatch, the schedulers and the units
+  blocks:
+  - dispatch
+  - sched_int
+  - sched_fp
+  - sched_ls
+  - eu_int
+  - eu_fp
+  figures:
+  - id: 04-issue
+    title: Schedulers and execution units
+    subtitle: ''
+    file: figures/04-issue.svg
+    level: region
+    up: poster
+    kinds:
+    - structure
+    blocks:
+    - backend
+    - dispatch
+    - sched_int
+    - sched_fp
+    - sched_ls
+    - eu_int
+    - eu_fp
+    mechanisms:
+    - dispatch_buffers
+    - paired_sched_queues
+    - matrix_scheduler
+    - hierarchical_reservation_station
+    - load_replay_shadow
+    - issue_age_flush
+    - divider_pipe
+    - exec_clock_gating
+    - exec_forwarding
+    - fp_back_to_back_fusion
+    hot:
+    - dispatch_fp
+    - dispatch_int_a
+    - dispatch_int_b
+    - dispatch_ls
+    - dispatch_mul
+    - eu_fp
+    - eu_int
+    - fa
+    - fb
+    - fc
+    - fd
+    - fe
+    - lat_0
+    - lat_1
+    - lat_10
+    - lat_11
+    - lat_12
+    - lat_2
+    - lat_3
+    - lat_4
+    - lat_5
+    - lat_6
+    - lat_7
+    - lat_8
+    - lat_9
+    - load_replay_shadow
+    - ls_units
+    - matrix_scheduler
+    - other_constraints
+    - q1
+    - q10
+    - q11
+    - q12
+    - q13
+    - q14
+    - q2
+    - q3
+    - q4
+    - q5
+    - q6
+    - q7
+    - q8
+    - q9
+    - u1
+    - u10
+    - u11
+    - u12
+    - u13
+    - u14
+    - u2
+    - u3
+    - u4
+    - u5
+    - u6
+    - u7
+    - u8
+    - u9
+    drawio:
+      file: drawio/port-04.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/04-issue.yaml
+      steps: 8
+      agreed: 0
+  - id: m4-sched
+    title: Inside a scheduler queue, wakeup, select and replay
+    subtitle: ''
+    file: figures/m4-sched.svg
+    level: mechanism
+    up: sched_int
+    kinds:
+    - structure
+    blocks:
+    - sched_int
+    - sched_ls
+    - int_prf
+    mechanisms:
+    - matrix_scheduler
+    - hierarchical_reservation_station
+    - paired_sched_queues
+    - load_replay_shadow
+    - issue_age_flush
+    - exec_forwarding
+    - divider_pipe
+    hot:
+    - age_matrix
+    - bank_test
+    - cross_domain
+    - fa
+    - fb
+    - fc
+    - fd
+    - hierarchical_reservation_station
+    - issue_age_flush
+    - load_replay_shadow
+    - matrix_scheduler
+    - paired_sched_queues
+    - prf_ports
+    - rs_secondary
+    - sched_entry
+    - shadow_check
+    - shadow_dep
+    - shadow_load
+    - size_dispute
+    drawio:
+      file: drawio/port-m4.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/m4-sched.yaml
+      steps: 8
+      agreed: 0
+  - id: x9-backend
+    title: Backend mechanisms, rename to retire
+    subtitle: ''
+    file: figures/x9-backend.svg
+    level: mechanism
+    up: backend
+    kinds:
+    - dataflow
+    - fsm
+    - rtl
+    - structure
+    blocks:
+    - backend
+    - rename
+    - int_prf
+    - flags_prf
+    - sched_int
+    - eu_int
+    - eu_fp
+    - retire
+    mechanisms:
+    - control_independence
+    - speculative_special_regs
+    - writeback_overflow_pool
+    - banked_prf_power
+    - split_flag_files
+    - issue_age_flush
+    - divider_pipe
+    - exec_clock_gating
+    - exec_forwarding
+    - fp_back_to_back_fusion
+    - simd_power_down
+    - abandonable_requests
+    - forced_nonspec_mode
+    hot:
+    - A
+    - B
+    - C
+    - D
+    - E
+    - ab_caches
+    - ab_demand
+    - ab_drain
+    - abandonable_requests
+    - banked_prf_power
+    - br_issue
+    - ci_stream
+    - control_independence
+    - div_q
+    - div_r1
+    - div_r2
+    - divider_pipe
+    - exec_clock_gating
+    - exec_forwarding
+    - fadd-pair
+    - fadd1
+    - flags_simd
+    - flush_pipes
+    - fn0
+    - fn2
+    - forced_nonspec_mode
+    - fp_back_to_back_fusion
+    - fw_int
+    - fw_simd
+    - gate_tune
+    - iex_pipes
+    - issue_age_flush
+    - madd
+    - madd_u
+    - pf_train
+    - simd_power_down
+    - sp0
+    - sp1
+    - speculative_special_regs
+    - split_flag_files
+    - ssr_map
+    - ssr_retire
+    - wb_ports
+    - wb_units
+    - writeback_overflow_pool
+    drawio:
+      file: drawio/deep-backend.drawio
+      page: X9 backend
+    walkthrough:
+      file: walkthroughs/x9-backend.yaml
+      steps: 11
+      agreed: 0
+  sheets:
+  - block: dispatch
+    name: Dispatch buffers
+    file: sheets/dispatch.svg
+    parent: backend
+    figures:
+    - 01-core-overview
+    - 08-lifecycle
+    - 03-rename
+    - 04-issue
+    - l5-rename
+    - l6-scheduler
+    - p1-pipeline
+  - block: sched_int
+    name: Integer schedulers
+    file: sheets/sched_int.svg
+    parent: backend
+    figures:
+    - 01-core-overview
+    - 08-lifecycle
+    - 04-issue
+    - m4-sched
+    - x9-backend
+    - l6-scheduler
+    - p1-pipeline
+  - block: sched_fp
+    name: FP/SIMD schedulers
+    file: sheets/sched_fp.svg
+    parent: backend
+    figures:
+    - 01-core-overview
+    - 04-issue
+    - p1-pipeline
+  - block: sched_ls
+    name: Load-store scheduler
+    file: sheets/sched_ls.svg
+    parent: backend
+    figures:
+    - 01-core-overview
+    - 04-issue
+    - m4-sched
+    - r1-load-rtl
+    - l6-scheduler
+    - p1-pipeline
+  - block: eu_int
+    name: Integer units
+    file: sheets/eu_int.svg
+    parent: backend
+    figures:
+    - 01-core-overview
+    - 04-issue
+    - x9-backend
+    - l6-scheduler
+    - p1-pipeline
+  - block: eu_fp
+    name: FP/SIMD units
+    file: sheets/eu_fp.svg
+    parent: backend
+    figures:
+    - 01-core-overview
+    - 04-issue
+    - x9-backend
+    - p1-pipeline
+- n: 6
+  id: retire
+  name: Retire
+  subtitle: two queues and the in-flight window
+  blocks:
+  - retire
+  figures:
+  - id: 05-retire
+    title: Retire, two queues and the in-flight window
+    subtitle: ''
+    file: figures/05-retire.svg
+    level: region
+    up: poster
+    kinds:
+    - structure
+    blocks:
+    - backend
+    - retire
+    - rename
+    - lq
+    - sq
+    - int_prf
+    - fp_prf
+    mechanisms:
+    - retire_groups
+    - rename_retire_queue
+    - lsq_early_release
+    hot:
+    - alt
+    - commit
+    - crq
+    - crq_f
+    - free
+    - group_entry
+    - rename
+    - rrq
+    - rrq_entry
+    - rrq_f
+    - rule
+    - w_branches
+    - w_fpreg
+    - w_intreg
+    - w_issuing
+    - w_loads
+    - w_nop
+    - w_regwrite
+    - w_stores
+    - walkback
+    - win_f
+    drawio:
+      file: drawio/port-05.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/05-retire.yaml
+      steps: 8
+      agreed: 0
+  - id: m5-retire
+    title: How uops pack into retire groups, and what the window probes see
+    subtitle: ''
+    file: figures/m5-retire.svg
+    level: mechanism
+    up: retire
+    kinds:
+    - structure
+    blocks:
+    - retire
+    - lq
+    - sq
+    - int_prf
+    mechanisms:
+    - retire_groups
+    - rename_retire_queue
+    - lsq_early_release
+    hot:
+    - a_branches
+    - a_intreg
+    - a_issuing
+    - a_loads
+    - a_nop
+    - a_regwrite
+    - a_stores
+    - alt
+    - arith_f
+    - entry
+    - g1
+    - g2
+    - g3
+    - g4
+    - g5
+    - g6
+    - lsq_release
+    - open
+    - pack_f
+    - rule
+    - stream
+    - stream_f
+    - test
+    drawio:
+      file: drawio/port-m5.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/m5-retire.yaml
+      steps: 8
+      agreed: 0
+  sheets:
+  - block: retire
+    name: Retire
+    file: sheets/retire.svg
+    parent: backend
+    figures:
+    - poster
+    - 01-core-overview
+    - 08-lifecycle
+    - 05-retire
+    - m5-retire
+    - f1-fsm
+    - x9-backend
+    - l5-rename
+    - l7-retire
+    - p1-pipeline
+- n: 7
+  id: lsu
+  name: Loads and Stores
+  subtitle: the load-store unit, its queues and its ordering
+  blocks:
+  - lsu
+  - lq
+  - sq
+  - dtlb
+  - mshr
+  figures:
+  - id: 06-lsu
+    title: Load-store unit
+    subtitle: ''
+    file: figures/06-lsu.svg
+    level: region
+    up: poster
+    kinds:
+    - dataflow
+    - structure
+    blocks:
+    - lsu
+    - lq
+    - sq
+    - l1d
+    - dtlb
+    - prefetch
+    - mshr
+    mechanisms:
+    - store_load_dep_predictor
+    - sq_partial_forwarding
+    - agu_same_page_check
+    - lsu_load_to_load_bypass
+    - mmu_walk_cache
+    - dtlb_piggyback
+    - l1d_banked_piggyback
+    - fill_bank_conflicts
+    - l1d_utag_way_predictor
+    - l1d_tree_plru
+    - l1d_write_allocate
+    - fill_buffer_pool
+    - fill_forwarding
+    - streaming_store_nt
+    - ampm_prefetcher
+    - content_directed_prefetch
+    - temporal_prefetch
+    - prefetch_throttle
+    - tso_mode
+    - exclusive_monitor_l1
+    - redundant_mem_op_elim
+    hot:
+    - agen
+    - ampm_prefetcher
+    - bandwidth
+    - banks
+    - checks
+    - content_directed_prefetch
+    - dtlb
+    - fwd
+    - l1d
+    - l2tlb
+    - latency
+    - lookup
+    - lq
+    - mshr
+    - pf
+    - pipe10
+    - pipe7
+    - pipe8
+    - pipe9
+    - queues
+    - sq
+    - store_load_dep_predictor
+    - temporal_prefetch
+    - walk
+    - xlat
+    drawio:
+      file: drawio/port-06.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/06-lsu.yaml
+      steps: 9
+      agreed: 0
+  - id: m6-lsu
+    title: A load and a store through the LSU
+    subtitle: ''
+    file: figures/m6-lsu.svg
+    level: mechanism
+    up: lsu
+    kinds:
+    - dataflow
+    - storyboard
+    - structure
+    blocks:
+    - lsu
+    - lq
+    - sq
+    - l1d
+    - dtlb
+    mechanisms:
+    - agu_same_page_check
+    - store_load_dep_predictor
+    - l1d_utag_way_predictor
+    - l1d_page_offset_index
+    - l1d_banked_piggyback
+    - sq_partial_forwarding
+    - late_ordering_check
+    - lsu_load_to_load_bypass
+    - sq_32b_slots
+    - l1d_write_allocate
+    - split_access_handling
+    - ldpq_lsu_split
+    - exclusive_monitor_l1
+    - tso_mode
+    hot:
+    - agu0
+    - agu2
+    - agu3
+    - agu4
+    - agu5
+    - agu_same_page_check
+    - alu0
+    - alu1
+    - alu2
+    - alu3
+    - alu4
+    - alu5
+    - banks0
+    - banks1
+    - banks2
+    - banks4
+    - banks5
+    - chase0
+    - chase1
+    - chase2
+    - chase3
+    - chase5
+    - cmp0
+    - cmp1
+    - cmp2
+    - cmp3
+    - cmp4
+    - dep0
+    - dep2
+    - dep3
+    - dep4
+    - dep5
+    - dtlb0
+    - dtlb1
+    - dtlb2
+    - dtlb3
+    - dtlb4
+    - dtlb5
+    - exclusive_monitor_l1
+    - l1d0
+    - l1d1
+    - l1d2
+    - l1d3
+    - l1d_banked_piggyback
+    - l1d_page_offset_index
+    - l1d_utag_way_predictor
+    - l20
+    - l21
+    - l22
+    - l23
+    - late_ordering_check
+    - ldpq_lsu_split
+    - load
+    - load-1
+    - load-2
+    - load-3
+    - load-4
+    - load-5
+    - load-6
+    - lsq0
+    - lsq1
+    - lsq2
+    - lsq3
+    - lsq4
+    - lsq5
+    - lsu_load_to_load_bypass
+    - simd0
+    - simd1
+    - simd2
+    - simd3
+    - simd4
+    - simd5
+    - split-page
+    - split_access_handling
+    - splits
+    - sq0
+    - sq1
+    - sq2
+    - sq3
+    - sq4
+    - sq5
+    - sq_32b_slots
+    - sq_partial_forwarding
+    - sta0
+    - sta1
+    - sta2
+    - sta3
+    - std0
+    - std1
+    - std2
+    - std3
+    - store
+    - store-1
+    - store-2
+    - store-3
+    - store-4
+    - store_load_dep_predictor
+    - tso_mode
+    - utag0
+    - utag1
+    - utag3
+    - utag4
+    - utag5
+    - va
+    - wait0
+    - wait1
+    - wait2
+    - wait3
+    drawio:
+      file: drawio/port-m6.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/m6-lsu.yaml
+      steps: 10
+      agreed: 0
+  - id: r1-load-rtl
+    title: Load pipeline, RTL view
+    subtitle: ''
+    file: figures/r1-load-rtl.svg
+    level: mechanism
+    up: lsu
+    kinds:
+    - dataflow
+    - rtl
+    - structure
+    blocks:
+    - lsu
+    - sched_ls
+    - l1d
+    - dtlb
+    - lq
+    - sq
+    mechanisms:
+    - agu_same_page_check
+    - store_load_dep_predictor
+    - l1d_utag_way_predictor
+    - l1d_banked_piggyback
+    - sq_partial_forwarding
+    - load_replay_shadow
+    - late_ordering_check
+    hot:
+    - add
+    - banks
+    - c34
+    - c8
+    - dep
+    - dtlb
+    - fill
+    - h
+    - m1
+    - prf
+    - r1
+    - r2
+    - r3
+    - r4
+    - replay
+    - samepage
+    - sched
+    - sel
+    - sqcam
+    - tagarr
+    - utag
+    - wb
+    drawio:
+      file: drawio/rtl-fsm.drawio
+      page: R1 load pipeline RTL
+    walkthrough:
+      file: walkthroughs/r1-load-rtl.yaml
+      steps: 7
+      agreed: 0
+  - id: x6-lsu-queues
+    title: Load and store queues, what an entry goes through
+    subtitle: ''
+    file: figures/x6-lsu-queues.svg
+    level: mechanism
+    up: lsu
+    kinds:
+    - dataflow
+    - fsm
+    - rtl
+    - structure
+    blocks:
+    - lsu
+    - lq
+    - sq
+    - l1d
+    mechanisms:
+    - banked_lsq
+    - ldpq_lsu_split
+    - split_access_handling
+    - spec_fault_no_access
+    - zero_cycle_loads
+    - redundant_mem_op_elim
+    - load_value_prediction
+    - load_address_prediction
+    hot:
+    - banked_lsq
+    - bk1
+    - bk2
+    - d0
+    - d1
+    - d2
+    - d3
+    - fa
+    - fb
+    - fc
+    - fd
+    - fe
+    - l1d_c
+    - l1d_e
+    - lap_test
+    - ld
+    - ld2
+    - ldpq
+    - ldpq_lsu_split
+    - ldpx
+    - lines
+    - load_address_prediction
+    - load_value_prediction
+    - lq_alloc
+    - lq_b1
+    - lq_ret
+    - lsq_test
+    - lvp_test
+    - melt
+    - one_req
+    - pages
+    - pg_assist
+    - prf
+    - redundant_mem_op_elim
+    - rob1
+    - rob2
+    - sch1
+    - sch2
+    - spec_fault_no_access
+    - split_access_handling
+    - sq_a
+    - sq_alloc
+    - sq_b
+    - sq_commit
+    - sqe
+    - st
+    - zcl_test
+    - zero_cycle_loads
+    drawio:
+      file: drawio/deep-lsuqueues.drawio
+      page: X6 load and store queues
+    walkthrough:
+      file: walkthroughs/x6-lsu-queues.yaml
+      steps: 8
+      agreed: 0
+  - id: x5-lsu-ordering
+    title: Ordering in the load-store unit
+    subtitle: ''
+    file: figures/x5-lsu-ordering.svg
+    level: mechanism
+    up: lsu
+    kinds:
+    - dataflow
+    - fsm
+    - structure
+    blocks:
+    - lsu
+    - lq
+    - sq
+    - l1d
+    - l2
+    mechanisms:
+    - barrier_colors
+    - stxr_barrier_fusion
+    - early_barrier_completion
+    - exclusive_monitor_l1
+    - tso_mode
+    - hierarchical_store_queue
+    - store_merge_buffer
+    - streaming_store_nt
+    - load_poison_bits
+    - coprocessor_ordering_table
+    - lsu_forward_progress
+    hot:
+    - amx_e
+    - barrier_colors
+    - coprocessor_ordering_table
+    - core_d
+    - creq
+    - dmb_a
+    - dmb_b
+    - drain_c
+    - e0
+    - e1
+    - e3
+    - early_barrier_completion
+    - exclusive_monitor_l1
+    - fa
+    - fb
+    - fc
+    - fd
+    - fe
+    - ff
+    - fp_lfsr
+    - fp_lock
+    - fp_replay
+    - fuse
+    - hierarchical_store_queue
+    - l1d_a
+    - l1d_c
+    - l2_a
+    - l2_c
+    - l2_e
+    - livelock
+    - load_e
+    - load_poison_bits
+    - loads_c
+    - lq_d
+    - lsu_a
+    - lsu_forward_progress
+    - ord_arm
+    - ord_out
+    - ord_tso
+    - p0
+    - p1
+    - pgcmp
+    - poc
+    - pt_drain
+    - pt_issue
+    - pt_replay
+    - pt_retire
+    - sq2
+    - store_merge_buffer
+    - streaming_store_nt
+    - stxr_a
+    - stxr_barrier_fusion
+    - tso_mode
+    - tsomux
+    - w0
+    - w1
+    - x0
+    - x2
+    - x3
+    - xl1
+    drawio:
+      file: drawio/deep-lsuorder.drawio
+      page: X5 LSU ordering
+    walkthrough:
+      file: walkthroughs/x5-lsu-ordering.yaml
+      steps: 10
+      agreed: 0
+  - id: m8-tlb
+    title: 'Translation: the two TLBs and the walk'
+    subtitle: ''
+    file: figures/m8-tlb.svg
+    level: mechanism
+    up: dtlb
+    kinds:
+    - structure
+    blocks:
+    - dtlb
+    - itlb
+    mechanisms:
+    - dtlb_piggyback
+    - dtlb_random_replacement
+    - itlb_victims_to_dtlb
+    - cluster_l2_tlb
+    - mmu_walk_cache
+    - indexed_page_permissions
+    - tlb_invalidation_shortcuts
+    - tlb_mixed_page_sizes
+    hot:
+    - aut_fault
+    - cluster_l2_tlb
+    - dtlb
+    - dtlb_entry
+    - dtlb_piggyback
+    - dtlb_random_replacement
+    - indexed_page_permissions
+    - itlb_shape
+    - itlb_victims_to_dtlb
+    - l1_f
+    - l1_miss
+    - l2_f
+    - l2_miss
+    - l2tlb
+    - lad_l1
+    - lad_l2
+    - lad_l2tlb
+    - lad_slc
+    - lad_walk
+    - ladder
+    - mmu_walk_cache
+    - pages
+    - piggyback_test
+    - share_test
+    - tlb_invalidation_shortcuts
+    - va_f
+    - va_l1tlb
+    - va_l2tlb
+    - va_walk
+    - walk_f
+    - walk_split
+    drawio:
+      file: drawio/port-m8.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/m8-tlb.yaml
+      steps: 9
+      agreed: 0
+  - id: m7-miss
+    title: A miss through the fill buffers, the L2 and the prefetchers
+    subtitle: ''
+    file: figures/m7-miss.svg
+    level: mechanism
+    up: mshr
+    kinds:
+    - dataflow
+    - structure
+    blocks:
+    - mshr
+    - l2
+    - prefetch
+    - l1d
+    mechanisms:
+    - fill_buffer_pool
+    - fill_forwarding
+    - fill_bank_conflicts
+    - l2_physical_index
+    - l2_hashed_way_filter
+    - l2_half_lines
+    - l2_core_lru
+    - l2_autolock
+    - l2_cachelets
+    - l2_core_round_robin
+    - ampm_prefetcher
+    - temporal_prefetch
+    - content_directed_prefetch
+    - prefetch_throttle
+    - prefetch_deny_list
+    - nt_load_handling
+    - l2_victim_fill
+    hot:
+    - access_map
+    - ampm_prefetcher
+    - arb_test
+    - cachelet_pick
+    - content_directed_prefetch
+    - dram_little
+    - fb_entry
+    - fb_f
+    - fb_guess
+    - fb_join
+    - fb_test
+    - fill_bank_conflicts
+    - fill_buffer_pool
+    - fill_forwarding
+    - l1d
+    - l2_arb
+    - l2_cachelets
+    - l2_f
+    - l2_halves
+    - l2_hashed_way_filter
+    - l2_index
+    - l2_pa
+    - l2_path
+    - l2_replace
+    - little
+    - pf_deny
+    - pf_f
+    - pf_levels
+    - prefetch_throttle
+    - ret_beats
+    - ret_f
+    - ret_lookup
+    - ret_req
+    - ret_rule
+    - ret_split
+    - ret_wake
+    - ret_write
+    - slc_victims
+    - sweep
+    - temporal_guess
+    - temporal_prefetch
+    drawio:
+      file: drawio/port-m7.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/m7-miss.yaml
+      steps: 9
+      agreed: 0
+  sheets:
+  - block: lsu
+    name: Load-store unit
+    file: sheets/lsu.svg
+    parent: core
+    figures:
+    - poster
+    - 01-core-overview
+    - 06-lsu
+    - m6-lsu
+    - r1-load-rtl
+    - f1-fsm
+    - l8-memdep
+    - l11-prefetch
+    - x11-prefetch-l1d-tlb
+    - x5-lsu-ordering
+    - x6-lsu-queues
+    - p1-pipeline
+  - block: lq
+    name: Load queue
+    file: sheets/lq.svg
+    parent: lsu
+    figures:
+    - poster
+    - 01-core-overview
+    - 08-lifecycle
+    - 05-retire
+    - 06-lsu
+    - m5-retire
+    - m6-lsu
+    - r1-load-rtl
+    - l8-memdep
+    - x5-lsu-ordering
+    - x6-lsu-queues
+    - p1-pipeline
+  - block: sq
+    name: Store queue
+    file: sheets/sq.svg
+    parent: lsu
+    figures:
+    - poster
+    - 01-core-overview
+    - 08-lifecycle
+    - 05-retire
+    - 06-lsu
+    - m5-retire
+    - m6-lsu
+    - d1-l1d
+    - r1-load-rtl
+    - x10-amx-slc
+    - l8-memdep
+    - x5-lsu-ordering
+    - x6-lsu-queues
+    - p1-pipeline
+  - block: dtlb
+    name: Data TLBs
+    file: sheets/dtlb.svg
+    parent: lsu
+    figures:
+    - poster
+    - 01-core-overview
+    - 06-lsu
+    - m6-lsu
+    - m8-tlb
+    - c1-l1d
+    - d1-l1d
+    - r1-load-rtl
+    - l9-l1d-way
+    - l13-tlb
+    - x11-prefetch-l1d-tlb
+    - p1-pipeline
+  - block: mshr
+    name: Miss handling
+    file: sheets/mshr.svg
+    parent: lsu
+    figures:
+    - poster
+    - 01-core-overview
+    - 06-lsu
+    - m7-miss
+    - d1-l1d
+- n: 8
+  id: caches
+  name: The Caches
+  subtitle: L1D and the shared L2
+  blocks:
+  - l1d
+  - l2
+  - prefetch
+  figures:
+  - id: c1-l1d
+    title: 'L1 data cache: 128 KiB, 8 ways, 64 B lines, virtually indexed (textbook form)'
+    subtitle: ''
+    file: figures/c1-l1d.svg
+    level: mechanism
+    up: l1d
+    kinds:
+    - dataflow
+    - storyboard
+    - structure
+    blocks:
+    - l1d
+    - dtlb
+    mechanisms:
+    - l1d_page_offset_index
+    - l1d_utag_way_predictor
+    - l1d_tree_plru
+    - l1d_banked_piggyback
+    - l1d_write_allocate
+    hot:
+    - c34
+    - c8
+    - data
+    - dtlb
+    - f0-data
+    - f0-h
+    - f0-tag
+    - f0-utag
+    - f1-data
+    - f1-tag
+    - f1-utag
+    - f2-c
+    - f2-data
+    - f2-tag
+    - f2-utag
+    - h
+    - hb0a
+    - hb0b
+    - hb0c
+    - hb1a
+    - hb1b
+    - hb1c
+    - hb2a
+    - hb2b
+    - hb2c
+    - hb3a
+    - hb3b
+    - hb3c
+    - hb4a
+    - hb4b
+    - hb4c
+    - hb5a
+    - hb5b
+    - hb5c
+    - hb6a
+    - hb6b
+    - hb6c
+    - helper
+    - lsu_out
+    - mux
+    - plru
+    - plru2
+    - plruf
+    - replay
+    - sb-1
+    - sb-2
+    - sb-3
+    - story
+    - tag
+    - utag
+    - va
+    - vab
+    drawio:
+      file: drawio/port-c1.drawio
+      page: ''
+  - id: d1-l1d
+    title: L1 data cache, one load from address to data
+    subtitle: ''
+    file: figures/d1-l1d.svg
+    level: mechanism
+    up: l1d
+    kinds:
+    - dataflow
+    - structure
+    blocks:
+    - l1d
+    - dtlb
+    - sq
+    - mshr
+    mechanisms:
+    - l1d_page_offset_index
+    - l1d_utag_way_predictor
+    - l1d_tree_plru
+    - l1d_banked_piggyback
+    - fill_forwarding
+    - l1d_write_allocate
+    - sq_32b_slots
+    hot:
+    - c34
+    - c8
+    - data
+    - dtlb
+    - evict
+    - fill
+    - h
+    - l2
+    - lsu_out
+    - mux_bank
+    - mux_way
+    - plru
+    - replay
+    - smiss
+    - sq
+    - tag
+    - utag
+    - va
+    - vab
+    drawio:
+      file: drawio/cache-dataflow.drawio
+      page: D1 L1 data cache
+    walkthrough:
+      file: walkthroughs/d1-l1d.yaml
+      steps: 9
+      agreed: 9
+  - id: x11-prefetch-l1d-tlb
+    title: Prefetchers, L1D ways and power, dTLB extras
+    subtitle: ''
+    file: figures/x11-prefetch-l1d-tlb.svg
+    level: mechanism
+    up: prefetch
+    kinds:
+    - dataflow
+    - fsm
+    - structure
+    blocks:
+    - prefetch
+    - l1d
+    - dtlb
+    - lsu
+    - l2
+    mechanisms:
+    - lsu_virtual_prefetch
+    - temporal_prefetch
+    - prefetch_deny_list
+    - prefetch_throttle
+    - nt_load_handling
+    - l1d_hashed_way
+    - l1d_way_lookup
+    - cache_subarray_power
+    - l1_l2_coherence_limit
+    - tlb_mixed_page_sizes
+    - tlb_invalidation_shortcuts
+    hot:
+    - acc_inv
+    - bundle
+    - cache_subarray_power
+    - core_a
+    - fa
+    - fb
+    - fc
+    - inv_cmp
+    - l1_l2_coherence_limit
+    - l1d_a
+    - l1d_b
+    - l1d_hashed_way
+    - l1d_way_lookup
+    - l2_a
+    - l2_b
+    - lookup
+    - lsu
+    - lsu_virtual_prefetch
+    - nt_load_handling
+    - p0
+    - p1
+    - p2
+    - pa
+    - pf_credits
+    - pg0
+    - pg1
+    - pg2
+    - prefetch_deny_list
+    - prefetch_throttle
+    - scan
+    - sizes
+    - stripes
+    - t0
+    - t1
+    - t2
+    - temporal_prefetch
+    - tlb_invalidation_shortcuts
+    - tlb_mixed_page_sizes
+    - va
+    - ways
+    drawio:
+      file: drawio/deep-lsucaches.drawio
+      page: X11 prefetch, L1D, dTLB
+    walkthrough:
+      file: walkthroughs/x11-prefetch-l1d-tlb.yaml
+      steps: 11
+      agreed: 0
+  - id: c2-l2
+    title: 'Shared L2, textbook form: 12 MiB, 12 ways, 128 B lines in two halves, physically indexed and hashed'
+    subtitle: ''
+    file: figures/c2-l2.svg
+    level: mechanism
+    up: l2
+    kinds:
+    - dataflow
+    - storyboard
+    - structure
+    blocks:
+    - l2
+    mechanisms:
+    - l2_physical_index
+    - l2_hashed_way_filter
+    - l2_half_lines
+    - l2_core_lru
+    - l2_autolock
+    - l2_cachelets
+    - l2_zero_line_tags
+    - l2_line_ordering
+    hot:
+    - cl0
+    - cl1
+    - cl2
+    - cl3
+    - cmp2
+    - cmp3
+    - core
+    - fa
+    - fb
+    - fbw
+    - fc
+    - fd
+    - fe
+    - fs
+    - ft
+    - h
+    - issue0
+    - issue1
+    - issue2
+    - issue3
+    - issue4
+    - issue5
+    - issue6
+    - issue7
+    - issue8
+    - l1a
+    - l1b
+    - l1d3
+    - l2_autolock
+    - l2_cachelets
+    - l2_core_lru
+    - l2_hashed_way_filter
+    - l2_zero_line_tags
+    - l2b
+    - opt1
+    - opt2
+    - pa
+    - rq0
+    - rq1
+    - rq2
+    - rq3
+    - set
+    - story-1
+    - story-2
+    - story-3
+    - story-4
+    - t1
+    - t2
+    - t3
+    - ways0
+    - ways1
+    - ways2
+    - ways3
+    drawio:
+      file: drawio/port-c2.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/c2-l2.yaml
+      steps: 6
+      agreed: 0
+  - id: d2-l2
+    title: Shared L2, four cores through one cache
+    subtitle: ''
+    file: figures/d2-l2.svg
+    level: mechanism
+    up: l2
+    kinds:
+    - dataflow
+    - structure
+    blocks:
+    - l2
+    mechanisms:
+    - l2_physical_index
+    - l2_hashed_way_filter
+    - l2_half_lines
+    - l2_core_lru
+    - l2_core_round_robin
+    - l2_autolock
+    - l2_victim_fill
+    hot:
+    - cl0
+    - cl1
+    - cl2
+    - cl3
+    - cmp
+    - ecore
+    - fabric
+    - half0
+    - half1
+    - l1copy
+    - lru
+    - pa
+    - pab
+    - pipe
+    - rq0
+    - rq1
+    - rq2
+    - rq3
+    - rr
+    - snoop
+    - tags
+    - tol1
+    - x
+    - zero
+    drawio:
+      file: drawio/cache-dataflow.drawio
+      page: D2 shared L2
+    walkthrough:
+      file: walkthroughs/d2-l2.yaml
+      steps: 8
+      agreed: 0
+  - id: x4-l2-more
+    title: Shared L2, the machinery around the array
+    subtitle: ''
+    file: figures/x4-l2-more.svg
+    level: mechanism
+    up: l2
+    kinds:
+    - dataflow
+    - fsm
+    - structure
+    blocks:
+    - l2
+    - ecluster
+    mechanisms:
+    - l2_request_pipelines
+    - l2_line_ordering
+    - snoop_starvation_guard
+    - l2_cachelets
+    - ecores_share_pl2
+    - l2_way_power
+    - l2_zero_line_tags
+    - l2_insertion_priority
+    - ipv_replacement
+    - l2_snoop_filter
+    - uncached_line_handling
+    hot:
+    - arb
+    - cl0
+    - cl1
+    - cl2
+    - cl3
+    - crit
+    - demand
+    - drop
+    - ecores_share_pl2
+    - evcred
+    - fa
+    - fb
+    - fc
+    - fd
+    - flo
+    - flush
+    - fsg
+    - fu
+    - fwd
+    - ipv_replacement
+    - l2_insertion_priority
+    - l2_snoop_filter
+    - l2_way_power
+    - l2_zero_line_tags
+    - l2banks
+    - l2tag
+    - lineA
+    - lineB
+    - loser
+    - lru
+    - ordq
+    - pc0
+    - pc1
+    - pc2
+    - pc3
+    - prb
+    - pref
+    - replay
+    - sg0
+    - sg1
+    - snc
+    - snoop
+    - snoopin
+    - ucgather
+    - ucmerge
+    - uncached_line_handling
+    - wp0
+    - wp1
+    - wp2
+    drawio:
+      file: drawio/deep-l2more.drawio
+      page: X4 L2 machinery
+    walkthrough:
+      file: walkthroughs/x4-l2-more.yaml
+      steps: 12
+      agreed: 0
+  sheets:
+  - block: l1d
+    name: L1 data cache
+    file: sheets/l1d.svg
+    parent: lsu
+    figures:
+    - poster
+    - 01-core-overview
+    - 06-lsu
+    - m6-lsu
+    - m7-miss
+    - c1-l1d
+    - c4-hierarchy
+    - d1-l1d
+    - d4-hierarchy
+    - r1-load-rtl
+    - f1-fsm
+    - l9-l1d-way
+    - x11-prefetch-l1d-tlb
+    - x5-lsu-ordering
+    - x6-lsu-queues
+    - p1-pipeline
+  - block: l2
+    name: Shared L2
+    file: sheets/l2.svg
+    parent: pcluster
+    figures:
+    - chip
+    - poster
+    - 01-core-overview
+    - 07-beyond
+    - m7-miss
+    - c2-l2
+    - c4-hierarchy
+    - d2-l2
+    - d4-hierarchy
+    - f1-fsm
+    - x10-amx-slc
+    - x4-l2-more
+    - l10-l2
+    - l12-slc
+    - x11-prefetch-l1d-tlb
+    - x5-lsu-ordering
+    - x3-memctrl
+    - p1-pipeline
+  - block: prefetch
+    name: Prefetchers
+    file: sheets/prefetch.svg
+    parent: lsu
+    figures:
+    - poster
+    - 01-core-overview
+    - 06-lsu
+    - m7-miss
+    - l11-prefetch
+    - x11-prefetch-l1d-tlb
+- n: 9
+  id: memory
+  name: The Memory Side
+  subtitle: the system level cache, the fabric, the controllers and power
+  blocks:
+  - slc
+  - fabric
+  - memctrl
+  - amx
+  - power
+  figures:
+  - id: c3-slc
+    title: 'System level cache, textbook form: 8 MiB, 16 ways, 4096 sets, memory side, every index bit hashed'
+    subtitle: ''
+    file: figures/c3-slc.svg
+    level: mechanism
+    up: slc
+    kinds:
+    - dataflow
+    - structure
+    blocks:
+    - slc
+    - memctrl
+    - fabric
+    mechanisms:
+    - slc_hashed_index
+    - slc_memory_side
+    - slc_victim_fill
+    - slc_slices
+    - slc_line_states
+    - slc_sticky_quota
+    - slc_address_ranges
+    - slc_speculative_read
+    - slc_power_gating
+    - coherence_duplicate_tags
+    hot:
+    - coherence_duplicate_tags
+    - el2
+    - fa
+    - fb
+    - fc
+    - fd
+    - gpu
+    - h
+    - issue0
+    - issue1
+    - issue2
+    - issue3
+    - issue4
+    - issue5
+    - issue6
+    - lat
+    - line
+    - mc
+    - pa
+    - pl2
+    - repl
+    - slc
+    - slc_line_states
+    - slc_power_gating
+    - slc_slices
+    - slc_speculative_read
+    - slc_sticky_quota
+    drawio:
+      file: drawio/port-c3.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/c3-slc.yaml
+      steps: 8
+      agreed: 0
+  - id: d3-slc
+    title: System level cache, on the memory side
+    subtitle: ''
+    file: figures/d3-slc.svg
+    level: mechanism
+    up: slc
+    kinds:
+    - dataflow
+    - structure
+    blocks:
+    - slc
+    - memctrl
+    - fabric
+    mechanisms:
+    - slc_hashed_index
+    - slc_memory_side
+    - slc_victim_fill
+    - slc_speculative_read
+    - slc_slices
+    - coherence_duplicate_tags
+    hot:
+    - arr
+    - coh
+    - dram
+    - el2
+    - gpu
+    - line
+    - mc
+    - pa
+    - pab
+    - pl2
+    - quota
+    - repl
+    - ret
+    - spec
+    - x0
+    - x1
+    - x2
+    - x3
+    - x4
+    - x5
+    drawio:
+      file: drawio/cache-dataflow.drawio
+      page: D3 system level cache
+    walkthrough:
+      file: walkthroughs/d3-slc.yaml
+      steps: 8
+      agreed: 0
+  - id: c4-hierarchy
+    title: The hierarchy, a line's life from DRAM to L1 and back
+    subtitle: ''
+    file: figures/c4-hierarchy.svg
+    level: mechanism
+    up: l2
+    kinds:
+    - dataflow
+    - storyboard
+    blocks:
+    - l1i
+    - l1d
+    - l2
+    - slc
+    - memctrl
+    mechanisms:
+    - l2_victim_fill
+    - slc_victim_fill
+    - l2_autolock
+    - l1i_maintenance_only
+    - slc_speculative_read
+    - coherence_duplicate_tags
+    - fill_forwarding
+    hot:
+    - dram
+    - f0-dram
+    - f0-l1
+    - f0-l2
+    - f0-slc
+    - f1-dram
+    - f1-l1
+    - f1-l2
+    - f1-slc
+    - f2-dram
+    - f2-l1
+    - f2-l2
+    - f2-slc
+    - f3-dram
+    - f3-l1
+    - f3-l2
+    - f3-slc
+    - f4-dram
+    - f4-l1
+    - f4-l2
+    - f4-slc
+    - f5-dram
+    - f5-l1
+    - f5-l2
+    - f5-slc
+    - f6-dram
+    - f6-l1
+    - f6-l2
+    - f6-slc
+    - l1d
+    - l1i
+    - l2
+    - life
+    - life-1
+    - life-2
+    - life-3
+    - life-4
+    - life-5
+    - life-6
+    - life-7
+    - slc
+    - stack
+    - table
+    drawio:
+      file: drawio/port-c4.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/c4-hierarchy.yaml
+      steps: 6
+      agreed: 0
+  - id: d4-hierarchy
+    title: The hierarchy, where lines move
+    subtitle: ''
+    file: figures/d4-hierarchy.svg
+    level: mechanism
+    up: l2
+    kinds:
+    - dataflow
+    - structure
+    blocks:
+    - l1i
+    - l1d
+    - l2
+    - slc
+    - memctrl
+    mechanisms:
+    - l2_victim_fill
+    - slc_victim_fill
+    - l2_autolock
+    - dczva_l2_zero
+    hot:
+    - core
+    - dram
+    - l1d
+    - l1i
+    - l2
+    - other
+    - slc
+    drawio:
+      file: drawio/cache-dataflow.drawio
+      page: D4 hierarchy
+    walkthrough:
+      file: walkthroughs/d4-hierarchy.yaml
+      steps: 6
+      agreed: 0
+  - id: x1-fabric
+    title: Fabric and coherence, what the patents describe
+    subtitle: ''
+    file: figures/x1-fabric.svg
+    level: mechanism
+    up: fabric
+    kinds:
+    - dataflow
+    - fsm
+    - structure
+    blocks:
+    - fabric
+    - slc
+    - memctrl
+    - pcluster
+    - ecluster
+    mechanisms:
+    - noc_layout
+    - address_interleave_hash
+    - pio_network
+    - noc_split_paths
+    - fabric_qos_credits
+    - coherence_directory
+    - unshared_snoop_skip
+    - same_address_ordering
+    - remote_maintenance_pacing
+    - slc_io_cache_proxy
+    - noc_rings_lanes
+    hot:
+    - address_interleave_hash
+    - blk
+    - bridge
+    - cmd
+    - coh
+    - coherence_directory
+    - credits
+    - dirhash
+    - dram
+    - duptags
+    - ecl
+    - fa
+    - fabric_qos_credits
+    - fb
+    - fc
+    - fd
+    - gate
+    - gpu
+    - ioc1
+    - iofab
+    - l2v
+    - later
+    - mc_off
+    - mcb
+    - mp0
+    - mp1
+    - noc_layout
+    - noc_rings_lanes
+    - noc_split_paths
+    - pcie
+    - pcl
+    - pio_network
+    - pipes
+    - poison
+    - porthash
+    - ports2
+    - remote_maintenance_pacing
+    - req
+    - resp
+    - same_address_ordering
+    - sk0
+    - sk1
+    - sk2
+    - slc_io_cache_proxy
+    - slcp
+    - splitn
+    - sw1
+    drawio:
+      file: drawio/deep-fabric.drawio
+      page: X1 fabric and coherence
+    walkthrough:
+      file: walkthroughs/x1-fabric.yaml
+      steps: 10
+      agreed: 0
+  - id: x3-memctrl
+    title: Memory controllers, the path to DRAM and what the controller decides
+    subtitle: ''
+    file: figures/x3-memctrl.svg
+    level: mechanism
+    up: memctrl
+    kinds:
+    - dataflow
+    - fsm
+    - structure
+    blocks:
+    - memctrl
+    - slc
+    - fabric
+    - l2
+    mechanisms:
+    - shared_rw_memory_path
+    - one_core_dram_saturation
+    - cluster_compression_engines
+    - pattern_index_transfer
+    - mc_write_merge
+    - dram_rw_turns
+    - dram_refresh_scheduling
+    - dram_qos_scheduler
+    - dram_power_states
+    - dram_clock_scaling
+    hot:
+    - bank
+    - ccef
+    - cluster_compression_engines
+    - core
+    - dram
+    - dram_clock_scaling
+    - dram_power_states
+    - dram_refresh_scheduling
+    - dram_rw_turns
+    - half
+    - l2
+    - lz
+    - mc
+    - mc_write_merge
+    - mcf
+    - noc
+    - one_core_dram_saturation
+    - path
+    - pattern_index_transfer
+    - pc
+    - pick
+    - pp0
+    - pp1
+    - ptab
+    - pwr
+    - qosf
+    - rq
+    - selfref
+    - shared_rw_memory_path
+    - slc
+    - wq
+    - wturn
+    - zline
+    drawio:
+      file: drawio/deep-memctrl.drawio
+      page: X3 memory controllers
+    walkthrough:
+      file: walkthroughs/x3-memctrl.yaml
+      steps: 9
+      agreed: 0
+  - id: x10-amx-slc
+    title: AMX and the system level cache, inside
+    subtitle: ''
+    file: figures/x10-amx-slc.svg
+    level: mechanism
+    up: amx
+    kinds:
+    - dataflow
+    - fsm
+    - structure
+    blocks:
+    - amx
+    - slc
+    - sq
+    - l2
+    mechanisms:
+    - amx_datapath
+    - amx_lsu_issue
+    - amx_op_set
+    - amx_shared_contexts
+    - amx_z_dependency_window
+    - slc_address_ranges
+    - slc_line_states
+    - slc_sticky_quota
+    - slc_power_gating
+    hot:
+    - amx_datapath
+    - amx_lsu_issue
+    - amx_op_set
+    - amx_shared_contexts
+    - core0
+    - core1
+    - core2
+    - core3
+    - famx
+    - fslc
+    - funit
+    - inv
+    - l2
+    - lsp
+    - mod
+    - mon
+    - ooo
+    - ops2
+    - os
+    - pdz
+    - planes
+    - pon
+    - rc
+    - req
+    - slc_address_ranges
+    - slc_line_states
+    - slc_power_gating
+    - slc_sticky_quota
+    - val
+    - ways
+    - xv
+    - yv
+    - zdep
+    drawio:
+      file: drawio/deep-amxslc.drawio
+      page: X10 AMX and SLC
+    walkthrough:
+      file: walkthroughs/x10-amx-slc.yaml
+      steps: 9
+      agreed: 0
+  - id: x2-power
+    title: Clocks and power, how the cluster changes speed, sleeps and wakes
+    subtitle: ''
+    file: figures/x2-power.svg
+    level: mechanism
+    up: power
+    kinds:
+    - dataflow
+    - fsm
+    - rtl
+    - structure
+    blocks:
+    - power
+    - pcluster
+    mechanisms:
+    - dvfs_transition
+    - clock_ramp
+    - idle_clock_division
+    - perf_controller
+    - power_estimator_throttle
+    - power_telemetry
+    - cluster_sleep_states
+    - core_power_cycle
+    - predictive_clock_crossing
+    - interrupt_routing
+    - fast_ipi
+    hot:
+    - a1
+    - a2
+    - a3
+    - a4
+    - a5
+    - aon
+    - busif
+    - c1
+    - c2
+    - c3
+    - clock_ramp
+    - cluster_sleep_states
+    - cnt
+    - core_power_cycle
+    - corea
+    - coreb
+    - cores
+    - ctr
+    - dvfs_transition
+    - e1
+    - e2
+    - e3
+    - e4
+    - e5
+    - fa
+    - fast_ipi
+    - fb
+    - fc
+    - fclk
+    - fd
+    - fe
+    - fifo
+    - hist
+    - idle_clock_division
+    - interrupt_routing
+    - l2c
+    - osc
+    - perf_controller
+    - power_estimator_throttle
+    - power_telemetry
+    - predictive_clock_crossing
+    - pst
+    - ptype
+    - ra
+    - rb
+    - rdram
+    - rl2
+    - rslc
+    - sw
+    - sync2
+    - tg
+    - vgate
+    drawio:
+      file: drawio/deep-power.drawio
+      page: X2 clocks and power
+    walkthrough:
+      file: walkthroughs/x2-power.yaml
+      steps: 10
+      agreed: 0
+  sheets:
+  - block: slc
+    name: System level cache
+    file: sheets/slc.svg
+    parent: chip
+    figures:
+    - chip
+    - poster
+    - 01-core-overview
+    - 07-beyond
+    - c3-slc
+    - c4-hierarchy
+    - d3-slc
+    - d4-hierarchy
+    - x10-amx-slc
+    - x1-fabric
+    - l12-slc
+    - x3-memctrl
+  - block: fabric
+    name: Fabric and coherence
+    file: sheets/fabric.svg
+    parent: chip
+    figures:
+    - chip
+    - poster
+    - 01-core-overview
+    - 07-beyond
+    - c3-slc
+    - d3-slc
+    - x1-fabric
+    - x3-memctrl
+  - block: memctrl
+    name: Memory controllers
+    file: sheets/memctrl.svg
+    parent: chip
+    figures:
+    - chip
+    - poster
+    - 01-core-overview
+    - 07-beyond
+    - c3-slc
+    - c4-hierarchy
+    - d3-slc
+    - d4-hierarchy
+    - x1-fabric
+    - l12-slc
+    - x3-memctrl
+  - block: amx
+    name: AMX coprocessor
+    file: sheets/amx.svg
+    parent: pcluster
+    figures:
+    - chip
+    - poster
+    - 01-core-overview
+    - 07-beyond
+    - x10-amx-slc
+  - block: power
+    name: Clocks and power
+    file: sheets/power.svg
+    parent: chip
+    figures:
+    - chip
+    - poster
+    - 01-core-overview
+    - 07-beyond
+    - x2-power
+- n: 10
+  id: lineage
+  name: Lineage
+  subtitle: the papers each mechanism descends from, beside the M1 version
+  blocks: []
+  figures:
+  - id: l1-branch
+    title: Branch prediction lineage, TAGE and its companions beside the M1 direction predictor
+    subtitle: ''
+    file: figures/l1-branch.svg
+    level: mechanism
+    up: dirpred
+    kinds:
+    - dataflow
+    - lineage
+    - structure
+    blocks:
+    - dirpred
+    - indpred
+    mechanisms:
+    - tage_tables
+    - path_history_shift_xor
+    - loop_predictor
+    - retire_time_training
+    - bpu_isolation
+    - ittage_indirect
+    - predictor_power_gating
+    hot:
+    - col_added
+    - col_changed
+    - col_kept
+    - m_base
+    - m_c1
+    - m_c2
+    - m_c3
+    - m_c4
+    - m_c5
+    - m_c6
+    - m_comp
+    - m_dir
+    - m_entry
+    - m_gate
+    - m_h1
+    - m_h2
+    - m_h3
+    - m_h4
+    - m_h5
+    - m_h6
+    - m_hist
+    - m_ind
+    - m_iso
+    - m_loop
+    - m_m1
+    - m_m2
+    - m_m3
+    - m_m4
+    - m_m5
+    - m_m6
+    - m_num
+    - m_out
+    - m_path
+    - m_pc
+    - m_ras
+    - m_t1
+    - m_t2
+    - m_t3
+    - m_t4
+    - m_t5
+    - m_t6
+    - m_train
+    - p_bta
+    - p_c1
+    - p_c2
+    - p_c3
+    - p_c4
+    - p_entry
+    - p_h1
+    - p_h2
+    - p_h3
+    - p_h4
+    - p_hist
+    - p_loop
+    - p_m1
+    - p_m2
+    - p_m3
+    - p_m4
+    - p_nair
+    - p_out
+    - p_pc
+    - p_phr
+    - p_pt
+    - p_sc
+    - p_scl
+    - p_sclm
+    - p_t0
+    - p_t1
+    - p_t2
+    - p_t3
+    - p_t4
+    - p_tage
+    - p_tagem
+    - tagnote
+    drawio:
+      file: drawio/port-l1.drawio
+      page: ''
+    walkthrough:
+      file: walkthroughs/l1-branch.yaml
+      steps: 5
+      agreed: 0
+  - id: l2-indirect
+    title: Indirect prediction lineage, ITTAGE and the tagged target cache beside the M1 indirect predictor
+    subtitle: ''
+    file: figures/l2-indirect.svg
+    level: mechanism
+    up: indpred
+    kinds:
+    - dataflow
+    - lineage
+    - structure
+    blocks:
+    - indpred
+    mechanisms:
+    - ittage_indirect
+    - ibp_context_check
+    - objc_msgsend_predictor
+    hot:
+    - col_added
+    - col_changed
+    - col_kept
+    - m_c1
+    - m_c2
+    - m_c3
+    - m_cap
+    - m_ctx
+    - m_entry
+    - m_h1
+    - m_h2
+    - m_h3
+    - m_hys
+    - m_ind
+    - m_m1
+    - m_m2
+    - m_m3
+    - m_objc
+    - m_path
+    - m_pc
+    - m_t1
+    - m_t2
+    - m_t3
+    - m_tgt
+    - p_ba
+    - p_bt
+    - p_c1
+    - p_c2
+    - p_c3
+    - p_entry
+    - p_h1
+    - p_h2
+    - p_h3
+    - p_hi
+    - p_hist
+    - p_if
+    - p_ittage
+    - p_m1
+    - p_m2
+    - p_m3
+    - p_pc
+    - p_pred
+    - p_t0
+    - p_t1
+    - p_t2
+    - p_t3
+    - p_tc
+    - p_tcmp
+    - p_ttc
+    drawio:
+      file: drawio/lineage2.drawio
+      page: L2 indirect
+    walkthrough:
+      file: walkthroughs/l2-indirect.yaml
+      steps: 4
+      agreed: 0
+  - id: l3-nfp
+    title: Fetch prediction lineage, the 21264 line and way predictor beside the M1 fetch group table
+    subtitle: ''
+    file: figures/l3-nfp.svg
+    level: mechanism
+    up: btb
+    kinds:
+    - dataflow
+    - lineage
+    - structure
+    blocks:
+    - btb
+    - fetch
+    - ftq
+    - l1i
+    mechanisms:
+    - next_fetch_groups
+    - nfp_training
+    - staged_fetch_redirect
+    - phantom_fetch
+    - l1i_coupled_btb
+    - l1i_way_prediction
+    - scan_on_fill_nfp
+    - biased_branch_filter
+    - decoupled_fetch
+    hot:
+    - col_added
+    - col_changed
+    - col_kept
+    - m_check
+    - m_cost
+    - m_entry
+    - m_ftq
+    - m_l0
+    - m_l1
+    - m_l1i
+    - m_nfp
+    - m_pc
+    - m_phantom
+    - m_way
+    - p_21264
+    - p_bp
+    - p_ci
+    - p_cmp0
+    - p_cmp1
+    - p_enq
+    - p_fdp
+    - p_ftq
+    - p_hit
+    - p_if
+    - p_ins
+    - p_l2pf
+    - p_line
+    - p_mux1
+    - p_mux2
+    - p_next
+    - p_pc
+    - p_pcgen
+    - p_piq
+    - p_tag0
+    - p_tag1
+    - p_way
+    drawio:
+      file: drawio/lineage2.drawio
+      page: L3 nfp
+    walkthrough:
+      file: walkthroughs/l3-nfp.yaml
+      steps: 4
+      agreed: 0
+  - id: l4-ras
+    title: Return prediction lineage, the call return stack beside the M1 return stack
+    subtitle: ''
+    file: figures/l4-ras.svg
+    level: mechanism
+    up: ras
+    kinds:
+    - dataflow
+    - lineage
+    - structure
+    blocks:
+    - ras
+    mechanisms:
+    - two_level_ras
+    - ras_pac_check
+    - ras_overflow_clear
+    - return_fetch_table
+    hot:
+    - col_added
+    - col_changed
+    - col_kept
+    - m_cost
+    - m_dec
+    - m_entry
+    - m_fetch
+    - m_mini
+    - m_ovf
+    - m_pac
+    - m_pc
+    - m_ras
+    - m_rft
+    - m_stack
+    - p_bht
+    - p_call
+    - p_ke
+    - p_mux
+    - p_other
+    - p_pc
+    - p_ret
+    - p_skadron
+    - p_stack
+    drawio:
+      file: drawio/lineage2.drawio
+      page: L4 ras
+    walkthrough:
+      file: walkthroughs/l4-ras.yaml
+      steps: 4
+      agreed: 0
+  - id: l14-trace
+    title: Fetch lineage, the core fetch unit and the trace cache beside the M1 fetch group
+    subtitle: ''
+    file: figures/l14-trace.svg
+    level: mechanism
+    up: fetch
+    kinds:
+    - dataflow
+    - lineage
+    - structure
+    blocks:
+    - fetch
+    - iq
+    - l1i
+    - ras
+    mechanisms:
+    - next_fetch_groups
+    - fetch_page_split
+    - trace_cache
+    - loop_modes
+    - iq_bypass_fixup
+    hot:
+    - col_added
+    - col_changed
+    - col_kept
+    - m_bypass
+    - m_cost
+    - m_dec
+    - m_fe
+    - m_fetch
+    - m_fgt
+    - m_iq
+    - m_l1i
+    - m_loop
+    - m_pc
+    - m_ras
+    - m_tc
+    - p_btb
+    - p_cfu
+    - p_cfu2
+    - p_dec
+    - p_dec2
+    - p_fa
+    - p_fa2
+    - p_hit
+    - p_ic
+    - p_ism
+    - p_latch
+    - p_lfb
+    - p_logic
+    - p_mbp
+    - p_merge
+    - p_mux
+    - p_pred
+    - p_ras
+    - p_ta
+    - p_tc
+    - p_tcf
+    - p_valid
+    drawio:
+      file: drawio/lineage2.drawio
+      page: L14 trace
+    walkthrough:
+      file: walkthroughs/l14-trace.yaml
+      steps: 4
+      agreed: 0
+  - id: l5-rename
+    title: 'Rename lineage: the R10000 map table, free list and active list beside the M1 rename stage'
+    subtitle: ''
+    file: figures/l5-rename.svg
+    level: mechanism
+    up: rename
+    kinds:
+    - lineage
+    - structure
+    blocks:
+    - rename
+    - int_prf
+    - fp_prf
+    - flags_prf
+    - retire
+    - dispatch
+    mechanisms:
+    - group_map
+    - macro_op_fusion
+    - move_elimination
+    - immediate_regs
+    - rename_retire_queue
+    - register_security_tag
+    hot:
+    - added
+    - changed
+    - dispatch
+    - fusion
+    - group_map
+    - how
+    - immediate_regs
+    - kept
+    - m1
+    - m1_free
+    - m1_group
+    - m1_map
+    - move_elimination
+    - paper
+    - r10k_active
+    - r10k_busy
+    - r10k_free
+    - r10k_grad
+    - r10k_instr
+    - r10k_map
+    - r10k_queue
+    - register_security_tag
+    - rename
+    - rename_retire_queue
+    - reno
+    - reno_map
+    - reno_rob
+    - retire
+    - sp85
+    drawio:
+      file: drawio/lineage3.drawio
+      page: L5 rename
+    walkthrough:
+      file: walkthroughs/l5-rename.yaml
+      steps: 4
+      agreed: 0
+  - id: l6-scheduler
+    title: 'Scheduler lineage: dependence matrices, age matrices and dependence FIFOs beside the M1 integer scheduler'
+    subtitle: ''
+    file: figures/l6-scheduler.svg
+    level: mechanism
+    up: sched_int
+    kinds:
+    - lineage
+    - structure
+    blocks:
+    - sched_int
+    - sched_ls
+    - dispatch
+    - eu_int
+    mechanisms:
+    - matrix_scheduler
+    - paired_sched_queues
+    - hierarchical_reservation_station
+    - load_replay_shadow
+    - issue_age_flush
+    - dispatch_buffers
+    hot:
+    - added
+    - age_matrix
+    - changed
+    - dispatch
+    - g_left
+    - g_rdyl
+    - g_right
+    - goshima
+    - hierarchical_reservation_station
+    - how
+    - issue_age_flush
+    - kept
+    - load_replay_shadow
+    - m1
+    - matrix_scheduler
+    - p_fifo0
+    - p_fifo1
+    - p_fifo2
+    - p_fifo3
+    - p_fu
+    - p_regfile
+    - p_rename
+    - p_select
+    - palacharla
+    - paper
+    - q1
+    - q2
+    - q3
+    - q4
+    - q5
+    - q6
+    - s_age
+    - s_bid
+    - s_grant
+    - s_wake
+    - sassone
+    - u1
+    - u2
+    - u3
+    - u4
+    - u5
+    - u6
+    drawio:
+      file: drawio/lineage3.drawio
+      page: L6 scheduler
+    walkthrough:
+      file: walkthroughs/l6-scheduler.yaml
+      steps: 5
+      agreed: 0
+  - id: l7-retire
+    title: 'Retire lineage: a saved map per instruction, checkpoints instead of a reorder buffer, fused entries, beside the
+      M1 retire queues'
+    subtitle: ''
+    file: figures/l7-retire.svg
+    level: mechanism
+    up: retire
+    kinds:
+    - lineage
+    - structure
+    blocks:
+    - retire
+    - rename
+    mechanisms:
+    - retire_groups
+    - rename_retire_queue
+    hot:
+    - a_ckpt
+    - a_conf
+    - a_count
+    - added
+    - akkary
+    - branches
+    - changed
+    - f_addr
+    - f_data
+    - f_fused
+    - f_retire
+    - group_entry
+    - group_rule
+    - how
+    - k_map
+    - k_queue
+    - k_saved
+    - kept
+    - kessler
+    - m1
+    - paper
+    - pentium
+    - rename_retire_queue
+    - retire_groups
+    - retire_rate
+    - windows
+    drawio:
+      file: drawio/lineage3.drawio
+      page: L7 retire
+    walkthrough:
+      file: walkthroughs/l7-retire.yaml
+      steps: 5
+      agreed: 0
+  - id: l8-memdep
+    title: 'Memory dependence lineage: store sets, store-load pairs and memory renaming beside the M1 load-store unit'
+    subtitle: ''
+    file: figures/l8-memdep.svg
+    level: mechanism
+    up: lsu
+    kinds:
+    - dataflow
+    - lineage
+    - structure
+    blocks:
+    - lsu
+    - lq
+    - sq
+    mechanisms:
+    - store_load_dep_predictor
+    - zero_cycle_loads
+    - late_ordering_check
+    - sq_partial_forwarding
+    - tso_mode
+    - load_address_prediction
+    - load_value_prediction
+    hot:
+    - absent
+    - added
+    - c_lfst
+    - c_pc
+    - c_ssit
+    - changed
+    - chrysos
+    - flush
+    - how
+    - kept
+    - late_ordering_check
+    - lq
+    - m1
+    - m_mdpt
+    - m_mdst
+    - moshovos
+    - paper
+    - sq
+    - sq_partial_forwarding
+    - store_load_dep_predictor
+    - t_cache
+    - t_lsq
+    - t_verify
+    - t_vfile
+    - tso_mode
+    - tyson
+    - zero_cycle_loads
+    drawio:
+      file: drawio/lineage3.drawio
+      page: L8 memdep
+    walkthrough:
+      file: walkthroughs/l8-memdep.yaml
+      steps: 5
+      agreed: 0
+  - id: l9-l1d-way
+    title: 'L1D way prediction lineage: a micro tag folded from the virtual address, after AMD'
+    subtitle: ''
+    file: figures/l9-l1d-way.svg
+    level: mechanism
+    up: l1d
+    kinds:
+    - lineage
+    - structure
+    blocks:
+    - l1d
+    - dtlb
+    mechanisms:
+    - l1d_utag_way_predictor
+    - l1d_tree_plru
+    - l1d_hashed_way
+    - l1d_way_lookup
+    - l1d_page_offset_index
+    hot:
+    - added
+    - changed
+    - fm
+    - fp
+    - kept
+    - l1d_hashed_way
+    - l1d_tree_plru
+    - l1d_utag_way_predictor
+    - l1d_way_lookup
+    - m_cmp
+    - m_data
+    - m_hash
+    - m_pa
+    - m_replay
+    - m_sizes
+    - m_va
+    - p_cmp
+    - p_cyc
+    - p_hash
+    - p_l1
+    - p_l2
+    - p_mru
+    - p_partial
+    - p_utag
+    - p_va
+    - p_ways
+    drawio:
+      file: drawio/lineage4.drawio
+      page: L9 L1D way prediction
+    walkthrough:
+      file: walkthroughs/l9-l1d-way.yaml
+      steps: 4
+      agreed: 0
+  - id: l10-l2
+    title: 'Shared L2 lineage: sectored lines, distance banks and insertion by class'
+    subtitle: ''
+    file: figures/l10-l2.svg
+    level: mechanism
+    up: l2
+    kinds:
+    - dataflow
+    - lineage
+    - structure
+    blocks:
+    - l2
+    mechanisms:
+    - l2_half_lines
+    - l2_cachelets
+    - l2_insertion_priority
+    - l2_autolock
+    - l2_core_lru
+    - l2_hashed_way_filter
+    hot:
+    - added
+    - changed
+    - fm
+    - fp
+    - kept
+    - l2_autolock
+    - l2_cachelets
+    - l2_cachelets1
+    - l2_cachelets2
+    - l2_cachelets3
+    - l2_core_lru
+    - l2_half_lines
+    - l2_insertion_priority
+    - m_bits
+    - m_core
+    - m_half1
+    - m_tag
+    - p_bank0
+    - p_bank1
+    - p_bank2
+    - p_bank3
+    - p_core
+    - p_lip
+    - p_lru
+    - p_rrip
+    - p_sl0
+    - p_sl1
+    - p_sl2
+    - p_sl3
+    - p_stack
+    - p_tag
+    drawio:
+      file: drawio/lineage4.drawio
+      page: L10 shared L2
+    walkthrough:
+      file: walkthroughs/l10-l2.yaml
+      steps: 5
+      agreed: 0
+  - id: l11-prefetch
+    title: 'Prefetch lineage: access maps, a global history, pointer scans and a pollution filter'
+    subtitle: ''
+    file: figures/l11-prefetch.svg
+    level: mechanism
+    up: prefetch
+    kinds:
+    - fsm
+    - lineage
+    - structure
+    blocks:
+    - prefetch
+    - lsu
+    mechanisms:
+    - lsu_virtual_prefetch
+    - ampm_prefetcher
+    - temporal_prefetch
+    - content_directed_prefetch
+    - prefetch_deny_list
+    - prefetch_throttle
+    - nt_load_handling
+    hot:
+    - added
+    - ampm_prefetcher
+    - changed
+    - content_directed_prefetch
+    - fm
+    - fp
+    - kept
+    - lsu_virtual_prefetch
+    - m_levels
+    - m_pcmp
+    - m_ptr
+    - m_region
+    - m_stride
+    - p_acc
+    - p_alg
+    - p_cand
+    - p_ea
+    - p_fh
+    - p_filter
+    - p_ghb
+    - p_idx
+    - p_init
+    - p_levels
+    - p_map
+    - p_pf
+    - p_pfreq
+    - p_sms
+    - p_vcmp
+    - p_zone
+    - prefetch_deny_list
+    - prefetch_throttle
+    - temporal_prefetch
+    drawio:
+      file: drawio/lineage4.drawio
+      page: L11 prefetchers
+    walkthrough:
+      file: walkthroughs/l11-prefetch.yaml
+      steps: 5
+      agreed: 0
+  - id: l12-slc
+    title: 'System level cache lineage: a victim cache grown to 8 MiB, with a hashed index'
+    subtitle: ''
+    file: figures/l12-slc.svg
+    level: mechanism
+    up: slc
+    kinds:
+    - dataflow
+    - lineage
+    - structure
+    blocks:
+    - slc
+    - l2
+    - memctrl
+    mechanisms:
+    - slc_victim_fill
+    - slc_hashed_index
+    - slc_slices
+    - slc_sticky_quota
+    - slc_speculative_read
+    - slc_memory_side
+    hot:
+    - added
+    - changed
+    - fm
+    - fp
+    - kept
+    - m_gpu
+    - m_l2
+    - m_mc
+    - m_pa
+    - m_sets
+    - p_addr
+    - p_b0
+    - p_b1
+    - p_cpu
+    - p_dm
+    - p_f0
+    - p_f1
+    - p_mem
+    - p_vc
+    - slc_hashed_index
+    - slc_slices
+    - slc_speculative_read
+    - slc_sticky_quota
+    - slc_victim_fill
+    drawio:
+      file: drawio/lineage4.drawio
+      page: L12 system level cache
+    walkthrough:
+      file: walkthroughs/l12-slc.yaml
+      steps: 4
+      agreed: 0
+  - id: l13-tlb
+    title: 'TLB lineage: two levels in front of a walk that caches the upper page table levels'
+    subtitle: ''
+    file: figures/l13-tlb.svg
+    level: mechanism
+    up: dtlb
+    kinds:
+    - lineage
+    - structure
+    blocks:
+    - dtlb
+    mechanisms:
+    - mmu_walk_cache
+    - dtlb_random_replacement
+    - itlb_victims_to_dtlb
+    - cluster_l2_tlb
+    - dtlb_piggyback
+    - tlb_mixed_page_sizes
+    - tlb_invalidation_shortcuts
+    hot:
+    - added
+    - changed
+    - cluster_l2_tlb
+    - dtlb_piggyback
+    - fm
+    - fp
+    - itlb_victims_to_dtlb
+    - kept
+    - m_l1tlb
+    - m_l2tlb
+    - m_repl
+    - m_va
+    - mmu_walk_cache
+    - p_L1
+    - p_L2
+    - p_L3
+    - p_L4
+    - p_l2d
+    - p_mmuc
+    - p_page
+    - p_psc
+    - p_tlb
+    - p_uptc
+    - p_va
+    - tlb_invalidation_shortcuts
+    - tlb_mixed_page_sizes
+    drawio:
+      file: drawio/lineage4.drawio
+      page: L13 TLBs
+    walkthrough:
+      file: walkthroughs/l13-tlb.yaml
+      steps: 4
+      agreed: 0
+  sheets: []

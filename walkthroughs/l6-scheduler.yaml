@@ -1,0 +1,82 @@
+# l6-scheduler.yaml
+# The l6-scheduler figure read step by step.
+figure: l6-scheduler
+steps:
+- n: 1
+  title: Wakeup as a matrix, Goshima 2001
+  say: Each row is a waiting uop, each column a producer. A grant clears the column; a row whose bits are all clear is ready.
+    No tag compare, one wire per column.
+  rests_on: corroborated
+  targets:
+  - goshima
+  - g_left
+  - g_rdyl
+  - g_right
+  status: draft
+- n: 2
+  title: Select by an age matrix, Sassone 2007
+  say: A second matrix orders the rows by age; the oldest ready row wins the port. Allocation writes a row and a column, and
+    nothing shifts.
+  rests_on: corroborated
+  targets:
+  - sassone
+  - s_wake
+  - s_age
+  - s_grant
+  - s_bid
+  status: draft
+- n: 3
+  title: Dependence steered FIFOs, Palacharla 1997
+  say: Rename steers each uop into a FIFO behind its producer, so only the heads need to be checked. Small queues with one
+    port each are fast; the cost is steering.
+  ask: What goes wrong when a FIFO head is not ready but something behind it is?
+  rests_on: corroborated
+  targets:
+  - palacharla
+  - p_rename
+  - p_fifo0
+  - p_fifo1
+  - p_fifo2
+  - p_fifo3
+  - p_select
+  - p_regfile
+  - p_fu
+  status: draft
+- n: 4
+  title: 'The M1: six paired queues of thirteen'
+  say: Six integer queues of about thirteen entries, one unit each, paired so a queue with nothing ready issues from its partner;
+    one uop a cycle enters each; 134 entries in all. Dispatch buffers in front do what rename time steering did. Handley reads
+    24 per queue; the dispute is one of method.
+  rests_on: derived
+  targets:
+  - m1
+  - dispatch
+  - q1
+  - q2
+  - q3
+  - q4
+  - q5
+  - q6
+  - u1
+  - u2
+  - u3
+  - u4
+  - u5
+  - u6
+  status: draft
+- n: 5
+  title: 'Patents, and the verdict: plausible'
+  say: Matrix wakeup and the age matrix are what Apple patents describe; the two level queue, the replay shadow behind a load
+    and the age bits that pick a flush are Apple additions, all from patents. Nothing measured separates a matrix from a tag
+    broadcast. Plausible.
+  rests_on: inferred
+  targets:
+  - matrix_scheduler
+  - age_matrix
+  - hierarchical_reservation_station
+  - load_replay_shadow
+  - issue_age_flush
+  - kept
+  - changed
+  - added
+  status: draft

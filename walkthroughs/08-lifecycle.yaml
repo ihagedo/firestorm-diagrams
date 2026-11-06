@@ -1,0 +1,118 @@
+# 08-lifecycle.yaml
+# The 08-lifecycle figure read step by step.
+figure: 08-lifecycle
+steps:
+- n: 1
+  title: The row is ordered by event, not by cycle
+  say: Nobody has published how many cycles each stage takes, so the row across the top is the order of events a uop passes
+    through, fetch to map history retire. The measured widths are solid, eight instructions fetched, decoded and renamed per
+    cycle; the map and writeback stages are drawn dashed because they are inferred from what must happen, not from a measurement.
+  ask: Why does a measurement of the window not tell you the number of pipeline stages?
+  rests_on: corroborated
+  targets:
+  - st0
+  - st1
+  - st2
+  - st3
+  - st4
+  - st5
+  - st6
+  - st7
+  - st8
+  - st9
+  - st10
+  status: draft
+- n: 2
+  title: A retire group slot is taken at rename
+  say: Uops retire in groups of up to seven. A memory operation opens a group and a branch closes one, and the slot is taken
+    at rename and held until the group retires. There are 330 groups, which is why the NOP window divided by the load, store
+    or branch window comes out close to a whole number.
+  ask: If a branch closes a group, what does a stream of back to back branches do to the usable window?
+  rests_on: corroborated
+  targets:
+  - retire_slot
+  - st3
+  - st9
+  status: draft
+- n: 3
+  title: The rename retire queue keeps the old map
+  say: Every uop that writes a register takes an entry in a second queue of 623, which records the old mapping so a flush
+    can restore it. The entry is freed only when its map history retires, sixteen per cycle, one stage after the retire group.
+    This queue, not the physical register count, is what limits a window of register writing instructions.
+  ask: Why would a core keep the old mapping around after the new one is in use?
+  rests_on: confirmed
+  targets:
+  - rrq_entry
+  - st3
+  - st10
+  status: draft
+- n: 4
+  title: A physical register is taken at rename and freed late
+  say: Rename hands each result a new physical register from 380 integer, 432 floating point and SIMD, or 128 flags registers.
+    The old register is not freed when the new one is written; it waits until the history entry retires, so a long dependent
+    chain keeps two registers per value for most of its life. Move elimination and zero idioms skip the register entirely.
+  rests_on: corroborated
+  targets:
+  - preg
+  - st3
+  - st10
+  status: draft
+- n: 5
+  title: The dispatch buffer holds a uop until a scheduler queue has room
+  say: Between rename and the schedulers sits a small buffer per group of schedulers, two of 24 for the integer side, 12 for
+    multiplies, 10 for loads and stores, 12 for floating point. A uop waits here only until its scheduler queue can take it,
+    one uop per queue per cycle, so the buffer is short lived unless a queue is full.
+  ask: What would you see in a window measurement if the dispatch buffer were the bottleneck?
+  rests_on: corroborated
+  targets:
+  - dispatch_entry
+  - st4
+  - st5
+  status: draft
+- n: 6
+  title: The scheduler entry waits for operands and selection
+  say: In the scheduler queue the uop waits until its operands are ready and it is selected for issue. The integer queues
+    hold about 13 each, derived from 134 measured entries over six queues; the floating point queues hold 36 and the load
+    store queues about 12. The entry is freed at issue, which is earlier than any other resource in the row.
+  rests_on: derived
+  targets:
+  - sched_entry
+  - st5
+  - st6
+  status: draft
+- n: 7
+  title: Load and store queue entries are taken at issue and given back early
+  say: The load queue has 130 entries and the store queue 60, but the entry is taken when the memory op issues, not when it
+    dispatches, and loads and non speculative stores give it back before they retire. This is our reading of the measurements,
+    taken at issue is a conjecture and early release is inferred, and it is why the same filler gives a different knee under
+    a cache miss than under an ALU delay.
+  ask: How would you tell allocation at issue from allocation at dispatch with only a window probe?
+  rests_on: inferred
+  targets:
+  - lsq_entry
+  - st6
+  - st9
+  status: draft
+- n: 8
+  title: Branches have their own count in flight
+  say: Independently of the groups, at most 144 branches can be in flight from rename to retire, measured by one group. A
+    branch heavy window runs into this limit before the retire groups, which is one more reason the window a program sees
+    depends on what it is made of.
+  rests_on: single
+  targets:
+  - branch_inflight
+  - st3
+  - st9
+  status: draft
+- n: 9
+  title: Store data reaches the L1D after the group commits
+  say: A store's data is written to the L1D only after its retire group commits, two stores per cycle. Until then it lives
+    in the store queue and forwards to younger loads from there. This is the last resource in the row, and the only one taken
+    after retire rather than before it.
+  ask: Why must the store wait for its retire group rather than its own retirement?
+  rests_on: corroborated
+  targets:
+  - store_commit
+  - st9
+  - st10
+  status: draft

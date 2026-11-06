@@ -1,0 +1,111 @@
+# 03-rename.yaml
+# The 03-rename figure read step by step.
+figure: 03-rename
+steps:
+- n: 1
+  title: Eight a cycle arrive, and the group is compared with itself
+  say: Decode hands over eight instructions a cycle. Before any rename happens, a map stage compares every slot of the group
+    against every other, so a dependence inside the group, including a chain of moves, is resolved in the same cycle. The
+    map stage itself is inferred from the way eliminated move chains behave; the eight wide figure is measured.
+  ask: Why must an in-group compare happen before rename rather than after?
+  rests_on: inferred
+  targets:
+  - decode
+  - group_map
+  status: draft
+- n: 2
+  title: Pairs that become one uop
+  say: Decode spots pairs and the map stage merges them. A flag setting ALU op with the conditional branch after it, an ALU
+    op with cbz or cbnz, the AES and PMULL pairs, and AMX pairs each become one uop. Two pairs that other cores fuse do not
+    fuse here, adrp with add and mov with movk, which is why they are struck through. Fusion is complete only while the fused
+    instructions read at most four registers per six instructions, which is the first hint of a read port limit.
+  ask: What does a fused compare and branch save, and where could the four reads per six instructions limit come from?
+  rests_on: single
+  targets:
+  - macro_op_fusion
+  status: draft
+- n: 3
+  title: Three kinds of instruction that finish at rename
+  say: A full width register move finishes at rename by pointing the new name at the old physical register, and a vector zeroing
+    idiom costs nothing; both are measured. A move of a non zero immediate also completes at rename, but only two of them
+    per eight instructions, into a pool of about thirty six registers that hold immediates. One group measured eight per cycle,
+    which the knowledge base records as a dispute; the two per eight figure has three sources. Sub register moves, a move
+    from xzr and an eor of a register with itself run as ordinary ops.
+  ask: Why would an immediate pool be small and separate instead of part of the integer file?
+  rests_on: corroborated
+  targets:
+  - move_elimination
+  - zero_idiom
+  - immediate_regs
+  status: draft
+- n: 4
+  title: The map, thirty two names to physical registers
+  say: Rename proper maps the thirty two architectural registers to physical ones, eight uops a cycle. Each mapping is read
+    to carry a security tag that says whether this process has written the register; code that reads registers it has not
+    written slows integer issue to about four wide, which is one group's measurement and their guess at the cause. Flag moves
+    handled at the map are our own conjecture, so that line is magenta.
+  ask: What would a security tag on a register mapping protect against?
+  rests_on: corroborated
+  targets:
+  - rename
+  status: draft
+- n: 5
+  title: The rename retire queue remembers every old mapping
+  say: Every uop that changes the map writes one entry here with the old physical register. On a mispredict the entries after
+    the branch are walked backwards to restore the map; at retire the old register is freed, sixteen entries a cycle. The
+    queue holds six hundred and twenty three entries, measured by several groups, which makes it the limit for instructions
+    that write registers.
+  ask: Why is the limit on register writers smaller than the limit on instructions in flight?
+  rests_on: confirmed
+  targets:
+  - rename_retire_queue
+  status: draft
+- n: 6
+  title: Four windows, four different limits
+  say: The bars compare the windows a probe can measure. NOPs reach two thousand two hundred and seventy seven, which is three
+    hundred and thirty retire groups of seven. Issuing uops reach about a thousand, the same groups at four. Register writers
+    stop at six hundred and twenty three, the rename retire queue, and branches at one hundred and forty four. Each window
+    is a different structure filling up, which is why the course keeps asking which structure a measurement is really about.
+  ask: Which structure fills first for a loop of loads and adds?
+  rests_on: corroborated
+  targets:
+  - windows
+  status: draft
+- n: 7
+  title: Three register files, and what is free for speculation
+  say: The integer file holds three hundred and eighty registers of which three hundred and sixty two are free for speculation,
+    the FP and SIMD file four hundred and thirty two with three hundred and eighty two free, and the flags file one hundred
+    and twenty eight with one hundred and twenty three free, each number from two groups. The integer file is read as four
+    banks that power down separately, with a two or three cycle wake, from a patent. Scalar and SIMD flags are separate files,
+    and moving flags across them costs about six cycles. The overflow pool for results beyond the write ports is a patent
+    reading and ours to test.
+  ask: Why does the headroom differ from the total by about the architectural register count?
+  rests_on: corroborated
+  targets:
+  - int_prf
+  - fp_prf
+  - flags_prf
+  status: draft
+- n: 8
+  title: Special registers are written speculatively
+  say: Writes to special registers go out of order into speculative storage and are made permanent at retire, so they do not
+    serialise the pipeline the way a textbook would. This is a patent reading with nothing measured, so the box is dotted.
+  rests_on: conjecture
+  targets:
+  - speculative_special_regs
+  status: draft
+- n: 9
+  title: Dispatch buffers, one queue per unit
+  say: Renamed uops go to unordered dispatch buffers, one per scheduler group, which take eight a cycle and feed one uop a
+    cycle into each scheduler queue. Integer has two buffers of twenty four, multiply twelve, load and store ten, and FP and
+    SIMD twelve, with fourteen also quoted. When a buffer is full, rename stalls; the buffers exist to let the eight wide
+    front end run ahead of the one per queue drain.
+  ask: Why would a core buffer between rename and the schedulers instead of making the schedulers bigger?
+  rests_on: corroborated
+  targets:
+  - dispatch_int
+  - dispatch_mul
+  - dispatch_ls
+  - dispatch_fp
+  - stall
+  status: draft

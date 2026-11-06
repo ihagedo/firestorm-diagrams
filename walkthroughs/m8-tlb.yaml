@@ -1,0 +1,113 @@
+# m8-tlb.yaml
+# The m8-tlb figure read step by step.
+figure: m8-tlb
+steps:
+- n: 1
+  title: One address, sliced three ways
+  say: The M1 uses 16 KiB pages and 48 bit virtual addresses, so the bottom fourteen bits never translate. The walker reads
+    eleven bits per table level, three full levels and a single bit at the top. The L1 dTLB takes its set from bits 18 to
+    14, the L2 TLB from bits 21 to 14; those set bits were measured by sweeping addresses, the walk slicing follows from the
+    architecture.
+  ask: Why does a larger page size cut the number of walk levels?
+  rests_on: corroborated
+  targets:
+  - va_walk
+  - va_l1tlb
+  - va_l2tlb
+  status: draft
+- n: 2
+  title: The L1 dTLB, 160 entries
+  say: The first level holds 160 translations as 32 sets of 5 ways, a number three groups agree on. Each entry carries the
+    virtual tag, the address space id, the physical frame and the permissions; the field widths on the figure are illustrative,
+    and the size field is a patent reading. Loads find their translation here in the same three cycles as the L1D hit.
+  rests_on: confirmed
+  targets:
+  - dtlb
+  - dtlb_entry
+  status: draft
+- n: 3
+  title: One port, random replacement, iTLB victims
+  say: Three things about the first level are inferred rather than measured directly. It does one lookup per cycle, with queued
+    requests to the same page sharing the result; three loads a cycle to one page run at full speed. Its replacement looks
+    random, because latency past 160 pages climbs smoothly from 3 to 9 cycles instead of stepping. And translations evicted
+    from the user and kernel iTLBs land here, so the dTLB backs the instruction side too.
+  ask: What would the latency curve look like with LRU replacement instead of random?
+  rests_on: inferred
+  targets:
+  - dtlb_piggyback
+  - dtlb_random_replacement
+  - itlb_victims_to_dtlb
+  status: draft
+- n: 4
+  title: The L2 TLB, 3072 entries, 25 cycles to miss it
+  say: A first level miss costs 6 cycles and goes to the L2 TLB, 3072 entries as 256 sets of 12 ways, measured by two groups.
+    Missing that costs about 25 cycles, which already includes the start of the walk. Only 16 KiB pages have been seen on
+    the M1; the patents describe a size field that would let one TLB hold up to five sizes, but nothing measured shows it.
+  rests_on: corroborated
+  targets:
+  - l1_miss
+  - l2tlb
+  - l2_miss
+  - pages
+  status: draft
+- n: 5
+  title: Is the L2 TLB shared by the cluster?
+  say: A patent puts the L2 TLB and the page walkers beside the L2 cache, in a unit the four cores share, with each core keeping
+    only its small first level. If that is the M1, the 25 cycles include a trip over the L1 to L2 path, and a second core's
+    misses contend for the same structure. Nothing published measures this. Our probe has two cores thrash their L1 dTLB while
+    hitting the L2 TLB; a shared single ported TLB raises the per core cost, a private one leaves it flat.
+  ask: What else in the 25 cycles would change if the L2 TLB sat beside the L2 cache?
+  rests_on: conjecture
+  targets:
+  - cluster_l2_tlb
+  - share_test
+  status: draft
+- n: 6
+  title: The walk, through a cache of the upper levels
+  say: An L2 TLB miss walks the three level table, but not from memory. An MMU walk cache holds the upper two levels, so a
+    typical walk is one walk cache hit plus one read of the leaf entry from the L2 cache. That is inferred from the 25 cycle
+    cost and the patents. Our split of the 25 is 17 for the L2 read and about 8 for the TLB and walker logic; the split is
+    ours, the total is measured.
+  rests_on: inferred
+  targets:
+  - mmu_walk_cache
+  - walk_split
+  status: draft
+- n: 7
+  title: Faults that leave no trace, and two patents
+  say: One measured fact and two patent readings sit at the edge of translation. A load through a pointer that failed its
+    authentication check is not performed and leaves no TLB trace; that was measured with a mispredicted branch gadget. The
+    patents describe permissions held as an index into a four entry table, so a page's permissions change with no TLB shootdown,
+    and a range invalidation that picks whichever of scanning or per page lookup is cheaper, comparing ASID and VMID four
+    at a time.
+  rests_on: conjecture
+  targets:
+  - aut_fault
+  - indexed_page_permissions
+  - tlb_invalidation_shortcuts
+  status: draft
+- n: 8
+  title: The iTLB that does not add up
+  say: The instruction TLB measures at 192 entries, from the point where branch cost steps up as pages are added. The shape
+    that has been proposed for it, four ways and 32 sets, gives 128. Either the shape or the count is wrong, and the KB keeps
+    it open rather than pick one.
+  ask: How would you tell 192 entries in 6 ways from 192 in 4 ways plus something else?
+  rests_on: single
+  targets:
+  - itlb_shape
+  status: draft
+- n: 9
+  title: The latency ladder
+  say: Put together, a load costs 3 cycles when both its translation and its data are in the first level, 9 when the translation
+    comes from the L2 TLB, about 28 when it has to walk, 17 when the translation hits but the data is in the L2, and around
+    90 when the data is in the system level cache. The 90 is a passing remark in one source; the 28 is the measured 25 plus
+    the 3 cycle hit.
+  rests_on: corroborated
+  targets:
+  - ladder
+  - lad_l1
+  - lad_l2tlb
+  - lad_walk
+  - lad_l2
+  - lad_slc
+  status: draft

@@ -1,0 +1,133 @@
+# x2-power.yaml
+# The x2-power figure read step by step.
+figure: x2-power
+steps:
+- n: 1
+  title: A cluster changes speed as one
+  say: The cores, the L2 and the bus interface of a cluster share one performance state. On a change the voltage rises first
+    and is sensed settled, then the PLL retargets behind a divider that steps from four to two to one, so the clock never
+    overshoots the voltage. The per cluster clock domain is documented; the sequence is a patent reading.
+  ask: Why raise the voltage before the clock and not together?
+  rests_on: conjecture
+  targets:
+  - dvfs_transition
+  - a1
+  - a2
+  - a3
+  - a4
+  - a5
+  - pst
+  - cores
+  - l2c
+  - busif
+  status: draft
+- n: 2
+  title: Waiting on memory gets one pulse in four; waking takes tens of milliseconds
+  say: A core stalled on DRAM or waiting for an event receives one clock pulse in four instead of a DVFS change, which is
+    cheaper than a transition for a short wait. Measured, from idle the P cluster clock begins rising within 10 to 20 milliseconds
+    and reaches its maximum after 40 to 100, in steps. The division is a patent reading; the ramp is measured by two groups.
+  rests_on: corroborated
+  targets:
+  - idle_clock_division
+  - clock_ramp
+  status: draft
+- n: 3
+  title: A closed loop controller picks the cluster and the level
+  say: A controller maps each thread group's control effort to a cluster type and a DVFS level, and when cores stall on memory
+    it raises the fabric, DRAM or feeding cluster clocks instead of the core's own. Patent reading, consistent with the measured
+    behaviour that memory bound code does not pull the core clock up.
+  ask: What signal tells the controller a thread is memory bound rather than idle?
+  rests_on: conjecture
+  targets:
+  - tg
+  - perf_controller
+  - ptype
+  - fclk
+  status: draft
+- n: 4
+  title: A digital power estimate throttles vector issue
+  say: Per core event counts feed a power estimate and a pool of energy credits. When the credits run out, vector and AMX
+    issue is blocked for a cycle or two, and the estimate also steers DVFS. Patent reading; it would show up as a periodic
+    bubble in a long SIMD stream.
+  rests_on: conjecture
+  targets:
+  - ctr
+  - power_estimator_throttle
+  - vgate
+  status: draft
+- n: 5
+  title: What software can read about power
+  say: The SMC reports power as keys that refresh about once a second and that user software can read; some of them move with
+    the data being processed. The OS energy counters look like estimates from utilisation rather than readings. Measured by
+    two groups.
+  rests_on: corroborated
+  targets:
+  - power_telemetry
+  - osc
+  - sw
+  status: draft
+- n: 6
+  title: A powered down core restarts from the always on manager
+  say: When a core powers down, an always on power manager keeps the restart address. On wake the core restarts there and
+    reloads its saved state from whichever level still holds it, the L2, the SLC or DRAM, depending on what else slept. The
+    10 microsecond power up is inferred; the restart path is a patent reading.
+  rests_on: conjecture
+  targets:
+  - aon
+  - core_power_cycle
+  - rl2
+  - rslc
+  - rdram
+  status: draft
+- n: 7
+  title: Four sleep levels, chosen in override registers
+  say: Wait for interrupt either clock gates the core or lets it power down, chosen in a CPU override register. When the last
+    core sleeps the cluster can go to deep sleep, where ACC override fields flush the L2, power down the SRM and CPM and train
+    the link down; branch predictor state can be kept across it. Inferred from the register map.
+  ask: Why would you keep branch predictor state across a sleep that flushes the L2?
+  rests_on: inferred
+  targets:
+  - cluster_sleep_states
+  - c1
+  - c2
+  - c3
+  status: draft
+- n: 8
+  title: Clock crossings predict the other edge
+  say: Where two clock domains meet, the crossing predicts the other clock's next edge from a history of past edges instead
+    of passing signals through a two flop synchroniser, and moves one bit pointer increments through small event FIFOs. That
+    saves a cycle or two at every crossing. Patent reading.
+  rests_on: conjecture
+  targets:
+  - ra
+  - fifo
+  - rb
+  - hist
+  - predictive_clock_crossing
+  - sync2
+  status: draft
+- n: 9
+  title: An interrupt is offered round by round
+  say: A device interrupt follows the device's own writes, is held while every core sleeps, and is then offered cluster by
+    cluster in a soft round that a busy core may refuse, a hard round, and a force round that cannot be refused. Patent reading.
+  rests_on: conjecture
+  targets:
+  - interrupt_routing
+  - e1
+  - e2
+  - e3
+  - e4
+  - e5
+  status: draft
+- n: 10
+  title: Fast IPIs through a system register
+  say: A core interrupts another by writing a system register with an immediate, deferred, retract or no wake request. A deferred
+    request waits for a countdown in reference clock ticks held in a global register. Inferred from the register map and the
+    kernel's use of it.
+  rests_on: inferred
+  targets:
+  - corea
+  - fast_ipi
+  - cnt
+  - coreb
+  status: draft

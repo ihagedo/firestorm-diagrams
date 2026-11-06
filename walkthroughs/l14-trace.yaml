@@ -1,0 +1,63 @@
+# l14-trace.yaml
+# The l14-trace figure read step by step.
+figure: l14-trace
+steps:
+- n: 1
+  title: The core fetch unit, Rotenberg 1996
+  say: A fetch address, a branch target buffer, a return stack and a multiple branch predictor drive an interleaved cache,
+    and the instructions are shifted and masked into one group up to the first predicted taken branch. One taken branch a
+    cycle is the limit.
+  rests_on: corroborated
+  targets:
+  - p_cfu
+  - p_fa
+  - p_btb
+  - p_ras
+  - p_mbp
+  - p_ic
+  - p_logic
+  status: draft
+- n: 2
+  title: The trace cache on top of it
+  say: Traces of up to sixteen instructions and three branches, tagged by the starting address and checked against the branch
+    flags, filled from the instruction latch through a line fill buffer. A hit fetches past taken branches in one cycle.
+  ask: What has to be true of the branch outcomes for a trace hit to be usable?
+  rests_on: corroborated
+  targets:
+  - p_tcf
+  - p_tc
+  - p_hit
+  - p_pred
+  - p_mux
+  - p_lfb
+  - p_merge
+  status: draft
+- n: 3
+  title: 'The M1: the core fetch unit, nothing above it'
+  say: 'Eight instructions a cycle, sixteen within one line, one taken branch a cycle: measured. The fetch group table gives
+    the target and length; TAGE predicts. No structure measured fetches across a taken branch.'
+  rests_on: confirmed
+  targets:
+  - m_fe
+  - m_pc
+  - m_fgt
+  - m_ras
+  - m_l1i
+  - m_fetch
+  - m_iq
+  - m_dec
+  - m_cost
+  status: draft
+- n: 4
+  title: 'Contrast: the limit the trace cache was built to lift'
+  say: The trace cache and the loop modes in the knowledge base are patent readings only; the measured one taken branch per
+    cycle is exactly the limit Rotenberg built the trace cache to lift. Contrast.
+  rests_on: confirmed
+  targets:
+  - m_tc
+  - m_loop
+  - m_bypass
+  - col_kept
+  - col_changed
+  - col_added
+  status: draft

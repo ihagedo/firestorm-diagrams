@@ -1,0 +1,109 @@
+# x10-amx-slc.yaml
+# The x10-amx-slc figure read step by step.
+figure: x10-amx-slc
+steps:
+- n: 1
+  title: AMX instructions leave the core through the store queue
+  say: An AMX instruction is a uop in the core's load store pipeline. It waits in the store queue until it is no longer speculative,
+    then goes out over the L2 bus to the AMX unit, up to two a cycle, in bundles of three or four. Measured by timing the
+    issue pattern.
+  ask: Why would a matrix instruction wait to be non speculative before it leaves the core?
+  rests_on: confirmed
+  targets:
+  - core0
+  - core1
+  - core2
+  - core3
+  - lsp
+  - amx_lsu_issue
+  status: draft
+- n: 2
+  title: One unit per cluster, a register set per core
+  say: There is one AMX unit per cluster, the E cluster included, and it keeps a full X, Y and Z register set for each core
+    so there is nothing to save when cores take turns. It reorders operations inside a window of about thirty, and a queue
+    monitor tells the OS when several cores overload it so the scheduler can move threads. Measured.
+  rests_on: confirmed
+  targets:
+  - amx_shared_contexts
+  - ooo
+  - mon
+  - os
+  status: draft
+- n: 3
+  title: An 8 by 8 grid accumulates outer products
+  say: The unit multiplies a row vector X by a column vector Y and accumulates the outer product into Z across an 8 by 8 grid
+    of processing elements, and it runs a load or a store of X, Y or Z rows to the L2 alongside each arithmetic operation,
+    which is why it sits on the L2 bus. The grid is inferred from the throughput; the paired load or store is a patent reading.
+  rests_on: inferred
+  targets:
+  - xv
+  - yv
+  - amx_datapath
+  - l2
+  status: draft
+- n: 4
+  title: What it can do, measured and patented
+  say: Measured, it multiplies and adds or subtracts outer products in fp64, fp32, fp16 and integer types down to 8 bit multiplicands.
+    Patents add 2 by 2 packing, lookup tables, strided dot products, mixed precision and row moves, none of which has been
+    timed on the M1.
+  rests_on: confirmed
+  targets:
+  - amx_op_set
+  - ops2
+  status: draft
+- n: 5
+  title: No renaming of Z, so four ranges keep the pipe full
+  say: The unit does not rename Z. An operation into a Z range must wait out the four cycle FMA latency of the last operation
+    into that range, so a core needs four independent Z ranges in flight to issue one outer product every cycle. Measured,
+    and the reason AMX code is written with interleaved accumulators.
+  ask: What would renaming Z cost, and what would it buy?
+  rests_on: confirmed
+  targets:
+  - zdep
+  status: draft
+- n: 6
+  title: An SLC line and its three states
+  say: An SLC line carries a tag, a group ID, a sticky bit, one of three states, per sector valid bits and a byte mask for
+    partial writes; later designs add dirtiness per 64 byte half. The line is 128 bytes, measured. The states are invalid,
+    valid and modified, filled by an L2 victim or a range fill, written back on eviction. The entry layout and the states
+    are patent reading.
+  rests_on: conjecture
+  targets:
+  - slc_line_states
+  - inv
+  - val
+  - mod
+  status: draft
+- n: 7
+  title: Group quotas and sticky lines
+  say: Every line belongs to one of 32 group IDs set by the driver, each group has a quota of the cache, and a sticky bit
+    protects lines that replacement must skip. Replacement among the rest is random, measured. The quotas and the sticky bit
+    are inferred from the driver interface and the data set IDs.
+  ask: Who should own a quota, the GPU or the display engine?
+  rests_on: inferred
+  targets:
+  - slc_sticky_quota
+  - ways
+  status: draft
+- n: 8
+  title: Address ranges held in the cache as memory
+  say: Range registers can map a physical address range straight into SLC lines, used as memory for camera frames or a static
+    display frame, or mark a filtered range that keeps only part of its lines. The data lives in four planes of 4096 sets
+    by 16 ways, measured. The ranges are patent reading.
+  rests_on: conjecture
+  targets:
+  - req
+  - rc
+  - slc_address_ranges
+  - planes
+  status: draft
+- n: 9
+  title: Ways power down to match what is in use
+  say: The SLC powers down ways to match the share in use and holds idle SRAM at a retention voltage. Low QoS requests are
+    batched until the cache wakes, high QoS wakes it at once. Inferred from power behaviour and the driver interface.
+  rests_on: inferred
+  targets:
+  - slc_power_gating
+  - pon
+  - pdz
+  status: draft

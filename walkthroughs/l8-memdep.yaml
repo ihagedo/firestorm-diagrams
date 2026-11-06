@@ -1,0 +1,67 @@
+# l8-memdep.yaml
+# The l8-memdep figure read step by step.
+figure: l8-memdep
+steps:
+- n: 1
+  title: Store sets, Chrysos and Emer 1998
+  say: A store set table maps a load or store PC to a set id; the last fetched store table holds the newest store of each
+    set. A load waits for the last store in its set. Stores are grouped, not paired.
+  rests_on: corroborated
+  targets:
+  - chrysos
+  - c_pc
+  - c_ssit
+  - c_lfst
+  status: draft
+- n: 2
+  title: 'Pairs: the MDPT, Moshovos 1997'
+  say: A prediction table holds one entry per store load pair that mis-speculated; a synchronisation table makes the load
+    wait for that store. One pair, one entry.
+  rests_on: corroborated
+  targets:
+  - moshovos
+  - m_mdpt
+  - m_mdst
+  status: draft
+- n: 3
+  title: Memory renaming, Tyson and Austin 1997
+  say: A load that always reads what one store wrote is renamed to the stored value through a value file, and verified later
+    against the real memory access.
+  ask: What must be checked after a renamed load, and when?
+  rests_on: corroborated
+  targets:
+  - tyson
+  - t_cache
+  - t_vfile
+  - t_lsq
+  - t_verify
+  status: draft
+- n: 4
+  title: 'The M1: 74 pairs and zero cycle loads'
+  say: 'About 74 store PC and load PC pairs: a load that matches waits for its store, every other load is predicted free.
+    That is the MDPT, not store sets. Zero cycle loads are memory renaming through the register file, no value file. Forwarding
+    takes six cycles when it is needed.'
+  rests_on: corroborated
+  targets:
+  - m1
+  - store_load_dep_predictor
+  - lq
+  - sq
+  - zero_cycle_loads
+  - sq_partial_forwarding
+  status: draft
+- n: 5
+  title: Added checks, absent predictors; likely
+  say: 'Added: a second address check as the data arrives, the twenty five cycle ordering flush when it fails, and the runtime
+    TSO switch. Absent: the load address and load value predictors that appear on the M2 and M3. Likely: pairs and renaming
+    match the papers field for field.'
+  rests_on: confirmed
+  targets:
+  - late_ordering_check
+  - flush
+  - tso_mode
+  - absent
+  - kept
+  - changed
+  - added
+  status: draft

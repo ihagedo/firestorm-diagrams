@@ -1,0 +1,139 @@
+# x7-fetch-path.yaml
+# The x7-fetch-path figure read step by step.
+figure: x7-fetch-path
+steps:
+- n: 1
+  title: Virtual index, physical tag
+  say: The L1I takes its set from virtual address bits 14 to 6, so the array can be read while the 192-entry iTLB translates
+    the upper bits. 512 sets of six ways of 64 B lines make the 192 KiB; the set index lies inside the 16 KiB page, which
+    is what lets the index be virtual without aliasing. Both are measured.
+  ask: What would break if the set index reached above bit 13?
+  rests_on: confirmed
+  targets:
+  - va
+  - itlb
+  - l1i
+  status: draft
+- n: 2
+  title: Tree PLRU, then the tag compare, then a fetch group
+  say: The victim is chosen by tree pseudo-LRU over the six ways as three pairs, our inference from the L1D doing the same.
+    The physical tag of the chosen way is compared with the iTLB's answer, and a hit delivers a fetch group of up to 16 instructions
+    from one line.
+  ask: Why pairs rather than a full LRU over six ways?
+  rests_on: inferred
+  targets:
+  - l1i_tree_plru
+  - ctag
+  - fgrp
+  status: draft
+- n: 3
+  title: Fill from the L2, predecode, scan for branches
+  say: Code written as data lands in the L2, the point of unification, and fills the L1I from there. The patents say lines
+    are predecoded on fill, calls and returns marked and the low 14 bits of PC-relative targets kept, and scanned for branches
+    before first use so the fast fetch table can be written ahead of time. The fill path is measured; predecode and scan are
+    patent readings.
+  ask: What does scanning on fill buy that training on execution does not?
+  rests_on: inferred
+  targets:
+  - l2
+  - l1i_predecode
+  - scan
+  - nfp
+  status: draft
+- n: 4
+  title: Code changes by invalidation only
+  say: The L1I does not snoop stores. New code runs only after an invalidate by line, which is measured. The data side is
+    coherent up to the L2, so a just-in-time compiler writes code, invalidates the lines and refetches from the L2.
+  ask: What is the cheapest correct sequence for a JIT that patches one instruction?
+  rests_on: confirmed
+  targets:
+  - l1i_maintenance_only
+  status: draft
+- n: 5
+  title: A cold-start mode
+  say: After power-up with empty caches, each instruction miss is read as bringing three lines and a new branch as being written
+    into four TAGE entries, until the caches fill and the core returns to one line per miss and one or two entries per branch.
+    This is a patent reading with nothing measured behind it yet.
+  ask: How would you tell a cold-start mode from an ordinary next-line prefetcher?
+  rests_on: conjecture
+  targets:
+  - cold_start_mode
+  - warm
+  status: draft
+- n: 6
+  title: Phantom fetch
+  say: A non-branch at the address of a trained branch redirects fetch to the trained target; the line is fetched and never
+    executed, and decode sees that the instruction at that PC was a NOP. This is measured, and it is the clearest sign that
+    the fast table is tagged by part of the PC and checked only at decode.
+  ask: What does phantom fetch cost, and when does it happen in real code?
+  rests_on: corroborated
+  targets:
+  - phbtb
+  - phfetch
+  - phdec
+  status: draft
+- n: 7
+  title: Biased branches filtered before the predictor
+  say: The patents describe bias bits per branch at the I-cache. A branch that always goes one way is handled as a jump or
+    a NOP, a biased CSEL as a move, and none of them enter the main TAGE tables; a light branch unit checks the bias, and
+    the first flip costs a full mispredict. Nothing of this is measured on the M1.
+  ask: What measurement would show biased branches being kept out of TAGE?
+  rests_on: conjecture
+  targets:
+  - biased_branch_filter
+  - bj
+  - bn
+  - bm
+  - blu
+  - tage
+  status: draft
+- n: 8
+  title: A fetch splits at a page boundary
+  say: Within a page fetch delivers up to 16 instructions, one 64 B line, per cycle; a group that crosses a 16 KiB page boundary
+    takes two cycles, one per page. Jia measured it by placing a loop's first instruction in the last four bytes of a page.
+  ask: Why would a page boundary, rather than a line boundary, cost the cycle?
+  rests_on: confirmed
+  targets:
+  - fetch_page_split
+  status: draft
+- n: 9
+  title: No decoupled fetch
+  say: There is no fetch target queue between prediction and the I-cache and no fetch-directed prefetch; the predictors hand
+    fetch a next PC every cycle. Handley's reading is that a single-level fetch predictor that answers in one cycle removes
+    the need for decoupling.
+  ask: What does a decoupled front end buy, and why might this core not need it?
+  rests_on: inferred
+  targets:
+  - pred
+  - decoupled_fetch
+  - fetch
+  status: draft
+- n: 10
+  title: The instruction queue, bypassed and fixed up
+  say: By the patents, fetch bypasses the instruction queue when it is empty, and inside the queue the instructions a short
+    forward branch skips are deleted without a refetch. The queue's depth has not been measured.
+  ask: What would deleting skipped instructions in the queue look like in a timing probe?
+  rests_on: conjecture
+  targets:
+  - fg2
+  - iq_bypass_fixup
+  - iqmux
+  - dec2
+  status: draft
+- n: 11
+  title: Loop modes and a trace cache, neither seen on the M1
+  say: The patents describe tiered loop modes, from the instruction queue to a loop buffer to an L0 cache, and a trace cache
+    that joins straight-line runs across stable taken branches so one fetch crosses several. On the M1 the measurements show
+    one taken branch per cycle in every case, so no trace cache is active here; Handley places it on the M4.
+  ask: What single measurement rules out an active trace cache?
+  rests_on: conjecture
+  targets:
+  - lm0
+  - loop_modes
+  - lm2
+  - runA
+  - runB
+  - runC
+  - trace_cache
+  - tfetch
+  status: draft

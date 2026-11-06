@@ -1,0 +1,89 @@
+# m4-sched.yaml
+# The m4-sched figure read step by step.
+figure: m4-sched
+steps:
+- n: 1
+  title: One queue entry, as we propose it
+  say: An entry carries the uop and its immediate, the destination and two source register numbers with a ready bit each,
+    a flags register, a valid bit and a small shadow timer. Only one thing here is measured, that operands are read from the
+    register file at issue and not kept in the queue; the field layout is our proposal on top of the patent.
+  ask: What does keeping operands out of the queue buy, and what does it cost?
+  rests_on: proposed
+  targets:
+  - sched_entry
+  status: draft
+- n: 2
+  title: Wakeup is a column clear
+  say: The dependency matrix has one row per entry and one column per producer; a set bit means the row waits on the column.
+    When an entry completes its column clears, and any row with no bits left is ready. That is one wire per entry and no tag
+    compare, which is what the patent describes and why a queue of 13 can be cheap and fast.
+  rests_on: conjecture
+  targets:
+  - matrix_scheduler
+  status: draft
+- n: 3
+  title: Select is the oldest ready row
+  say: The age matrix records which entry is older than which; select picks the ready entry with no older ready entry. Allocation
+    writes one row and one column, so nothing shifts when an entry leaves, which fits the measurement that queues do not compact.
+  ask: Why does a matrix scheduler not need its entries in order?
+  rests_on: conjecture
+  targets:
+  - age_matrix
+  status: draft
+- n: 4
+  title: Two levels inside one queue
+  say: A patent splits each queue into a small primary buffer for the highest priority ops and a secondary for the rest, each
+    with its own pick logic; secondary picks fill the issue slots the primary leaves empty. Whether the 13 we measure is the
+    primary or the sum is open; we draw it as the sum.
+  rests_on: conjecture
+  targets:
+  - hierarchical_reservation_station
+  - rs_secondary
+  status: draft
+- n: 5
+  title: Pairs, and the 13 versus 24 dispute
+  say: Pairing is inferred, a queue with nothing ready issues from its partner, and a shared age matrix across the pair would
+    do it. Johnson measured 24 per integer queue and 28 per multiply queue; Handley says each pair was counted twice, so 13.
+    Chen's 134 total is the number both have to fit.
+  ask: Design a test that separates one 24 entry queue from two 13 entry queues that share picks.
+  rests_on: inferred
+  targets:
+  - paired_sched_queues
+  - size_dispute
+  status: draft
+- n: 6
+  title: Speculative wakeup behind a load
+  say: The consumer of a load is woken for cycle 3 as if the load will hit and its address checks will pass. The late tag
+    check and store address recheck run after that; if one fails the load replays instead of flushing, which is measured,
+    and the dependents that already issued must reissue, which is the shadow at work. The replaying load waits in a load execution
+    queue, from the patent.
+  ask: What would a dependent chain of k ALU ops behind a replaying load cost as k grows?
+  rests_on: proposed
+  targets:
+  - shadow_load
+  - shadow_dep
+  - shadow_check
+  - load_replay_shadow
+  status: draft
+- n: 7
+  title: Too many reads for one bank
+  say: Fourteen units with up to two sources is 28 reads a cycle and 14 writes plus load data. A patent says the integer file
+    has four banks, which would be about seven reads per bank, more than one bank can give. We propose the banks split by
+    register number modulo four and that a conflict stalls select by a cycle; the test is hard because software cannot pick
+    physical registers.
+  rests_on: derived
+  targets:
+  - prf_ports
+  - bank_test
+  status: draft
+- n: 8
+  title: Domain crossings and the one branch a cycle
+  say: Moving a value from the integer side to SIMD goes through a load slot as a fake load, about six cycles; the reverse
+    has its own path, also about six. A multiply add feeds the next addend in one cycle and the integer divider is a side
+    pipe that takes a divide every other cycle. One possibly mispredicting op issues a cycle, and short age bits tell recovery
+    what to flush, both from a patent.
+  rests_on: single
+  targets:
+  - cross_domain
+  - issue_age_flush
+  status: draft

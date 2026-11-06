@@ -1,0 +1,74 @@
+# l11-prefetch.yaml
+# The l11-prefetch figure read step by step.
+figure: l11-prefetch
+steps:
+- n: 1
+  title: Access maps, Ishii 2011; region patterns, Somogyi 2006
+  say: Ishii keeps one map per zone with two bits per line and matches it against stride patterns. Somogyi records a region
+    pattern per trigger and replays it; it is drawn as the alternative the access map replaces.
+  rests_on: corroborated
+  targets:
+  - fp
+  - p_zone
+  - p_map
+  - p_init
+  - p_pf
+  - p_acc
+  - p_sms
+  status: draft
+- n: 2
+  title: The global history buffer, Nesbit and Smith 2004
+  say: 'A FIFO of misses threaded by an index table: follow the links from the current miss and prefetch what came after it
+    last time.'
+  rests_on: corroborated
+  targets:
+  - p_idx
+  - p_ghb
+  - p_alg
+  status: draft
+- n: 3
+  title: Pointer scans, Cooksey 2002; a filter and a level, Srinath 2007
+  say: Cooksey scans a filled line for values whose upper bits match the line own address and prefetches them. Srinath adds
+    a pollution filter and sets an aggressiveness level from accuracy, lateness and pollution.
+  ask: Why does matching the upper address bits find pointers and little else?
+  rests_on: corroborated
+  targets:
+  - p_ea
+  - p_cand
+  - p_vcmp
+  - p_pfreq
+  - p_fh
+  - p_filter
+  - p_levels
+  status: draft
+- n: 4
+  title: The M1 prefetchers, measured
+  say: Sixteen streams and strides to 8 KiB read as an access map with stride side tables. A temporal history a little under
+    256 entries covers random accesses inside a 15 KiB region and not 16. The pointer chaser scans one level, after three
+    accesses, up to 64 KiB past the array, with the pointer and its line in the same 4 GiB. All trained on virtual addresses
+    at the LSU.
+  rests_on: confirmed
+  targets:
+  - fm
+  - lsu_virtual_prefetch
+  - ampm_prefetcher
+  - m_stride
+  - temporal_prefetch
+  - m_region
+  - m_ptr
+  - m_pcmp
+  - content_directed_prefetch
+  status: draft
+- n: 5
+  title: 'Deny list and rater, and the verdict: likely'
+  say: 'The deny list of evicted unused lines and the L2 rater that sets a throttle level every thirty two cycles are patents
+    and descend from Srinath. Likely: the knowledge base names the mechanisms after the papers and the measurements fit.'
+  rests_on: corroborated
+  targets:
+  - prefetch_deny_list
+  - prefetch_throttle
+  - m_levels
+  - kept
+  - changed
+  - added
+  status: draft

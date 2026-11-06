@@ -1,0 +1,122 @@
+# x8-predictors-decode.yaml
+# The x8-predictors-decode figure read step by step.
+figure: x8-predictors-decode
+steps:
+- n: 1
+  title: Two return stacks, one at decode and one at fetch
+  say: The return stack is 50 deep, measured. Our reading of the patents is that the real stack lives at decode, where calls
+    and returns are known exactly, and a small fetch-side stack covers only returns whose calls decode has not seen yet. Fetch
+    groups that end in a return sit in a return fetch table with no target, since the stack supplies it.
+  ask: Why would a return stack at decode be more accurate than one at fetch, and what does it cost?
+  rests_on: conjecture
+  targets:
+  - ras_main
+  - two_level_ras
+  - return_fetch_table
+  status: draft
+- n: 2
+  title: The next PC after a return costs one bubble
+  say: Either stack can supply the next PC through the mux; a predicted return costs one bubble, inferred from the fetch timing.
+    After the return, fetch assumes the maximum group length until decode says otherwise.
+  rests_on: inferred
+  targets:
+  - m_ras
+  - next_pc
+  status: draft
+- n: 3
+  title: Overflow clears the stack
+  say: Calls nesting deeper than 50 make call and return time jump, which we read as the stack being cleared on overflow rather
+    than wrapping. The stack refills as the program returns to shallower depth.
+  ask: What would the timing look like if the stack wrapped instead of clearing?
+  rests_on: inferred
+  targets:
+  - ov0
+  - ras_overflow_clear
+  status: draft
+- n: 4
+  title: Pointer authentication is checked at the stack
+  say: Return addresses carry a pointer authentication code in their high bits. A patent places the check in the logic that
+    pushes and pops the return stack, so a mismatch faults there. This is a patent reading, not a measurement.
+  rests_on: conjecture
+  targets:
+  - ras_pac_check
+  - pac_cmp
+  status: draft
+- n: 5
+  title: A loop predictor beside TAGE
+  say: The direction comes from the six TAGE tables, measured. A patent describes a small loop predictor beside them that
+    takes over in loop mode and lets the tables power down soon after. On the M1 we have no measurement of it.
+  rests_on: conjecture
+  targets:
+  - tage
+  - loop_predictor
+  - m_dir
+  - dir_out
+  status: draft
+- n: 6
+  title: Loop mode as a state machine
+  say: Three states capture the patent's story. TAGE predicts until a loop is found; loop mode takes over; soon after, the
+    tables are gated to save power. An exit or a mispredict brings TAGE back. Only the first state is something we have measured.
+  rests_on: conjecture
+  targets:
+  - lp0
+  - lp1
+  - lp2
+  status: draft
+- n: 7
+  title: No privilege or process tag on an entry
+  say: A predictor entry has a tag, a counter and usefulness bits, but no exception level and no ASID. Two contexts that collide
+    in index and tag share one counter. That is measured, and it is the basis of the cross-context attacks on this core.
+  ask: Which cheap bit would close this, and what would it cost in prediction quality?
+  rests_on: confirmed
+  targets:
+  - bpu_isolation
+  - ctx_a
+  - ctx_b
+  status: draft
+- n: 8
+  title: Indirect targets are shared, then checked at execute
+  say: The indirect predictor's 1024 targets are also shared across contexts. A target trained in another context is predicted
+    and its line is fetched, but the context is checked before execute, so the foreign path is squashed rather than run. Measured.
+  rests_on: confirmed
+  targets:
+  - ittage
+  - ibp_fetch
+  - ibp_context_check
+  - ibp_exec
+  - ib_sq
+  status: draft
+- n: 9
+  title: The method cache the M1 does not have
+  say: Later cores add a method cache for one configured hot indirect branch, objc_msgSend, keyed by a hash of class and selector
+    and redirecting fetch. It is drawn to mark the hole, as the M1 lacks it.
+  rests_on: conjecture
+  targets:
+  - objc_uop
+  - objc_hash
+  - objc_msgsend_predictor
+  - objc_redirect
+  status: draft
+- n: 10
+  title: What decode does to an instruction
+  say: Measured on the issue counters, a shifted ALU op is one uop that issues twice, a load pair issues once, a compare and
+    branch fuse into one, NOP and B never issue at all, and a pre- or post-indexed access adds a base-update uop.
+  ask: Which of these would change a microbenchmark that counts issue slots?
+  rests_on: confirmed
+  targets:
+  - uop_split_merge
+  status: draft
+- n: 11
+  title: Barriers that work, and a fusion that is absent
+  say: After a bounds check, a CSDB or ISB stops speculation past a mispredicted branch; a DMB or DSB alone does not, measured.
+    Load-op fusion, where a small ALU in the load unit applies an add or shift to the loaded value, appears in a patent but
+    not on the M1.
+  rests_on: confirmed
+  targets:
+  - sb0
+  - sb1
+  - speculation_barriers
+  - ldop_data
+  - load_op_fusion
+  - ldop_out
+  status: draft

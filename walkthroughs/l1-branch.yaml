@@ -1,0 +1,92 @@
+# l1-branch.yaml
+# The l1-branch figure read step by step.
+figure: l1-branch
+steps:
+- n: 1
+  title: TAGE, Seznec and Michaud 2006
+  say: A tagless base table and several tagged tables, each indexed by the program counter hashed with a longer slice of the
+    global history. Every table that hits offers a prediction; the one with the longest history wins. An entry holds a three
+    bit counter, a partial tag and a useful bit.
+  ask: Why does the longest history win rather than the most confident counter?
+  rests_on: corroborated
+  targets:
+  - p_tage
+  - p_hist
+  - p_t0
+  - p_t1
+  - p_t2
+  - p_t3
+  - p_t4
+  - p_m1
+  - p_m2
+  - p_m3
+  - p_m4
+  - p_out
+  status: draft
+- n: 2
+  title: Two companions, and a path instead of outcomes
+  say: TAGE-SC-L adds a statistical corrector and a loop predictor after TAGE. Nair showed that recording the addresses of
+    the preceding branch targets, not whether they were taken, tells two paths to the same branch apart. The M1 history is
+    a path in that sense.
+  rests_on: corroborated
+  targets:
+  - p_scl
+  - p_nair
+  - p_tagem
+  - p_sc
+  - p_loop
+  - p_bta
+  - p_phr
+  - p_pt
+  status: draft
+- n: 3
+  title: The M1 direction predictor, measured
+  say: Six tagged tables indexed by PC bits 18:2 and a 100 branch path record that shifts once per taken or indirect branch
+    and XORs in address bits; a not taken branch does not shift. Three bit counters, about forty four thousand entries, thirteen
+    cycles to recover. The tables are split by PC bit 6 so two branches of one block read together.
+  ask: What measurement would tell six tables from one large table?
+  rests_on: confirmed
+  targets:
+  - m_dir
+  - m_pc
+  - m_path
+  - m_t1
+  - m_t2
+  - m_t3
+  - m_t4
+  - m_t5
+  - m_t6
+  - m_hist
+  - m_num
+  - m_entry
+  status: draft
+- n: 4
+  title: 'Kept, changed, added: likely'
+  say: 'Kept: geometric lengths, partial tags, three bit counters, useful bits, longest hit wins, a loop companion. Changed:
+    six tables, a path history with PC and target bits folded in, the split by PC bit 6. Added: the 100 branch record, no
+    process or privilege tag, retire time training and power gating from patents. The tag is likely because TAGE is measured
+    and the match is structural; no citation names the paper.'
+  rests_on: corroborated
+  targets:
+  - col_kept
+  - col_changed
+  - col_added
+  - m_base
+  - m_loop
+  - m_train
+  - m_iso
+  - m_gate
+  status: draft
+- n: 5
+  title: What stays open
+  say: The base predictor is not measured and is drawn absent; a bimodal table is the TAGE default and our guess. Whether
+    a statistical corrector exists has no measurement either way. The indirect predictor shares the path record and has its
+    own figure.
+  ask: Design a probe that would show a statistical corrector.
+  rests_on: proposed
+  targets:
+  - m_base
+  - m_ind
+  - m_ras
+  - tagnote
+  status: draft

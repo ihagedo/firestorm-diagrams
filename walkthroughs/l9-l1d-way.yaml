@@ -1,0 +1,61 @@
+# l9-l1d-way.yaml
+# The l9-l1d-way figure read step by step.
+figure: l9-l1d-way
+steps:
+- n: 1
+  title: The AMD way predictor, Lipp 2020
+  say: A micro tag folded by XOR from virtual address bits is compared against one small tag per way before translation; the
+    matching way is read alone, and no match raises an early miss. Lipp recovered the fold as bits 12 to 27 folded to 8.
+  rests_on: corroborated
+  targets:
+  - fp
+  - p_va
+  - p_hash
+  - p_utag
+  - p_cmp
+  - p_l1
+  - p_l2
+  status: draft
+- n: 2
+  title: 'The older roots: Inoue 1999 and Kessler 1989'
+  say: 'Inoue reads the predicted way first and all ways only on a miss. Kessler compares a few tag bits of every way and
+    only the survivors in full. Calder, Grunwald and Emer 1996 is named and not redrawn: the paper is not in hand.'
+  rests_on: corroborated
+  targets:
+  - p_mru
+  - p_cyc
+  - p_partial
+  - p_ways
+  status: draft
+- n: 3
+  title: 'The M1: an 8 bit fold of VA 47:14'
+  say: The micro tag is an eight bit XOR fold of virtual address bits 47 to 14, measured; the set is bits 13 to 6, inside
+    the page. The physical tag confirms at three cycles, and a wrong micro tag replays the load. 128 KiB, eight ways, sixteen
+    banks.
+  ask: Why fold 34 bits rather than take 8 of them?
+  rests_on: confirmed
+  targets:
+  - fm
+  - m_va
+  - m_hash
+  - l1d_utag_way_predictor
+  - m_cmp
+  - m_data
+  - m_pa
+  - m_replay
+  - m_sizes
+  status: draft
+- n: 4
+  title: 'Added, speculative; the verdict: likely'
+  say: 'Two additions are speculative in the knowledge base: the way seems fixed by a hash of physical page bits, one experiment
+    by one group, and no way misprediction shows in latency. Tree PLRU replacement is measured and has no paper counterpart.
+    Likely: the AMD scheme with a wider fold.'
+  rests_on: inferred
+  targets:
+  - l1d_hashed_way
+  - l1d_way_lookup
+  - l1d_tree_plru
+  - kept
+  - changed
+  - added
+  status: draft

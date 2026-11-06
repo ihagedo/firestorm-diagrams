@@ -1,0 +1,101 @@
+# m2-dirpred.yaml
+# The m2-dirpred figure read step by step.
+figure: m2-dirpred
+steps:
+- n: 1
+  title: The history is a path, not a string of outcomes
+  say: The predictor keeps a 100-bit register, but it does not record taken or not taken. On every taken branch, and on every
+    indirect branch, it shifts left by one and XORs in bits of the branch address and its offset. A not-taken conditional
+    branch does nothing at all. This update rule was measured by three groups independently.
+  ask: What does a predictor lose when not-taken branches leave no trace?
+  rests_on: confirmed
+  targets:
+  - phr
+  - path_history_shift_xor
+  - xorin
+  status: draft
+- n: 2
+  title: Which bit lands where is ours to guess
+  say: The measurements say which address bits enter the history, but not where each one lands after the fold. The simulator
+    can use any invertible mapping; ours sends PC bit k to history bit k minus two modulo 32. A mispredict costs 13 cycles,
+    measured by two groups, and the core keeps up to 144 branches in flight.
+  rests_on: proposed
+  targets:
+  - fold
+  - penalty
+  status: draft
+- n: 3
+  title: Six tagged tables, indexed by PC and history
+  say: There are six tagged tables. Each is indexed by PC bits 18 to 2 XORed with a fold of the history, and the index splits
+    on PC bit 6 so the two halves of a 128-byte block are read together, two branches per lookup. Each table has its own associativity
+    and three-bit counters; the history lengths per table are ours. About 44 000 entries in all, derived from the layout.
+  ask: Why would a designer read two branches per lookup?
+  rests_on: corroborated
+  targets:
+  - pc
+  - idx_hash
+  - tage_t1
+  - tage_t2
+  - tage_t3
+  - tage_t4
+  - tage_t5
+  - tage_t6
+  status: draft
+- n: 4
+  title: The longest matching history provides
+  say: The prediction comes from the longest-history table whose tag matches; the next longest is the alternate. That is standard
+    TAGE and is inferred rather than measured. The base predictor underneath was never measured; a bimodal table indexed by
+    PC alone is the usual choice.
+  rests_on: inferred
+  targets:
+  - base
+  - provider
+  - direction
+  status: draft
+- n: 5
+  title: Allocation, training and a loop companion come from patents
+  say: On a mispredict, one or two longer tables get a new entry; a cold start writes four. Training happens at retire, from
+    branch information tables carried from decode, and only on mispredicts and weak counters. A small loop predictor sits
+    beside the tables and gates them in loop mode. All three are patent readings, none measured.
+  ask: Why train at retire rather than at execute?
+  rests_on: conjecture
+  targets:
+  - alloc
+  - retire_time_training
+  - loop_predictor
+  status: draft
+- n: 6
+  title: Recovery is the conjecture
+  say: How the history is restored after a mispredict is not measured. Our reading is a circular buffer of taken-branch footprints;
+    each branch in flight stores only the seven-bit head, and a mispredict rewinds the head and refolds the history. The alternative
+    is a full 100-bit copy per branch. No published timing probe tells the two apart.
+  ask: Which design would you expect to cost more area, and which more time after a mispredict?
+  rests_on: proposed
+  targets:
+  - path_history_rewind
+  - mark
+  - rebuild
+  - alt
+  status: draft
+- n: 7
+  title: Indirect targets from the same history
+  say: Indirect targets come from an ITTAGE-like set of tagged tables holding about 1024 targets; the capacity is measured,
+    the structure inferred. The same path history indexes it, and because indirect branches fold in target bits, the history
+    says where the last calls went, which is how one call site with many targets is told apart.
+  rests_on: inferred
+  targets:
+  - ittage_indirect
+  - ind_hist
+  status: draft
+- n: 8
+  title: No context tag, and no method cache yet
+  say: Entries carry no ASID or exception level, so two processes that collide share a counter, and a target trained in another
+    context is fetched but not executed. A wrong-path indirect is squashed as soon as its target computes, without waiting
+    for older branches. The objc_msgSend method cache arrives with the M2; the M1 does not have it.
+  ask: What attack does the missing context tag make possible, and what stops it from running code?
+  rests_on: single
+  targets:
+  - ind_ctx
+  - objc_msgsend_predictor
+  - squash
+  status: draft

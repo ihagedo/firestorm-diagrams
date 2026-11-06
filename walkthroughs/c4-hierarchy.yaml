@@ -1,0 +1,76 @@
+# c4-hierarchy.yaml
+# The c4-hierarchy figure read step by step.
+figure: c4-hierarchy
+steps:
+- n: 1
+  title: Below the L2 the hierarchy is inclusive
+  say: The L2 holds a copy of every line in the L1I and the L1D, so a 64 byte fill to either L1 comes out of a 128 byte L2
+    line, 17 cycles away at 32 bytes a cycle, and a write back from the L1D lands on a copy the L2 already has. The L1I is
+    never snooped, stores to code are made visible by an explicit invalidate, and that is why it can be inclusive without
+    a coherence path of its own.
+  ask: What does inclusion buy the L2 when a snoop arrives from another cluster?
+  rests_on: confirmed
+  targets:
+  - l1i
+  - l1d
+  - l2
+  status: draft
+- n: 2
+  title: Above the L2 it is exclusive
+  say: The L2 and the SLC never both hold a line. A victim leaving the L2 goes to the SLC through an allocator, and a hit
+    in the SLC refills the L2 and leaves the SLC. A CPU miss does not allocate in the SLC at all. SLAC and EXAM measured the
+    victim fill, EXAM the exclusion, and Handley reads the same behaviour as the SLC keeping the L2's tags but not its data.
+  ask: Why is exclusion the natural choice for a cache that is smaller than the L2s it serves?
+  rests_on: corroborated
+  targets:
+  - l2
+  - slc
+  status: draft
+- n: 3
+  title: DRAM fills past the SLC
+  say: A line coming from DRAM goes straight to the L2 and does not stop in the SLC on the way, which is what victim filling
+    means in practice. Only a modified line evicted from the SLC goes down to DRAM. The round trip is 91 nanoseconds beyond
+    the L2, about 290 cycles at 3.2 GHz.
+  rests_on: corroborated
+  targets:
+  - slc
+  - dram
+  status: draft
+- n: 4
+  title: One line's life, the way down
+  say: Frame by frame. The L1D misses on both the micro tag and the physical tag and a fill buffer entry is taken, three cycles
+    in. The request goes to the L2 after the dTLB answers, four more. The L2 misses and the coherence point asks the other
+    clusters through its duplicate tags, about twenty, a guess. The SLC misses and a DRAM read is already in flight beside
+    the lookup, about thirty, also a guess. The measured numbers are the 3 and the 4, the rest are ours in magenta.
+  ask: Which of the four waits could a measurement from one core separate out, and which cannot be separated?
+  rests_on: single
+  targets:
+  - life-1
+  - life-2
+  - life-3
+  - life-4
+  status: draft
+- n: 5
+  title: The way up, and the way out
+  say: DRAM returns both 64 byte halves to the L2 and one of them continues to the L1D, about 290 cycles after the miss. The
+    waiting load gets its data forwarded from the fill as the line arrives, and the fill steals a bank cycle from the L1D.
+    Much later the line is evicted, L1 to L2 to SLC, and a reload from the SLC removes it from there. Adding the frames, a
+    DRAM miss costs about 350 cycles, of which 291 is the 91 nanoseconds.
+  rests_on: corroborated
+  targets:
+  - life-5
+  - life-6
+  - life-7
+  status: draft
+- n: 6
+  title: Four levels side by side
+  say: Read across the table. Sizes 192 KiB, 128 KiB, 12 MiB and 8 MiB. Lines of 64 bytes in the L1s, 128 bytes in two halves
+    in the L2, 128 sectored bytes in the SLC. Virtual index below the L2, physical and hashed above it. Way lookup by a predictor,
+    a micro tag, a partial tag filter and a full compare in turn. Replacement tree PLRU, tree PLRU, per core LRU with AutoLock,
+    and disputed. Latencies 3, 17 and about 90 cycles. The magenta cells are our readings, the L1I's tree PLRU and the L1D's
+    write allocate.
+  ask: Pick one row and say which cell you would measure first, and how.
+  rests_on: corroborated
+  targets:
+  - table
+  status: draft

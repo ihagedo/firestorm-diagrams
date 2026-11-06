@@ -1,0 +1,101 @@
+# 02-frontend.yaml
+# The 02-frontend figure read step by step.
+figure: 02-frontend
+steps:
+- n: 1
+  title: Two halves, prediction and fetch
+  say: The front end has two halves. On the left the predictors decide where the next fetch group starts and where it ends;
+    on the right the fetch side turns that address into eight decoded instructions per cycle. One fetch group per cycle, ending
+    at the first taken branch, is the measured rhythm of this core.
+  ask: Why does a fetch group end at a taken branch rather than at a fixed byte count?
+  rests_on: confirmed
+  targets:
+  - fpred
+  - ffetch
+  status: draft
+- n: 2
+  title: A branch target buffer in two tiers
+  say: The first tier holds 1024 targets in 512 sets of two ways, indexed by PC bits 10 to 2, and answers in the same cycle,
+    so a taken branch inside 4 KiB of code costs nothing. Past that reach a second tier of about 8192 entries answers two
+    cycles later, and the reading is that this tier is coupled to the L1I itself. Phantom fetch is measured too, where a non-branch
+    at a trained address redirects fetch.
+  ask: What experiment would show the L0 tier being set-indexed rather than fully associative?
+  rests_on: corroborated
+  targets:
+  - btb
+  status: draft
+- n: 3
+  title: A TAGE-like direction predictor with 100 branches of history
+  say: Direction comes from six tagged tables indexed by PC bits and a path history 100 branches long. The history shifts
+    by one and folds in branch address bits, and not-taken conditional branches do not shift it at all, which is unusual and
+    measured. Counting the tables gives about 44 thousand entries in all.
+  ask: Why would a designer leave not-taken branches out of the history?
+  rests_on: corroborated
+  targets:
+  - dirpred
+  status: draft
+- n: 4
+  title: Indirect targets and returns
+  say: Indirect branches get their targets from a 1024-entry tagged predictor that behaves like ITTAGE, and its entries are
+    shared across address spaces and privilege levels; a target trained in another context is fetched but never executed.
+    Returns come from a 50-entry return stack, measured by a call-depth sweep where the cost jumps at level 51, read as the
+    stack clearing on overflow.
+  ask: What does sharing indirect entries across privilege levels buy, and what does it risk?
+  rests_on: single
+  targets:
+  - indpred
+  - ras
+  status: draft
+- n: 5
+  title: The next fetch predictor and recovery
+  say: Tying the predictors together is a next fetch predictor keyed by the fetch PC that gives the next group's target, length
+    and ending branch type in one cycle; the slower predictors check it and refetch when they disagree. That structure is
+    inferred from the fetch group behaviour, not measured directly. A full mispredict costs 13 cycles, measured by two groups,
+    and the KB's conjecture is that path history is rewound per branch rather than rebuilt.
+  ask: Which parts of this box would a measurement confirm, and which can only come from a patent?
+  rests_on: inferred
+  targets:
+  - nfp
+  - recovery
+  status: draft
+- n: 6
+  title: The instruction TLB and a 192 KiB L1I
+  say: The fetch side starts with a 192-entry instruction TLB and a 192 KiB, six-way L1I with 64 B lines, virtually indexed
+    and physically tagged. Stores are not snooped, so code written as data runs only after an invalidate by line. Fills come
+    from the L2 at 17 cycles, with no fetch-directed prefetch; how many fetch misses can be outstanding is still open.
+  ask: Why can a cache this large still be virtually indexed with 16 KiB pages?
+  rests_on: confirmed
+  targets:
+  - itlb
+  - l1i
+  - fill
+  status: draft
+- n: 7
+  title: Fetch, the instruction queue and decode
+  say: Fetch delivers up to 16 instructions from one line but sustains 8 per cycle, with one taken branch per cycle and one
+    extra cycle when a group crosses a page. An instruction queue of unknown depth sits before decode. Decode handles 8 per
+    cycle and already shapes the uops, so a shifted ALU op is one uop that issues twice and a store becomes an address uop
+    and a data uop. ISB and CSDB stop speculation at decode; DMB and DSB alone do not.
+  ask: If 16 can arrive in a cycle but 8 are sustained, where is the narrow point?
+  rests_on: confirmed
+  targets:
+  - fetch
+  - iq
+  - decode
+  - barriers
+  status: draft
+- n: 8
+  title: What a taken branch costs, by the tier that caught it
+  say: Read the bars from the top. A branch the L0 tier knows costs nothing; a predicted return costs one bubble; a branch
+    only the L1 tier knows costs two; and a direction mispredict costs 13 cycles of fetch. The tier that catches a branch
+    is the whole story of its cost, and the first three are the ones a compiler can influence by keeping hot code inside 4
+    KiB.
+  ask: Which of the four costs would you expect to change on a core with a decoupled front end?
+  rests_on: corroborated
+  targets:
+  - fcost
+  - l0hit
+  - rashit
+  - l1hit
+  - mispred
+  status: draft

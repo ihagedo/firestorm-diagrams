@@ -1,0 +1,132 @@
+# x1-fabric.yaml
+# The x1-fabric figure read step by step.
+figure: x1-fabric
+steps:
+- n: 1
+  title: One port per cluster, two switch levels
+  say: Each CPU cluster is one requester on the fabric, with a single port, and the GPU is another. A first switch level gathers
+    them and a second level is the coherence point that joins the CPUs, the GPU, the system level cache and memory. The one
+    port per cluster is inferred from the bandwidth curves; the switch levels are a patent reading.
+  ask: Why would a four core cluster share one port rather than have one each?
+  rests_on: inferred
+  targets:
+  - pcl
+  - ecl
+  - gpu
+  - sw1
+  - noc_layout
+  status: draft
+- n: 2
+  title: A hash spreads addresses over pipelines and channels
+  say: Past the coherence point the address is hashed twice, once across the coherence, SLC and memory controller pipelines
+    and once across DRAM channels, ranks and banks. A later patent lets the OS move the pages off an idle controller and power
+    it down. All of this is patent reading; what is measured is only that one core can saturate memory.
+  ask: What would a bad interleave hash look like in a bandwidth sweep?
+  rests_on: conjecture
+  targets:
+  - address_interleave_hash
+  - pipes
+  - dram
+  - mc_off
+  status: draft
+- n: 3
+  title: The IO fabric and the flat PIO network
+  say: A bridge joins the coherent fabric to a non coherent IO fabric for PCIe and USB. Device registers and short control
+    messages such as interrupts between cores take a separate flat network that skips coherence, the SLC and DRAM entirely.
+    The PIO network is inferred from the register map and timing; the IO fabric is a patent reading.
+  rests_on: inferred
+  targets:
+  - bridge
+  - iofab
+  - pcie
+  - pio_network
+  status: draft
+- n: 4
+  title: Commands and data travel apart
+  say: A write puts its data into a buffer once, at the entry to the fabric, and only a small control packet is routed through
+    coherence to the memory controller, which then pulls the data once. Most read returns go straight back to the requester
+    and skip the coherence point. This is a patent reading of how the fabric saves data movement.
+  ask: What does moving data once buy over forwarding it hop by hop?
+  rests_on: conjecture
+  targets:
+  - req
+  - noc_split_paths
+  - cmd
+  - coh
+  - mcb
+  status: draft
+- n: 5
+  title: Five QoS classes, six virtual channels, credits per hop
+  say: Requests carry one of five quality of service classes grouped into three bands, carried on six virtual channels, and
+    credits gate entry to each hop and to the memory controller. The bands and the credit gating are inferred from kernel
+    settings and the measured bandwidth behaviour under mixed traffic, not from a patent.
+  ask: Why credits rather than priorities alone?
+  rests_on: inferred
+  targets:
+  - fabric_qos_credits
+  - credits
+  - gate
+  status: draft
+- n: 6
+  title: A directory at the SLC says which L2 holds a line
+  say: A hashed, set associative directory beside the SLC records for every line which L2 level caches hold it, so a request
+    snoops only where it must. When a directory set overflows the line is invalidated in its L2. An earlier design, duplicate
+    tags at the coherence point, is what the directory replaced. Both are patent readings; the protocol itself, MOESI, is
+    inferred.
+  ask: What is the cost of a directory set overflowing?
+  rests_on: conjecture
+  targets:
+  - dirhash
+  - coherence_directory
+  - l2v
+  - duptags
+  status: draft
+- n: 7
+  title: Lines that are never shared skip the snoop
+  say: A request to a page marked never shared, or to a line the requester has learned no one else can hold, skips the snoop
+    broadcast and goes straight on. Everything else snoops all. A patent reading, and one of the cheapest ways to save fabric
+    traffic if the OS marks its pages honestly.
+  rests_on: conjecture
+  targets:
+  - sk0
+  - sk1
+  - sk2
+  status: draft
+- n: 8
+  title: Same address requests wait in a linked retry queue
+  say: A request that collides with work in flight to the same address does not spin. It waits linked behind the blocking
+    transaction, whether that is a pending SLC line or an entry in a hashed write table, and is retried once the blocker's
+    response has passed. Patent reading.
+  ask: Why keep the waiting requests linked rather than retry them all?
+  rests_on: conjecture
+  targets:
+  - same_address_ordering
+  - blk
+  - resp
+  status: draft
+- n: 9
+  title: Remote cache maintenance is paced per cluster
+  say: Cache and TLB maintenance requests from other clusters queue in a unit at each cluster, and a core that has taken many
+    in a row refuses more until it has made progress of its own. A later design poisons the invalidated line immediately and
+    synchronises later. Patent reading.
+  rests_on: conjecture
+  targets:
+  - remote_maintenance_pacing
+  - mp0
+  - mp1
+  - poison
+  status: draft
+- n: 10
+  title: Outside coherence, and what later chips changed
+  say: The SLC acts as the cache controller for small caches inside the IO blocks, turning one request into the few simple
+    commands such a cache understands. Later chips moved to two counter rotating rings, added a parallel lane for bandwidth,
+    split the CPU, IO and GPU networks, and gave each P cluster two ports picked by address hash. All patent readings, and
+    none of it is claimed for the M1 itself.
+  ask: Which of these later changes would the single core bandwidth test detect?
+  rests_on: conjecture
+  targets:
+  - slcp
+  - slc_io_cache_proxy
+  - ioc1
+  - later
+  status: draft

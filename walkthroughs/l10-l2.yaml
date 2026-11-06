@@ -1,0 +1,73 @@
+# l10-l2.yaml
+# The l10-l2 figure read step by step.
+figure: l10-l2
+steps:
+- n: 1
+  title: Sectored caches, Seznec 1994
+  say: One address tag over several lines, each with its own valid bit, so a long line costs the tag of a short one. The M1
+    128 byte line that is really two 64 byte halves, each filling and evicting on its own, is a two line sector.
+  rests_on: corroborated
+  targets:
+  - fp
+  - p_tag
+  - p_sl0
+  - p_sl1
+  - p_sl2
+  - p_sl3
+  status: draft
+- n: 2
+  title: Non uniform cache, Kim 2002
+  say: Banks at different distances from the core answer at different latencies. Four 3 MiB cachelets with the near one at
+    seventeen cycles, and a core seeing about 7.5 MiB, read as a static NUCA with one bank per core and no migration.
+  ask: What would migration between cachelets look like in a latency sweep?
+  rests_on: corroborated
+  targets:
+  - p_bank0
+  - p_bank1
+  - p_bank2
+  - p_bank3
+  - p_core
+  status: draft
+- n: 3
+  title: Insertion policies, Qureshi 2007 and Jaleel 2010
+  say: A new line enters the recency stack somewhere other than the top according to its class, so streaming lines leave first.
+    Drawn from the text of both papers; neither has a single insertion stack figure.
+  rests_on: corroborated
+  targets:
+  - p_stack
+  - p_lru
+  - p_lip
+  - p_rrip
+  status: draft
+- n: 4
+  title: The M1 L2, measured
+  say: 12 MiB in 12 ways of 128 byte lines, 17 cycles, inclusive of the L1Ds, LRU among one core lines but not across cores,
+    lines an L1D still holds spared. The two halves are measured; Augury and GoFetch disagree on whether one or both fill
+    the L1. The 3 and 7.5 MiB steps are measured; that they are cachelets picked by address bits is a patent reading.
+  rests_on: confirmed
+  targets:
+  - fm
+  - m_tag
+  - l2_half_lines
+  - m_half1
+  - l2_cachelets
+  - l2_cachelets1
+  - l2_cachelets2
+  - l2_cachelets3
+  - m_core
+  - l2_autolock
+  - l2_core_lru
+  status: draft
+- n: 5
+  title: 'Insertion bits, and the verdict: plausible'
+  say: The stream, prefetch and trip bits carried by the L1 victim decide where a line enters the stack, from a patent. Nothing
+    cites these papers, and cachelets and insertion are patents. Plausible. The pinned core sweep, one hash class at a time,
+    decides cachelets versus a capacity budget.
+  rests_on: inferred
+  targets:
+  - l2_insertion_priority
+  - m_bits
+  - kept
+  - changed
+  - added
+  status: draft

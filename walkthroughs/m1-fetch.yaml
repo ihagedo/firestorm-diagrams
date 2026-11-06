@@ -1,0 +1,109 @@
+# m1-fetch.yaml
+# The m1-fetch figure read step by step.
+figure: m1-fetch
+steps:
+- n: 1
+  title: Cycle 0, the fast tier answers
+  say: In the first cycle the next fetch predictor and the L0 BTB look up the fetch PC together. The L0 BTB is indexed by
+    PC bits 10 to 2 and tagged, and a hit gives the next group's target, length and ending branch type. That lets the next
+    PC be ready for cycle 1 with no bubble, which is the measured zero-bubble behaviour inside 4 KiB.
+  ask: What has to be true of the index for a hit to come back in one cycle?
+  rests_on: corroborated
+  targets:
+  - nfp_look
+  - l0_look
+  status: draft
+- n: 2
+  title: Cycles 1 and 2, the I-cache reads one way
+  say: With a way supplied by the predictor the L1I reads a single way in cycle 1 and checks the tag against the iTLB in cycle
+    2. That is the patent reading; what is measured is that the cache delivers 16 instructions from one 64 B line and sustains
+    8 per cycle. If the way is wrong the tag check catches it.
+  ask: What does reading one way instead of six save, and what does it cost when the guess is wrong?
+  rests_on: conjecture
+  targets:
+  - l1i_read
+  - l1i_tag
+  status: draft
+- n: 3
+  title: Cycles 0 to 3, the slow tier checks the fast one
+  say: Over the first three cycles TAGE, ITTAGE and the return stack do the full history lookup and compare their answer with
+    the fast tier's. In the same window the second BTB tier, coupled to the L1I, supplies a target for branches the L0 missed.
+    A disagreement restarts fetch at cycle 3, which is the two-bubble cost ocxtal measured for a branch that hits the L1I
+    but misses the first BTB tier.
+  ask: Why check at cycle 3 rather than waiting for execute?
+  rests_on: inferred
+  targets:
+  - slow_look
+  - l1btb_look
+  status: draft
+- n: 4
+  title: Cycles 3 to 7, decode and execute check again
+  say: Decode finds branches no predictor knew about and fixes the group length; execute resolves the direction and target
+    for real. A branch resolved wrong in execute costs 13 cycles back to fetch in all, measured by 7-cpu and ocxtal. The three
+    redirect points, cycle 1, cycle 3 and execute, are the three tiers of the figure's title.
+  ask: Count the cycles from fetch to the branch unit; where do the other six go?
+  rests_on: corroborated
+  targets:
+  - dec_check
+  - exec_resolve
+  status: draft
+- n: 5
+  title: What a next fetch predictor entry must hold
+  say: From the fetch group behaviour an entry needs a tag of fetch PC bits, a target, a length of up to 16 instructions and
+    an ending branch type, so a return can take its target from the stack and an indirect from ITTAGE. The patents add a way
+    field, so the I-cache reads one way and skips its tag array and the iTLB, and a mask of which slow predictors this group
+    needs. The field widths drawn are illustrative.
+  ask: Which fields are forced by the measurements and which only by the patents?
+  rests_on: inferred
+  targets:
+  - fnfp
+  - nfp_entry
+  status: draft
+- n: 6
+  title: Training, and the phantom fetch that reveals it
+  say: The patents say the slow predictors write the fast table when they disagree, keep an entry until it is wrong twice,
+    and send strong newcomers to a FIFO overflow table. Phantom fetch is the measured consequence of a tagged fast table,
+    where a non-branch at a trained address redirects fetch to the old target, which is fetched but never executed, because
+    the tag does not cover the whole PC and the bytes are only checked at decode.
+  ask: How would you detect phantom fetch with a microbenchmark?
+  rests_on: corroborated
+  targets:
+  - nfp_training
+  - phantom_fetch
+  status: draft
+- n: 7
+  title: Why the zero-bubble tier reaches 4 KiB
+  say: The L0 BTB uses PC bits 10 to 2 as a set index, so 512 sets of two ways give 1024 entries and a 4 KiB code footprint.
+    Jia measured it by spacing branches 2 KiB apart, which leaves room for only two one-cycle branches. Beyond that footprint
+    the second tier adds two bubbles, and Handley reads its 8192 entries as living beside the I-cache.
+  ask: Two branches exactly 2 KiB apart share a set; what happens with a third?
+  rests_on: confirmed
+  targets:
+  - fl0
+  - l0_index
+  status: draft
+- n: 8
+  title: Our reading, and the test that would settle it
+  say: Our reading is that the L0 BTB and the fetch group table are one structure, two-way sets indexed by PC bits 10 to 2,
+    so branches 2 KiB apart compete for a set. Three taken branches exactly 2 KiB apart would show the third evicting one
+    of the first two. What is settled is one taken branch per cycle in every case, and no trace cache on the M1.
+  ask: What result from that probe would falsify our reading?
+  rests_on: proposed
+  targets:
+  - l0_reading
+  - one_taken
+  status: draft
+- n: 9
+  title: The decode side
+  say: The instruction queue's depth is open; it is bypassed when empty and, by the patents, deletes the bodies of short forward
+    branches that were skipped. Decode is 8 wide and splits or merges uops, so NOP and B take no issue slot, LDP is one uop
+    with two writes, and a store is two uops. The return stack is read as two levels, a main stack of 50 at decode and a small
+    fetch-side stack for returns whose calls decode has not yet seen.
+  ask: Why keep the main return stack at decode rather than at fetch?
+  rests_on: single
+  targets:
+  - fdec
+  - iq
+  - decode
+  - two_level_ras
+  status: draft

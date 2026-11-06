@@ -1,0 +1,111 @@
+# d1-l1d.yaml
+# The d1-l1d figure read step by step.
+figure: d1-l1d
+steps:
+- n: 1
+  title: The address arrives untranslated
+  say: A load's virtual address reaches the cache 48 bits wide. With 16 KiB pages, bits 13:0 never change under translation,
+    so anything indexed by those bits can start now. The set field 13:6 and the bank field 7:4 both sit inside that window.
+    Of the bank bits, the lower two (5:4) pick the 16 B slice inside the line and the upper two (7:6) pick which of four bank
+    groups the line lives in; those upper two are also the low end of the set index.
+  ask: What is the largest 8-way cache you can index inside a 16 KiB page offset?
+  rests_on: corroborated
+  targets:
+  - va
+  - vab
+  status: agreed
+- n: 2
+  title: The micro tag picks a way early
+  say: The micro tag is the XOR fold of the page number, VA[47:14], down to eight bits. It is compared against the eight micro
+    tags of the set, and one way wins in cycle 1, before the TLB has answered; that way select goes on to the tag array and
+    the data banks. This is the AMD-style way predictor the security papers measured.
+  ask: Two different pages can fold to the same 8 bits. What happens then?
+  rests_on: single
+  targets:
+  - h
+  - utag
+  - c8
+  status: agreed
+- n: 3
+  title: The physical tag confirms late
+  say: In parallel, the L1 dTLB translates the page number. It holds 160 entries in five ways, indexed by VA 18:14, and gives
+    back the physical page, PA[47:14]. In cycle 3 the 34-bit physical tag stored with the chosen way is compared against that
+    physical page; the result is the tag hit, and only now is the hit certain.
+  rests_on: confirmed
+  targets:
+  - dtlb
+  - tag
+  - c34
+  status: agreed
+- n: 4
+  title: Data leaves the banks through two muxes
+  say: The data is held in 16 banks of 16 B, 512 rows each; one 64 B line spans four banks. Two selections in series pick
+    the 16 B that leaves. The way select from the micro tag drives an 8-to-1 mux inside the bank, choosing which way's column
+    comes out; then the bank bits of the address drive a 16-to-1 mux that steers that bank's output to a load port. The bank
+    bits are known from the address in cycle 0, the way only in cycle 1, which is why they are two muxes and not one. Three
+    such paths run each cycle, the measured 48 bytes per cycle of load bandwidth.
+  ask: Why does a 16 B load touch one bank but an LDP of two Q registers touch two?
+  rests_on: corroborated
+  targets:
+  - data
+  - mux_way
+  - mux_bank
+  - lsu_out
+  status: agreed
+- n: 5
+  title: No match means replay
+  say: A replay happens when the micro tag picked a way but the physical tag disagrees. The data that already went out was
+    wrong, so the load goes back to the scheduler and issues again; its consumers were waiting on the confirm, so nothing
+    wrong reaches them. The cost is a retry, not a stall of the whole pipeline.
+  rests_on: inferred
+  targets:
+  - c34
+  - replay
+  status: agreed
+- n: 6
+  title: A miss takes a fill buffer
+  say: A true miss allocates a fill buffer and sends a request down to the shared L2; the L2 answers in 17 cycles and the
+    64 B line comes back up as two 32 B halves, so the request and the fill are two wires, a thin control line down and a
+    thick data line up. How many fill buffers there are is a hole in the record, since nobody has measured it. Little's law
+    on the measured L2 bandwidth says there must be at least seven, which is what the drawing's question mark stands for.
+  ask: How would you measure the number of fill buffers?
+  rests_on: conjecture
+  targets:
+  - fill
+  - l2
+  status: agreed
+- n: 7
+  title: Fill forwarding and the stolen bank cycle
+  say: The short version is that the waiting load gets its data as the line arrives. In detail, two things happen at once.
+    The load that missed does not wait for the line to be written and read again; it takes its bytes straight off the fill
+    buffer, the forward path into the load port. And the write of the line into the bank takes a bank cycle that a load would
+    otherwise have used, so a load to that bank in that cycle is delayed by one. The detail is inferred from timing probes
+    rather than measured directly; the short version holds either way.
+  rests_on: inferred
+  targets:
+  - fill
+  - data
+  - lsu_out
+  status: agreed
+- n: 8
+  title: Tree PLRU picks the victim
+  say: When a fill needs a way, a tree PLRU chooses the victim. Seven bits per set form a three-level tree over the eight
+    ways; each access flips the bits on its path to point away from itself, and the victim is found by following the bits
+    down. This was measured by the Prime+Retouch work. The victim is written back to the L2 only if it is dirty; otherwise
+    it is simply dropped, because the L2 is inclusive and already holds a copy.
+  rests_on: single
+  targets:
+  - plru
+  - evict
+  status: agreed
+- n: 9
+  title: Stores come over the top
+  say: Stores come in over the top. The store queue holds 60 entries of 32 B and, once a store retires, writes it into the
+    banks at two 16 B slices per cycle, so a store never competes with the loads for the mux path. A store that misses does
+    not stall the queue; it takes a store-miss entry, fetches the line for ownership from the L2, and younger stores that
+    hit keep writing in the meantime.
+  rests_on: corroborated
+  targets:
+  - sq
+  - smiss
+  status: agreed

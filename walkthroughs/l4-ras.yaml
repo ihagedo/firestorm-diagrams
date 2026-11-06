@@ -1,0 +1,56 @@
+# l4-ras.yaml
+# The l4-ras figure read step by step.
+figure: l4-ras
+steps:
+- n: 1
+  title: The call return stack, Kaeli and Emma 1991
+  say: A return goes to a different place each time, so a branch history table mispredicts it. A stack pushed on call and
+    popped on return predicts it exactly. Drawn from the text; the paper figure is not redrawn.
+  rests_on: corroborated
+  targets:
+  - p_ke
+  - p_call
+  - p_ret
+  - p_other
+  - p_stack
+  - p_bht
+  - p_pc
+  - p_mux
+  status: draft
+- n: 2
+  title: 'The repair side: paper to come'
+  say: Skadron, Ahuja, Martonosi and Clark described how to repair the stack pointer and contents after a mispredict inside
+    a call. The paper is not in hand, so the panel is a placeholder and the repair claim is untested.
+  rests_on: inferred
+  targets:
+  - p_skadron
+  status: draft
+- n: 3
+  title: 'The M1: 50 entries, a main stack and a shadow'
+  say: 'Fifty entries measured: call and return time steps up sharply past fifty nested calls. A main stack at decode with
+    a small shadow at fetch, and one bubble per return, are patent and inference.'
+  ask: How would you tell a cleared stack from a saturated one?
+  rests_on: single
+  targets:
+  - m_ras
+  - m_dec
+  - m_fetch
+  - m_mini
+  - m_stack
+  - m_entry
+  - m_cost
+  status: draft
+- n: 4
+  title: PAC check, overflow clear; plausible
+  say: 'A pointer authentication check at the push and pop and a clear on overflow come from patents. Kept: the stack. Changed:
+    depth and the two levels. Added: PAC, the return fetch table. Plausible, because a stack is the generic answer and the
+    M1 specific parts are unmeasured.'
+  rests_on: inferred
+  targets:
+  - m_pac
+  - m_ovf
+  - m_rft
+  - col_kept
+  - col_changed
+  - col_added
+  status: draft

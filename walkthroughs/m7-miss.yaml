@@ -1,0 +1,127 @@
+# m7-miss.yaml
+# The m7-miss figure read step by step.
+figure: m7-miss
+steps:
+- n: 1
+  title: A miss takes a fill buffer
+  say: When a load misses the L1D its line address goes into a fill buffer, one per 64 byte line in flight, and the load waits
+    on that entry. A second miss to the same line joins the entry instead of taking a new one, and a load that finds no free
+    buffer replays later. The pool and its sharing between demand loads and prefetches are the KB's conjecture; the count
+    has never been measured.
+  ask: What happens to a core's memory level parallelism when the pool is full?
+  rests_on: conjecture
+  targets:
+  - l1d
+  - fill_buffer_pool
+  - fb_entry
+  - fb_join
+  status: draft
+- n: 2
+  title: At least seven, by Little's law
+  say: The pool is bounded from below by the measured L2 bandwidth. 85 gigabytes a second at 3.2 gigahertz is 26.6 bytes a
+    cycle; over the 17 cycle L2 latency that is 452 bytes in flight, a little over seven lines. So at least seven buffers,
+    or the measured bandwidth could not happen. Our guess is 16, because three loads a cycle plus prefetch make seven too
+    tight; that number is ours.
+  rests_on: derived
+  targets:
+  - little
+  - fb_guess
+  status: draft
+- n: 3
+  title: The fill wakes the waiter and steals a bank cycle
+  say: When the line arrives the waiting load is woken and takes its bytes during the fill, rather than replaying after the
+    line is written; that is read from Handley's eighth volume. Lines that were prefetched into the L1 wait in buffers and
+    are written into the data banks, and that write blocks loads to those banks for about one cycle in seven.
+  rests_on: inferred
+  targets:
+  - fill_forwarding
+  - fill_bank_conflicts
+  status: draft
+- n: 4
+  title: Seventeen cycles, cycle by cycle
+  say: The 17 cycle L2 hit is measured; how it divides is not. Our split is four cycles for the request to reach the L2, nine
+    for the 8192 set lookup, and four for the two 32 byte beats back over the 32 byte a cycle path. The waiter wakes at the
+    first beat. The path width is derived from the measured bandwidth; copies between L1 and L2 cap near 150 gigabytes a second
+    on coherence work.
+  ask: Which of the three parts would you expect to change if the data sat in a far cachelet?
+  rests_on: derived
+  targets:
+  - ret_req
+  - ret_lookup
+  - ret_beats
+  - ret_wake
+  - ret_write
+  - ret_split
+  - l2_path
+  - ret_rule
+  status: draft
+- n: 5
+  title: What the L2 shows the miss
+  say: The miss arrives at the L2 with a physical address. The set index spans the page offset and the frame, with two bits
+    hashed against higher frame bits, which is why some strides crowd part of the cache. Each 128 byte line is two 64 byte
+    halves that fill and evict on their own, and whether one half or both come to the L1 is disputed. Replacement is LRU among
+    one core's lines and spares lines an L1 still holds. Map 8 draws all of this in full; here it is the miss's view.
+  rests_on: corroborated
+  targets:
+  - l2_pa
+  - l2_index
+  - l2_halves
+  - l2_replace
+  - l2_hashed_way_filter
+  status: draft
+- n: 6
+  title: Cachelets and arbitration, the conjectures
+  say: One core sees 17 cycles out to 3 megabytes and more beyond, and about 7.5 megabytes in all, which is read as four 3
+    megabyte cachelets, one beside each core. Our proposal is that the two hashed index bits pick the cachelet and a far placement
+    pays the fabric hop. The KB's conjecture for arbitration is per core request queues served round robin into each bank,
+    demand before prefetch; the test is three cores streaming while a fourth pointer chases, whose latency stays flat under
+    round robin.
+  rests_on: conjecture
+  targets:
+  - l2_cachelets
+  - cachelet_pick
+  - l2_arb
+  - arb_test
+  status: draft
+- n: 7
+  title: Access maps and a temporal history
+  say: The prefetchers train on virtual addresses in the load store unit. An access map per region records which lines were
+    accessed and which prefetched, matches stride patterns and extends them; the map granularity grows from 64 to 128 to 256
+    bytes for long patterns and 16 stride streams run at once, both measured. A temporal history of just under 256 entries
+    covers random access inside a 15 kibibyte region but not 16; our reading is that 240 lines is the buffer less what the
+    probe loop itself uses.
+  rests_on: inferred
+  targets:
+  - access_map
+  - ampm_prefetcher
+  - temporal_prefetch
+  - temporal_guess
+  status: draft
+- n: 8
+  title: The pointer chaser, the throttle and who fills what
+  say: The data memory dependent prefetcher scans filled lines for 8 byte values that look like pointers into the same region,
+    arms after three accesses, dereferences one level and prefetches into the L2, not the L1; a history filter stops repeats,
+    and only a privileged bit turns it off. That was measured by two security groups. The throttle and deny list are patent
+    readings. By level, the stride and region prefetchers fill the L1D through the fill buffers, which is why they steal bank
+    cycles; the pointer chaser and the temporal prefetcher fill the L2 only.
+  ask: Why would a designer keep the pointer chaser out of the L1?
+  rests_on: single
+  targets:
+  - content_directed_prefetch
+  - prefetch_throttle
+  - pf_deny
+  - pf_levels
+  status: draft
+- n: 9
+  title: Beyond the L2, and the tests we would run
+  say: Little's law again gives about 48 lines of 128 bytes in flight to draw 64 gigabytes a second from DRAM at 97 nanoseconds,
+    which is the L2 miss queue depth to look for. DRAM fills enter the L2 and the L1, and the system level cache takes only
+    L2 victims, so one core sweeping a buffer up to about 20 megabytes still hits on chip. Our test for the shared pool is
+    a stride stream keeping 16 lines in flight plus a pointer chase; if the chase slows, demand and prefetch share one pool.
+  rests_on: derived
+  targets:
+  - fb_test
+  - dram_little
+  - slc_victims
+  - sweep
+  status: draft
