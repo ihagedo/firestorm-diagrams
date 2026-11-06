@@ -1,0 +1,271 @@
+<mxfile host="svgkit2" version="22.0.0">
+  <diagram id="m4-sched" name="m4-sched">
+    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2400" pageHeight="1420" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Inside a scheduler queue, wakeup, select and replay" style="text;html=1;kind=title;fontSize=18;fontStyle=1;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="17" y="11" width="729" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" value="A matrix scheduler fits what is measured, operands read at issue and queues that do not shift. The entry format and the replay rule are proposed." style="text;html=1;kind=title;fontSize=11;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="17" y="37" width="1151" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="f-fa" value="One queue entry" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#8abfb3;fontColor=#059669;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="2320" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="f-fa-note" value="integer queue of about 13; proposed on top of the patent" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1953.6" y="76" width="399.4" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="f-fb" value="Dependency matrix and age matrix" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#8abfb3;fontColor=#059669;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="1160" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="f-fb-note" value="13 by 13, patent reading" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1021.3" y="306" width="171.7" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="f-fc" value="Pairing, the size dispute and the load shadow" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#8abfb3;fontColor=#059669;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="300" width="1130" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="f-fd" value="Issue ports to the register file" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#8abfb3;fontColor=#059669;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="970" width="2320" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="v-sched_entry" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f2faf8;strokeColor=#8abfb3;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="118" width="2260" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="v-sched_entry-cell" value="uop and immediate 63:40" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-sched_entry">
+          <mxGeometry x="0.0" y="0.0" width="847.5" height="34.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-sched_entry-cell-2" value="dest preg 39:31" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-sched_entry">
+          <mxGeometry x="847.5" y="0.0" width="317.8" height="34.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-sched_entry-cell-3" value="src A preg 30:22" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-sched_entry">
+          <mxGeometry x="1165.3" y="0.0" width="317.8" height="34.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-sched_entry-cell-4" value="rA 21" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-sched_entry">
+          <mxGeometry x="1483.1" y="0.0" width="35.3" height="34.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-sched_entry-cell-5" value="src B preg 20:12" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-sched_entry">
+          <mxGeometry x="1518.4" y="0.0" width="317.8" height="34.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-sched_entry-cell-6" value="rB 11" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-sched_entry">
+          <mxGeometry x="1836.2" y="0.0" width="35.3" height="34.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-sched_entry-cell-7" value="flags preg 10:4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-sched_entry">
+          <mxGeometry x="1871.6" y="0.0" width="247.2" height="34.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-sched_entry-cell-8" value="shadow 3:1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-sched_entry">
+          <mxGeometry x="2118.8" y="0.0" width="105.9" height="34.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-sched_entry-cell-9" value="v 0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-sched_entry">
+          <mxGeometry x="2224.7" y="0.0" width="35.3" height="34.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-hierarchical_reservation_station" value="&lt;b&gt;Primary buffer&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;highest priority ops&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="858" width="420" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="v-rs_secondary" value="&lt;b&gt;Secondary buffer&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;the rest; fills gaps the primary leaves&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="640" y="858" width="420" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="v-paired_sched_queues" value="&lt;b&gt;Paired queues&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Q1 with Q2, Q3 with Q4, Q5 with Q6&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;nothing ready: issue from the partner&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;one age matrix per pair would do it&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="345" width="530" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="v-size_dispute" value="&lt;b&gt;The 13 versus 24 dispute&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Johnson: 24 per int queue, 28 per mul queue&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Handley: each pair counted twice, so 13&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;134 in all, measured by Chen&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;drawn as 13; 134 is the hard number&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ebf7f3;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=9 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1810" y="345" width="530" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_load" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fcf4dc;strokeColor=#f0ca52;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="560" width="910" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_load-cell" value="issue" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_load">
+          <mxGeometry x="4.0" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_load-cell-2" value="AGU" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_load">
+          <mxGeometry x="132.9" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_load-cell-3" value="L1D read" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_load">
+          <mxGeometry x="261.7" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_load-cell-4" value="data" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_load">
+          <mxGeometry x="390.6" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_load-cell-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_load">
+          <mxGeometry x="519.4" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_load-cell-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_load">
+          <mxGeometry x="648.3" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_load-cell-7" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_load">
+          <mxGeometry x="777.1" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_dep" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbf2fc;strokeColor=#c026d3;strokeWidth=1.2;dashed=1;dashPattern=6 2;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="612" width="910" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_dep-cell" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_dep">
+          <mxGeometry x="4.0" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_dep-cell-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_dep">
+          <mxGeometry x="132.9" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_dep-cell-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_dep">
+          <mxGeometry x="261.7" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_dep-cell-4" value="issues" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_dep">
+          <mxGeometry x="390.6" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_dep-cell-5" value="ALU use" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_dep">
+          <mxGeometry x="519.4" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_dep-cell-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_dep">
+          <mxGeometry x="648.3" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_dep-cell-7" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_dep">
+          <mxGeometry x="777.1" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_check" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fcf4dc;strokeColor=#f0ca52;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="664" width="910" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_check-cell" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_check">
+          <mxGeometry x="4.0" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_check-cell-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_check">
+          <mxGeometry x="132.9" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_check-cell-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_check">
+          <mxGeometry x="261.7" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_check-cell-4" value="tag check" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_check">
+          <mxGeometry x="390.6" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_check-cell-5" value="store address" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_check">
+          <mxGeometry x="519.4" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_check-cell-6" value="recheck" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_check">
+          <mxGeometry x="648.3" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-shadow_check-cell-7" value="replay" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-shadow_check">
+          <mxGeometry x="777.1" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-load_replay_shadow" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbf2fc;strokeColor=#c026d3;strokeWidth=1.2;dashed=1;dashPattern=6 2;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="716" width="910" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="v-load_replay_shadow-cell" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-load_replay_shadow">
+          <mxGeometry x="4.0" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-load_replay_shadow-cell-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-load_replay_shadow">
+          <mxGeometry x="132.9" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-load_replay_shadow-cell-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-load_replay_shadow">
+          <mxGeometry x="261.7" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-load_replay_shadow-cell-4" value="entries kept" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-load_replay_shadow">
+          <mxGeometry x="390.6" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-load_replay_shadow-cell-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-load_replay_shadow">
+          <mxGeometry x="519.4" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-load_replay_shadow-cell-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-load_replay_shadow">
+          <mxGeometry x="648.3" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-load_replay_shadow-cell-7" value="reissue" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-load_replay_shadow">
+          <mxGeometry x="777.1" y="4.0" width="127.4" height="32.0" as="geometry" />
+        </mxCell>
+        <mxCell id="v-prf_ports" value="&lt;b&gt;Reads and writes per cycle&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;14 units with up to 2 sources: 28 reads&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;14 writes plus load data&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;4 banks means about 7 reads per bank, too many&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;proposed: bank by register number mod 4&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a bank conflict stalls select by a cycle&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ebf7f3;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=9 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1015" width="1100" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="v-cross_domain" value="&lt;b&gt;Cross domain paths, measured&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;int to SIMD: a fake load, about 6 cycles&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;SIMD to int: a dedicated path, about 6 cycles&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;MADD feeds the next addend in 1 cycle&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;int divide: a side pipe, one every 2 cycles&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcf0ea;strokeColor=#50b696;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="1015" width="1110" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="v-issue_age_flush" value="&lt;b&gt;One possibly mispredicting op a cycle&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;short age bits say what to flush&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="70" y="1230" width="1100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="v-bank_test" value="&lt;b&gt;Test for the banks&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;ALU ops sourcing one bank, versus spread&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;hard to control from software&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbf2fc;strokeColor=#c026d3;strokeWidth=1.2;dashed=1;dashPattern=6 2;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1230" y="1230" width="1110" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e-rs_secondary-hierarchical_reservation_station" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=2 3;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.00000;exitY=0.50000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.00000;entryY=0.50000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-rs_secondary" target="v-hierarchical_reservation_station">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n-rA_rB_ready_bits_set_by_wakeu" value="rA, rB: ready bits, set by wakeup" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="191.5" width="212.6" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-shadow_3_bit_timer_from_the_loa" value="shadow: 3 bit timer from the load that woke this uop" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="209.0" width="339.8" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-while_the_timer_runs_the_entry_s" value="while the timer runs the entry stays after issue, to reissue +" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1000.0" y="191.5" width="386.9" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-operands_are_read_from_the_regis" value="operands are read from the register file at issue ●" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1000.0" y="209.0" width="317.3" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-entry_1_completes_column_1_clea" value="entry 1 completes: column 1 clears, row 3 is ready" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="776.5" width="322.9" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-wakeup_is_a_column_clear_one_wi" value="wakeup is a column clear, one wire per entry" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="794.0" width="292.3" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-no_tag_compare" value="no tag compare" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="811.5" width="98.6" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-select_the_ready_entry_with_no" value="select: the ready entry with no older ready entry" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="640.0" y="776.5" width="308.3" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-allocation_writes_one_row_and_on" value="allocation writes one row and one column" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="640.0" y="794.0" width="271.3" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-no_shifting" value="no shifting" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="640.0" y="811.5" width="68.0" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-picks_fill_empty_slots" value="picks fill empty slots" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-rs_secondary-hierarchical_reservation_station;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="500.0" y="835.5" width="145.6" height="18.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-Speculative_wakeup_behind_a_load" value="Speculative wakeup behind a load, proposed from the patent" style="text;html=1;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1250.0" y="517.0" width="458.7" height="18.0" as="geometry" />
+        </mxCell>
+        <mxCell id="n-load_pipe" value="load pipe" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1250.0" y="572.5" width="59.0" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-dependent" value="dependent" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1250.0" y="624.5" width="65.1" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-late_checks" value="late checks" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1250.0" y="676.5" width="74.1" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-shadow" value="shadow" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1250.0" y="728.5" width="50.3" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-clk_0" value="clk 0" style="text;html=1;fontSize=8.5;fontColor=#9ca3af;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1374.0" y="769.2" width="30.5" height="15.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n-clk_1" value="clk 1" style="text;html=1;fontSize=8.5;fontColor=#9ca3af;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1504.0" y="769.2" width="27.1" height="15.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n-clk_2" value="clk 2" style="text;html=1;fontSize=8.5;fontColor=#9ca3af;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1634.0" y="769.2" width="30.5" height="15.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n-clk_3" value="clk 3" style="text;html=1;fontSize=8.5;fontColor=#9ca3af;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1764.0" y="769.2" width="30.5" height="15.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n-clk_4" value="clk 4" style="text;html=1;fontSize=8.5;fontColor=#9ca3af;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1894.0" y="769.2" width="30.5" height="15.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n-clk_5" value="clk 5" style="text;html=1;fontSize=8.5;fontColor=#9ca3af;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="2024.0" y="769.2" width="30.5" height="15.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n-clk_6" value="clk 6" style="text;html=1;fontSize=8.5;fontColor=#9ca3af;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="2154.0" y="769.2" width="30.5" height="15.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n-the_consumer_is_woken_for_cycle" value="the consumer is woken for cycle 3 as if the load hits" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1250.0" y="786.5" width="340.9" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-a_store_address_resolving_late_c" value="a store address resolving late causes a replay, not a flush ○" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1250.0" y="804.0" width="385.3" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-the_replaying_load_waits_in_a_lo" value="the replaying load waits in a load execution queue ?" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1250.0" y="821.5" width="337.2" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-test_k_dependent_ALU_ops_behind" value="test: k dependent ALU ops behind a load that replays once" style="text;html=1;fontSize=9;fontColor=#c026d3;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1250.0" y="856.5" width="376.3" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-cost_grows_with_k_until_k_passes" value="cost grows with k until k passes the shadow depth" style="text;html=1;fontSize=9;fontColor=#c026d3;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1250.0" y="874.0" width="330.2" height="16.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
