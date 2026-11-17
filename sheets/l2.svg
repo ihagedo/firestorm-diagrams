@@ -3,7 +3,7 @@
 <text x="1650.0" y="123.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" fill="#4b5563" text-anchor="end">12 parameters</text>
 <rect x="40.0" y="484.0" width="1620.0" height="422.0" rx="9" fill="#fff9f6" stroke="#dfb396" stroke-width="1"/>
 <text x="50.0" y="501.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#f97316" text-anchor="start">Mechanisms</text>
-<text x="1650.0" y="501.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" fill="#4b5563" text-anchor="end">19: ◆ 4 measured, ~ 3 inferred, ? 11 speculative, ? 1 conjecture</text>
+<text x="1650.0" y="501.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" fill="#4b5563" text-anchor="end">19 mechanisms, ◆ 4 measured, ~ 3 inferred, ? 11 speculative, ? 1 conjecture</text>
 <rect x="40.0" y="70.0" width="54.9" height="18.5" rx="4" fill="#f1f1f3" stroke="#9ba2ab" stroke-width="0.8"/>
 <rect x="116.9" y="70.0" width="56.9" height="18.5" rx="4" fill="#f1f1f3" stroke="#9ba2ab" stroke-width="0.8"/>
 <rect x="195.8" y="70.0" width="60.8" height="18.5" rx="4" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.8"/>

@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2550 1050" width="2550" height="1050" role="img" aria-label="L12  System level cache lineage: a victim cache grown to 8 MiB, with a hashed index" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" data-kinds="dataflow structure"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker><marker id="arrowrev" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M10,0 L0,5 L10,10 z" fill="#1f2937"/></marker></defs><rect x="0" y="0" width="2550" height="1050" fill="#ffffff"/><text x="20" y="30" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#1f2937">L12  System level cache lineage: a victim cache grown to 8 MiB, with a hashed index</text><text x="20" y="48" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#4b5563">Left, Jouppi&#x27;s victim cache and Seznec&#x27;s skewed index redrawn. Right, the M1 SLC from the measurements. Between them, what was kept, changed and added.</text><rect x="30.0" y="105.0" width="1050.0" height="750.0" rx="9" fill="#fbfbfc" stroke="#bec4cc" stroke-width="1"/>
-<text x="40.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#9ca3af" text-anchor="start">Jouppi 1990, Fig. 3-4 | Seznec 1993, Fig. 4</text>
+<text x="40.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#9ca3af" text-anchor="start">Jouppi 1990 Figs. 3 and 4, Seznec 1993 Fig. 4</text>
 <text x="1070.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">redrawn</text>
 <rect x="1470.0" y="105.0" width="1050.0" height="750.0" rx="9" fill="#fff9f6" stroke="#dfb396" stroke-width="1"/>
 <text x="1480.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#f97316" text-anchor="start">M1 system level cache, 8 MiB, 16 ways, 128 B lines</text>
-<text x="2510.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">EXAM and SLAC measured | the rest from patents</text>
+<text x="2510.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">EXAM and SLAC measured, the rest from patents</text>
 <rect x="60.0" y="168.0" width="450.0" height="105.0" rx="5" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
 <line x1="65.0" y1="200.0" x2="505.0" y2="200.0" stroke="#c4c8d0" stroke-width="1"/>
 <rect x="60.0" y="345.0" width="450.0" height="135.0" rx="4" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
@@ -50,19 +50,19 @@
 <line x1="1115.0" y1="461.5" x2="1435.0" y2="461.5" stroke="#cda9d9" stroke-width="1"/>
 <rect x="1500.0" y="168.0" width="300.0" height="90.0" rx="5" fill="#fedcc5" stroke="#f97316" stroke-width="1.4"/>
 <line x1="1505.0" y1="200.0" x2="1795.0" y2="200.0" stroke="#dbbcaa" stroke-width="1"/>
-<rect x="1500.0" y="345.0" width="300.0" height="105.0" rx="5" fill="#fdcdab" stroke="#f97316" stroke-width="2.2"/>
+<rect x="1500.0" y="345.0" width="300.0" height="105.0" rx="5" fill="#fedcc5" stroke="#f97316" stroke-width="1.4"/>
 <line x1="1505.0" y1="377.0" x2="1795.0" y2="377.0" stroke="#dbbcaa" stroke-width="1"/>
 <rect x="1890.0" y="168.0" width="240.0" height="90.0" rx="5" fill="#feebde" stroke="#fb9d5c" stroke-width="1"/>
 <line x1="1895.0" y1="200.0" x2="2125.0" y2="200.0" stroke="#dbbcaa" stroke-width="1"/>
-<rect x="1890.0" y="381.0" width="240.0" height="75.0" rx="5" fill="#f6c9c9" stroke="#dc2626" stroke-width="1.4"/>
+<rect x="1890.0" y="381.0" width="240.0" height="75.0" rx="5" fill="#fae1e1" stroke="#e66767" stroke-width="1"/>
 <line x1="1895.0" y1="413.0" x2="2125.0" y2="413.0" stroke="#d4a9ae" stroke-width="1"/>
 <rect x="1500.0" y="618.0" width="630.0" height="33.0" rx="2" fill="#fffbf8" stroke="#ddb8a0" stroke-width="1"/>
-<rect x="1500.0" y="618.0" width="519.8" height="33.0" rx="2" fill="#fdcdab" stroke="#f97316" stroke-width="2.2"/>
+<rect x="1500.0" y="618.0" width="519.8" height="33.0" rx="2" fill="#fedcc5" stroke="#f97316" stroke-width="1.4"/>
 <rect x="2019.8" y="618.0" width="110.2" height="33.0" rx="2" fill="#fdcdab" stroke="#f97316" stroke-width="2.2"/>
 <circle cx="2220.0" cy="634.5" r="11" fill="#ffffff" stroke="#1f2937" stroke-width="1.1"/>
 <polyline points="2213.4,634.5 2226.6,634.5" fill="none" stroke="#1f2937" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="2220.0,627.9 2220.0,641.1" fill="none" stroke="#1f2937" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
-<rect x="2295.0" y="600.0" width="195.0" height="75.0" rx="4" fill="#fdcdab" stroke="#f97316" stroke-width="2.2"/>
+<rect x="2295.0" y="600.0" width="195.0" height="75.0" rx="4" fill="#feebde" stroke="#fb9d5c" stroke-width="1"/>
 <rect x="2299.0" y="623.0" width="30.0" height="22.8" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
 <rect x="2330.2" y="623.0" width="30.0" height="22.8" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
 <rect x="2361.3" y="623.0" width="30.0" height="22.8" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
@@ -101,7 +101,7 @@
 <polyline points="2231.0,634.5 2295.0,634.5" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="17" data-src="slc_hashed_index" data-dst="m_sets"/>
 <polyline points="1440.0,198.2 1455.0,198.2 1455.0,397.5 1500.0,397.5" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="18" data-src="kept" data-dst="slc_victim_fill"/>
 <polyline points="1440.0,345.6 1455.0,345.6 1455.0,642.0 1500.0,642.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="19" data-src="changed" data-dst="m_pa"/>
-<text x="60.0" y="150.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="p1">victim caching: a line thrown out goes to a small associative cache</text>
+<text x="60.0" y="150.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="p1">In victim caching, an evicted line goes to a small cache.</text>
 <text x="67.0" y="190.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">direct mapped cache</text>
 <text x="67.0" y="214.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">tags and data</text>
 <text x="285.0" y="382.4" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">tag, comparator, line</text>
@@ -111,19 +111,19 @@
 <text x="607.0" y="397.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">next level</text>
 <text x="105.0" y="318.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="2">victim</text>
 <text x="394.0" y="318.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="3">hit, swap back</text>
-<text x="60.0" y="525.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Jouppi: no line is in both</text>
-<text x="60.0" y="542.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">four lines remove most conflict misses of 4 KiB</text>
-<text x="60.0" y="600.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="p2">skewed associativity: each bank indexed by its own hash</text>
+<text x="60.0" y="525.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">In Jouppi no line is in both,</text>
+<text x="60.0" y="542.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">and four lines remove most 4 KiB conflict misses.</text>
+<text x="60.0" y="600.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="p2">With skewed associativity, each bank has its own index hash.</text>
 <text x="67.0" y="640.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">address</text>
 <text x="330.0" y="659.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="400" fill="#1f2937" text-anchor="middle">f0</text>
 <text x="330.0" y="746.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="400" fill="#1f2937" text-anchor="middle">f1</text>
 <text x="555.0" y="635.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">bank 0</text>
 <text x="555.0" y="722.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">bank 1</text>
-<text x="720.0" y="660.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Seznec: two ways,</text>
-<text x="720.0" y="677.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">two hash functions</text>
-<text x="60.0" y="822.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start" data-owner="p2d">the skewed cache is Fig. 4 of the 1993 paper, not Fig. 1</text>
+<text x="720.0" y="660.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Seznec uses two ways</text>
+<text x="720.0" y="677.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">and two hash functions.</text>
+<text x="60.0" y="822.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start" data-owner="p2d">The skewed cache is Fig. 4 of the 1993 paper.</text>
 <rect x="1208.4" y="124.2" width="133.1" height="20.8" rx="3" fill="#feebde" stroke="none" stroke-width="1"/>
-<text x="1212.4" y="141.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="lineage">lineage: contrast</text>
+<text x="1212.4" y="141.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="lineage">lineage, contrast</text>
 <text x="1117.0" y="193.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">kept</text>
 <text x="1117.0" y="217.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">filled only by the victims above</text>
 <text x="1117.0" y="235.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">no line in both levels</text>
@@ -139,26 +139,34 @@
 <text x="1117.0" y="493.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">group quotas and sticky lines</text>
 <text x="1117.0" y="511.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">ranges held as memory</text>
 <text x="1117.0" y="528.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">a DRAM read beside the lookup</text>
-<text x="1500.0" y="150.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m1">filled by L2 victims: a CPU miss goes past it to DRAM</text>
+<text x="1500.0" y="150.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m1">L2 victims fill it, so a CPU miss goes past it to DRAM.</text>
 <text x="1507.0" y="190.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">P-cluster L2</text>
-<text x="1507.0" y="214.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="1519.1" y="214.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">12 MiB, inclusive of the L1s</text>
+<text x="1507.0" y="214.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="1519.1" y="214.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">12 MiB</text>
+<text x="1507.0" y="232.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
+<text x="1519.1" y="232.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">inclusive of the L1s</text>
 <text x="1507.0" y="367.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">system level cache</text>
-<text x="1507.0" y="391.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="1507.0" y="391.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
 <text x="1519.1" y="391.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">exclusive of the CPU caches</text>
-<text x="1507.0" y="409.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
-<text x="1519.1" y="409.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">4096 sets, 16 ways</text>
+<text x="1507.0" y="409.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
+<text x="1519.1" y="409.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">4096 sets</text>
+<text x="1507.0" y="426.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="1519.1" y="426.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">16 ways</text>
 <text x="1897.0" y="190.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">GPU, E cluster</text>
 <text x="1897.0" y="214.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
 <text x="1909.1" y="214.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">reads allocate</text>
 <text x="1897.0" y="403.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">controllers</text>
-<text x="1897.0" y="427.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="1909.1" y="427.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">91 ns, 8 channels</text>
+<text x="1897.0" y="427.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
+<text x="1909.1" y="427.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">91 ns</text>
+<text x="1897.0" y="445.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
+<text x="1909.1" y="445.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">8 channels</text>
 <text x="1504.0" y="318.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="10">victims</text>
-<text x="1729.0" y="309.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="11">hit, about 90 clk</text>
-<text x="1500.0" y="495.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">measured: 8 MiB, 16 ways, 128 B, exclusive, victim filled</text>
-<text x="1500.0" y="512.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">replacement disputed | 90 cycles only reported</text>
-<text x="1500.0" y="600.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m2">every one of the 12 index bits is an XOR of address bits</text>
+<text x="1729.0" y="309.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="11">hit, </text>
+<rect x="1751.8" y="296.6" width="89.6" height="16.7" rx="3" fill="#fff9f6" stroke="#fb9d5c" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="1757.5" y="309.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="11">about 90 clk</text>
+<text x="1500.0" y="495.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Measured are the size, ways, line, exclusion and victim fill.</text>
+<text x="1500.0" y="512.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">? Replacement is disputed, and 90 cycles only reported.</text>
+<text x="1500.0" y="600.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m2">◆ Each of the 12 index bits is an XOR of address bits.</text>
 <text x="1759.9" y="638.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">PA 39:7, every index bit hashed</text>
 <text x="1502.0" y="663.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">39</text>
 <text x="2017.8" y="663.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="end">7</text>
@@ -176,8 +184,8 @@
 <text x="2197.0" y="727.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">read beside the lookup</text>
 <text x="2197.0" y="751.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
 <text x="2209.1" y="751.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">killed on a hit</text>
-<text x="1500.0" y="822.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">the idea survives, the structure does not</text>
-<text x="1500.0" y="839.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">Jouppi backed one small cache | the SLC backs a die</text>
+<text x="1500.0" y="822.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">The idea survives, but the structure does not.</text>
+<text x="1500.0" y="839.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">Jouppi backed one small cache, and the SLC backs a die.</text>
 <rect x="60.0" y="1011.0" width="16.0" height="11.0" rx="2" fill="#fdcdab" stroke="#f97316" stroke-width="2.2"/>
 <text x="80.0" y="1020.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">● 3+ measurements</text>
 <rect x="230.9" y="1011.0" width="16.0" height="11.0" rx="2" fill="#fedcc5" stroke="#f97316" stroke-width="1.4"/>

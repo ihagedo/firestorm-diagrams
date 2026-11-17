@@ -3,7 +3,7 @@
 <text x="1650.0" y="123.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" fill="#4b5563" text-anchor="end">2 parameters</text>
 <rect x="40.0" y="260.0" width="1620.0" height="266.0" rx="9" fill="#fef6f6" stroke="#d5989c" stroke-width="1"/>
 <text x="50.0" y="277.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.5" font-weight="700" fill="#dc2626" text-anchor="start">Mechanisms</text>
-<text x="1650.0" y="277.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" fill="#4b5563" text-anchor="end">12: ~ 3 inferred, ? 9 speculative</text>
+<text x="1650.0" y="277.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10" font-weight="400" fill="#4b5563" text-anchor="end">12 mechanisms, ~ 3 inferred, ? 9 speculative</text>
 <rect x="40.0" y="70.0" width="54.9" height="18.5" rx="4" fill="#f1f1f3" stroke="#9ba2ab" stroke-width="0.8"/>
 <rect x="116.9" y="70.0" width="111.2" height="18.5" rx="4" fill="#fceeee" stroke="#d58f93" stroke-width="0.8"/>
 <rect x="54.0" y="136.0" width="300.0" height="64.0" rx="4" fill="#fef8f8" stroke="#d4a0a5" stroke-width="0.8"/>

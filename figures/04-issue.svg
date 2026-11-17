@@ -70,22 +70,22 @@
 <rect x="1780.0" y="329.6" width="142.0" height="25.1" rx="1.5" fill="#fdf9eb" stroke="#dcc67c" stroke-width="0.6"/>
 <rect x="1780.0" y="356.2" width="142.0" height="25.1" rx="1.5" fill="#fdf9eb" stroke="#dcc67c" stroke-width="0.6"/>
 <rect x="1780.0" y="382.9" width="142.0" height="25.1" rx="1.5" fill="#fdf9eb" stroke="#dcc67c" stroke-width="0.6"/>
-<rect x="1940.0" y="280.0" width="150.0" height="150.0" rx="4" fill="#dcf0ea" stroke="#50b696" stroke-width="1"/>
+<rect x="1940.0" y="280.0" width="150.0" height="150.0" rx="4" fill="#ebf7f3" stroke="#50b696" stroke-width="1" stroke-dasharray="9 3"/>
 <rect x="1944.0" y="303.0" width="142.0" height="25.1" rx="1.5" fill="#9bd5c3" stroke="#75b9a8" stroke-width="0.6"/>
 <rect x="1944.0" y="329.6" width="142.0" height="25.1" rx="1.5" fill="#9bd5c3" stroke="#75b9a8" stroke-width="0.6"/>
 <rect x="1944.0" y="356.2" width="142.0" height="25.1" rx="1.5" fill="#ebf7f3" stroke="#75b9a8" stroke-width="0.6"/>
 <rect x="1944.0" y="382.9" width="142.0" height="25.1" rx="1.5" fill="#ebf7f3" stroke="#75b9a8" stroke-width="0.6"/>
-<rect x="2104.0" y="280.0" width="150.0" height="150.0" rx="4" fill="#dcf0ea" stroke="#50b696" stroke-width="1"/>
+<rect x="2104.0" y="280.0" width="150.0" height="150.0" rx="4" fill="#ebf7f3" stroke="#50b696" stroke-width="1" stroke-dasharray="9 3"/>
 <rect x="2108.0" y="303.0" width="142.0" height="25.1" rx="1.5" fill="#9bd5c3" stroke="#75b9a8" stroke-width="0.6"/>
 <rect x="2108.0" y="329.6" width="142.0" height="25.1" rx="1.5" fill="#9bd5c3" stroke="#75b9a8" stroke-width="0.6"/>
 <rect x="2108.0" y="356.2" width="142.0" height="25.1" rx="1.5" fill="#ebf7f3" stroke="#75b9a8" stroke-width="0.6"/>
 <rect x="2108.0" y="382.9" width="142.0" height="25.1" rx="1.5" fill="#ebf7f3" stroke="#75b9a8" stroke-width="0.6"/>
-<rect x="2268.0" y="280.0" width="150.0" height="150.0" rx="4" fill="#dcf0ea" stroke="#50b696" stroke-width="1"/>
+<rect x="2268.0" y="280.0" width="150.0" height="150.0" rx="4" fill="#ebf7f3" stroke="#50b696" stroke-width="1" stroke-dasharray="9 3"/>
 <rect x="2272.0" y="303.0" width="142.0" height="25.1" rx="1.5" fill="#9bd5c3" stroke="#75b9a8" stroke-width="0.6"/>
 <rect x="2272.0" y="329.6" width="142.0" height="25.1" rx="1.5" fill="#9bd5c3" stroke="#75b9a8" stroke-width="0.6"/>
 <rect x="2272.0" y="356.2" width="142.0" height="25.1" rx="1.5" fill="#ebf7f3" stroke="#75b9a8" stroke-width="0.6"/>
 <rect x="2272.0" y="382.9" width="142.0" height="25.1" rx="1.5" fill="#ebf7f3" stroke="#75b9a8" stroke-width="0.6"/>
-<rect x="2432.0" y="280.0" width="150.0" height="150.0" rx="4" fill="#dcf0ea" stroke="#50b696" stroke-width="1"/>
+<rect x="2432.0" y="280.0" width="150.0" height="150.0" rx="4" fill="#ebf7f3" stroke="#50b696" stroke-width="1" stroke-dasharray="9 3"/>
 <rect x="2436.0" y="303.0" width="142.0" height="25.1" rx="1.5" fill="#9bd5c3" stroke="#75b9a8" stroke-width="0.6"/>
 <rect x="2436.0" y="329.6" width="142.0" height="25.1" rx="1.5" fill="#9bd5c3" stroke="#75b9a8" stroke-width="0.6"/>
 <rect x="2436.0" y="356.2" width="142.0" height="25.1" rx="1.5" fill="#ebf7f3" stroke="#75b9a8" stroke-width="0.6"/>
@@ -228,8 +228,10 @@
 <polyline points="2179.0,430.0 2179.0,550.0" fill="none" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="30" data-src="q12" data-dst="u12"/>
 <polyline points="2343.0,430.0 2343.0,550.0" fill="none" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="31" data-src="q13" data-dst="u13"/>
 <polyline points="2507.0,430.0 2507.0,550.0" fill="none" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="32" data-src="q14" data-dst="u14"/>
-<text x="50.0" y="118.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="fa-note">filled by rename</text>
-<text x="50.0" y="135.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="fa-note">8 a cycle</text>
+<text x="50.0" y="118.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="fa-note">Rename fills them,</text>
+<rect x="51.0" y="123.1" width="67.8" height="16.7" rx="3" fill="#dcf0ea" stroke="#50b696" stroke-width="1"/>
+<text x="56.8" y="135.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="fa-note">8 a cycle</text>
+<text x="119.8" y="135.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="fa-note">.</text>
 <text x="307.0" y="130.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">int A, 24</text>
 <text x="307.0" y="154.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
 <text x="319.1" y="154.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">units 1 to 3</text>
@@ -245,20 +247,23 @@
 <text x="1947.0" y="130.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">FP and SIMD, 12</text>
 <text x="1947.0" y="154.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
 <text x="1959.1" y="154.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">units 11 to 14</text>
-<text x="50.0" y="290.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="fb-note">one per pipeline</text>
-<text x="50.0" y="307.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="fb-note">1 uop a cycle in</text>
+<text x="50.0" y="290.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="fb-note">One per pipeline,</text>
+<text x="50.0" y="307.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="fb-note">each takes </text>
+<rect x="120.1" y="295.1" width="97.1" height="16.7" rx="3" fill="#f5fbf9" stroke="#50b696" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="125.8" y="307.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="fb-note">1 uop a clock</text>
+<text x="218.2" y="307.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="fb-note">.</text>
 <text x="375.0" y="297.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Q1</text>
-<text x="375.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">13, J says 24</text>
+<text x="375.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">13, probes 24</text>
 <text x="539.0" y="297.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Q2</text>
-<text x="539.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">13, J says 26</text>
+<text x="539.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">13, probes 26</text>
 <text x="703.0" y="297.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Q3</text>
-<text x="703.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">13, J says 16</text>
+<text x="703.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">13, probes 16</text>
 <text x="867.0" y="297.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Q4</text>
-<text x="867.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">13, J says 12</text>
+<text x="867.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">13, probes 12</text>
 <text x="1031.0" y="297.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Q5</text>
-<text x="1031.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">13, J says 28</text>
+<text x="1031.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">13, probes 28</text>
 <text x="1195.0" y="297.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Q6</text>
-<text x="1195.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">13, J says 28</text>
+<text x="1195.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">13, probes 28</text>
 <text x="1359.0" y="297.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Q7</text>
 <text x="1359.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">48 shared</text>
 <text x="1523.0" y="297.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Q8</text>
@@ -268,13 +273,13 @@
 <text x="1851.0" y="297.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Q10</text>
 <text x="1851.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">48 shared</text>
 <text x="2015.0" y="297.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Q11</text>
-<text x="2015.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">36</text>
+<text x="2015.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">18, probes 36</text>
 <text x="2179.0" y="297.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Q12</text>
-<text x="2179.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">36</text>
+<text x="2179.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">18, probes 36</text>
 <text x="2343.0" y="297.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Q13</text>
-<text x="2343.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">36</text>
+<text x="2343.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">18, probes 36</text>
 <text x="2507.0" y="297.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Q14</text>
-<text x="2507.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">36</text>
+<text x="2507.0" y="425.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">18, probes 36</text>
 <text x="50.0" y="560.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="fc-note">6 integer</text>
 <text x="50.0" y="577.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="fc-note">4 load and store</text>
 <text x="50.0" y="595.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="fc-note">4 FP and SIMD</text>
@@ -293,13 +298,13 @@
 <text x="635.0" y="572.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Unit 3</text>
 <text x="635.0" y="596.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
 <text x="647.1" y="596.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">alu, flags</text>
-<text x="635.0" y="614.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="647.1" y="614.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">from fp?</text>
+<text x="635.0" y="614.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
+<text x="647.1" y="614.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">from fp</text>
 <text x="799.0" y="572.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Unit 4</text>
 <text x="799.0" y="596.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
 <text x="811.1" y="596.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">alu</text>
-<text x="799.0" y="614.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="811.1" y="614.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">from fp?</text>
+<text x="799.0" y="614.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
+<text x="811.1" y="614.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">from fp</text>
 <text x="963.0" y="572.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Unit 5</text>
 <text x="963.0" y="596.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
 <text x="975.1" y="596.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">alu, mul</text>
@@ -341,52 +346,60 @@
 <text x="2439.0" y="631.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
 <text x="2451.1" y="631.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">sha</text>
 <text x="307.0" y="772.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">6 integer units</text>
-<text x="307.0" y="796.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="319.1" y="796.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">1 cycle ALU, 2 branch units</text>
-<text x="307.0" y="814.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="319.1" y="814.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">paired queues, idle one issues from its partner</text>
-<text x="307.0" y="831.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◇</text>
-<text x="319.1" y="831.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">queue size 13 each, or 24 to 28, disputed</text>
+<text x="307.0" y="796.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
+<text x="319.1" y="796.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">1 cycle ALU</text>
+<text x="307.0" y="814.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
+<text x="319.1" y="814.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">2 branch units</text>
+<text x="307.0" y="831.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
+<text x="319.1" y="831.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">an idle queue issues from its partner</text>
+<text x="307.0" y="849.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◇</text>
+<text x="319.1" y="849.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">13 per queue, derived</text>
+<text x="307.0" y="866.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
+<text x="319.1" y="866.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">probes see 24 to 28</text>
 <text x="1291.0" y="772.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">4 load and store pipes</text>
 <text x="1291.0" y="796.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
-<text x="1303.1" y="796.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">3 loads or 2 stores a cycle</text>
-<text x="1291.0" y="814.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="1303.1" y="814.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">four queues of 12, or one of 48, disputed</text>
-<text x="1291.0" y="831.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="1303.1" y="831.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">4 uops a cycle in</text>
+<text x="1303.1" y="796.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">3 loads a cycle</text>
+<text x="1291.0" y="814.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="1303.1" y="814.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">or 2 stores</text>
+<text x="1291.0" y="831.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
+<text x="1303.1" y="831.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">one queue of 48</text>
+<text x="1291.0" y="849.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◇</text>
+<text x="1303.1" y="849.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">or four of 12, derived</text>
+<text x="1291.0" y="866.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
+<text x="1303.1" y="866.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">4 uops a cycle in</text>
 <text x="1947.0" y="772.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">4 FP and SIMD units</text>
 <text x="1947.0" y="796.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
 <text x="1959.1" y="796.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">128 bits each</text>
-<text x="1947.0" y="814.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="1959.1" y="814.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">36 per queue, one source</text>
+<text x="1947.0" y="814.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◇</text>
+<text x="1959.1" y="814.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">18 per queue, derived</text>
 <text x="1947.0" y="831.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="1959.1" y="831.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">18 was once quoted</text>
+<text x="1959.1" y="831.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">probes see 36 per queue</text>
 <text x="60.0" y="1040.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat0">ALU</text>
-<text x="486.0" y="1040.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv0">1 ○</text>
+<text x="486.0" y="1040.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv0">○ 1</text>
 <text x="60.0" y="1070.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat1">MADD into the next addend</text>
-<text x="486.0" y="1070.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv1">1 ○</text>
+<text x="486.0" y="1070.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv1">○ 1</text>
 <text x="60.0" y="1100.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat2">L1D load to an ALU</text>
-<text x="654.0" y="1100.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv2">4 ●</text>
+<text x="654.0" y="1100.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv2">● 4</text>
 <text x="60.0" y="1130.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat3">L1D load, pointer chase</text>
-<text x="598.0" y="1130.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv3">3 ●</text>
+<text x="598.0" y="1130.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv3">● 3</text>
 <text x="60.0" y="1160.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat4">L1D load to SIMD</text>
-<text x="710.0" y="1160.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv4">5 ○</text>
+<text x="710.0" y="1160.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv4">○ 5</text>
 <text x="60.0" y="1190.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat5">FADD</text>
-<text x="598.0" y="1190.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv5">3 ○</text>
+<text x="598.0" y="1190.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv5">○ 3</text>
 <text x="60.0" y="1220.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat6">FMUL and FMA</text>
-<text x="654.0" y="1220.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv6">4 ○</text>
+<text x="654.0" y="1220.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv6">○ 4</text>
 <text x="60.0" y="1250.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat7">dependent FADD pair, fused</text>
-<text x="710.0" y="1250.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv7">5 ~</text>
+<text x="710.0" y="1250.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv7">~ 5</text>
 <text x="60.0" y="1280.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat8">int to SIMD, fake load</text>
-<text x="766.0" y="1280.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv8">6 ○</text>
+<text x="766.0" y="1280.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv8">○ 6</text>
 <text x="60.0" y="1310.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat9">SIMD to int, own path</text>
-<text x="766.0" y="1310.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv9">6 ○</text>
+<text x="766.0" y="1310.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv9">○ 6</text>
 <text x="60.0" y="1340.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat10">flags across the two files</text>
-<text x="766.0" y="1340.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv10">6 ○</text>
+<text x="766.0" y="1340.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv10">○ 6</text>
 <text x="60.0" y="1370.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat11">store to load forward</text>
-<text x="766.0" y="1370.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv11">6 ◆</text>
-<text x="60.0" y="1400.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat12">integer divide, issue every</text>
-<text x="542.0" y="1400.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv12">2 ~</text>
+<text x="766.0" y="1370.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv11">◆ 6</text>
+<text x="60.0" y="1400.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="lat12">integer divide, one every</text>
+<text x="542.0" y="1400.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="latv12">~ 2</text>
 <text x="1277.0" y="1042.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">Select and wakeup</text>
 <text x="1277.0" y="1066.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
 <text x="1289.1" y="1066.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">matrix scheduler, no shifting</text>

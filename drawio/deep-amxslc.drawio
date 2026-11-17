@@ -7,14 +7,14 @@
         <mxCell id="title" value="AMX and the system level cache, inside" style="text;html=1;kind=title;fontSize=18;fontStyle=1;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="17" y="11" width="564" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="subtitle" value="Top: how AMX instructions reach the one unit per cluster and what holds them there. Bottom: what an SLC line carries and the policies on top of it. Status glyphs: ◆ measured, ~ inferred, ? speculative." style="text;html=1;kind=title;fontSize=11;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="17" y="37" width="1600" height="18" as="geometry" />
+        <mxCell id="subtitle" value="The top shows how AMX instructions reach the one unit per cluster and what holds them. The bottom shows what an SLC line carries and the policies on it. The marks are ◆ measured, ~ inferred and ? speculative." style="text;html=1;kind=title;fontSize=11;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="17" y="37" width="1702" height="18" as="geometry" />
         </mxCell>
         <mxCell id="f-famx" value="AMX, one unit per cluster" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#8abfb3;fontColor=#059669;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="75.0" y="105.0" width="2400.0" height="817.5" as="geometry" />
         </mxCell>
-        <mxCell id="f-famx-note" value="E-cluster too | a full register set per core" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="2168.1" y="111.0" width="299.9" height="14" as="geometry" />
+        <mxCell id="f-famx-note" value="E-cluster too, a full register set per core" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="2173.1" y="111.0" width="294.9" height="14" as="geometry" />
         </mxCell>
         <mxCell id="f-funit" value="AMX unit" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#8abfb3;fontColor=#059669;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="930.0" y="150.0" width="1515.0" height="742.5" as="geometry" />
@@ -70,7 +70,7 @@
         <mxCell id="v-amx_lsu_issue-cell-8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-amx_lsu_issue">
           <mxGeometry x="4.0" y="181.8" width="157.0" height="21.2" as="geometry" />
         </mxCell>
-        <mxCell id="v-amx_lsu_issue-count" value="wait: non-spec" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-amx_lsu_issue">
+        <mxCell id="v-amx_lsu_issue-count" value="sent after commit" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-amx_lsu_issue">
           <mxGeometry x="0" y="209.0" width="165.0" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-os" value="&lt;b&gt;OS&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;reschedules when the unit is overloaded&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -796,8 +796,8 @@
         <mxCell id="n-L2_bus_bundles_of_3_to_4" value="L2 bus, bundles of 3 to 4" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-amx_lsu_issue-ooo;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="717.0" y="386.0" width="170.3" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-2_per_clk" value="2 per clk" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="720.0" y="424.5" width="56.4" height="16.5" as="geometry" />
+        <mxCell id="n-_inferred_backend_2_a_clock" value="&lt;span style=&quot;background-color:#f5fbf9;border:1px dashed #50b696;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;2 a clock&lt;/span&gt;" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="720.0" y="424.5" width="70.6" height="16.5" as="geometry" />
         </mxCell>
         <mxCell id="n-overload" value="overload" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-mon-os;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="609.0" y="600.5" width="62.5" height="18.5" as="geometry" />
@@ -814,14 +814,14 @@
         <mxCell id="n-outer_product_multiply_add_and_s" value="outer product multiply add and subtract, measured" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1485.0" y="606.0" width="322.4" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-patents_add" value="patents add" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1350.0" y="726.0" width="74.1" height="16.5" as="geometry" />
+        <mxCell id="n-Patents_add_these." value="Patents add these." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1350.0" y="726.0" width="119.9" height="16.5" as="geometry" />
         </mxCell>
         <mxCell id="n-Z_range_busy" value="Z range busy" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-amx_datapath-zdep;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1884.0" y="357.5" width="91.7" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-one_line_entry_128_B_right_two" value="one line entry, 128 B | right two fields: later designs" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="105.0" y="1011.0" width="335.3" height="16.5" as="geometry" />
+        <mxCell id="n-One_128_B_line_entry._The_right" value="One 128 B line entry. The right two fields are later designs." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="105.0" y="1011.0" width="381.6" height="16.5" as="geometry" />
         </mxCell>
         <mxCell id="n-L2_victim_or_range_fill" value="L2 victim or range fill" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-inv-val;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1474.2" y="1126.8" width="141.7" height="17.8" as="geometry" />
@@ -829,8 +829,8 @@
         <mxCell id="n-sector_fill" value="sector fill" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-val-val;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1661.8" y="1094.2" width="66.3" height="17.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-partial_write_byte_mask" value="partial write: byte mask" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-val-mod;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1768.1" y="1126.8" width="153.9" height="17.8" as="geometry" />
+        <mxCell id="n-a_partial_write_sets_the_mask" value="a partial write sets the mask" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-val-mod;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1753.1" y="1126.8" width="183.8" height="17.8" as="geometry" />
         </mxCell>
         <mxCell id="n-write_back" value="write back" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-mod-val;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1808.8" y="1225.4" width="72.4" height="17.8" as="geometry" />
@@ -838,26 +838,29 @@
         <mxCell id="n-evict" value="evict" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-val-inv;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1526.0" y="1234.4" width="38.0" height="17.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-evict_write_DRAM" value="evict: write DRAM" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-mod-inv;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1634.5" y="1336.4" width="121.0" height="17.8" as="geometry" />
+        <mxCell id="n-evict_written_to_DRAM" value="evict, written to DRAM" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-mod-inv;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1621.0" y="1336.4" width="148.0" height="17.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-32_group_IDs_replacement_skips" value="32 group IDs | replacement skips sticky lines" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="105.0" y="1366.5" width="293.4" height="16.5" as="geometry" />
+        <mxCell id="n-There_are_32_group_IDs." value="There are 32 group IDs." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="105.0" y="1354.5" width="151.6" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-one_set_16_ways_filled_stick" value="one set, 16 ways | filled = sticky" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="660.0" y="1161.0" width="210.6" height="16.5" as="geometry" />
+        <mxCell id="n-Replacement_skips_sticky_lines." value="Replacement skips sticky lines." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="105.0" y="1372.0" width="207.8" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-victim_random_among_the_non-sti" value="victim: random among the non-sticky" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-pt-ways;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="843.0" y="1284.5" width="250.6" height="18.5" as="geometry" />
+        <mxCell id="n-One_set_of_16_ways_sticky_ones" value="One set of 16 ways, sticky ones filled" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="660.0" y="1161.0" width="242.9" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-the_victim_is_random_among_non-s" value="the victim is random among non-sticky ways" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-pt-ways;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="843.0" y="1284.5" width="302.3" height="18.5" as="geometry" />
         </mxCell>
         <mxCell id="n-range_held_as_memory" value="range held as memory" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-slc_address_ranges-planes;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="780.0" y="1448.0" width="150.6" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-filtered_keep_part_of_the_lines" value="filtered: keep part of the lines" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-slc_address_ranges-planes-2;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="780.0" y="1523.0" width="198.1" height="18.5" as="geometry" />
+        <mxCell id="n-a_filtered_range_keeps_part_of_i" value="a filtered range keeps part of its lines" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-slc_address_ranges-planes-2;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="780.0" y="1523.0" width="249.5" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-speculative_patents" value="speculative: patents" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="105.0" y="1561.5" width="130.0" height="16.5" as="geometry" />
+        <mxCell id="n-_These_are_patent_readings." value="? These are patent readings." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="105.0" y="1561.5" width="183.4" height="16.5" as="geometry" />
         </mxCell>
         <mxCell id="n-idle" value="idle" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-pon-pdz;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="2234.6" y="1614.5" width="30.8" height="17.8" as="geometry" />

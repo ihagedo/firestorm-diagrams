@@ -271,7 +271,7 @@
         <mxCell id="v-group_map" value="&lt;b&gt;group map&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 x 8 compare&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1920" y="110" width="190" height="66" as="geometry" />
         </mxCell>
-        <mxCell id="v-fusion" value="&lt;b&gt;fusion&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;ALU + branch&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;AES, AMX pairs&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#a5d9c9;strokeColor=#059669;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-fusion" value="&lt;b&gt;fusion&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;ALU + branch&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;AES, AMX pairs&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="2140" y="110" width="190" height="74.75" as="geometry" />
         </mxCell>
         <mxCell id="v-m1_map" value="&lt;b&gt;map tables&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -331,7 +331,7 @@
         <mxCell id="v-m1_map-cell-18" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-m1_map">
           <mxGeometry x="158.7" y="114.0" width="76.1" height="14.3" as="geometry" />
         </mxCell>
-        <mxCell id="v-m1_map-count" value="int | FP | flags" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-m1_map">
+        <mxCell id="v-m1_map-count" value="int, FP, flags" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-m1_map">
           <mxGeometry x="0" y="134" width="240" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-m1_free" value="&lt;b&gt;free lists&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -361,7 +361,7 @@
         <mxCell id="v-m1_free-cell-8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-m1_free">
           <mxGeometry x="4.0" y="116.2" width="142.0" height="11.8" as="geometry" />
         </mxCell>
-        <mxCell id="v-m1_free-count" value="380 | 432 | 128" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-m1_free">
+        <mxCell id="v-m1_free-count" value="380, 432, 128" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-m1_free">
           <mxGeometry x="0" y="134" width="150" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-rename_retire_queue" value="&lt;b&gt;rename retire queue&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#a5d9c9;strokeColor=#059669;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -400,19 +400,19 @@
         <mxCell id="v-rename_retire_queue-count" value="623, 16 freed a clk" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-rename_retire_queue">
           <mxGeometry x="0" y="354" width="200" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="v-retire" value="&lt;b&gt;retire&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;330 groups&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 a cycle&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#a5d9c9;strokeColor=#059669;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-retire" value="&lt;b&gt;retire&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;330 groups&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 a cycle&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="2150" y="220" width="180" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="v-rename" value="&lt;b&gt;rename&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 uops a cycle&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;4 register reads per 6&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#a5d9c9;strokeColor=#059669;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-rename" value="&lt;b&gt;rename&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 uops a cycle&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;4 register reads per 6&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1410" y="420" width="240" height="96" as="geometry" />
         </mxCell>
         <mxCell id="v-move_elimination" value="&lt;b&gt;move elimination&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;full width moves&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;zero idioms&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#a5d9c9;strokeColor=#059669;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1690" y="420" width="180" height="96" as="geometry" />
         </mxCell>
-        <mxCell id="v-immediate_regs" value="&lt;b&gt;immediate pool&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;36 registers&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;2 per 8 instructions&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#a5d9c9;strokeColor=#059669;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-immediate_regs" value="&lt;b&gt;immediate pool&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;36 registers&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;2 per 8 instructions&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dcf0ea;strokeColor=#50b696;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1690" y="560" width="180" height="96" as="geometry" />
         </mxCell>
-        <mxCell id="v-register_security_tag" value="&lt;b&gt;security tag&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;per mapping&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;unwritten read slows&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-register_security_tag" value="&lt;b&gt;security tag&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;per mapping&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;an unwritten read slows&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="2150" y="420" width="180" height="96" as="geometry" />
         </mxCell>
         <mxCell id="v-dispatch" value="" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -433,7 +433,7 @@
         <mxCell id="v-dispatch-cell-5" value="FP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-dispatch">
           <mxGeometry x="365.6" y="4.0" width="88.9" height="45.5" as="geometry" />
         </mxCell>
-        <mxCell id="v-dispatch-count" value="2 x 24 int | 12 mul | 10 LS | 12 FP" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-dispatch">
+        <mxCell id="v-dispatch-count" value="2 x 24 int, 12 mul, 10 LS, 12 FP" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-dispatch">
           <mxGeometry x="0" y="54" width="460" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-kept" value="&lt;b&gt;kept&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;map of names to registers&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;free list, a FIFO of numbers&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;old destination logged, freed at retire&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;ready bits read at the queue&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f2faf8;strokeColor=#8abfb3;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -632,17 +632,17 @@
         <mxCell id="n-uops" value="uops" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-rename-dispatch;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1538.0" y="585.5" width="38.3" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-lineage_likely" value="lineage: likely" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=#d7eee7;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+        <mxCell id="n-lineage_likely" value="lineage, likely" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=#d7eee7;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1070.0" y="167.2" width="121.9" height="20.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-likely_structure_matches_field" value="likely: structure matches field for field" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="987.8" width="261.4" height="17.2" as="geometry" />
+        <mxCell id="n-Likely_means_the_structure_match" value="Likely means the structure matches field for field." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="987.8" width="342.0" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-plausible_function_matches_str" value="plausible: function matches, structure unseen" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="1006.0" width="309.7" height="17.2" as="geometry" />
+        <mxCell id="n-Plausible_means_the_function_mat" value="Plausible means the function matches, the structure unseen." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="1006.0" width="412.6" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-contrast_the_road_not_taken" value="contrast: the road not taken" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="1024.2" width="185.0" height="17.2" as="geometry" />
+        <mxCell id="n-Contrast_means_the_road_not_take" value="Contrast means the road not taken." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="1024.2" width="236.8" height="17.2" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -655,8 +655,8 @@
         <mxCell id="title" value="L6  Scheduler lineage: dependence matrices, age matrices and dependence FIFOs beside the M1 integer scheduler" style="text;html=1;kind=title;fontSize=18;fontStyle=1;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="17" y="11" width="1579" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="subtitle" value="Left, three papers redrawn with their own numbers. Right, the M1 from the knowledge base: six paired queues of thirteen, the matrix and the two levels from patents." style="text;html=1;kind=title;fontSize=11;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="17" y="37" width="1313" height="18" as="geometry" />
+        <mxCell id="subtitle" value="Left, three papers redrawn with their own numbers. Right, the M1 from the knowledge base, six paired queues of thirteen, with the matrix and two levels from patents." style="text;html=1;kind=title;fontSize=11;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="17" y="37" width="1325" height="18" as="geometry" />
         </mxCell>
         <mxCell id="f-paper" value="Published schedulers" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#fbfbfc;strokeColor=#bec4cc;fontColor=#9ca3af;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="70" width="1000" height="640" as="geometry" />
@@ -800,7 +800,7 @@
           <mxGeometry x="4.0" y="130.7" width="42.0" height="23.8" as="geometry" />
         </mxCell>
         <mxCell id="v-p_select" value="&lt;b&gt;wakeup, select&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;one head per FIFO&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f1f2f4;strokeColor=#babfc7;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
-          <mxGeometry x="620" y="453" width="150" height="74.75" as="geometry" />
+          <mxGeometry x="620" y="453" width="150" height="70" as="geometry" />
         </mxCell>
         <mxCell id="v-p_regfile" value="&lt;b&gt;register file&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f1f2f4;strokeColor=#babfc7;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="810" y="453" width="110" height="70" as="geometry" />
@@ -1108,7 +1108,7 @@
         <mxCell id="v-u6" value="&lt;b&gt;U6&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1870" y="460" width="60" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="v-hierarchical_reservation_station" value="&lt;b&gt;two level queue&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;primary: highest priority ops&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;secondary refills it&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-hierarchical_reservation_station" value="&lt;b&gt;two level queue&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a primary holds the highest priority ops&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a secondary refills it&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1990" y="300" width="320" height="96" as="geometry" />
         </mxCell>
         <mxCell id="v-load_replay_shadow" value="&lt;b&gt;replay shadow&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;dependents wait under a timer&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;reissue if the load replays&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -1150,10 +1150,10 @@
         <mxCell id="e-p_rename-p_fifo0" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.6;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.50000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.34375;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-p_rename" target="v-p_fifo0">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e-p_fifo3-p_select" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.6;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.30000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.46823;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-p_fifo3" target="v-p_select">
+        <mxCell id="e-p_fifo3-p_select" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.6;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.30000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.50000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-p_fifo3" target="v-p_select">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e-p_select-p_regfile" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.6;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.50000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.53393;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-p_select" target="v-p_regfile">
+        <mxCell id="e-p_select-p_regfile" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.6;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.50000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.50000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-p_select" target="v-p_regfile">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e-p_regfile-p_fu" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.6;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.50000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.50000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-p_regfile" target="v-p_fu">
@@ -1266,23 +1266,23 @@
         <mxCell id="n-rdy" value="rdy" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="204.0" y="271.5" width="19.7" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-row_c_column_p_c_waits_on_p" value="row c, column p: c waits on p" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="80.0" y="295.8" width="204.8" height="17.2" as="geometry" />
+        <mxCell id="n-Row_c_column_p_is_set_when_c_wa" value="Row c, column p is set when c waits on p." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="80.0" y="295.8" width="294.9" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-issued_columns_clear_a_clear_ro" value="issued columns clear, a clear row is ready" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="80.0" y="314.0" width="290.8" height="17.2" as="geometry" />
+        <mxCell id="n-Issued_columns_clear_and_a_clea" value="Issued columns clear, and a clear row is ready." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="80.0" y="314.0" width="324.3" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-a_granted_column_clears_every_ro" value="a granted column clears every row that waited on it" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="450.0" y="295.8" width="351.5" height="17.2" as="geometry" />
+        <mxCell id="n-A_granted_column_clears_every_ro" value="A granted column clears every row that waited on it." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="450.0" y="295.8" width="358.3" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-an_older_row_that_bids_cancels_a" value="an older row that bids cancels a younger grant" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="450.0" y="314.0" width="314.5" height="17.2" as="geometry" />
+        <mxCell id="n-An_older_row_that_bids_cancels_a" value="An older row that bids cancels a younger grant." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="450.0" y="314.0" width="321.3" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-FIFOs_dependents_steered_to_one" value="FIFOs: dependents steered to one queue, in order inside it" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="300.0" y="610.8" width="395.4" height="17.2" as="geometry" />
+        <mxCell id="n-Dependents_go_to_one_FIFO_and_st" value="Dependents go to one FIFO and stay in order there." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="300.0" y="610.8" width="346.5" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-US_6_557_095_Intel_the_same_m" value="US 6,557,095 (Intel): the same matrix in a product patent" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="620.0" y="545.8" width="389.8" height="17.2" as="geometry" />
+        <mxCell id="n-Intel_patent_US_6_557_095_uses_t" value="Intel patent US 6,557,095 uses the same matrix." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="620.0" y="545.8" width="332.6" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-pair" value="pair" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-q1-q2;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1463.9" y="207.5" width="32.1" height="18.5" as="geometry" />
@@ -1293,20 +1293,23 @@
         <mxCell id="n-pair-3" value="pair" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-q5-q6;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1843.9" y="207.5" width="32.1" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-134_entries_in_all_24_in_Handle" value="134 entries in all, 24 in Handley's reading | one uop a cycle into each queue" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1410.0" y="525.8" width="516.3" height="17.2" as="geometry" />
+        <mxCell id="n-_single_backend_134_entries_in" value="&lt;span style=&quot;background-color:#dcf0ea;border:1px solid #50b696;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;134 entries&lt;/span&gt; in all, about &lt;span style=&quot;background-color:#ebf7f3;border:1px dashed #50b696;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;13 a queue&lt;/span&gt; in Handley&amp;#x27;s reading." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1410.0" y="525.8" width="393.9" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-lineage_plausible" value="lineage: plausible" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=#dce6fc;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+        <mxCell id="n-Each_queue_takes_inferred_backe" value="Each queue takes &lt;span style=&quot;background-color:#f5fbf9;border:1px dashed #50b696;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;one uop a clock&lt;/span&gt;." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1410.0" y="544.0" width="243.8" height="17.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n-lineage_plausible" value="lineage, plausible" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=#dce6fc;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1070.0" y="167.2" width="150.0" height="20.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-likely_structure_matches_field" value="likely: structure matches field for field" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="767.8" width="261.4" height="17.2" as="geometry" />
+        <mxCell id="n-Likely_means_the_structure_match" value="Likely means the structure matches field for field." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="767.8" width="342.0" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-plausible_function_matches_str" value="plausible: function matches, structure unseen" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="786.0" width="309.7" height="17.2" as="geometry" />
+        <mxCell id="n-Plausible_means_the_function_mat" value="Plausible means the function matches, the structure unseen." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="786.0" width="412.6" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-contrast_the_road_not_taken" value="contrast: the road not taken" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="804.2" width="185.0" height="17.2" as="geometry" />
+        <mxCell id="n-Contrast_means_the_road_not_take" value="Contrast means the road not taken." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="804.2" width="236.8" height="17.2" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -1319,7 +1322,7 @@
         <mxCell id="title" value="L7  Retire lineage: a saved map per instruction, checkpoints instead of a reorder buffer, fused entries, beside the M1 retire queues" style="text;html=1;kind=title;fontSize=18;fontStyle=1;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="17" y="11" width="1782" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="subtitle" value="Left, three papers redrawn with their own numbers. Right, the M1 from the knowledge base: 330 groups of up to seven and a 623-entry queue of map changes." style="text;html=1;kind=title;fontSize=11;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+        <mxCell id="subtitle" value="Left, three papers redrawn with their own numbers. Right, the M1 from the knowledge base, 330 groups of up to seven and a 623-entry queue of map changes." style="text;html=1;kind=title;fontSize=11;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="17" y="37" width="1261" height="18" as="geometry" />
         </mxCell>
         <mxCell id="f-paper" value="Published retirement" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#fbfbfc;strokeColor=#bec4cc;fontColor=#9ca3af;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
@@ -1511,7 +1514,7 @@
         <mxCell id="v-f_retire" value="&lt;b&gt;retire&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;when both are done&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f1f2f4;strokeColor=#babfc7;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="640" y="455" width="220" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="v-retire_groups" value="&lt;b&gt;coalesced retire queue&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#a5d9c9;strokeColor=#059669;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-retire_groups" value="&lt;b&gt;coalesced retire queue&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1410" y="110" width="520" height="140" as="geometry" />
         </mxCell>
         <mxCell id="v-retire_groups-cell" value="ld add" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-retire_groups">
@@ -1535,10 +1538,10 @@
         <mxCell id="v-retire_groups-count" value="330 groups of up to 7 uops" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-retire_groups">
           <mxGeometry x="0" y="124" width="520" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="v-group_rule" value="&lt;b&gt;group rule&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a memory op opens a group&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a branch closes it, 7 slots at most&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-group_rule" value="&lt;b&gt;group rule&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a memory op opens a group&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a branch closes it&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;7 slots at most&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1980" y="110" width="350" height="96" as="geometry" />
         </mxCell>
-        <mxCell id="v-retire_rate" value="&lt;b&gt;retire&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 groups a cycle, in order&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#a5d9c9;strokeColor=#059669;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-retire_rate" value="&lt;b&gt;retire&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 groups a cycle, in order&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1980" y="240" width="350" height="60" as="geometry" />
         </mxCell>
         <mxCell id="v-rename_retire_queue" value="&lt;b&gt;rename retire queue&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#a5d9c9;strokeColor=#059669;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -1574,7 +1577,7 @@
         <mxCell id="v-rename_retire_queue-cell-10" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-rename_retire_queue">
           <mxGeometry x="464.8" y="23.0" width="49.7" height="66.5" as="geometry" />
         </mxCell>
-        <mxCell id="v-rename_retire_queue-count" value="623 map changes, 16 retired a cycle" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-rename_retire_queue">
+        <mxCell id="v-rename_retire_queue-count" value="623 map changes, &lt;span style=&quot;background-color:#c0e5da;border:1.4px solid #059669;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;16 retired a cycle&lt;/span&gt;" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-rename_retire_queue">
           <mxGeometry x="0" y="94" width="520" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-branches" value="&lt;b&gt;branches in flight&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;144, their own limit&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dcf0ea;strokeColor=#50b696;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -1589,11 +1592,11 @@
         <mxCell id="v-kept" value="&lt;b&gt;kept&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;map history kept apart from retirement&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;retire in groups, not single uops&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;one entry for a fused pair&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f2faf8;strokeColor=#8abfb3;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1070" y="200" width="280" height="93" as="geometry" />
         </mxCell>
-        <mxCell id="v-changed" value="&lt;b&gt;changed&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a map copy per instruction becomes&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;  a 623-entry queue of changes&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 checkpoints become 330 groups&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a branch closes a group, not confidence&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f2faf8;strokeColor=#8abfb3;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
-          <mxGeometry x="1070" y="309" width="280" height="129.5" as="geometry" />
+        <mxCell id="v-changed" value="&lt;b&gt;changed&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a map copy per instruction becomes&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;  a 623-entry queue of changes&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 checkpoints become 330 groups&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;branches close groups, not confidence&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f2faf8;strokeColor=#8abfb3;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="309" width="280" height="111.25" as="geometry" />
         </mxCell>
-        <mxCell id="v-added" value="&lt;b&gt;added&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;144 branches as a separate limit&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;16 map changes retired a cycle&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a group entry we propose, with its probe&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f2faf8;strokeColor=#8abfb3;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
-          <mxGeometry x="1070" y="454.5" width="280" height="111.25" as="geometry" />
+        <mxCell id="v-added" value="&lt;b&gt;added&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;144 branches as a separate limit&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;16 map changes retired a cycle&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a proposed group entry and probe&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f2faf8;strokeColor=#8abfb3;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="436.25" width="280" height="93" as="geometry" />
         </mxCell>
         <mxCell id="e-k_map-k_saved" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.30000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.30000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-k_map" target="v-k_saved">
           <mxGeometry relative="1" as="geometry" />
@@ -1675,9 +1678,9 @@
         </mxCell>
         <mxCell id="e-pt-a_count" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=none;endFill=1;startArrow=none;startFill=1;entryX=0.50000;entryY=1.00000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="v-a_count">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1070.0" y="418.5" as="sourcePoint" />
+            <mxPoint x="1070.0" y="400.2" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="1040.0" y="418.5" />
+              <mxPoint x="1040.0" y="400.2" />
               <mxPoint x="1040.0" y="275.0" />
               <mxPoint x="800.0" y="275.0" />
             </Array>
@@ -1685,23 +1688,23 @@
         </mxCell>
         <mxCell id="e-pt-rename_retire_queue" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=none;endFill=1;startArrow=none;startFill=1;entryX=0.00000;entryY=0.30000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="v-rename_retire_queue">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1350.0" y="418.5" as="sourcePoint" />
+            <mxPoint x="1350.0" y="400.2" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="1365.0" y="418.5" />
+              <mxPoint x="1365.0" y="400.2" />
               <mxPoint x="1365.0" y="343.0" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e-pt-f_retire" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=none;endFill=1;startArrow=none;startFill=1;entryX=1.00000;entryY=0.49167;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="v-f_retire">
+        <mxCell id="e-pt-f_retire" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=none;endFill=1;startArrow=none;startFill=1;entryX=1.00000;entryY=0.18750;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="v-f_retire">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1070.0" y="484.5" as="sourcePoint" />
+            <mxPoint x="1070.0" y="466.2" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e-pt-windows" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=none;endFill=1;startArrow=none;startFill=1;entryX=0.00000;entryY=0.50000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="v-windows">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1350.0" y="484.5" as="sourcePoint" />
+            <mxPoint x="1350.0" y="466.2" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="1365.0" y="484.5" />
+              <mxPoint x="1365.0" y="466.2" />
               <mxPoint x="1365.0" y="530.0" />
             </Array>
           </mxGeometry>
@@ -1712,41 +1715,41 @@
         <mxCell id="n-numbers" value="numbers" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-k_saved-k_queue;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="363.6" y="127.5" width="62.8" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-a_map_copy_per_instruction_rest" value="a map copy per instruction, restored on a mispredict" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="80.0" y="285.8" width="354.5" height="17.2" as="geometry" />
+        <mxCell id="n-Each_instruction_keeps_a_map_cop" value="Each instruction keeps a map copy for a mispredict." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="80.0" y="285.8" width="355.1" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-retire_in_order_from_the_queue" value="retire in order from the queue, the copy released" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="80.0" y="304.0" width="325.4" height="17.2" as="geometry" />
+        <mxCell id="n-It_retires_in_order_and_the_cop" value="It retires in order, and the copy is released." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="80.0" y="304.0" width="293.1" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-new" value="new" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-a_conf-a_count;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="837.2" y="127.5" width="35.5" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-no_reorder_buffer_a_checkpoint" value="no reorder buffer: a checkpoint retires when its counter is zero" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="570.0" y="285.8" width="422.7" height="17.2" as="geometry" />
+        <mxCell id="n-With_no_reorder_buffer_a_checkp" value="With no reorder buffer, a checkpoint retires at count zero." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="570.0" y="285.8" width="385.9" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-a_checkpoint_at_a_low-confidence" value="a checkpoint at a low-confidence branch, not at every one" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="570.0" y="304.0" width="396.0" height="17.2" as="geometry" />
+        <mxCell id="n-Checkpoints_go_at_low-confidence" value="Checkpoints go at low-confidence branches, not every branch." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="570.0" y="304.0" width="425.3" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-one_entry_from_allocation_to_ret" value="one entry from allocation to retirement" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="80.0" y="585.8" width="260.2" height="17.2" as="geometry" />
+        <mxCell id="n-A_fused_pair_is_one_entry_from_a" value="A fused pair is one entry from allocation to retirement." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="80.0" y="585.8" width="369.0" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-split_only_at_the_units" value="split only at the units" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="80.0" y="604.0" width="144.9" height="17.2" as="geometry" />
+        <mxCell id="n-It_splits_only_at_the_units." value="It splits only at the units." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="80.0" y="604.0" width="171.9" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-frees_old" value="frees old" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-retire_rate-rename_retire_queue;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1810.0" y="267.5" width="63.9" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-lineage_plausible" value="lineage: plausible" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=#dce6fc;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+        <mxCell id="n-lineage_plausible" value="lineage, plausible" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=#dce6fc;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1070.0" y="167.2" width="150.0" height="20.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-likely_structure_matches_field" value="likely: structure matches field for field" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="727.8" width="261.4" height="17.2" as="geometry" />
+        <mxCell id="n-Likely_means_the_structure_match" value="Likely means the structure matches field for field." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="727.8" width="342.0" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-plausible_function_matches_str" value="plausible: function matches, structure unseen" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="746.0" width="309.7" height="17.2" as="geometry" />
+        <mxCell id="n-Plausible_means_the_function_mat" value="Plausible means the function matches, the structure unseen." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="746.0" width="412.6" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-contrast_the_road_not_taken" value="contrast: the road not taken" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="764.2" width="185.0" height="17.2" as="geometry" />
+        <mxCell id="n-Contrast_means_the_road_not_take" value="Contrast means the road not taken." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="764.2" width="236.8" height="17.2" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
@@ -1759,7 +1762,7 @@
         <mxCell id="title" value="L8  Memory dependence lineage: store sets, store-load pairs and memory renaming beside the M1 load-store unit" style="text;html=1;kind=title;fontSize=18;fontStyle=1;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="17" y="11" width="1566" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="subtitle" value="Left, three papers redrawn with their own numbers. Right, the M1 from the knowledge base: a 74-entry store-load pair predictor, zero-cycle loads, a late recheck and a 25-cycle flush." style="text;html=1;kind=title;fontSize=11;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+        <mxCell id="subtitle" value="Left, three papers redrawn with their own numbers. Right, the M1 from the knowledge base, a 74-entry store-load pair predictor, zero-cycle loads, a late recheck and a 25-cycle flush." style="text;html=1;kind=title;fontSize=11;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="17" y="37" width="1458" height="18" as="geometry" />
         </mxCell>
         <mxCell id="f-paper" value="Published memory dependence prediction" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#fbfbfc;strokeColor=#bec4cc;fontColor=#9ca3af;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
@@ -1891,7 +1894,7 @@
         <mxCell id="v-m_mdpt-cell-12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f6f7;strokeColor=#b9bec7;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-m_mdpt">
           <mxGeometry x="155.5" y="65.2" width="49.3" height="13.1" as="geometry" />
         </mxCell>
-        <mxCell id="v-m_mdpt-count" value="load PC | store PC | V | dist" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-m_mdpt">
+        <mxCell id="v-m_mdpt-count" value="load PC, store PC, V, dist" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-m_mdpt">
           <mxGeometry x="0" y="84" width="210" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-m_mdst" value="&lt;b&gt;MDST&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f1f2f4;strokeColor=#babfc7;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -1981,7 +1984,7 @@
         <mxCell id="v-t_verify" value="&lt;b&gt;writeback&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;compare, recover&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f1f2f4;strokeColor=#babfc7;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="800" y="430" width="200" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="v-store_load_dep_predictor" value="&lt;b&gt;store-load PC pairs&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f7e4a6;strokeColor=#eab308;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-store_load_dep_predictor" value="&lt;b&gt;store-load PC pairs&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fcf4dc;strokeColor=#f0ca52;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1410" y="110" width="300" height="130" as="geometry" />
         </mxCell>
         <mxCell id="v-store_load_dep_predictor-cell" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fdf7e6;strokeColor=#dcc67c;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-store_load_dep_predictor">
@@ -2074,29 +2077,29 @@
         <mxCell id="v-zero_cycle_loads" value="&lt;b&gt;zero cycle load&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;store and load share a base&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;renamed to the stored register&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fefcf5;strokeColor=#f0ca52;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="2080" y="110" width="250" height="96" as="geometry" />
         </mxCell>
-        <mxCell id="v-late_ordering_check" value="&lt;b&gt;late recheck&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;as the data arrives&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f7e4a6;strokeColor=#eab308;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-late_ordering_check" value="&lt;b&gt;late recheck&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;as the data arrives&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#faecc1;strokeColor=#eab308;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1760" y="290" width="270" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="v-flush" value="&lt;b&gt;ordering flush&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;25 cycles&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f7e4a6;strokeColor=#eab308;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-flush" value="&lt;b&gt;ordering flush&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;25 cycles&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fcf4dc;strokeColor=#f0ca52;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="2080" y="290" width="250" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="v-sq_partial_forwarding" value="&lt;b&gt;forwarding&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;6 cycles from the store queue&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f7e4a6;strokeColor=#eab308;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-sq_partial_forwarding" value="&lt;b&gt;forwarding&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;6 cycles from the store queue&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#faecc1;strokeColor=#eab308;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1410" y="290" width="300" height="80" as="geometry" />
         </mxCell>
         <mxCell id="v-absent" value="&lt;b&gt;not on the M1&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;load address prediction, on the M2&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;load value prediction, on the M3&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fefbf3;strokeColor=#dac991;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1410" y="430" width="620" height="96" as="geometry" />
         </mxCell>
-        <mxCell id="v-tso_mode" value="&lt;b&gt;TSO switch&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;one privileged bit&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f7e4a6;strokeColor=#eab308;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-tso_mode" value="&lt;b&gt;TSO switch&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;one privileged bit&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#faecc1;strokeColor=#eab308;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="2080" y="430" width="250" height="96" as="geometry" />
         </mxCell>
         <mxCell id="v-kept" value="&lt;b&gt;kept&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a store PC and a load PC as a pair&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a predicted load waits for its store&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;renaming a load to the stored value&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f2faf8;strokeColor=#8abfb3;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1070" y="200" width="280" height="93" as="geometry" />
         </mxCell>
-        <mxCell id="v-changed" value="&lt;b&gt;changed&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;pairs, not store sets&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;about 74 entries&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;renamed through the register, no value file&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f2faf8;strokeColor=#8abfb3;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
-          <mxGeometry x="1070" y="309" width="280" height="111.25" as="geometry" />
+        <mxCell id="v-changed" value="&lt;b&gt;changed&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;pairs, not store sets&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;about 74 entries&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;register renaming, no value file&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f2faf8;strokeColor=#8abfb3;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1070" y="309" width="280" height="93" as="geometry" />
         </mxCell>
         <mxCell id="v-added" value="&lt;b&gt;added&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a second check as the data returns&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a 25 cycle ordering flush&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;no address or value predictor&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f2faf8;strokeColor=#8abfb3;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
-          <mxGeometry x="1070" y="436.25" width="280" height="93" as="geometry" />
+          <mxGeometry x="1070" y="418" width="280" height="93" as="geometry" />
         </mxCell>
         <mxCell id="e-c_pc-c_ssit" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.50000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.60000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-c_pc" target="v-c_ssit">
           <mxGeometry relative="1" as="geometry">
@@ -2160,44 +2163,47 @@
         </mxCell>
         <mxCell id="e-pt-t_verify" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=none;endFill=1;startArrow=none;startFill=1;entryX=1.00000;entryY=0.50000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="v-t_verify">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1070.0" y="400.2" as="sourcePoint" />
+            <mxPoint x="1070.0" y="382.0" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="1040.0" y="400.2" />
+              <mxPoint x="1040.0" y="382.0" />
               <mxPoint x="1040.0" y="470.0" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e-pt-sq_partial_forwarding" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=none;endFill=1;startArrow=none;startFill=1;entryX=0.00000;entryY=0.50000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="v-sq_partial_forwarding">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1350.0" y="400.2" as="sourcePoint" />
+            <mxPoint x="1350.0" y="382.0" as="sourcePoint" />
             <Array as="points">
-              <mxPoint x="1365.0" y="400.2" />
+              <mxPoint x="1365.0" y="382.0" />
               <mxPoint x="1365.0" y="330.0" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e-pt-absent" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=none;endFill=1;startArrow=none;startFill=1;entryX=0.00000;entryY=0.37760;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="v-absent">
+        <mxCell id="e-pt-absent" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=none;endFill=1;startArrow=none;startFill=1;entryX=0.00000;entryY=0.18750;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="v-absent">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1350.0" y="466.2" as="sourcePoint" />
+            <mxPoint x="1350.0" y="448.0" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="n-a_load_waits_for_the_last_fetche" value="a load waits for the last fetched store of its set" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="80.0" y="275.8" width="320.4" height="17.2" as="geometry" />
+        <mxCell id="n-A_load_waits_for_the_last_fetche" value="A load waits for the last fetched store of its set." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="80.0" y="275.8" width="327.2" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-stores_in_one_set_issue_in_order" value="stores in one set issue in order" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="80.0" y="294.0" width="210.4" height="17.2" as="geometry" />
+        <mxCell id="n-Stores_in_one_set_issue_in_order" value="Stores in one set issue in order." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="80.0" y="294.0" width="217.3" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-a_mis-speculation_records_the_st" value="a mis-speculation records the store and load PCs" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="570.0" y="275.8" width="337.9" height="17.2" as="geometry" />
+        <mxCell id="n-A_mis-speculation_records_the_st" value="A mis-speculation records the store and load PCs." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="570.0" y="275.8" width="344.7" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-the_load_then_waits_on_that_stor" value="the load then waits on that store, and only that one" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="570.0" y="294.0" width="346.2" height="17.2" as="geometry" />
+        <mxCell id="n-The_load_then_waits_on_that_stor" value="The load then waits on that store alone." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="570.0" y="294.0" width="271.8" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-value_id" value="value id" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-t_cache-t_vfile;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="290.3" y="397.5" width="59.4" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-a_load_guesses_the_value_a_match" value="a load guesses the value a matching store left | the real load only checks" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="80.0" y="555.8" width="499.4" height="17.2" as="geometry" />
+        <mxCell id="n-A_load_guesses_the_value_a_match" value="A load guesses the value a matching store left." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="80.0" y="555.8" width="321.3" height="17.2" as="geometry" />
+        </mxCell>
+        <mxCell id="n-The_real_load_only_checks_it." value="The real load only checks it." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="80.0" y="574.0" width="195.0" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-wait" value="wait" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-store_load_dep_predictor-lq;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1716.5" y="87.5" width="36.9" height="18.5" as="geometry" />
@@ -2205,17 +2211,17 @@
         <mxCell id="n-violation" value="violation" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-late_ordering_check-flush;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="2023.1" y="267.5" width="63.9" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-lineage_likely" value="lineage: likely" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=#d7eee7;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+        <mxCell id="n-lineage_likely" value="lineage, likely" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=#d7eee7;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1070.0" y="167.2" width="121.9" height="20.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-likely_structure_matches_field" value="likely: structure matches field for field" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="727.8" width="261.4" height="17.2" as="geometry" />
+        <mxCell id="n-Likely_means_the_structure_match" value="Likely means the structure matches field for field." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="727.8" width="342.0" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-plausible_function_matches_str" value="plausible: function matches, structure unseen" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="746.0" width="309.7" height="17.2" as="geometry" />
+        <mxCell id="n-Plausible_means_the_function_mat" value="Plausible means the function matches, the structure unseen." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="746.0" width="412.6" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-contrast_the_road_not_taken" value="contrast: the road not taken" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="764.2" width="185.0" height="17.2" as="geometry" />
+        <mxCell id="n-Contrast_means_the_road_not_take" value="Contrast means the road not taken." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="764.2" width="236.8" height="17.2" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

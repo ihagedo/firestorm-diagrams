@@ -3,7 +3,7 @@
 <text x="1265.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">? speculative</text>
 <rect x="1320.0" y="105.0" width="1155.0" height="600.0" rx="9" fill="#fefcf5" stroke="#dac991" stroke-width="1"/>
 <text x="1330.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#eab308" text-anchor="start">One LDP, one or two cache requests</text>
-<text x="2465.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">~ inferred | crossings measured</text>
+<text x="2465.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">~ inferred, the crossings measured</text>
 <polyline points="1552.5,168.0 1552.5,465.0" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="1777.5,168.0 1777.5,465.0" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="2010.0,168.0 2010.0,465.0" fill="none" stroke="#9ca3af" stroke-width="0.8" stroke-dasharray="6 4" stroke-linejoin="round" stroke-linecap="round"/>
@@ -18,7 +18,7 @@
 <text x="2465.0" y="767.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">◆ measured</text>
 <rect x="75.0" y="1245.0" width="2400.0" height="337.5" rx="9" fill="#fefcf5" stroke="#dac991" stroke-width="1"/>
 <text x="85.0" y="1262.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#eab308" text-anchor="start">Not on the M1</text>
-<text x="2465.0" y="1262.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">x absent, measured | the first two arrive on M2 and M3</text>
+<text x="2465.0" y="1262.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">x absent, measured, two of them on later chips</text>
 <rect x="120.0" y="150.0" width="300.0" height="51.0" rx="5" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
 <rect x="120.0" y="240.0" width="135.0" height="270.0" rx="4" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
 <rect x="124.0" y="263.0" width="127.0" height="26.8" rx="1.5" fill="#f7e19c" stroke="#dcc67c" stroke-width="0.6"/>
@@ -183,26 +183,26 @@
 <path d="M 1500.1,1001.3 Q 1599.0,1087.5 1736.0,1081.5" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
 <path d="M 1803.1,1087.9 Q 1920.0,1116.0 2028.2,1090.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
 <polyline points="345.0,1417.5 435.0,1417.5" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="29" data-src="redundant_mem_op_elim" data-dst="l1d_e"/>
-<text x="127.0" y="172.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">loads: alternate banks</text>
+<text x="127.0" y="172.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">Loads alternate banks</text>
 <text x="187.5" y="257.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">LQ bank 0</text>
 <text x="187.5" y="505.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">65</text>
 <text x="352.5" y="257.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">LQ bank 1</text>
 <text x="352.5" y="505.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">65</text>
-<text x="127.0" y="592.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">leave: 1 per bank per clk</text>
-<text x="637.0" y="172.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">stores: one contiguous run per bank</text>
+<text x="127.0" y="592.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">One leaves per bank a clock</text>
+<text x="637.0" y="172.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">Stores fill one bank in a run</text>
 <text x="697.5" y="257.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">SQ bank A</text>
 <text x="697.5" y="505.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">filling</text>
 <text x="937.5" y="257.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">SQ bank B</text>
 <text x="937.5" y="505.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">draining</text>
-<text x="637.0" y="592.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">commit to L1D</text>
+<text x="637.0" y="592.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">Commit to the L1D</text>
 <text x="637.0" y="616.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
-<text x="649.1" y="616.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">1 per bank per clk</text>
+<text x="649.1" y="616.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">one per bank a clock</text>
 <text x="791.8" y="366.3" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="5">pointers</text>
 <text x="1057.0" y="262.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">test</text>
 <text x="1057.0" y="286.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
 <text x="1069.1" y="286.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">drain a full queue</text>
 <text x="1057.0" y="304.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
-<text x="1069.1" y="304.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">2 leave per clk at most</text>
+<text x="1069.1" y="304.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">2 leave a clock at most</text>
 <text x="1057.0" y="321.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
 <text x="1069.1" y="321.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">however many are ready</text>
 <text x="1357.0" y="217.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">LDP Q0, Q1</text>
@@ -239,8 +239,8 @@
 <text x="127.0" y="1069.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">ldr x4, [x5]</text>
 <text x="127.0" y="1093.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
 <text x="139.1" y="1093.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">same address, other base</text>
-<text x="457.0" y="832.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">SQ entry: base x2, data P7</text>
-<text x="615.0" y="932.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">rename map: x3 -&gt; P7</text>
+<text x="457.0" y="832.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">SQ entry, base x2, data P7</text>
+<text x="615.0" y="932.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">rename map, x3 to P7</text>
 <text x="457.0" y="1072.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">L1D, 3 clk</text>
 <text x="960.0" y="827.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">int PRF</text>
 <text x="960.0" y="1006.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">P7 = x1</text>
@@ -248,11 +248,11 @@
 <text x="367.8" y="954.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="22">base match</text>
 <text x="1117.0" y="832.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">test</text>
 <text x="1117.0" y="856.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="1129.1" y="856.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">ld -&gt; div chain</text>
+<text x="1129.1" y="856.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">load, then divide</text>
 <text x="1117.0" y="874.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
 <text x="1129.1" y="874.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">shorter only</text>
 <text x="1117.0" y="891.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="1129.1" y="891.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">with x2</text>
+<text x="1129.1" y="891.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">with base x2</text>
 <text x="1470.0" y="972.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">AUT</text>
 <text x="1470.0" y="988.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">check</text>
 <text x="1770.0" y="890.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">ok</text>
@@ -267,11 +267,11 @@
 <text x="1885.0" y="1119.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="trans-d3-spec_fault_no_access">speculative</text>
 <text x="2257.0" y="862.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">cross address space</text>
 <text x="2257.0" y="886.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="2269.1" y="886.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">reads: none seen</text>
+<text x="2269.1" y="886.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">its reads show nothing</text>
 <text x="2257.0" y="904.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="2269.1" y="904.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">faulting pointer:</text>
+<text x="2269.1" y="904.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">a faulting pointer</text>
 <text x="2257.0" y="921.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="2269.1" y="921.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">no trace</text>
+<text x="2269.1" y="921.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">leaves no trace</text>
 <text x="232.5" y="1361.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">ldr x0, [x1]</text>
 <text x="232.5" y="1421.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">ldr x0, [x1]</text>
 <text x="232.5" y="1482.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">ldr x0, [x1]</text>
@@ -283,7 +283,7 @@
 <text x="812.0" y="1339.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">PC</text>
 <text x="988.0" y="1339.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">stride</text>
 <text x="900.0" y="1322.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">load address predictor</text>
-<text x="900.0" y="1525.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">PC -&gt; stride, from M2 / A15</text>
+<text x="900.0" y="1525.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">PC to stride, M2 and A15</text>
 <text x="1117.0" y="1379.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">test</text>
 <text x="1117.0" y="1404.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
 <text x="1129.1" y="1404.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">32 B strided chain</text>
@@ -292,12 +292,12 @@
 <text x="1592.0" y="1339.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">PC</text>
 <text x="1768.0" y="1339.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">value</text>
 <text x="1680.0" y="1322.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">load value predictor</text>
-<text x="1680.0" y="1525.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">PC -&gt; last value | M3 / A17 Pro</text>
+<text x="1680.0" y="1525.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">PC to last value, M3 and A17 Pro</text>
 <text x="1897.0" y="1379.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">test</text>
 <text x="1897.0" y="1404.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
 <text x="1909.1" y="1404.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">dependent byte loads</text>
 <text x="1897.0" y="1421.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="1909.1" y="1421.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">constant = random speed</text>
+<text x="1909.1" y="1421.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">constant runs as random does</text>
 <rect x="90.0" y="1603.5" width="16.0" height="11.0" rx="2" fill="#f7e4a6" stroke="#eab308" stroke-width="2.2"/>
 <text x="110.0" y="1612.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">● 3+ measurements</text>
 <rect x="260.9" y="1603.5" width="16.0" height="11.0" rx="2" fill="#faecc1" stroke="#eab308" stroke-width="1.4"/>

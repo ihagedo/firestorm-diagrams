@@ -472,7 +472,7 @@
         <mxCell id="v-l2_way_power-cell-12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fef1e8;strokeColor=#e3a982;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-l2_way_power">
           <mxGeometry x="381.7" y="23.0" width="32.8" height="56.5" as="geometry" />
         </mxCell>
-        <mxCell id="v-l2_way_power-count" value="idle -&gt; sleep, concentrated -&gt; off" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-l2_way_power">
+        <mxCell id="v-l2_way_power-count" value="idle groups sleep, then switch off" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-l2_way_power">
           <mxGeometry x="0" y="84" width="420" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-wp0" value="active" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=1.1;fontSize=9;" vertex="1" parent="1">
@@ -646,10 +646,10 @@
         <mxCell id="v-ipv_replacement-cell-24" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fef1e8;strokeColor=#e3a982;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-ipv_replacement">
           <mxGeometry x="280.7" y="83.8" width="54.1" height="14.5" as="geometry" />
         </mxCell>
-        <mxCell id="v-ipv_replacement-count" value="row: prefetched, critical bits" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-ipv_replacement">
+        <mxCell id="v-ipv_replacement-count" value="rows by prefetched and critical bits" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-ipv_replacement">
           <mxGeometry x="0" y="104" width="340" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="v-crit" value="&lt;b&gt;critical lines&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;page table, instruction&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;outlast prefetched and demand&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-crit" value="&lt;b&gt;critical lines&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;page table and code lines&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;outlast the others&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="750" y="700" width="220" height="110" as="geometry" />
         </mxCell>
         <mxCell id="v-l2_snoop_filter" value="&lt;b&gt;duplicate L1 tags&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -1087,38 +1087,44 @@
         <mxCell id="n-line_B" value="line B" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="290.0" y="455.2" width="36.1" height="15.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-R_A.0_waits_for_W_A.0_R_A.1_may" value="R A.0 waits for W A.0 | R A.1 may pass W A.0" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="90.0" y="593.2" width="281.6" height="15.8" as="geometry" />
+        <mxCell id="n-_R_A.0_waits_for_W_A.0_but_R_A" value="○ R A.0 waits for W A.0, but R A.1 may pass it." style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="90.0" y="593.2" width="287.5" height="15.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-3_MiB_per_core_steps_at_3_and_7" value="3 MiB per core | steps at 3 and 7.5 MiB" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1030.0" y="267.2" width="241.6" height="15.8" as="geometry" />
+        <mxCell id="n-_Each_core_gets_3_MiB_with_ste" value="○ Each core gets 3 MiB, with steps at 3 and 7.5 MiB." style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1030.0" y="267.2" width="326.5" height="15.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-z_an_all-zero_line_a_tag_bit_a" value="z: an all-zero line, a tag bit and no data write" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1030.0" y="477.2" width="278.2" height="15.8" as="geometry" />
+        <mxCell id="n-A_hit_on_a_sleeping_group_costs" value="A hit on a sleeping group costs 1 or 2 clk." style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1500.0" y="463.2" width="251.9" height="15.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-zero_data_read_returns_zeros_a" value="zero: data read returns zeros | a real write wakes the loser bank" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1030.0" y="559.2" width="389.8" height="15.8" as="geometry" />
+        <mxCell id="n-z_marks_an_all-zero_line_a_tag" value="z marks an all-zero line, a tag bit with no data write." style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1030.0" y="477.2" width="325.7" height="15.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-_patent_readings" value="? patent readings" style="text;html=1;fontSize=8.5;fontColor=#9ca3af;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1030.0" y="589.2" width="104.2" height="15.8" as="geometry" />
+        <mxCell id="n-Reading_a_zero_line_returns_zero" value="Reading a zero line returns zeros." style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1030.0" y="559.2" width="204.5" height="15.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-bits_carried_by_the_victim_from" value="bits carried by the victim from the L1" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="907.2" width="224.6" height="15.8" as="geometry" />
+        <mxCell id="n-A_real_write_wakes_the_loser_ban" value="A real write wakes the loser bank." style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1030.0" y="576.0" width="210.6" height="15.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-stream_near_LRU" value="stream: near LRU" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-l2_insertion_priority-lru;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="470.0" y="779.5" width="121.4" height="18.5" as="geometry" />
+        <mxCell id="n-_These_are_patent_readings." value="? These are patent readings." style="text;html=1;fontSize=8.5;fontColor=#9ca3af;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1030.0" y="593.2" width="173.2" height="15.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n-The_victim_carries_these_bits_fr" value="The victim carries these bits from the L1." style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="907.2" width="252.2" height="15.8" as="geometry" />
+        </mxCell>
+        <mxCell id="n-a_stream_goes_near_LRU" value="a stream goes near LRU" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-l2_insertion_priority-lru;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="470.0" y="779.5" width="163.8" height="18.5" as="geometry" />
         </mxCell>
         <mxCell id="n-demand-2" value="demand" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-l2_insertion_priority-lru-2;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="300.0" y="803.5" width="58.3" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-streams_hold_few_ways_a_sweep_e" value="streams hold few ways | a sweep evicts 1/8 to 1/4" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="70.0" y="997.2" width="311.6" height="15.8" as="geometry" />
+        <mxCell id="n-Streams_hold_few_ways_and_a_swe" value="Streams hold few ways, and a sweep evicts 1/8 to 1/4." style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="70.0" y="997.2" width="339.2" height="15.8" as="geometry" />
         </mxCell>
         <mxCell id="n-promote_on_hit" value="promote on hit" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-ipv_replacement-lru;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="290.0" y="749.5" width="100.4" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-unused_prefetched_lines_leave_fi" value="unused prefetched lines leave first" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="750.0" y="947.2" width="209.8" height="15.8" as="geometry" />
+        <mxCell id="n-Unused_prefetched_lines_leave_fi" value="Unused prefetched lines leave first." style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="750.0" y="947.2" width="215.9" height="15.8" as="geometry" />
         </mxCell>
         <mxCell id="n-hit-2" value="hit" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-snc-fwd;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1387.4" y="687.5" width="24.6" height="18.5" as="geometry" />
@@ -1126,8 +1132,8 @@
         <mxCell id="n-read" value="read" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-ucmerge-uncached_line_handling;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1646.0" y="793.5" width="35.2" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-write_skips_L1_and_L2" value="write: skips L1 and L2" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-ucgather-pt;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1654.8" y="955.5" width="153.2" height="18.5" as="geometry" />
+        <mxCell id="n-a_write_skips_the_L1_and_L2" value="a write skips the L1 and L2" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-ucgather-pt;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1623.1" y="955.5" width="184.9" height="18.5" as="geometry" />
         </mxCell>
         <mxCell id="n-write" value="write" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1770.0" y="795.2" width="31.6" height="15.8" as="geometry" />
@@ -1138,14 +1144,14 @@
         <mxCell id="n-progress" value="progress" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-sg1-sg0;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="629.9" y="580.2" width="59.4" height="17.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-idle_count" value="idle count" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-wp0-wp1;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1577.0" y="408.7" width="67.9" height="17.8" as="geometry" />
+        <mxCell id="n-idle" value="idle" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-wp0-wp1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1594.7" y="375.6" width="30.8" height="17.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-_1_or_2_clk_hit" value="+1 or 2 clk hit" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-wp1-wp0;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1565.2" y="467.4" width="89.7" height="17.8" as="geometry" />
+        <mxCell id="n-a_hit" value="a hit" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-wp1-wp0;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1593.3" y="440.0" width="35.1" height="17.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-concentrated" value="concentrated" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-wp1-wp2;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1729.5" y="412.7" width="85.2" height="17.8" as="geometry" />
+        <mxCell id="n-lines_moved" value="lines moved" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-wp1-wp2;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1730.8" y="412.6" width="82.5" height="17.8" as="geometry" />
         </mxCell>
         <mxCell id="n-miss_pressure" value="miss pressure" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-wp2-wp0;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1643.8" y="300.2" width="93.9" height="17.8" as="geometry" />

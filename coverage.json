@@ -195,6 +195,7 @@
       "x10-amx-slc",
       "x1-fabric",
       "l12-slc",
+      "s20-mshr-fill",
       "x3-memctrl"
      ],
      "status": "have",
@@ -213,14 +214,17 @@
       "x10-amx-slc",
       "x1-fabric",
       "l12-slc",
+      "s20-mshr-fill",
       "x3-memctrl"
      ],
      "status": "have",
      "planned": null
     },
     "rtl": {
-     "figs": [],
-     "status": "gap",
+     "figs": [
+      "s20-mshr-fill"
+     ],
+     "status": "have",
      "planned": null
     },
     "fsm": {
@@ -261,6 +265,7 @@
     "x10-amx-slc",
     "x1-fabric",
     "l12-slc",
+    "s20-mshr-fill",
     "x3-memctrl"
    ]
   },
@@ -279,6 +284,7 @@
       "d4-hierarchy",
       "x1-fabric",
       "l12-slc",
+      "s20-mshr-fill",
       "x3-memctrl"
      ],
      "status": "have",
@@ -296,14 +302,17 @@
       "d4-hierarchy",
       "x1-fabric",
       "l12-slc",
+      "s20-mshr-fill",
       "x3-memctrl"
      ],
      "status": "have",
      "planned": null
     },
     "rtl": {
-     "figs": [],
-     "status": "gap",
+     "figs": [
+      "s20-mshr-fill"
+     ],
+     "status": "have",
      "planned": null
     },
     "fsm": {
@@ -342,6 +351,7 @@
     "d4-hierarchy",
     "x1-fabric",
     "l12-slc",
+    "s20-mshr-fill",
     "x3-memctrl"
    ]
   },
@@ -493,6 +503,7 @@
       "x4-l2-more",
       "l10-l2",
       "l12-slc",
+      "s20-mshr-fill",
       "x11-prefetch-l1d-tlb",
       "x5-lsu-ordering",
       "x3-memctrl",
@@ -516,6 +527,7 @@
       "x4-l2-more",
       "l10-l2",
       "l12-slc",
+      "s20-mshr-fill",
       "x11-prefetch-l1d-tlb",
       "x5-lsu-ordering",
       "x3-memctrl",
@@ -526,6 +538,7 @@
     },
     "rtl": {
      "figs": [
+      "s20-mshr-fill",
       "p1-pipeline"
      ],
      "status": "have",
@@ -579,6 +592,7 @@
     "x4-l2-more",
     "l10-l2",
     "l12-slc",
+    "s20-mshr-fill",
     "x11-prefetch-l1d-tlb",
     "x5-lsu-ordering",
     "x3-memctrl",
@@ -780,7 +794,6 @@
      "figs": [
       "poster",
       "01-core-overview",
-      "03-rename",
       "x9-backend",
       "p1-pipeline"
      ],
@@ -839,6 +852,8 @@
       "r1-load-rtl",
       "l8-memdep",
       "l11-prefetch",
+      "s16-lq",
+      "s17-sq",
       "x11-prefetch-l1d-tlb",
       "x5-lsu-ordering",
       "x6-lsu-queues",
@@ -855,6 +870,8 @@
       "m6-lsu",
       "r1-load-rtl",
       "l8-memdep",
+      "s16-lq",
+      "s17-sq",
       "x11-prefetch-l1d-tlb",
       "x5-lsu-ordering",
       "x6-lsu-queues",
@@ -866,6 +883,9 @@
     "rtl": {
      "figs": [
       "r1-load-rtl",
+      "s16-lq",
+      "s17-sq",
+      "s21-lsu-pipe",
       "x6-lsu-queues",
       "p1-pipeline"
      ],
@@ -912,6 +932,9 @@
     "fsm-lsu",
     "l8-memdep",
     "l11-prefetch",
+    "s16-lq",
+    "s17-sq",
+    "s21-lsu-pipe",
     "x11-prefetch-l1d-tlb",
     "x5-lsu-ordering",
     "x6-lsu-queues",
@@ -1021,6 +1044,7 @@
       "m8-tlb",
       "x7-fetch-path",
       "s8-fetch-icache",
+      "s9-tlbs",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1033,6 +1057,7 @@
       "02-frontend",
       "x7-fetch-path",
       "s8-fetch-icache",
+      "s9-tlbs",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1041,6 +1066,7 @@
     "rtl": {
      "figs": [
       "s8-fetch-icache",
+      "s9-tlbs",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1075,6 +1101,7 @@
     "m8-tlb",
     "x7-fetch-path",
     "s8-fetch-icache",
+    "s9-tlbs",
     "p1-pipeline"
    ]
   },
@@ -1202,6 +1229,7 @@
     "fsm": {
      "figs": [
       "x7-fetch-path",
+      "fsm-dirpred",
       "x8-predictors-decode"
      ],
      "status": "have",
@@ -1230,6 +1258,7 @@
     "l1-branch",
     "x7-fetch-path",
     "s6-tage",
+    "fsm-dirpred",
     "p1-pipeline",
     "x8-predictors-decode"
    ]
@@ -1244,6 +1273,7 @@
       "poster",
       "01-core-overview",
       "m1-fetch",
+      "s7-indirect-ras",
       "l4-ras",
       "l14-trace",
       "p1-pipeline",
@@ -1258,6 +1288,7 @@
       "01-core-overview",
       "02-frontend",
       "s4-next-pc",
+      "s7-indirect-ras",
       "l4-ras",
       "l14-trace",
       "p1-pipeline",
@@ -1269,6 +1300,7 @@
     "rtl": {
      "figs": [
       "s4-next-pc",
+      "s7-indirect-ras",
       "p1-pipeline",
       "x8-predictors-decode"
      ],
@@ -1305,6 +1337,7 @@
     "02-frontend",
     "m1-fetch",
     "s4-next-pc",
+    "s7-indirect-ras",
     "l4-ras",
     "l14-trace",
     "p1-pipeline",
@@ -1322,6 +1355,7 @@
       "01-core-overview",
       "m2-dirpred",
       "l1-branch",
+      "s7-indirect-ras",
       "l2-indirect",
       "p1-pipeline",
       "x8-predictors-decode"
@@ -1337,6 +1371,7 @@
       "m2-dirpred",
       "l1-branch",
       "s4-next-pc",
+      "s7-indirect-ras",
       "l2-indirect",
       "p1-pipeline",
       "x8-predictors-decode"
@@ -1347,6 +1382,7 @@
     "rtl": {
      "figs": [
       "s4-next-pc",
+      "s7-indirect-ras",
       "p1-pipeline",
       "x8-predictors-decode"
      ],
@@ -1383,6 +1419,7 @@
     "m2-dirpred",
     "l1-branch",
     "s4-next-pc",
+    "s7-indirect-ras",
     "l2-indirect",
     "p1-pipeline",
     "x8-predictors-decode"
@@ -1565,6 +1602,7 @@
     },
     "rtl": {
      "figs": [
+      "s10-decode",
       "s4-next-pc",
       "p1-pipeline",
       "x8-predictors-decode"
@@ -1599,6 +1637,7 @@
     "01-core-overview",
     "02-frontend",
     "m1-fetch",
+    "s10-decode",
     "s4-next-pc",
     "fsm-decode",
     "p1-pipeline",
@@ -1636,6 +1675,7 @@
     },
     "rtl": {
      "figs": [
+      "s10-decode",
       "s8-fetch-icache",
       "p1-pipeline"
      ],
@@ -1670,6 +1710,7 @@
     "poster",
     "02-frontend",
     "m1-fetch",
+    "s10-decode",
     "x7-fetch-path",
     "s8-fetch-icache",
     "fsm-iq",
@@ -1690,6 +1731,8 @@
       "05-retire",
       "m3-rename",
       "x9-backend",
+      "s11-rename-map",
+      "s14-retire-window",
       "l5-rename",
       "l7-retire",
       "p1-pipeline"
@@ -1701,8 +1744,8 @@
      "figs": [
       "poster",
       "01-core-overview",
-      "03-rename",
       "x9-backend",
+      "s11-rename-map",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1711,6 +1754,8 @@
     "rtl": {
      "figs": [
       "x9-backend",
+      "s11-rename-map",
+      "s14-retire-window",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1750,6 +1795,8 @@
     "05-retire",
     "m3-rename",
     "x9-backend",
+    "s11-rename-map",
+    "s14-retire-window",
     "fsm-rename",
     "l5-rename",
     "l7-retire",
@@ -1771,6 +1818,7 @@
       "m4-sched",
       "m5-retire",
       "x9-backend",
+      "s11-rename-map",
       "l5-rename",
       "p1-pipeline",
       "s2-int-prf"
@@ -1782,8 +1830,8 @@
      "figs": [
       "poster",
       "01-core-overview",
-      "03-rename",
       "x9-backend",
+      "s11-rename-map",
       "s13-exec-bypass",
       "p1-pipeline"
      ],
@@ -1793,6 +1841,7 @@
     "rtl": {
      "figs": [
       "x9-backend",
+      "s11-rename-map",
       "s13-exec-bypass",
       "p1-pipeline"
      ],
@@ -1833,6 +1882,7 @@
     "m4-sched",
     "m5-retire",
     "x9-backend",
+    "s11-rename-map",
     "s13-exec-bypass",
     "fsm-int-prf",
     "l5-rename",
@@ -1852,6 +1902,8 @@
       "03-rename",
       "05-retire",
       "m3-rename",
+      "s11-rename-map",
+      "s15-fp-prf",
       "l5-rename",
       "p1-pipeline"
      ],
@@ -1862,7 +1914,8 @@
      "figs": [
       "poster",
       "01-core-overview",
-      "03-rename",
+      "s11-rename-map",
+      "s15-fp-prf",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1870,14 +1923,17 @@
     },
     "rtl": {
      "figs": [
+      "s11-rename-map",
       "p1-pipeline"
      ],
      "status": "have",
      "planned": null
     },
     "fsm": {
-     "figs": [],
-     "status": "gap",
+     "figs": [
+      "fsm-fp-prf"
+     ],
+     "status": "have",
      "planned": null
     },
     "storyboard": {
@@ -1903,6 +1959,9 @@
     "03-rename",
     "05-retire",
     "m3-rename",
+    "s11-rename-map",
+    "s15-fp-prf",
+    "fsm-fp-prf",
     "l5-rename",
     "p1-pipeline"
    ]
@@ -1919,6 +1978,8 @@
       "03-rename",
       "m3-rename",
       "x9-backend",
+      "s11-rename-map",
+      "s15-fp-prf",
       "l5-rename",
       "p1-pipeline"
      ],
@@ -1929,8 +1990,9 @@
      "figs": [
       "poster",
       "01-core-overview",
-      "03-rename",
       "x9-backend",
+      "s11-rename-map",
+      "s15-fp-prf",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1939,6 +2001,7 @@
     "rtl": {
      "figs": [
       "x9-backend",
+      "s11-rename-map",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1974,6 +2037,8 @@
     "03-rename",
     "m3-rename",
     "x9-backend",
+    "s11-rename-map",
+    "s15-fp-prf",
     "l5-rename",
     "p1-pipeline"
    ]
@@ -1988,6 +2053,7 @@
       "01-core-overview",
       "03-rename",
       "04-issue",
+      "s12-dispatch",
       "l5-rename",
       "l6-scheduler",
       "p1-pipeline"
@@ -1998,7 +2064,6 @@
     "dataflow": {
      "figs": [
       "01-core-overview",
-      "03-rename",
       "p1-pipeline"
      ],
      "status": "have",
@@ -2006,6 +2071,7 @@
     },
     "rtl": {
      "figs": [
+      "s12-dispatch",
       "p1-pipeline"
      ],
      "status": "have",
@@ -2040,6 +2106,7 @@
     "08-lifecycle",
     "03-rename",
     "04-issue",
+    "s12-dispatch",
     "fsm-dispatch",
     "l5-rename",
     "l6-scheduler",
@@ -2058,6 +2125,7 @@
       "04-issue",
       "m4-sched",
       "x9-backend",
+      "s12-dispatch",
       "l6-scheduler",
       "p1-pipeline",
       "s1-sched-int-queue"
@@ -2077,6 +2145,7 @@
     "rtl": {
      "figs": [
       "x9-backend",
+      "s12-dispatch",
       "p1-pipeline"
      ],
      "status": "have",
@@ -2113,6 +2182,7 @@
     "04-issue",
     "m4-sched",
     "x9-backend",
+    "s12-dispatch",
     "fsm-sched-int",
     "l6-scheduler",
     "p1-pipeline",
@@ -2130,6 +2200,7 @@
      "figs": [
       "01-core-overview",
       "04-issue",
+      "s12-dispatch",
       "p1-pipeline",
       "s24-sched-fp-queue"
      ],
@@ -2146,14 +2217,17 @@
     },
     "rtl": {
      "figs": [
+      "s12-dispatch",
       "p1-pipeline"
      ],
      "status": "have",
      "planned": null
     },
     "fsm": {
-     "figs": [],
-     "status": "gap",
+     "figs": [
+      "fsm-sched-fp"
+     ],
+     "status": "have",
      "planned": null
     },
     "storyboard": {
@@ -2172,6 +2246,8 @@
    "figures": [
     "01-core-overview",
     "04-issue",
+    "s12-dispatch",
+    "fsm-sched-fp",
     "p1-pipeline",
     "s24-sched-fp-queue"
    ]
@@ -2187,6 +2263,7 @@
       "04-issue",
       "m4-sched",
       "r1-load-rtl",
+      "s12-dispatch",
       "l6-scheduler",
       "p1-pipeline"
      ],
@@ -2205,6 +2282,7 @@
     "rtl": {
      "figs": [
       "r1-load-rtl",
+      "s12-dispatch",
       "p1-pipeline"
      ],
      "status": "have",
@@ -2237,6 +2315,7 @@
     "04-issue",
     "m4-sched",
     "r1-load-rtl",
+    "s12-dispatch",
     "fsm-sched-ls",
     "l6-scheduler",
     "p1-pipeline"
@@ -2347,7 +2426,8 @@
     },
     "fsm": {
      "figs": [
-      "x9-backend"
+      "x9-backend",
+      "fsm-eu-fp"
      ],
      "status": "have",
      "planned": null
@@ -2369,6 +2449,7 @@
     "01-core-overview",
     "04-issue",
     "x9-backend",
+    "fsm-eu-fp",
     "p1-pipeline",
     "s24-sched-fp-queue"
    ]
@@ -2385,6 +2466,8 @@
       "05-retire",
       "m5-retire",
       "x9-backend",
+      "s11-rename-map",
+      "s14-retire-window",
       "l5-rename",
       "l7-retire",
       "p1-pipeline"
@@ -2397,6 +2480,7 @@
       "poster",
       "01-core-overview",
       "x9-backend",
+      "s11-rename-map",
       "p1-pipeline"
      ],
      "status": "have",
@@ -2405,6 +2489,8 @@
     "rtl": {
      "figs": [
       "x9-backend",
+      "s11-rename-map",
+      "s14-retire-window",
       "p1-pipeline"
      ],
      "status": "have",
@@ -2444,6 +2530,8 @@
     "m5-retire",
     "f1-fsm",
     "x9-backend",
+    "s11-rename-map",
+    "s14-retire-window",
     "fsm-retire",
     "l5-rename",
     "l7-retire",
@@ -2466,6 +2554,7 @@
       "m6-lsu",
       "r1-load-rtl",
       "l8-memdep",
+      "s16-lq",
       "x5-lsu-ordering",
       "x6-lsu-queues",
       "p1-pipeline"
@@ -2481,6 +2570,7 @@
       "m6-lsu",
       "r1-load-rtl",
       "l8-memdep",
+      "s16-lq",
       "x5-lsu-ordering",
       "x6-lsu-queues",
       "p1-pipeline"
@@ -2491,6 +2581,7 @@
     "rtl": {
      "figs": [
       "r1-load-rtl",
+      "s16-lq",
       "x6-lsu-queues",
       "p1-pipeline"
      ],
@@ -2534,6 +2625,7 @@
     "r1-load-rtl",
     "fsm-lq",
     "l8-memdep",
+    "s16-lq",
     "x5-lsu-ordering",
     "x6-lsu-queues",
     "p1-pipeline"
@@ -2556,6 +2648,8 @@
       "r1-load-rtl",
       "x10-amx-slc",
       "l8-memdep",
+      "s16-lq",
+      "s17-sq",
       "x5-lsu-ordering",
       "x6-lsu-queues",
       "p1-pipeline"
@@ -2573,6 +2667,8 @@
       "r1-load-rtl",
       "x10-amx-slc",
       "l8-memdep",
+      "s16-lq",
+      "s17-sq",
       "x5-lsu-ordering",
       "x6-lsu-queues",
       "p1-pipeline"
@@ -2583,6 +2679,9 @@
     "rtl": {
      "figs": [
       "r1-load-rtl",
+      "s16-lq",
+      "s17-sq",
+      "s21-lsu-pipe",
       "x6-lsu-queues",
       "p1-pipeline"
      ],
@@ -2629,6 +2728,9 @@
     "x10-amx-slc",
     "fsm-sq",
     "l8-memdep",
+    "s16-lq",
+    "s17-sq",
+    "s21-lsu-pipe",
     "x5-lsu-ordering",
     "x6-lsu-queues",
     "p1-pipeline"
@@ -2651,6 +2753,9 @@
       "d4-hierarchy",
       "r1-load-rtl",
       "l9-l1d-way",
+      "s17-sq",
+      "s19-l1d",
+      "s20-mshr-fill",
       "x11-prefetch-l1d-tlb",
       "x5-lsu-ordering",
       "x6-lsu-queues",
@@ -2671,6 +2776,9 @@
       "d1-l1d",
       "d4-hierarchy",
       "r1-load-rtl",
+      "s17-sq",
+      "s19-l1d",
+      "s20-mshr-fill",
       "x11-prefetch-l1d-tlb",
       "x5-lsu-ordering",
       "x6-lsu-queues",
@@ -2682,6 +2790,10 @@
     "rtl": {
      "figs": [
       "r1-load-rtl",
+      "s17-sq",
+      "s19-l1d",
+      "s20-mshr-fill",
+      "s21-lsu-pipe",
       "x6-lsu-queues",
       "p1-pipeline"
      ],
@@ -2732,6 +2844,10 @@
     "f1-fsm",
     "fsm-l1d",
     "l9-l1d-way",
+    "s17-sq",
+    "s19-l1d",
+    "s20-mshr-fill",
+    "s21-lsu-pipe",
     "x11-prefetch-l1d-tlb",
     "x5-lsu-ordering",
     "x6-lsu-queues",
@@ -2753,8 +2869,10 @@
       "c1-l1d",
       "d1-l1d",
       "r1-load-rtl",
+      "s9-tlbs",
       "l9-l1d-way",
       "l13-tlb",
+      "s18-dtlb",
       "x11-prefetch-l1d-tlb",
       "p1-pipeline"
      ],
@@ -2770,6 +2888,8 @@
       "c1-l1d",
       "d1-l1d",
       "r1-load-rtl",
+      "s9-tlbs",
+      "s18-dtlb",
       "x11-prefetch-l1d-tlb",
       "p1-pipeline"
      ],
@@ -2779,6 +2899,9 @@
     "rtl": {
      "figs": [
       "r1-load-rtl",
+      "s9-tlbs",
+      "s18-dtlb",
+      "s21-lsu-pipe",
       "p1-pipeline"
      ],
      "status": "have",
@@ -2820,9 +2943,12 @@
     "c1-l1d",
     "d1-l1d",
     "r1-load-rtl",
+    "s9-tlbs",
     "fsm-dtlb",
     "l9-l1d-way",
     "l13-tlb",
+    "s18-dtlb",
+    "s21-lsu-pipe",
     "x11-prefetch-l1d-tlb",
     "p1-pipeline"
    ]
@@ -2905,7 +3031,8 @@
       "01-core-overview",
       "06-lsu",
       "m7-miss",
-      "d1-l1d"
+      "d1-l1d",
+      "s20-mshr-fill"
      ],
      "status": "have",
      "planned": null
@@ -2916,14 +3043,17 @@
       "01-core-overview",
       "06-lsu",
       "m7-miss",
-      "d1-l1d"
+      "d1-l1d",
+      "s20-mshr-fill"
      ],
      "status": "have",
      "planned": null
     },
     "rtl": {
-     "figs": [],
-     "status": "gap",
+     "figs": [
+      "s20-mshr-fill"
+     ],
+     "status": "have",
      "planned": null
     },
     "fsm": {
@@ -2952,7 +3082,8 @@
     "06-lsu",
     "m7-miss",
     "d1-l1d",
-    "fsm-mshr"
+    "fsm-mshr",
+    "s20-mshr-fill"
    ]
   }
  }

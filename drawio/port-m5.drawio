@@ -19,8 +19,8 @@
         <mxCell id="f-pack_f" value="Packed by the rule" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#8abfb3;fontColor=#059669;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="260" width="2220" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="f-pack_f-note" value="the rule is inferred | a second reading differs on the rows" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1840.8" y="266" width="412.2" height="14" as="geometry" />
+        <mxCell id="f-pack_f-note" value="the rule is inferred, and a second reading differs on the rows" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1815.5" y="266" width="437.5" height="14" as="geometry" />
         </mxCell>
         <mxCell id="f-arith_f" value="Window arithmetic against the probes" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#8abfb3;fontColor=#059669;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="850" width="2220" height="560" as="geometry" />
@@ -280,50 +280,50 @@
         <mxCell id="v-a_stores" value="&lt;b&gt;Stores&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;60, the store queue&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;AnandTech 106 is 60 plus 48 less 1&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1160" y="1017" width="1060" height="106" as="geometry" />
         </mxCell>
-        <mxCell id="v-a_intreg" value="&lt;b&gt;Integer registers&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;362 of 380 free&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;see Map 4&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dcf0ea;strokeColor=#50b696;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-a_intreg" value="&lt;b&gt;Integer registers&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;362 of 380 free&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;18 never free, derived&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dcf0ea;strokeColor=#50b696;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1160" y="1139" width="1060" height="106" as="geometry" />
         </mxCell>
         <mxCell id="v-open" value="&lt;b&gt;The open item&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;groups hold 3 issuing uops, not 4&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;or a 1000 entry limit elsewhere&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;schedulers and dispatch total 254&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f6e1f9;strokeColor=#c026d3;strokeWidth=1.5;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1160" y="1261" width="1060" height="106" as="geometry" />
         </mxCell>
-        <mxCell id="n-nop_and_b_take_a_retire_slot_but" value="nop and b take a retire slot but no issue slot" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="178.5" width="283.9" height="16.5" as="geometry" />
+        <mxCell id="n-_nop_and_b_take_a_retire_slot_b" value="● nop and b take a retire slot but no issue slot." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="178.5" width="300.5" height="16.5" as="geometry" />
         </mxCell>
         <mxCell id="n-group_1" value="group 1" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="324.8" width="46.2" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-ldr_opens_b.eq_closes" value="ldr opens, b.eq closes" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="850.0" y="324.8" width="150.0" height="17.2" as="geometry" />
+        <mxCell id="n-ldr_opens_it_and_b.eq_closes_it." value="ldr opens it and b.eq closes it." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="850.0" y="324.8" width="207.2" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-group_2" value="group 2" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="402.8" width="50.1" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-closed_by_the_str_that_follows" value="closed by the str that follows" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="850.0" y="402.8" width="199.5" height="17.2" as="geometry" />
+        <mxCell id="n-The_str_that_follows_closes_it." value="The str that follows closes it." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="850.0" y="402.8" width="203.0" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-group_3" value="group 3" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="480.8" width="50.1" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-str_opens_cbz_closes" value="str opens, cbz closes" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="850.0" y="480.8" width="145.2" height="17.2" as="geometry" />
+        <mxCell id="n-str_opens_it_and_cbz_closes_it." value="str opens it and cbz closes it." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="850.0" y="480.8" width="202.4" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-group_4" value="group 4" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="558.8" width="50.1" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-7_slots_full" value="7 slots full" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="850.0" y="558.8" width="73.8" height="17.2" as="geometry" />
+        <mxCell id="n-All_7_slots_are_full." value="All 7 slots are full." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="850.0" y="558.8" width="128.3" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-group_5" value="group 5" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="636.8" width="50.1" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-closed_by_the_next_ldr" value="closed by the next ldr" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="850.0" y="636.8" width="146.7" height="17.2" as="geometry" />
+        <mxCell id="n-The_next_ldr_closes_it." value="The next ldr closes it." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="850.0" y="636.8" width="150.3" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-group_6" value="group 6" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="714.8" width="50.1" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-ldr_opens_b_closes" value="ldr opens, b closes" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="850.0" y="714.8" width="129.2" height="17.2" as="geometry" />
+        <mxCell id="n-ldr_opens_it_and_b_closes_it." value="ldr opens it and b closes it." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="850.0" y="714.8" width="186.4" height="17.2" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

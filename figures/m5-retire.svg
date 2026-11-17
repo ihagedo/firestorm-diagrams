@@ -3,7 +3,7 @@
 <text x="2250.0" y="87.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">shaded uops issue</text>
 <rect x="40.0" y="260.0" width="2220.0" height="560.0" rx="9" fill="#f5fbf9" stroke="#8abfb3" stroke-width="1"/>
 <text x="50.0" y="277.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#059669" text-anchor="start">Packed by the rule</text>
-<text x="2250.0" y="277.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">the rule is inferred | a second reading differs on the rows</text>
+<text x="2250.0" y="277.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">the rule is inferred, and a second reading differs on the rows</text>
 <rect x="40.0" y="850.0" width="2220.0" height="560.0" rx="9" fill="#f5fbf9" stroke="#8abfb3" stroke-width="1"/>
 <text x="50.0" y="867.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#059669" text-anchor="start">Window arithmetic against the probes</text>
 <text x="2250.0" y="867.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">measured knee, the arithmetic, the verdict</text>
@@ -130,7 +130,7 @@
 <text x="2009.8" y="126.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">ldr</text>
 <text x="2100.2" y="126.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">add</text>
 <text x="2190.8" y="126.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">b</text>
-<text x="60.0" y="192.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="stream-note">nop and b take a retire slot but no issue slot</text>
+<text x="60.0" y="192.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="stream-note">● nop and b take a retire slot but no issue slot.</text>
 <text x="60.0" y="339.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="g1">group 1</text>
 <text x="229.1" y="321.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">ldr</text>
 <text x="319.4" y="321.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">add</text>
@@ -138,17 +138,17 @@
 <text x="500.0" y="321.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">nop</text>
 <text x="590.3" y="321.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">nop</text>
 <text x="680.6" y="321.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">b.eq</text>
-<text x="850.0" y="339.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic" data-owner="g1">ldr opens, b.eq closes</text>
+<text x="850.0" y="339.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic" data-owner="g1">ldr opens it and b.eq closes it.</text>
 <text x="60.0" y="417.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="g2">group 2</text>
 <text x="229.1" y="399.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">add</text>
 <text x="319.4" y="399.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">add</text>
-<text x="850.0" y="417.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic" data-owner="g2">closed by the str that follows</text>
+<text x="850.0" y="417.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic" data-owner="g2">The str that follows closes it.</text>
 <text x="60.0" y="495.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="g3">group 3</text>
 <text x="229.1" y="477.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">str</text>
 <text x="319.4" y="477.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">nop</text>
 <text x="409.7" y="477.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">mul</text>
 <text x="500.0" y="477.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">cbz</text>
-<text x="850.0" y="495.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic" data-owner="g3">str opens, cbz closes</text>
+<text x="850.0" y="495.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic" data-owner="g3">str opens it and cbz closes it.</text>
 <text x="60.0" y="573.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="g4">group 4</text>
 <text x="229.1" y="555.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">ldr</text>
 <text x="319.4" y="555.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">nop</text>
@@ -157,16 +157,16 @@
 <text x="590.3" y="555.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">nop</text>
 <text x="680.6" y="555.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">nop</text>
 <text x="770.9" y="555.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">nop</text>
-<text x="850.0" y="573.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic" data-owner="g4">7 slots full</text>
+<text x="850.0" y="573.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic" data-owner="g4">All 7 slots are full.</text>
 <text x="60.0" y="651.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="g5">group 5</text>
 <text x="229.1" y="633.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">nop</text>
 <text x="319.4" y="633.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">add</text>
-<text x="850.0" y="651.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic" data-owner="g5">closed by the next ldr</text>
+<text x="850.0" y="651.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic" data-owner="g5">The next ldr closes it.</text>
 <text x="60.0" y="729.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="g6">group 6</text>
 <text x="229.1" y="711.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">ldr</text>
 <text x="319.4" y="711.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">add</text>
 <text x="409.7" y="711.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">b</text>
-<text x="850.0" y="729.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic" data-owner="g6">ldr opens, b closes</text>
+<text x="850.0" y="729.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic" data-owner="g6">ldr opens it and b closes it.</text>
 <text x="1337.0" y="327.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Packing rule</text>
 <text x="1337.0" y="351.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
 <text x="1350.4" y="351.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">a memory op opens a group</text>
@@ -238,7 +238,7 @@
 <text x="1167.0" y="1185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
 <text x="1180.4" y="1185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">362 of 380 free</text>
 <text x="1167.0" y="1204.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">◇</text>
-<text x="1180.4" y="1204.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">see Map 4</text>
+<text x="1180.4" y="1204.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">18 never free, derived</text>
 <text x="1167.0" y="1283.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">The open item</text>
 <text x="1167.0" y="1307.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">*</text>
 <text x="1180.4" y="1307.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#c026d3" text-anchor="start">groups hold 3 issuing uops, not 4</text>

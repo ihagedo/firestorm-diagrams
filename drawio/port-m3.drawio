@@ -7,14 +7,14 @@
         <mxCell id="title" value="An 8 wide group through map and rename" style="text;html=1;kind=title;fontSize=18;fontStyle=1;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="17" y="11" width="578" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="subtitle" value="one cycle: map, rename, history" style="text;html=1;kind=title;fontSize=11;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="17" y="37" width="264" height="18" as="geometry" />
+        <mxCell id="subtitle" value="One cycle carries a group through map, rename and history." style="text;html=1;kind=title;fontSize=11;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="17" y="37" width="478" height="18" as="geometry" />
         </mxCell>
         <mxCell id="f-grp" value="Group from decode" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#f5fbfc;strokeColor=#8bbdcd;fontColor=#0891b2;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="75.0" y="105.0" width="2400.0" height="177.0" as="geometry" />
         </mxCell>
-        <mxCell id="f-grp-note" value="8 uops/clk" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="2384.0" y="111.0" width="84.0" height="14" as="geometry" />
+        <mxCell id="f-grp-note" value="8 uops a clock" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="2357.2" y="111.0" width="110.8" height="14" as="geometry" />
         </mxCell>
         <mxCell id="f-sb-1" value="1" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#8abfb3;fontColor=#059669;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="75.0" y="315.0" width="584.25" height="439.5" as="geometry" />
@@ -37,8 +37,8 @@
         <mxCell id="f-lim" value="Limits" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#8abfb3;fontColor=#059669;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="75.0" y="1329.0" width="2400.0" height="210.0" as="geometry" />
         </mxCell>
-        <mxCell id="f-lim-note" value="measured | one proposed cause" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="2236.4" y="1335.0" width="231.6" height="14" as="geometry" />
+        <mxCell id="f-lim-note" value="measured, with one proposed cause" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="2204.3" y="1335.0" width="263.7" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-group" value="" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#a6d7e3;strokeColor=#0891b2;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="105" y="150" width="2340" height="66" as="geometry" />
@@ -121,7 +121,7 @@
         <mxCell id="v-immediate_regs-cell-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-immediate_regs">
           <mxGeometry x="4.0" y="124.2" width="202.0" height="18.8" as="geometry" />
         </mxCell>
-        <mxCell id="v-immediate_regs-count" value="~36" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-immediate_regs">
+        <mxCell id="v-immediate_regs-count" value="about 36" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-immediate_regs">
           <mxGeometry x="0" y="149.0" width="210.0" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-e_imm" value="&lt;b&gt;slot 4  mov x5,#7&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -481,16 +481,16 @@
         <mxCell id="v-imm-cell-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-imm">
           <mxGeometry x="72.0" y="4.0" width="66.5" height="31.0" as="geometry" />
         </mxCell>
-        <mxCell id="v-lim1" value="&lt;b&gt;2 imm / 8 instr&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 / 8 disputed&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-lim1" value="&lt;b&gt;2 imm per 8 instr&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 per 8 disputed&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="105" y="1374" width="450" height="87" as="geometry" />
         </mxCell>
-        <mxCell id="v-lim2" value="&lt;b&gt;4 reads / 6 instr&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;cmp + b fusion&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dcf0ea;strokeColor=#50b696;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-lim2" value="&lt;b&gt;4 reads per 6 instr&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;limits cmp + b fusion&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dcf0ea;strokeColor=#50b696;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="600" y="1374" width="450" height="87" as="geometry" />
         </mxCell>
         <mxCell id="v-lim3" value="&lt;b&gt;adrp+add, mov+movk&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;not fused&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dcf0ea;strokeColor=#50b696;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1095" y="1374" width="450" height="87" as="geometry" />
         </mxCell>
-        <mxCell id="v-ports" value="&lt;b&gt;16 read ports&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 uops x 2 src&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fbf2fc;strokeColor=#c026d3;strokeWidth=1.2;dashed=1;dashPattern=6 2;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-ports" value="&lt;b&gt;16 read ports&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 uops x 2 sources&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fbf2fc;strokeColor=#c026d3;strokeWidth=1.2;dashed=1;dashPattern=6 2;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1605" y="1374" width="390" height="87" as="geometry" />
         </mxCell>
         <mxCell id="e-group_map-srcs" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2;strokeColor=#1f2937;dashed=0;endArrow=none;endFill=1;startArrow=none;startFill=1;entryX=0.00000;entryY=0.51923;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="v-srcs">
@@ -562,17 +562,17 @@
         <mxCell id="n-STA_STD" value="STA + STD" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="2256.6" y="234.0" width="73.9" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-Map_8_8_compare" value="Map: 8 x 8 compare" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="302.8" y="758.5" width="128.6" height="18.5" as="geometry" />
+        <mxCell id="n-1_The_map_compares_each_slot_wi" value="1  The map compares each slot with the earlier ones." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="198.1" y="758.5" width="338.1" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-Eliminate_mov_p40_7_imm_p" value="Eliminate: mov -&gt; p40, #7 -&gt; imm pool" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="843.9" y="758.5" width="256.9" height="18.5" as="geometry" />
+        <mxCell id="n-2_The_mov_maps_to_p40_and_7_g" value="2  The mov maps to p40, and #7 goes to the imm pool." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="796.7" y="758.5" width="351.3" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-Fuse_cmp_b.ne" value="Fuse: cmp + b.ne" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1521.3" y="758.5" width="112.6" height="18.5" as="geometry" />
+        <mxCell id="n-3_cmp_and_b.ne_fuse_into_one_uo" value="3  cmp and b.ne fuse into one uop." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1468.4" y="758.5" width="218.5" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-Rename_free_list_history" value="Rename: free list, history" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="2101.0" y="758.5" width="163.7" height="18.5" as="geometry" />
+        <mxCell id="n-4_Rename_takes_a_free_register" value="4  Rename takes a free register and logs history." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="2028.2" y="758.5" width="309.4" height="18.5" as="geometry" />
         </mxCell>
         <mxCell id="n-sources" value="sources" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="456.0" y="357.2" width="55.2" height="17.8" as="geometry" />
@@ -583,8 +583,8 @@
         <mxCell id="n-_7" value="#7" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-e_imm-immediate_regs;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1130.2" y="611.5" width="23.7" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-4_reads_6_instr" value="4 reads / 6 instr ○" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1312.5" y="653.5" width="125.4" height="18.5" as="geometry" />
+        <mxCell id="n-_At_most_4_reads_per_6_instruct" value="○ At most 4 reads per 6 instructions." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1312.5" y="653.5" width="243.9" height="18.5" as="geometry" />
         </mxCell>
         <mxCell id="n-new" value="new" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-freelist-rename_map;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="2064.8" y="452.5" width="35.5" height="18.5" as="geometry" />
@@ -595,59 +595,65 @@
         <mxCell id="n-map_entry_32" value="map entry x 32" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="105.0" y="903.5" width="104.6" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-sec_this_process_wrote_it" value="sec: this process wrote it" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="105.0" y="999.5" width="172.8" height="18.5" as="geometry" />
+        <mxCell id="n-_sec_marks_what_this_process_wr" value="~ sec marks what this process wrote." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="105.0" y="1000.5" width="244.0" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-unwritten_read_4_wide" value="unwritten read -&gt; ~4 wide ~" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="105.0" y="1032.5" width="188.8" height="18.5" as="geometry" />
+        <mxCell id="n-_Reading_an_unwritten_one_drops" value="~ Reading an unwritten one drops to about 4 wide." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="105.0" y="1018.0" width="324.9" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-v_zero_idiom_no_preg" value="v: zero idiom, no preg" style="text;html=1;fontSize=9;fontColor=#c026d3;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="105.0" y="1071.5" width="148.7" height="18.5" as="geometry" />
+        <mxCell id="n-_v_marks_a_zero_idiom_with_no_p" value="+ v marks a zero idiom with no preg." style="text;html=1;fontSize=9;fontColor=#c026d3;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="105.0" y="1071.5" width="245.8" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-history_entry_1_per_map_change" value="history entry | 1 per map change" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="630.0" y="903.5" width="212.1" height="18.5" as="geometry" />
+        <mxCell id="n-history_entry_one_per_map_chang" value="history entry, one per map change" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="630.0" y="903.5" width="225.9" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-8_alloc_clk" value="8 alloc/clk" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="630.0" y="1101.5" width="79.6" height="18.5" as="geometry" />
+        <mxCell id="n-_corroborated_backend_8_a_clock" value="&lt;span style=&quot;background-color:#c0e5da;border:1.4px solid #059669;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;8 a clock&lt;/span&gt; allocated" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="630.0" y="1101.5" width="136.4" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-16_retire_clk_old_freed" value="16 retire/clk | old freed" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="975.0" y="1101.5" width="154.9" height="18.5" as="geometry" />
+        <mxCell id="n-_corroborated_backend_16_a_clock" value="&lt;span style=&quot;background-color:#c0e5da;border:1.4px solid #059669;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;16 a clock&lt;/span&gt; retired, old freed" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="975.0" y="1101.5" width="188.2" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-no_entry_nop_b_str_cmp" value="no entry: nop, b, str, cmp" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="630.0" y="1149.5" width="169.7" height="18.5" as="geometry" />
+        <mxCell id="n-_nop_b_str_and_cmp_take_no_en" value="○ nop, b, str and cmp take no entry." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="630.0" y="1150.5" width="228.3" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-windows_NOP_2277_writing_623" value="windows: NOP 2277 | writing 623" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="975.0" y="1149.5" width="230.1" height="18.5" as="geometry" />
+        <mxCell id="n-_A_mispredict_walks_the_tail_ba" value="~ A mispredict walks the tail back, 16 a clock." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="630.0" y="1168.0" width="300.5" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-mispredict_tail_branch_16_cl" value="mispredict: tail -&gt; branch, 16/clk" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="630.0" y="1194.5" width="221.7" height="18.5" as="geometry" />
+        <mxCell id="n-_The_worst_case_takes_about_39" value="◇ The worst case takes about 39 clk." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="630.0" y="1185.5" width="240.6" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-old_map_new_free" value="old -&gt; map | new -&gt; free" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="975.0" y="1194.5" width="168.6" height="18.5" as="geometry" />
+        <mxCell id="n-_The_window_holds_2277_NOPs_but" value="● The window holds 2277 NOPs but 623 writers." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="975.0" y="1150.5" width="317.9" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-worst_case_39_clk" value="worst case 39 clk" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="630.0" y="1233.5" width="124.3" height="18.5" as="geometry" />
+        <mxCell id="n-_The_old_register_goes_back_to" value="~ The old register goes back to the map." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="975.0" y="1168.0" width="260.6" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-integer_380_362_free" value="integer 380 ◆ | 362 free" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1500.0" y="908.0" width="159.4" height="18.5" as="geometry" />
+        <mxCell id="n-_The_new_one_returns_to_the_fre" value="~ The new one returns to the free list." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="975.0" y="1185.5" width="243.7" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-fp_simd_432_382_free" value="fp / simd 432 ◆ | 382 free" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1500.0" y="992.0" width="176.2" height="18.5" as="geometry" />
+        <mxCell id="n-_integer_380_362_free" value="◆ integer 380, 362 free" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1500.0" y="908.0" width="154.9" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-flags_128_123_free" value="flags 128 ◆ | 123 free" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1500.0" y="1076.0" width="140.0" height="18.5" as="geometry" />
+        <mxCell id="n-_fp_simd_432_382_free" value="◆ fp / simd 432, 382 free" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1500.0" y="992.0" width="171.7" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-imm_pool_36_36_free" value="imm pool 36 ○ | 36 free" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1500.0" y="1160.0" width="160.2" height="18.5" as="geometry" />
+        <mxCell id="n-_flags_128_123_free" value="◆ flags 128, 123 free" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1500.0" y="1076.0" width="135.5" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-4_banks_wake_2_3_clk" value="4 banks | wake 2-3 clk ~" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1500.0" y="1254.5" width="171.7" height="18.5" as="geometry" />
+        <mxCell id="n-_imm_pool_36_36_free" value="○ imm pool 36, 36 free" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1500.0" y="1160.0" width="155.7" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-cause" value="cause?" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-lim2-ports;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1050.0" y="1500.5" width="53.5" height="18.5" as="geometry" />
+        <mxCell id="n-_The_integer_file_has_4_banks." value="~ The integer file has 4 banks." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1500.0" y="1234.5" width="197.4" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-test_fewer_sources_more_fusio" value="test: fewer sources -&gt; more fusion?" style="text;html=1;fontSize=9;fontColor=#c026d3;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1605.0" y="1485.5" width="239.7" height="18.5" as="geometry" />
+        <mxCell id="n-_Waking_a_bank_takes_2_to_3_clk" value="? Waking a bank takes 2 to 3 clk." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1500.0" y="1252.0" width="215.9" height="16.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-a_cause" value="a cause?" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-lim2-ports;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1050.0" y="1500.5" width="65.6" height="18.5" as="geometry" />
+        </mxCell>
+        <mxCell id="n-_Test_whether_fewer_sources_all" value="+ Test whether fewer sources allow more fusion." style="text;html=1;fontSize=9;fontColor=#c026d3;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=None;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1605.0" y="1485.5" width="326.7" height="18.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

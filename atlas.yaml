@@ -1144,6 +1144,57 @@ maps:
     drawio:
       file: drawio/frontend-rtl.drawio
       page: S6 TAGE
+  - id: s7-indirect-ras
+    title: Indirect targets and returns, ITTAGE and the return stack
+    subtitle: ''
+    file: figures/s7-indirect-ras.svg
+    level: structure
+    up: indpred
+    kinds:
+    - dataflow
+    - rtl
+    - structure
+    blocks:
+    - indpred
+    - ras
+    mechanisms:
+    - ittage_indirect
+    - two_level_ras
+    - ras_overflow_clear
+    - ras_pac_check
+    hot:
+    - hist
+    - ind.base
+    - ind.base.index
+    - ind.base.target
+    - ind.check
+    - ind.final
+    - ind.provider
+    - ind.t1
+    - ind.t1.index
+    - ind.t1.tag
+    - ind.t1.target
+    - ind.t2
+    - ind.t2.index
+    - ind.t2.tag
+    - ind.t2.target
+    - ind.t3
+    - ind.t3.index
+    - ind.t3.tag
+    - ind.t3.target
+    - ittage
+    - pc
+    - ras
+    - ras.fetch
+    - ras.out
+    - ras.overflow
+    - ras.pop
+    - ras.push
+    - ras.top
+    - rasf
+    drawio:
+      file: drawio/frontend-rtl.drawio
+      page: S7 indirect and RAS
   - id: s8-fetch-icache
     title: Fetch and the instruction cache, VIPT lookup to the instruction queue
     subtitle: ''
@@ -1198,8 +1249,106 @@ maps:
     drawio:
       file: drawio/frontend-rtl.drawio
       page: S8 fetch and I-cache
+  - id: s9-tlbs
+    title: The TLBs, two levels in front of a page walk
+    subtitle: ''
+    file: figures/s9-tlbs.svg
+    level: structure
+    up: dtlb
+    kinds:
+    - dataflow
+    - rtl
+    - structure
+    blocks:
+    - itlb
+    - dtlb
+    mechanisms:
+    - cluster_l2_tlb
+    - tlb_mixed_page_sizes
+    - tlb_invalidation_shortcuts
+    hot:
+    - dtlb
+    - dtlb.hit
+    - dtlb.index
+    - inval
+    - itlb
+    - itlb.hit
+    - itlb.index
+    - l1f
+    - l2.hit
+    - l2.index
+    - l2f
+    - l2tlb
+    - pt1
+    - pt2
+    - pt3
+    - refill
+    - shared
+    - sizes
+    - va
+    - walk
+    - walkf
+    drawio:
+      file: drawio/frontend-rtl.drawio
+      page: S9 TLBs
+  - id: s10-decode
+    title: 'Decode: eight decoders and what each one emits'
+    subtitle: ''
+    file: figures/s10-decode.svg
+    level: structure
+    up: decode
+    kinds:
+    - rtl
+    blocks:
+    - decode
+    - iq
+    mechanisms:
+    - uop_split_merge
+    - macro_op_fusion
+    hot:
+    - d0
+    - d0.fuse
+    - d0.one
+    - d0.split
+    - d1
+    - d1.fuse
+    - d1.one
+    - d1.split
+    - d2
+    - d2.fuse
+    - d2.one
+    - d2.split
+    - d3
+    - d3.fuse
+    - d3.one
+    - d3.split
+    - d4
+    - d4.fuse
+    - d4.one
+    - d4.split
+    - d5
+    - d5.fuse
+    - d5.one
+    - d5.split
+    - d6
+    - d6.fuse
+    - d6.one
+    - d6.split
+    - d7
+    - d7.fuse
+    - d7.one
+    - d7.split
+    - fd
+    - fr
+    - iq
+    - pairs
+    - rule_fuse
+    - rule_split
+    drawio:
+      file: drawio/backend-rtl.drawio
+      page: S10 decode
   - id: fsm-btb
-    title: 'Branch target buffer: the machine behind its exits'
+    title: Branch target buffer, the machine behind its exits
     subtitle: ''
     file: figures/fsm-btb.svg
     level: structure
@@ -1237,8 +1386,39 @@ maps:
     drawio:
       file: drawio/fsm-rooms.drawio
       page: fsm btb
+  - id: fsm-dirpred
+    title: Direction predictor, the machine behind its exits
+    subtitle: ''
+    file: figures/fsm-dirpred.svg
+    level: structure
+    up: dirpred
+    kinds:
+    - fsm
+    blocks:
+    - dirpred
+    mechanisms:
+    - tage_tables
+    - path_history_shift_xor
+    hot:
+    - fm
+    - machine
+    - st.in
+    - st.no_direction
+    - st.predict_not_taken
+    - st.predict_taken
+    - st.to_fetch
+    - tr.arrive
+    - tr.no_direction
+    - tr.no_direction.to_fetch
+    - tr.predict_not_taken
+    - tr.predict_not_taken.to_fetch
+    - tr.predict_taken
+    - tr.predict_taken.to_fetch
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm dirpred
   - id: fsm-fetch
-    title: 'Fetch: the machine behind its exits'
+    title: Fetch, the machine behind its exits
     subtitle: ''
     file: figures/fsm-fetch.svg
     level: structure
@@ -1272,7 +1452,7 @@ maps:
       file: drawio/fsm-rooms.drawio
       page: fsm fetch
   - id: fsm-l1i
-    title: 'L1 instruction cache: the machine behind its exits'
+    title: L1 instruction cache, the machine behind its exits
     subtitle: ''
     file: figures/fsm-l1i.svg
     level: structure
@@ -1300,7 +1480,7 @@ maps:
       file: drawio/fsm-rooms.drawio
       page: fsm l1i
   - id: fsm-iq
-    title: 'Instruction queue: the machine behind its exits'
+    title: Instruction queue, the machine behind its exits
     subtitle: ''
     file: figures/fsm-iq.svg
     level: structure
@@ -1324,7 +1504,7 @@ maps:
       file: drawio/fsm-rooms.drawio
       page: fsm iq
   - id: fsm-decode
-    title: 'Decode: the machine behind its exits'
+    title: Decode, the machine behind its exits
     subtitle: ''
     file: figures/fsm-decode.svg
     level: structure
@@ -1387,6 +1567,7 @@ maps:
     - l1-branch
     - x7-fetch-path
     - s6-tage
+    - fsm-dirpred
     - p1-pipeline
     - x8-predictors-decode
   - block: indpred
@@ -1400,6 +1581,7 @@ maps:
     - m2-dirpred
     - l1-branch
     - s4-next-pc
+    - s7-indirect-ras
     - l2-indirect
     - p1-pipeline
     - x8-predictors-decode
@@ -1413,6 +1595,7 @@ maps:
     - 02-frontend
     - m1-fetch
     - s4-next-pc
+    - s7-indirect-ras
     - l4-ras
     - l14-trace
     - p1-pipeline
@@ -1474,6 +1657,7 @@ maps:
     - m8-tlb
     - x7-fetch-path
     - s8-fetch-icache
+    - s9-tlbs
     - p1-pipeline
   - block: decode
     name: Decode
@@ -1484,6 +1668,7 @@ maps:
     - 01-core-overview
     - 02-frontend
     - m1-fetch
+    - s10-decode
     - s4-next-pc
     - fsm-decode
     - p1-pipeline
@@ -1496,6 +1681,7 @@ maps:
     - poster
     - 02-frontend
     - m1-fetch
+    - s10-decode
     - x7-fetch-path
     - s8-fetch-icache
     - fsm-iq
@@ -1518,7 +1704,6 @@ maps:
     level: region
     up: poster
     kinds:
-    - dataflow
     - structure
     blocks:
     - backend
@@ -1636,8 +1821,675 @@ maps:
       file: walkthroughs/m3-rename.yaml
       steps: 9
       agreed: 0
+  - id: s11-rename-map
+    title: 'Rename: the map table, the free lists and what finishes here'
+    subtitle: ''
+    file: figures/s11-rename-map.svg
+    level: structure
+    up: rename
+    kinds:
+    - dataflow
+    - rtl
+    - structure
+    blocks:
+    - rename
+    - int_prf
+    - fp_prf
+    - flags_prf
+    - retire
+    mechanisms:
+    - move_elimination
+    - immediate_regs
+    - rename_retire_queue
+    hot:
+    - elim
+    - ffree
+    - fmap
+    - fpath
+    - free.flags
+    - free.flags.count
+    - free.fp
+    - free.fp.count
+    - free.int
+    - free.int.count
+    - frrq
+    - imm
+    - in
+    - in.check
+    - map.flags
+    - map.sp
+    - map.x0
+    - map.x1
+    - map.x10
+    - map.x11
+    - map.x12
+    - map.x13
+    - map.x14
+    - map.x15
+    - map.x16
+    - map.x17
+    - map.x18
+    - map.x19
+    - map.x2
+    - map.x20
+    - map.x21
+    - map.x22
+    - map.x23
+    - map.x24
+    - map.x25
+    - map.x26
+    - map.x27
+    - map.x28
+    - map.x29
+    - map.x3
+    - map.x30
+    - map.x4
+    - map.x5
+    - map.x6
+    - map.x7
+    - map.x8
+    - map.x9
+    - out
+    - rrq
+    - rrq.write
+    - zero
+    structure:
+      block: rename
+      slots: map.x{0..30} | map.sp | map.flags | free.int | free.fp | free.flags
+    drawio:
+      file: drawio/backend-rtl.drawio
+      page: S11 rename map
+  - id: s15-fp-prf
+    title: The FP and SIMD register file, and the flags file, register by register
+    subtitle: ''
+    file: figures/s15-fp-prf.svg
+    level: structure
+    up: fp_prf
+    kinds:
+    - dataflow
+    - structure
+    blocks:
+    - fp_prf
+    - flags_prf
+    mechanisms:
+    - split_flag_files
+    hot:
+    - ff
+    - file
+    - fl
+    - flags
+    - flags.r0
+    - flags.r1
+    - flags.r10
+    - flags.r100
+    - flags.r101
+    - flags.r102
+    - flags.r103
+    - flags.r104
+    - flags.r105
+    - flags.r106
+    - flags.r107
+    - flags.r108
+    - flags.r109
+    - flags.r11
+    - flags.r110
+    - flags.r111
+    - flags.r112
+    - flags.r113
+    - flags.r114
+    - flags.r115
+    - flags.r116
+    - flags.r117
+    - flags.r118
+    - flags.r119
+    - flags.r12
+    - flags.r120
+    - flags.r121
+    - flags.r122
+    - flags.r123
+    - flags.r124
+    - flags.r125
+    - flags.r126
+    - flags.r127
+    - flags.r13
+    - flags.r14
+    - flags.r15
+    - flags.r16
+    - flags.r17
+    - flags.r18
+    - flags.r19
+    - flags.r2
+    - flags.r20
+    - flags.r21
+    - flags.r22
+    - flags.r23
+    - flags.r24
+    - flags.r25
+    - flags.r26
+    - flags.r27
+    - flags.r28
+    - flags.r29
+    - flags.r3
+    - flags.r30
+    - flags.r31
+    - flags.r32
+    - flags.r33
+    - flags.r34
+    - flags.r35
+    - flags.r36
+    - flags.r37
+    - flags.r38
+    - flags.r39
+    - flags.r4
+    - flags.r40
+    - flags.r41
+    - flags.r42
+    - flags.r43
+    - flags.r44
+    - flags.r45
+    - flags.r46
+    - flags.r47
+    - flags.r48
+    - flags.r49
+    - flags.r5
+    - flags.r50
+    - flags.r51
+    - flags.r52
+    - flags.r53
+    - flags.r54
+    - flags.r55
+    - flags.r56
+    - flags.r57
+    - flags.r58
+    - flags.r59
+    - flags.r6
+    - flags.r60
+    - flags.r61
+    - flags.r62
+    - flags.r63
+    - flags.r64
+    - flags.r65
+    - flags.r66
+    - flags.r67
+    - flags.r68
+    - flags.r69
+    - flags.r7
+    - flags.r70
+    - flags.r71
+    - flags.r72
+    - flags.r73
+    - flags.r74
+    - flags.r75
+    - flags.r76
+    - flags.r77
+    - flags.r78
+    - flags.r79
+    - flags.r8
+    - flags.r80
+    - flags.r81
+    - flags.r82
+    - flags.r83
+    - flags.r84
+    - flags.r85
+    - flags.r86
+    - flags.r87
+    - flags.r88
+    - flags.r89
+    - flags.r9
+    - flags.r90
+    - flags.r91
+    - flags.r92
+    - flags.r93
+    - flags.r94
+    - flags.r95
+    - flags.r96
+    - flags.r97
+    - flags.r98
+    - flags.r99
+    - flags.simd
+    - fq
+    - free
+    - free.flags
+    - r0
+    - r1
+    - r10
+    - r100
+    - r101
+    - r102
+    - r103
+    - r104
+    - r105
+    - r106
+    - r107
+    - r108
+    - r109
+    - r11
+    - r110
+    - r111
+    - r112
+    - r113
+    - r114
+    - r115
+    - r116
+    - r117
+    - r118
+    - r119
+    - r12
+    - r120
+    - r121
+    - r122
+    - r123
+    - r124
+    - r125
+    - r126
+    - r127
+    - r128
+    - r129
+    - r13
+    - r130
+    - r131
+    - r132
+    - r133
+    - r134
+    - r135
+    - r136
+    - r137
+    - r138
+    - r139
+    - r14
+    - r140
+    - r141
+    - r142
+    - r143
+    - r144
+    - r145
+    - r146
+    - r147
+    - r148
+    - r149
+    - r15
+    - r150
+    - r151
+    - r152
+    - r153
+    - r154
+    - r155
+    - r156
+    - r157
+    - r158
+    - r159
+    - r16
+    - r160
+    - r161
+    - r162
+    - r163
+    - r164
+    - r165
+    - r166
+    - r167
+    - r168
+    - r169
+    - r17
+    - r170
+    - r171
+    - r172
+    - r173
+    - r174
+    - r175
+    - r176
+    - r177
+    - r178
+    - r179
+    - r18
+    - r180
+    - r181
+    - r182
+    - r183
+    - r184
+    - r185
+    - r186
+    - r187
+    - r188
+    - r189
+    - r19
+    - r190
+    - r191
+    - r192
+    - r193
+    - r194
+    - r195
+    - r196
+    - r197
+    - r198
+    - r199
+    - r2
+    - r20
+    - r200
+    - r201
+    - r202
+    - r203
+    - r204
+    - r205
+    - r206
+    - r207
+    - r208
+    - r209
+    - r21
+    - r210
+    - r211
+    - r212
+    - r213
+    - r214
+    - r215
+    - r216
+    - r217
+    - r218
+    - r219
+    - r22
+    - r220
+    - r221
+    - r222
+    - r223
+    - r224
+    - r225
+    - r226
+    - r227
+    - r228
+    - r229
+    - r23
+    - r230
+    - r231
+    - r232
+    - r233
+    - r234
+    - r235
+    - r236
+    - r237
+    - r238
+    - r239
+    - r24
+    - r240
+    - r241
+    - r242
+    - r243
+    - r244
+    - r245
+    - r246
+    - r247
+    - r248
+    - r249
+    - r25
+    - r250
+    - r251
+    - r252
+    - r253
+    - r254
+    - r255
+    - r256
+    - r257
+    - r258
+    - r259
+    - r26
+    - r260
+    - r261
+    - r262
+    - r263
+    - r264
+    - r265
+    - r266
+    - r267
+    - r268
+    - r269
+    - r27
+    - r270
+    - r271
+    - r272
+    - r273
+    - r274
+    - r275
+    - r276
+    - r277
+    - r278
+    - r279
+    - r28
+    - r280
+    - r281
+    - r282
+    - r283
+    - r284
+    - r285
+    - r286
+    - r287
+    - r288
+    - r289
+    - r29
+    - r290
+    - r291
+    - r292
+    - r293
+    - r294
+    - r295
+    - r296
+    - r297
+    - r298
+    - r299
+    - r3
+    - r30
+    - r300
+    - r301
+    - r302
+    - r303
+    - r304
+    - r305
+    - r306
+    - r307
+    - r308
+    - r309
+    - r31
+    - r310
+    - r311
+    - r312
+    - r313
+    - r314
+    - r315
+    - r316
+    - r317
+    - r318
+    - r319
+    - r32
+    - r320
+    - r321
+    - r322
+    - r323
+    - r324
+    - r325
+    - r326
+    - r327
+    - r328
+    - r329
+    - r33
+    - r330
+    - r331
+    - r332
+    - r333
+    - r334
+    - r335
+    - r336
+    - r337
+    - r338
+    - r339
+    - r34
+    - r340
+    - r341
+    - r342
+    - r343
+    - r344
+    - r345
+    - r346
+    - r347
+    - r348
+    - r349
+    - r35
+    - r350
+    - r351
+    - r352
+    - r353
+    - r354
+    - r355
+    - r356
+    - r357
+    - r358
+    - r359
+    - r36
+    - r360
+    - r361
+    - r362
+    - r363
+    - r364
+    - r365
+    - r366
+    - r367
+    - r368
+    - r369
+    - r37
+    - r370
+    - r371
+    - r372
+    - r373
+    - r374
+    - r375
+    - r376
+    - r377
+    - r378
+    - r379
+    - r38
+    - r380
+    - r381
+    - r382
+    - r383
+    - r384
+    - r385
+    - r386
+    - r387
+    - r388
+    - r389
+    - r39
+    - r390
+    - r391
+    - r392
+    - r393
+    - r394
+    - r395
+    - r396
+    - r397
+    - r398
+    - r399
+    - r4
+    - r40
+    - r400
+    - r401
+    - r402
+    - r403
+    - r404
+    - r405
+    - r406
+    - r407
+    - r408
+    - r409
+    - r41
+    - r410
+    - r411
+    - r412
+    - r413
+    - r414
+    - r415
+    - r416
+    - r417
+    - r418
+    - r419
+    - r42
+    - r420
+    - r421
+    - r422
+    - r423
+    - r424
+    - r425
+    - r426
+    - r427
+    - r428
+    - r429
+    - r43
+    - r430
+    - r431
+    - r44
+    - r45
+    - r46
+    - r47
+    - r48
+    - r49
+    - r5
+    - r50
+    - r51
+    - r52
+    - r53
+    - r54
+    - r55
+    - r56
+    - r57
+    - r58
+    - r59
+    - r6
+    - r60
+    - r61
+    - r62
+    - r63
+    - r64
+    - r65
+    - r66
+    - r67
+    - r68
+    - r69
+    - r7
+    - r70
+    - r71
+    - r72
+    - r73
+    - r74
+    - r75
+    - r76
+    - r77
+    - r78
+    - r79
+    - r8
+    - r80
+    - r81
+    - r82
+    - r83
+    - r84
+    - r85
+    - r86
+    - r87
+    - r88
+    - r89
+    - r9
+    - r90
+    - r91
+    - r92
+    - r93
+    - r94
+    - r95
+    - r96
+    - r97
+    - r98
+    - r99
+    structure:
+      block: fp_prf
+      slots: r{0..431} | flags.r{0..127} | free | free.flags
+    drawio:
+      file: drawio/backend-rtl.drawio
+      page: S15 FP and flags files
   - id: fsm-rename
-    title: 'Rename: the machine behind its exits'
+    title: Rename, the machine behind its exits
     subtitle: ''
     file: figures/fsm-rename.svg
     level: structure
@@ -1703,7 +2555,7 @@ maps:
       file: drawio/fsm-rooms.drawio
       page: fsm rename
   - id: fsm-int-prf
-    title: 'Integer register file: the machine behind its exits'
+    title: Integer register file, the machine behind its exits
     subtitle: ''
     file: figures/fsm-int-prf.svg
     level: structure
@@ -1732,6 +2584,33 @@ maps:
     drawio:
       file: drawio/fsm-rooms.drawio
       page: fsm int_prf
+  - id: fsm-fp-prf
+    title: FP and SIMD register file, the machine behind its exits
+    subtitle: ''
+    file: figures/fsm-fp-prf.svg
+    level: structure
+    up: fp_prf
+    kinds:
+    - fsm
+    blocks:
+    - fp_prf
+    mechanisms:
+    - exec_forwarding
+    hot:
+    - fm
+    - machine
+    - st.bypass
+    - st.in
+    - st.read
+    - st.to_eu_fp
+    - tr.arrive
+    - tr.bypass
+    - tr.bypass.to_eu_fp
+    - tr.read
+    - tr.read.to_eu_fp
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm fp_prf
   sheets:
   - block: rename
     name: Rename and map
@@ -1745,6 +2624,8 @@ maps:
     - 05-retire
     - m3-rename
     - x9-backend
+    - s11-rename-map
+    - s14-retire-window
     - fsm-rename
     - l5-rename
     - l7-retire
@@ -1762,6 +2643,7 @@ maps:
     - m4-sched
     - m5-retire
     - x9-backend
+    - s11-rename-map
     - s13-exec-bypass
     - fsm-int-prf
     - l5-rename
@@ -1777,6 +2659,9 @@ maps:
     - 03-rename
     - 05-retire
     - m3-rename
+    - s11-rename-map
+    - s15-fp-prf
+    - fsm-fp-prf
     - l5-rename
     - p1-pipeline
   - block: flags_prf
@@ -1789,6 +2674,8 @@ maps:
     - 03-rename
     - m3-rename
     - x9-backend
+    - s11-rename-map
+    - s15-fp-prf
     - l5-rename
     - p1-pipeline
 - n: 5
@@ -2688,6 +3575,113 @@ maps:
     drawio:
       file: drawio/structures.drawio
       page: S3 scheduler entry machine
+  - id: s12-dispatch
+    title: 'Dispatch: five buffers, entry by entry'
+    subtitle: ''
+    file: figures/s12-dispatch.svg
+    level: structure
+    up: dispatch
+    kinds:
+    - rtl
+    - structure
+    blocks:
+    - dispatch
+    - sched_int
+    - sched_fp
+    - sched_ls
+    mechanisms:
+    - dispatch_buffers
+    hot:
+    - accept
+    - fb
+    - fp
+    - fp.e0
+    - fp.e1
+    - fp.e10
+    - fp.e11
+    - fp.e2
+    - fp.e3
+    - fp.e4
+    - fp.e5
+    - fp.e6
+    - fp.e7
+    - fp.e8
+    - fp.e9
+    - fq
+    - hold
+    - inflow.q1
+    - inflow.q10
+    - inflow.q11
+    - inflow.q12
+    - inflow.q13
+    - inflow.q14
+    - inflow.q2
+    - inflow.q3
+    - inflow.q4
+    - inflow.q5
+    - inflow.q6
+    - inflow.q7
+    - inflow.q8
+    - inflow.q9
+    - int_a
+    - int_a.e0
+    - int_a.e1
+    - int_a.e18
+    - int_a.e19
+    - int_a.e2
+    - int_a.e20
+    - int_a.e21
+    - int_a.e22
+    - int_a.e23
+    - int_a.e3
+    - int_a.e4
+    - int_a.e5
+    - int_a.eband
+    - int_b
+    - int_b.e0
+    - int_b.e1
+    - int_b.e18
+    - int_b.e19
+    - int_b.e2
+    - int_b.e20
+    - int_b.e21
+    - int_b.e22
+    - int_b.e23
+    - int_b.e3
+    - int_b.e4
+    - int_b.e5
+    - int_b.eband
+    - ls
+    - ls.e0
+    - ls.e1
+    - ls.e2
+    - ls.e3
+    - ls.e4
+    - ls.e5
+    - ls.e6
+    - ls.e7
+    - ls.e8
+    - ls.e9
+    - mul
+    - mul.e0
+    - mul.e1
+    - mul.e10
+    - mul.e11
+    - mul.e2
+    - mul.e3
+    - mul.e4
+    - mul.e5
+    - mul.e6
+    - mul.e7
+    - mul.e8
+    - mul.e9
+    structure:
+      block: dispatch
+      slots: int_a.e{0..23} | int_b.e{0..23} | mul.e{0..11} | ls.e{0..9} | fp.e{0..11}; bands int_a.eband, int_b.eband for
+        e6 to e17
+    drawio:
+      file: drawio/backend-rtl.drawio
+      page: S12 dispatch buffers
   - id: s13-exec-bypass
     title: 'Execute: six integer pipelines and the bypass network'
     subtitle: ''
@@ -2786,7 +3780,7 @@ maps:
       file: drawio/structures.drawio
       page: S22 dispatch entry machine
   - id: fsm-dispatch
-    title: 'Dispatch: the machine behind its exits'
+    title: Dispatch, the machine behind its exits
     subtitle: ''
     file: figures/fsm-dispatch.svg
     level: structure
@@ -2838,7 +3832,7 @@ maps:
       file: drawio/fsm-rooms.drawio
       page: fsm dispatch
   - id: fsm-sched-int
-    title: 'Integer schedulers: the machine behind its exits'
+    title: Integer schedulers, the machine behind its exits
     subtitle: ''
     file: figures/fsm-sched-int.svg
     level: structure
@@ -2880,8 +3874,38 @@ maps:
     drawio:
       file: drawio/fsm-rooms.drawio
       page: fsm sched_int
+  - id: fsm-sched-fp
+    title: FP and SIMD schedulers, the machine behind its exits
+    subtitle: ''
+    file: figures/fsm-sched-fp.svg
+    level: structure
+    up: sched_fp
+    kinds:
+    - fsm
+    blocks:
+    - sched_fp
+    mechanisms: []
+    hot:
+    - fm
+    - machine
+    - st.enter_queue
+    - st.in
+    - st.issue_ready
+    - st.to_fp_prf
+    - st.wait_operand
+    - tr.arrive
+    - tr.enter_queue
+    - tr.enter_queue.next
+    - tr.issue_ready
+    - tr.issue_ready.to_fp_prf
+    - tr.wait_operand
+    - tr.wait_operand.stay
+    - tr.wait_operand.until
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm sched_fp
   - id: fsm-sched-ls
-    title: 'Load-store scheduler: the machine behind its exits'
+    title: Load-store scheduler, the machine behind its exits
     subtitle: ''
     file: figures/fsm-sched-ls.svg
     level: structure
@@ -2911,7 +3935,7 @@ maps:
       file: drawio/fsm-rooms.drawio
       page: fsm sched_ls
   - id: fsm-eu-int
-    title: 'Integer units: the machine behind its exits'
+    title: Integer units, the machine behind its exits
     subtitle: ''
     file: figures/fsm-eu-int.svg
     level: structure
@@ -2940,6 +3964,34 @@ maps:
     drawio:
       file: drawio/fsm-rooms.drawio
       page: fsm eu_int
+  - id: fsm-eu-fp
+    title: FP and SIMD units, the machine behind its exits
+    subtitle: ''
+    file: figures/fsm-eu-fp.svg
+    level: structure
+    up: eu_fp
+    kinds:
+    - fsm
+    blocks:
+    - eu_fp
+    mechanisms:
+    - fp_back_to_back_fusion
+    - exec_forwarding
+    hot:
+    - fm
+    - machine
+    - st.execute
+    - st.fused_fadd
+    - st.in
+    - st.to_retire
+    - tr.arrive
+    - tr.execute
+    - tr.execute.to_retire
+    - tr.fused_fadd
+    - tr.fused_fadd.to_retire
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm eu_fp
   sheets:
   - block: dispatch
     name: Dispatch buffers
@@ -2950,6 +4002,7 @@ maps:
     - 08-lifecycle
     - 03-rename
     - 04-issue
+    - s12-dispatch
     - fsm-dispatch
     - l5-rename
     - l6-scheduler
@@ -2965,6 +4018,7 @@ maps:
     - 04-issue
     - m4-sched
     - x9-backend
+    - s12-dispatch
     - fsm-sched-int
     - l6-scheduler
     - p1-pipeline
@@ -2978,6 +4032,8 @@ maps:
     figures:
     - 01-core-overview
     - 04-issue
+    - s12-dispatch
+    - fsm-sched-fp
     - p1-pipeline
     - s24-sched-fp-queue
   - block: sched_ls
@@ -2989,6 +4045,7 @@ maps:
     - 04-issue
     - m4-sched
     - r1-load-rtl
+    - s12-dispatch
     - fsm-sched-ls
     - l6-scheduler
     - p1-pipeline
@@ -3013,6 +4070,7 @@ maps:
     - 01-core-overview
     - 04-issue
     - x9-backend
+    - fsm-eu-fp
     - p1-pipeline
     - s24-sched-fp-queue
 - n: 6
@@ -3149,8 +4207,129 @@ maps:
     drawio:
       file: drawio/structures.drawio
       page: S23 retire group machine
+  - id: s14-retire-window
+    title: 'The retire window: 330 groups, the rename retire queue and the counters'
+    subtitle: ''
+    file: figures/s14-retire-window.svg
+    level: structure
+    up: retire
+    kinds:
+    - rtl
+    - structure
+    blocks:
+    - retire
+    - rename
+    mechanisms:
+    - retire_groups
+    - rename_retire_queue
+    hot:
+    - branches
+    - commit
+    - fb
+    - fg
+    - fr
+    - free_return
+    - g0
+    - g0.u0
+    - g0.u1
+    - g0.u2
+    - g0.u3
+    - g0.u4
+    - g0.u5
+    - g0.u6
+    - g1
+    - g1.u0
+    - g1.u1
+    - g1.u2
+    - g1.u3
+    - g1.u4
+    - g1.u5
+    - g1.u6
+    - g2
+    - g2.u0
+    - g2.u1
+    - g2.u2
+    - g2.u3
+    - g2.u4
+    - g2.u5
+    - g2.u6
+    - g3
+    - g3.u0
+    - g3.u1
+    - g3.u2
+    - g3.u3
+    - g3.u4
+    - g3.u5
+    - g3.u6
+    - g325
+    - g325.u0
+    - g325.u1
+    - g325.u2
+    - g325.u3
+    - g325.u4
+    - g325.u5
+    - g325.u6
+    - g326
+    - g326.u0
+    - g326.u1
+    - g326.u2
+    - g326.u3
+    - g326.u4
+    - g326.u5
+    - g326.u6
+    - g327
+    - g327.u0
+    - g327.u1
+    - g327.u2
+    - g327.u3
+    - g327.u4
+    - g327.u5
+    - g327.u6
+    - g328
+    - g328.u0
+    - g328.u1
+    - g328.u2
+    - g328.u3
+    - g328.u4
+    - g328.u5
+    - g328.u6
+    - g329
+    - g329.u0
+    - g329.u1
+    - g329.u2
+    - g329.u3
+    - g329.u4
+    - g329.u5
+    - g329.u6
+    - g4
+    - g4.u0
+    - g4.u1
+    - g4.u2
+    - g4.u3
+    - g4.u4
+    - g4.u5
+    - g4.u6
+    - gband
+    - rate
+    - rrq.e0
+    - rrq.e1
+    - rrq.e2
+    - rrq.e3
+    - rrq.e619
+    - rrq.e620
+    - rrq.e621
+    - rrq.e622
+    - rrq.eband
+    - windows
+    structure:
+      block: retire
+      slots: g{0..329} (g0 to g4 and g325 to g329 drawn, gband for the rest) | g{n}.u{0..6} | rrq.e{0..622} (rrq.e0 to rrq.e3
+        and rrq.e619 to rrq.e622 drawn, rrq.eband for the rest)
+    drawio:
+      file: drawio/backend-rtl.drawio
+      page: S14 retire window
   - id: fsm-retire
-    title: 'Retire: the machine behind its exits'
+    title: Retire, the machine behind its exits
     subtitle: ''
     file: figures/fsm-retire.svg
     level: structure
@@ -3197,6 +4376,8 @@ maps:
     - m5-retire
     - f1-fsm
     - x9-backend
+    - s11-rename-map
+    - s14-retire-window
     - fsm-retire
     - l5-rename
     - l7-retire
@@ -3723,6 +4904,88 @@ maps:
       file: walkthroughs/m8-tlb.yaml
       steps: 9
       agreed: 0
+  - id: s18-dtlb
+    title: The data TLBs, set by set
+    subtitle: ''
+    file: figures/s18-dtlb.svg
+    level: structure
+    up: dtlb
+    kinds:
+    - dataflow
+    - rtl
+    - structure
+    blocks:
+    - dtlb
+    mechanisms:
+    - mmu_walk_cache
+    - dtlb_piggyback
+    - dtlb_random_replacement
+    - itlb_victims_to_dtlb
+    - cluster_l2_tlb
+    - tlb_mixed_page_sizes
+    hot:
+    - f1
+    - f2
+    - f3
+    - l1
+    - l1.hit
+    - l1.s0
+    - l1.s0.w0
+    - l1.s0.w1
+    - l1.s0.w2
+    - l1.s0.w3
+    - l1.s0.w4
+    - l1.s1
+    - l1.s1.w0
+    - l1.s1.w1
+    - l1.s1.w2
+    - l1.s1.w3
+    - l1.s1.w4
+    - l1.s2
+    - l1.s2.w0
+    - l1.s2.w1
+    - l1.s2.w2
+    - l1.s2.w3
+    - l1.s2.w4
+    - l1.s29
+    - l1.s29.w0
+    - l1.s29.w1
+    - l1.s29.w2
+    - l1.s29.w3
+    - l1.s29.w4
+    - l1.s30
+    - l1.s30.w0
+    - l1.s30.w1
+    - l1.s30.w2
+    - l1.s30.w3
+    - l1.s30.w4
+    - l1.s31
+    - l1.s31.w0
+    - l1.s31.w1
+    - l1.s31.w2
+    - l1.s31.w3
+    - l1.s31.w4
+    - l1.sband
+    - l2
+    - l2.hit
+    - l2.s0
+    - l2.s1
+    - l2.s2
+    - l2.s252
+    - l2.s253
+    - l2.s254
+    - l2.s255
+    - l2.s3
+    - l2.sband
+    - refill
+    - va
+    - walk
+    structure:
+      block: dtlb
+      slots: l1.s{0..31}.w{0..4}; drawn sets s0-s2, s29-s31, band l1.sband | l2.s{0..255}; drawn s0-s3, s252-s255, band l2.sband
+    drawio:
+      file: drawio/lsu-rtl.drawio
+      page: S18 data TLBs
   - id: m7-miss
     title: A miss through the fill buffers, the L2 and the prefetchers
     subtitle: ''
@@ -3804,8 +5067,231 @@ maps:
       file: walkthroughs/m7-miss.yaml
       steps: 9
       agreed: 0
+  - id: s16-lq
+    title: The load queue, entry by entry
+    subtitle: ''
+    file: figures/s16-lq.svg
+    level: structure
+    up: lq
+    kinds:
+    - dataflow
+    - rtl
+    - structure
+    blocks:
+    - lq
+    - lsu
+    - sq
+    mechanisms:
+    - lsq_at_issue
+    - banked_lsq
+    - late_ordering_check
+    - load_poison_bits
+    - lsq_early_release
+    hot:
+    - alloc
+    - check
+    - e0
+    - e0.addr
+    - e0.check
+    - e0.dep
+    - e1
+    - e1.addr
+    - e1.check
+    - e1.dep
+    - e126
+    - e126.addr
+    - e126.check
+    - e126.dep
+    - e127
+    - e127.addr
+    - e127.check
+    - e127.dep
+    - e128
+    - e128.addr
+    - e128.check
+    - e128.dep
+    - e129
+    - e129.addr
+    - e129.check
+    - e129.dep
+    - e2
+    - e2.addr
+    - e2.check
+    - e2.dep
+    - e3
+    - e3.addr
+    - e3.check
+    - e3.dep
+    - eband
+    - fa
+    - fq
+    - pipes
+    - q
+    - release
+    - replay
+    structure:
+      block: lq
+      slots: e{0..129}[.addr|.dep|.check]; drawn e0-e3, e126-e129, band eband
+    drawio:
+      file: drawio/lsu-rtl.drawio
+      page: S16 load queue
+  - id: s17-sq
+    title: The store queue, entry by entry
+    subtitle: ''
+    file: figures/s17-sq.svg
+    level: structure
+    up: sq
+    kinds:
+    - dataflow
+    - rtl
+    - structure
+    blocks:
+    - sq
+    - lsu
+    - l1d
+    mechanisms:
+    - sq_partial_forwarding
+    - hierarchical_store_queue
+    - store_load_dep_predictor
+    - store_merge_buffer
+    - streaming_store_nt
+    - sq_32b_slots
+    - store_address_data_uops
+    - l1d_write_allocate
+    hot:
+    - cam
+    - commit
+    - e0
+    - e0.addr
+    - e0.data
+    - e0.ready
+    - e1
+    - e1.addr
+    - e1.data
+    - e1.ready
+    - e2
+    - e2.addr
+    - e2.data
+    - e2.ready
+    - e3
+    - e3.addr
+    - e3.data
+    - e3.ready
+    - e56
+    - e56.addr
+    - e56.data
+    - e56.ready
+    - e57
+    - e57.addr
+    - e57.data
+    - e57.ready
+    - e58
+    - e58.addr
+    - e58.data
+    - e58.ready
+    - e59
+    - e59.addr
+    - e59.data
+    - e59.ready
+    - eband
+    - fd
+    - fq
+    - fs
+    - fwd.fail
+    - fwd.full
+    - fwd.partial
+    - lsdp
+    - lsdp.e0
+    - lsdp.e0.load PC
+    - lsdp.e0.store PC
+    - lsdp.e1
+    - lsdp.e1.load PC
+    - lsdp.e1.store PC
+    - lsdp.e2
+    - lsdp.e2.load PC
+    - lsdp.e2.store PC
+    - lsdp.e71
+    - lsdp.e71.load PC
+    - lsdp.e71.store PC
+    - lsdp.e72
+    - lsdp.e72.load PC
+    - lsdp.e72.store PC
+    - lsdp.e73
+    - lsdp.e73.load PC
+    - lsdp.e73.store PC
+    - lsdp.eband
+    - lsdp_rule
+    - merge
+    - q
+    structure:
+      block: sq
+      slots: e{0..59}[.addr|.data|.ready]; drawn e0-e3, e56-e59, band eband | lsdp.e{0..73}[.store PC|.load PC]; drawn lsdp.e0-e2,
+        e71-e73, band lsdp.eband
+    drawio:
+      file: drawio/lsu-rtl.drawio
+      page: S17 store queue
+  - id: s21-lsu-pipe
+    title: The four load-store pipelines, stage by stage
+    subtitle: ''
+    file: figures/s21-lsu-pipe.svg
+    level: structure
+    up: lsu
+    kinds:
+    - rtl
+    blocks:
+    - lsu
+    - dtlb
+    - l1d
+    - sq
+    mechanisms:
+    - zero_cycle_loads
+    - agu_same_page_check
+    - store_address_data_uops
+    - late_ordering_check
+    - store_load_dep_predictor
+    - l1d_utag_way_predictor
+    hot:
+    - fp
+    - ord
+    - p0
+    - p0.agu
+    - p0.data
+    - p0.fwd
+    - p0.role
+    - p0.tag
+    - p0.tlb
+    - p0.wb
+    - p1
+    - p1.agu
+    - p1.data
+    - p1.fwd
+    - p1.role
+    - p1.tag
+    - p1.tlb
+    - p1.wb
+    - p2
+    - p2.agu
+    - p2.data
+    - p2.fwd
+    - p2.role
+    - p2.tag
+    - p2.tlb
+    - p2.wb
+    - p3
+    - p3.agu
+    - p3.data
+    - p3.fwd
+    - p3.role
+    - p3.tag
+    - p3.tlb
+    - p3.wb
+    - stl
+    - zcl
+    drawio:
+      file: drawio/lsu-rtl.drawio
+      page: S21 load-store pipes
   - id: fsm-lsu
-    title: 'Load-store pipelines: the machine behind its exits'
+    title: Load-store pipelines, the machine behind its exits
     subtitle: ''
     file: figures/fsm-lsu.svg
     level: structure
@@ -3846,7 +5332,7 @@ maps:
       file: drawio/fsm-rooms.drawio
       page: fsm lsu
   - id: fsm-lq
-    title: 'Load queue: the machine behind its exits'
+    title: Load queue, the machine behind its exits
     subtitle: ''
     file: figures/fsm-lq.svg
     level: structure
@@ -3876,7 +5362,7 @@ maps:
       file: drawio/fsm-rooms.drawio
       page: fsm lq
   - id: fsm-sq
-    title: 'Store queue: the machine behind its exits'
+    title: Store queue, the machine behind its exits
     subtitle: ''
     file: figures/fsm-sq.svg
     level: structure
@@ -3922,7 +5408,7 @@ maps:
       file: drawio/fsm-rooms.drawio
       page: fsm sq
   - id: fsm-dtlb
-    title: 'Data TLBs: the machine behind its exits'
+    title: Data TLBs, the machine behind its exits
     subtitle: ''
     file: figures/fsm-dtlb.svg
     level: structure
@@ -3954,7 +5440,7 @@ maps:
       file: drawio/fsm-rooms.drawio
       page: fsm dtlb
   - id: fsm-mshr
-    title: 'Fill buffers: the machine behind its exits'
+    title: Fill buffers, the machine behind its exits
     subtitle: ''
     file: figures/fsm-mshr.svg
     level: structure
@@ -3995,6 +5481,9 @@ maps:
     - fsm-lsu
     - l8-memdep
     - l11-prefetch
+    - s16-lq
+    - s17-sq
+    - s21-lsu-pipe
     - x11-prefetch-l1d-tlb
     - x5-lsu-ordering
     - x6-lsu-queues
@@ -4014,6 +5503,7 @@ maps:
     - r1-load-rtl
     - fsm-lq
     - l8-memdep
+    - s16-lq
     - x5-lsu-ordering
     - x6-lsu-queues
     - p1-pipeline
@@ -4034,6 +5524,9 @@ maps:
     - x10-amx-slc
     - fsm-sq
     - l8-memdep
+    - s16-lq
+    - s17-sq
+    - s21-lsu-pipe
     - x5-lsu-ordering
     - x6-lsu-queues
     - p1-pipeline
@@ -4050,9 +5543,12 @@ maps:
     - c1-l1d
     - d1-l1d
     - r1-load-rtl
+    - s9-tlbs
     - fsm-dtlb
     - l9-l1d-way
     - l13-tlb
+    - s18-dtlb
+    - s21-lsu-pipe
     - x11-prefetch-l1d-tlb
     - p1-pipeline
   - block: mshr
@@ -4066,6 +5562,7 @@ maps:
     - m7-miss
     - d1-l1d
     - fsm-mshr
+    - s20-mshr-fill
 - n: 8
   id: caches
   name: The Caches
@@ -4199,6 +5696,195 @@ maps:
       file: walkthroughs/d1-l1d.yaml
       steps: 9
       agreed: 9
+  - id: s19-l1d
+    title: The L1 data cache, set by set and bank by bank
+    subtitle: ''
+    file: figures/s19-l1d.svg
+    level: structure
+    up: l1d
+    kinds:
+    - dataflow
+    - rtl
+    - structure
+    blocks:
+    - l1d
+    mechanisms:
+    - l1d_utag_way_predictor
+    - l1d_tree_plru
+    - l1d_page_offset_index
+    - l1d_hashed_way
+    - l1d_way_lookup
+    - l1d_banked_piggyback
+    - fill_bank_conflicts
+    hot:
+    - bank.b0
+    - bank.b1
+    - bank.b10
+    - bank.b11
+    - bank.b12
+    - bank.b13
+    - bank.b14
+    - bank.b15
+    - bank.b2
+    - bank.b3
+    - bank.b4
+    - bank.b5
+    - bank.b6
+    - bank.b7
+    - bank.b8
+    - bank.b9
+    - banks
+    - bwb
+    - evict
+    - fs
+    - fw
+    - hit
+    - lat
+    - miss
+    - plru
+    - set.s0
+    - set.s0.w0
+    - set.s0.w1
+    - set.s0.w2
+    - set.s0.w3
+    - set.s0.w4
+    - set.s0.w5
+    - set.s0.w6
+    - set.s0.w7
+    - set.s1
+    - set.s1.w0
+    - set.s1.w1
+    - set.s1.w2
+    - set.s1.w3
+    - set.s1.w4
+    - set.s1.w5
+    - set.s1.w6
+    - set.s1.w7
+    - set.s2
+    - set.s2.w0
+    - set.s2.w1
+    - set.s2.w2
+    - set.s2.w3
+    - set.s2.w4
+    - set.s2.w5
+    - set.s2.w6
+    - set.s2.w7
+    - set.s253
+    - set.s253.w0
+    - set.s253.w1
+    - set.s253.w2
+    - set.s253.w3
+    - set.s253.w4
+    - set.s253.w5
+    - set.s253.w6
+    - set.s253.w7
+    - set.s254
+    - set.s254.w0
+    - set.s254.w1
+    - set.s254.w2
+    - set.s254.w3
+    - set.s254.w4
+    - set.s254.w5
+    - set.s254.w6
+    - set.s254.w7
+    - set.s255
+    - set.s255.w0
+    - set.s255.w1
+    - set.s255.w2
+    - set.s255.w3
+    - set.s255.w4
+    - set.s255.w5
+    - set.s255.w6
+    - set.s255.w7
+    - set.sband
+    - sets
+    - utag
+    - va
+    structure:
+      block: l1d
+      slots: set.s{0..255}.w{0..7}; drawn sets s0-s2, s253-s255, band set.sband | bank.b{0..15}
+    drawio:
+      file: drawio/lsu-rtl.drawio
+      page: S19 L1 data cache
+  - id: s20-mshr-fill
+    title: Miss handling and the fill path
+    subtitle: ''
+    file: figures/s20-mshr-fill.svg
+    level: structure
+    up: mshr
+    kinds:
+    - dataflow
+    - rtl
+    - structure
+    blocks:
+    - mshr
+    - l1d
+    - l2
+    - slc
+    - memctrl
+    mechanisms:
+    - fill_buffer_pool
+    - fill_forwarding
+    - fill_bank_conflicts
+    - l2_half_lines
+    - l2_victim_fill
+    - slc_victim_fill
+    hot:
+    - ff
+    - fill
+    - fl
+    - fm
+    - l2.hit
+    - l2.miss
+    - l2.req
+    - mshr
+    - mshr.e0
+    - mshr.e0.half 0
+    - mshr.e0.half 1
+    - mshr.e0.line address
+    - mshr.e0.waiters
+    - mshr.e1
+    - mshr.e1.half 0
+    - mshr.e1.half 1
+    - mshr.e1.line address
+    - mshr.e1.waiters
+    - mshr.e2
+    - mshr.e2.half 0
+    - mshr.e2.half 1
+    - mshr.e2.line address
+    - mshr.e2.waiters
+    - mshr.e3
+    - mshr.e3.half 0
+    - mshr.e3.half 1
+    - mshr.e3.line address
+    - mshr.e3.waiters
+    - mshr.e4
+    - mshr.e4.half 0
+    - mshr.e4.half 1
+    - mshr.e4.line address
+    - mshr.e4.waiters
+    - mshr.e5
+    - mshr.e5.half 0
+    - mshr.e5.half 1
+    - mshr.e5.line address
+    - mshr.e5.waiters
+    - mshr.e6
+    - mshr.e6.half 0
+    - mshr.e6.half 1
+    - mshr.e6.line address
+    - mshr.e6.waiters
+    - mshr.e7
+    - mshr.e7.half 0
+    - mshr.e7.half 1
+    - mshr.e7.line address
+    - mshr.e7.waiters
+    - ship
+    structure:
+      block: mshr
+      slots: mshr.e{0..7}; eight drawn, the count is not published
+    drawio:
+      file: drawio/lsu-rtl.drawio
+      page: S20 miss handling and fill
   - id: x11-prefetch-l1d-tlb
     title: Prefetchers, L1D ways and power, dTLB extras
     subtitle: ''
@@ -4491,7 +6177,7 @@ maps:
       steps: 12
       agreed: 0
   - id: fsm-l1d
-    title: 'L1 data cache: the machine behind its exits'
+    title: L1 data cache, the machine behind its exits
     subtitle: ''
     file: figures/fsm-l1d.svg
     level: structure
@@ -4537,7 +6223,7 @@ maps:
       file: drawio/fsm-rooms.drawio
       page: fsm l1d
   - id: fsm-l2
-    title: 'Shared L2: the machine behind its exits'
+    title: Shared L2, the machine behind its exits
     subtitle: ''
     file: figures/fsm-l2.svg
     level: structure
@@ -4577,7 +6263,7 @@ maps:
       file: drawio/fsm-rooms.drawio
       page: fsm l2
   - id: fsm-prefetch
-    title: 'Prefetchers: the machine behind its exits'
+    title: Prefetchers, the machine behind its exits
     subtitle: ''
     file: figures/fsm-prefetch.svg
     level: structure
@@ -4625,6 +6311,10 @@ maps:
     - f1-fsm
     - fsm-l1d
     - l9-l1d-way
+    - s17-sq
+    - s19-l1d
+    - s20-mshr-fill
+    - s21-lsu-pipe
     - x11-prefetch-l1d-tlb
     - x5-lsu-ordering
     - x6-lsu-queues
@@ -4649,6 +6339,7 @@ maps:
     - x4-l2-more
     - l10-l2
     - l12-slc
+    - s20-mshr-fill
     - x11-prefetch-l1d-tlb
     - x5-lsu-ordering
     - x3-memctrl
@@ -5211,6 +6902,7 @@ maps:
     - x10-amx-slc
     - x1-fabric
     - l12-slc
+    - s20-mshr-fill
     - x3-memctrl
   - block: fabric
     name: Fabric and coherence
@@ -5240,6 +6932,7 @@ maps:
     - d4-hierarchy
     - x1-fabric
     - l12-slc
+    - s20-mshr-fill
     - x3-memctrl
   - block: amx
     name: AMX coprocessor

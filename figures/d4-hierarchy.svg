@@ -190,7 +190,7 @@
 <rect x="546.9" y="602.9" width="35.2" height="15.4" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
 <rect x="583.2" y="602.9" width="35.2" height="15.4" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
 <rect x="619.6" y="602.9" width="35.2" height="15.4" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
-<rect x="760.0" y="530.0" width="280.0" height="110.0" rx="5" fill="#f6c9c9" stroke="#dc2626" stroke-width="1.4"/>
+<rect x="760.0" y="530.0" width="280.0" height="110.0" rx="5" fill="#fae1e1" stroke="#e66767" stroke-width="1"/>
 <line x1="765.0" y1="560.5" x2="1035.0" y2="560.5" stroke="#d4a9ae" stroke-width="1"/>
 <rect x="760.0" y="300.0" width="280.0" height="150.0" rx="5" fill="#fae1e1" stroke="#e66767" stroke-width="1"/>
 <line x1="765.0" y1="330.5" x2="1035.0" y2="330.5" stroke="#d4a9ae" stroke-width="1"/>
@@ -215,69 +215,79 @@
 <polyline points="424.0,530.0 424.0,450.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="8" data-src="slc" data-dst="l2"/>
 <polyline points="606.3,450.0 606.3,492.7 745.3,492.7 745.3,557.7 760.0,557.7" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="9" data-src="l2" data-dst="dram"/>
 <polyline points="760.0,568.3 734.7,568.3 734.7,503.3 595.7,503.3 595.7,450.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="10" data-src="dram" data-dst="l2"/>
-<polyline points="905.3,450.0 905.3,483.3 705.3,483.3 705.3,590.3 660.0,590.3" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="11" data-src="other" data-dst="slc"/>
-<polyline points="660.0,579.7 694.7,579.7 694.7,472.7 894.7,472.7 894.7,450.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="12" data-src="slc" data-dst="other"/>
-<polyline points="660.0,612.7 760.0,612.7" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="13" data-src="slc" data-dst="dram"/>
-<polyline points="760.0,623.3 660.0,623.3" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="14" data-src="dram" data-dst="slc"/>
-<polyline points="760.0,378.7 660.0,378.7" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="15" data-src="other" data-dst="l2"/>
-<polyline points="660.0,371.3 760.0,371.3" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="16" data-src="l2" data-dst="other"/>
+<polyline points="660.0,612.7 760.0,612.7" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="11" data-src="slc" data-dst="dram"/>
+<polyline points="760.0,623.3 660.0,623.3" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="12" data-src="dram" data-dst="slc"/>
+<polyline points="760.0,378.7 660.0,378.7" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="13" data-src="other" data-dst="l2"/>
+<polyline points="660.0,371.3 760.0,371.3" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="14" data-src="l2" data-dst="other"/>
 <text x="180.0" y="117.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">L1I</text>
 <text x="180.0" y="215.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">192 KiB, 6-way, 64 B</text>
 <text x="495.0" y="117.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">L1D</text>
 <text x="495.0" y="215.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">128 KiB, 8-way, 64 B, 3 clk</text>
 <text x="365.0" y="317.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Shared L2</text>
-<text x="365.0" y="445.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">12 MiB, 12-way, 2x64 B, 17 clk</text>
+<text x="261.2" y="445.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">12 MiB, 12-way, 2 x 64 B, </text>
+<rect x="418.8" y="432.6" width="49.1" height="16.7" rx="3" fill="#feebde" stroke="#fb9d5c" stroke-width="1"/>
+<text x="424.5" y="445.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">17 clk</text>
 <text x="365.0" y="547.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">System level cache</text>
-<text x="365.0" y="635.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">8 MiB, 16-way, 128 B, ~90 clk</text>
+<text x="251.8" y="635.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">8 MiB, 16-way, 128 B, </text>
+<rect x="387.6" y="622.6" width="89.6" height="16.7" rx="3" fill="#fff9f6" stroke="#fb9d5c" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="393.4" y="635.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">about 90 clk</text>
 <text x="767.0" y="552.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">DRAM</text>
 <text x="767.0" y="576.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="780.4" y="576.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">LPDDR4X, 8 ch</text>
+<text x="780.4" y="576.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">8 LPDDR4X channels</text>
 <text x="767.0" y="595.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="780.4" y="595.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">91 ns ~= 290 clk</text>
+<text x="780.4" y="595.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">91 ns, about 290 clk</text>
 <text x="767.0" y="614.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">◇</text>
-<text x="780.4" y="614.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">68 GB/s</text>
+<text x="780.4" y="614.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">68 GB/s peak</text>
 <text x="767.0" y="322.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Other clients</text>
 <text x="767.0" y="346.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="780.4" y="346.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">E-cluster L2</text>
+<text x="780.4" y="346.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">the E-cluster L2</text>
 <text x="767.0" y="365.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="780.4" y="365.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">GPU -&gt; SLC</text>
+<text x="780.4" y="365.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">the GPU allocates in the SLC</text>
 <text x="767.0" y="384.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="780.4" y="384.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">coh: dup L2 tags</text>
+<text x="780.4" y="384.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">duplicate L2 tags snoop</text>
 <text x="767.0" y="122.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Core</text>
 <text x="767.0" y="146.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
-<text x="780.4" y="146.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">3 ld + 2 st /clk</text>
-<text x="767.0" y="165.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="780.4" y="165.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">16 instr/clk</text>
-<text x="704.0" y="240.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="0">48 B ld | 32 B st</text>
-<text x="421.2" y="73.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="2">64 B/clk</text>
-<text x="444.0" y="262.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="3">2 x 32 B/clk</text>
+<text x="780.4" y="146.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">3 loads a clock</text>
+<text x="767.0" y="165.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="780.4" y="165.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">2 stores a clock</text>
+<text x="767.0" y="184.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
+<text x="780.4" y="184.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">16 instructions a fetch</text>
+<rect x="695.0" y="235.6" width="40.0" height="16.7" rx="3" fill="#faecc1" stroke="#eab308" stroke-width="1.4"/>
+<text x="700.8" y="248.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="0">48 B</text>
+<text x="739.8" y="248.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="0">loads, </text>
+<rect x="780.6" y="235.6" width="40.0" height="16.7" rx="3" fill="#faecc1" stroke="#eab308" stroke-width="1.4"/>
+<text x="786.3" y="248.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="0">32 B</text>
+<text x="825.4" y="248.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="0">stores</text>
+<rect x="418.7" y="60.6" width="62.6" height="16.7" rx="3" fill="#ede3fc" stroke="#a375f2" stroke-width="1"/>
+<text x="424.5" y="73.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="2">64 B/clk</text>
+<rect x="445.0" y="249.6" width="85.1" height="16.7" rx="3" fill="#fff4ec" stroke="#fb9d5c" stroke-width="1" stroke-dasharray="9 3"/>
+<text x="450.8" y="262.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="3">2 x 32 B/clk</text>
 <text x="194.0" y="262.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="5">fill</text>
 <text x="614.0" y="262.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="6">inclusive</text>
 <text x="264.0" y="495.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="7">victim</text>
-<text x="444.0" y="495.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="8">hit | leave</text>
-<text x="504.0" y="516.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="9">miss</text>
-<text x="749.0" y="466.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="11">GPU alloc</text>
-<text x="690.0" y="660.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="13">wb</text>
-<text x="691.0" y="360.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="15">snoop</text>
+<text x="444.0" y="495.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="8">a hit leaves the SLC</text>
+<text x="620.0" y="481.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="9">miss</text>
+<text x="675.9" y="660.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="11">write back</text>
+<text x="691.0" y="360.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="13">snoop</text>
 <text x="1120.0" y="110.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">load latency, clk</text>
 <text x="1120.0" y="136.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">L1D</text>
-<text x="1180.8" y="136.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">3 ●</text>
+<text x="1180.8" y="136.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">● 3</text>
 <text x="1120.0" y="158.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">L2</text>
-<text x="1203.2" y="158.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">17 ○</text>
+<text x="1203.2" y="158.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○ 17</text>
 <text x="1120.0" y="180.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">SLC</text>
-<text x="1320.0" y="180.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">90 ~</text>
+<text x="1320.0" y="180.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">~ 90</text>
 <text x="1120.0" y="202.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">DRAM</text>
-<text x="1641.6" y="202.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">291 ○</text>
+<text x="1641.6" y="202.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○ 291</text>
 <text x="1120.0" y="250.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">capacity</text>
 <text x="1120.0" y="276.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">L1D</text>
-<text x="1261.3" y="276.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">128 KiB ●</text>
+<text x="1261.3" y="276.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">● 128 KiB</text>
 <text x="1120.0" y="298.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">L2 per core</text>
-<text x="1437.7" y="298.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">3 MiB ○</text>
+<text x="1437.7" y="298.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○ 3 MiB</text>
 <text x="1120.0" y="320.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">L2 all</text>
-<text x="1659.4" y="320.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">12 MiB ●</text>
+<text x="1659.4" y="320.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">● 12 MiB</text>
 <text x="1120.0" y="342.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">SLC</text>
-<text x="1578.0" y="342.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">8 MiB ●</text>
-<text x="1120.0" y="365.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start" font-style="italic">bar width ~ sqrt capacity</text>
+<text x="1578.0" y="342.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">● 8 MiB</text>
+<text x="1120.0" y="365.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start" font-style="italic">Bar width grows as the square root of capacity.</text>
 <rect x="60.0" y="721.0" width="16.0" height="11.0" rx="2" fill="#fdcdab" stroke="#f97316" stroke-width="2.2"/>
 <text x="80.0" y="730.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">● 3+ measurements</text>
 <rect x="230.9" y="721.0" width="16.0" height="11.0" rx="2" fill="#fedcc5" stroke="#f97316" stroke-width="1.4"/>

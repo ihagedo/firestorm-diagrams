@@ -13,26 +13,26 @@
         <mxCell id="f-fa" value="A layered fabric, one port per cluster" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#fef6f6;strokeColor=#d5989c;fontColor=#dc2626;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="75.0" y="105.0" width="1500.0" height="660.0" as="geometry" />
         </mxCell>
-        <mxCell id="f-fa-note" value="noc_layout | address_interleave_hash | pio_network" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1190.4" y="111.0" width="377.6" height="14" as="geometry" />
+        <mxCell id="f-fa-note" value="layout, address hash, PIO network" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1315.5" y="111.0" width="252.5" height="14" as="geometry" />
         </mxCell>
         <mxCell id="f-fb" value="Commands and data travel apart" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#fef6f6;strokeColor=#d5989c;fontColor=#dc2626;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="1620.0" y="105.0" width="855.0" height="660.0" as="geometry" />
         </mxCell>
-        <mxCell id="f-fb-note" value="noc_split_paths | fabric_qos_credits" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="2203.4" y="111.0" width="264.6" height="14" as="geometry" />
+        <mxCell id="f-fb-note" value="split paths, QoS credits" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="2293.2" y="111.0" width="174.8" height="14" as="geometry" />
         </mxCell>
         <mxCell id="f-fc" value="Coherence point" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#fef6f6;strokeColor=#d5989c;fontColor=#dc2626;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="75.0" y="810.0" width="1500.0" height="810.0" as="geometry" />
         </mxCell>
-        <mxCell id="f-fc-note" value="coherence_directory | unshared_snoop_skip | same_address_ordering | remote_maintenance_pacing" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="848.5" y="816.0" width="719.5" height="14" as="geometry" />
+        <mxCell id="f-fc-note" value="directory, snoop skip, ordering, pacing" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1288.4" y="816.0" width="279.6" height="14" as="geometry" />
         </mxCell>
         <mxCell id="f-fd" value="Outside coherence, and later NoCs" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#fef6f6;strokeColor=#d5989c;fontColor=#dc2626;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="1620.0" y="810.0" width="855.0" height="810.0" as="geometry" />
         </mxCell>
-        <mxCell id="f-fd-note" value="slc_io_cache_proxy | noc_rings_lanes" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="2189.6" y="816.0" width="278.4" height="14" as="geometry" />
+        <mxCell id="f-fd-note" value="IO cache proxy, later rings" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="2273.6" y="816.0" width="194.4" height="14" as="geometry" />
         </mxCell>
         <mxCell id="f-later" value="Later NoCs" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#fef6f6;strokeColor=#d5989c;fontColor=#dc2626;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="1650.0" y="1110.0" width="810.0" height="450.0" as="geometry" />
@@ -52,7 +52,7 @@
         <mxCell id="v-sw1" value="&lt;b&gt;Switch level 1&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;coherent&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="375" y="165" width="165" height="285" as="geometry" />
         </mxCell>
-        <mxCell id="v-noc_layout" value="&lt;b&gt;Switch level 2&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;coherence point&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;joins CPU, GPU,&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;SLC, memory&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-noc_layout" value="&lt;b&gt;Switch level 2&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;coherence point&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;joins CPU and GPU&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;to SLC and memory&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="600" y="165" width="225" height="285" as="geometry" />
         </mxCell>
         <mxCell id="v-address_interleave_hash" value="" style="shape=stencil(nZNBcoMwDEVP420HcJoLpOk9XFCKJkb22E6ht6+JaEC0DZluGP9v6UkCofQhtsaDqgoyHSj9oqpqcCE/s9WyrgqWvZQmeqgTeyccoGE7puDO0GOTpnSkFgKm8VYflT7UjignoqN4M3KSQcoxxcBJxdMz4z4nzcpnUgcJgnDn1ulqvD7OLR/jxk2u7Pa7yha33+KW/+PCkpsPP975m6nP78FdqGEN1qKP8OdAv26A3I+52hp+cgGERmt5TW5Z3ozrMp4697FoYye/lqhkkRaR5f5OqISWcrjdHaiMnGrMk85tr+bJh/XU2eJ/TR+/AA==);perimeter=ellipsePerimeter;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=1.1;fontSize=9;" vertex="1" parent="1">
@@ -70,7 +70,7 @@
         <mxCell id="v-pipes-cell-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fce9e9;strokeColor=#d6868a;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-pipes">
           <mxGeometry x="148.7" y="23.0" width="70.8" height="76.5" as="geometry" />
         </mxCell>
-        <mxCell id="v-pipes-count" value="coherence | SLC | MC" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-pipes">
+        <mxCell id="v-pipes-count" value="coherence, SLC, MC" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-pipes">
           <mxGeometry x="0" y="104.0" width="225.0" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-dram" value="&lt;b&gt;DRAM&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -100,7 +100,7 @@
         <mxCell id="v-dram-cell-8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fce9e9;strokeColor=#d6868a;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-dram">
           <mxGeometry x="193.9" y="23.0" width="25.6" height="76.5" as="geometry" />
         </mxCell>
-        <mxCell id="v-dram-count" value="channel | rank | bank" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-dram">
+        <mxCell id="v-dram-count" value="channel, rank, bank" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-dram">
           <mxGeometry x="0" y="104.0" width="225.0" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-mc_off" value="&lt;b&gt;Idle controller&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;OS moves its pages&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;then powers it off&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -115,7 +115,7 @@
         <mxCell id="v-pcie" value="&lt;b&gt;PCIe, USB&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9ca3af;strokeWidth=1;dashed=1;dashPattern=2 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="900" y="510" width="165" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="v-pio_network" value="&lt;b&gt;PIO network&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;flat: device registers, IPIs&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;skips coherence, SLC, DRAM&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fef6f6;strokeColor=#e66767;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-pio_network" value="&lt;b&gt;PIO network&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;flat, for registers and IPIs&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;skips coherence, SLC, DRAM&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fef6f6;strokeColor=#e66767;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1050" y="645" width="495" height="90" as="geometry" />
         </mxCell>
         <mxCell id="v-req" value="&lt;b&gt;Requester&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;write&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -145,7 +145,7 @@
         <mxCell id="v-coh" value="&lt;b&gt;Coherence&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="2130" y="315" width="150" height="75" as="geometry" />
         </mxCell>
-        <mxCell id="v-mcb" value="&lt;b&gt;MC&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;data moved&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;once&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-mcb" value="&lt;b&gt;MC&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;data moves&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;only once&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="2325" y="150" width="120" height="240" as="geometry" />
         </mxCell>
         <mxCell id="v-fabric_qos_credits" value="&lt;b&gt;virtual channels&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#fef6f6;strokeColor=#e66767;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -370,7 +370,7 @@
         <mxCell id="v-poison" value="&lt;b&gt;later design&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;poison the line now, sync later&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1110" y="1410" width="390" height="75" as="geometry" />
         </mxCell>
-        <mxCell id="v-slcp" value="&lt;b&gt;SLC&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;cache controller for&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;small IO caches&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-slcp" value="&lt;b&gt;SLC&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;runs IO caches&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1650" y="870" width="225" height="120" as="geometry" />
         </mxCell>
         <mxCell id="v-slc_io_cache_proxy" value="&lt;b&gt;IO cache 0&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;outside coherence&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -382,7 +382,7 @@
         <mxCell id="v-noc_rings_lanes" value="&lt;b&gt;parallel lane&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;bandwidth&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1995" y="1170" width="195" height="72" as="geometry" />
         </mxCell>
-        <mxCell id="v-splitn" value="&lt;b&gt;split networks&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;CPU | IO | GPU&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-splitn" value="&lt;b&gt;split networks&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;CPU, IO and GPU&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1995" y="1252.5" width="195" height="81" as="geometry" />
         </mxCell>
         <mxCell id="v-ports2" value="&lt;b&gt;P-cluster&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;2 ports by hash&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -560,8 +560,8 @@
         <mxCell id="n-overflow" value="overflow" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-coherence_directory-l2v;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="705.0" y="903.5" width="64.2" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-unshared_snoop_skip" value="unshared_snoop_skip" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1050.0" y="864.0" width="137.9" height="16.5" as="geometry" />
+        <mxCell id="n-Snoop_skip" value="Snoop skip" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1050.0" y="864.0" width="71.6" height="16.5" as="geometry" />
         </mxCell>
         <mxCell id="n-waits_on" value="waits on" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-same_address_ordering-blk;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="379.8" y="1194.5" width="64.2" height="18.5" as="geometry" />
@@ -569,14 +569,14 @@
         <mxCell id="n-retry" value="retry" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-resp-same_address_ordering;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="393.0" y="1373.0" width="36.6" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-remote_maintenance_one_queue_pe" value="remote maintenance: one queue per cluster, refused until the core progresses" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="120.0" y="1501.5" width="496.2" height="16.5" as="geometry" />
+        <mxCell id="n-Remote_maintenance_queues_per_cl" value="Remote maintenance queues per cluster and waits on core progress." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="120.0" y="1501.5" width="441.1" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-simple_cmds" value="simple cmds" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-slcp-slc_io_cache_proxy;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1884.0" y="867.5" width="91.7" height="18.5" as="geometry" />
+        <mxCell id="n-commands" value="commands" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-slcp-slc_io_cache_proxy;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1890.0" y="867.5" width="78.2" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-one_request_becomes_the_few_comm" value="one request becomes the few commands a small cache understands" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1650.0" y="1021.5" width="441.4" height="16.5" as="geometry" />
+        <mxCell id="n-One_request_becomes_the_few_comm" value="One request becomes the few commands a small cache knows." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1650.0" y="1021.5" width="413.3" height="16.5" as="geometry" />
         </mxCell>
         <mxCell id="n-port_0_1" value="port 0 / 1" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="2310.0" y="1376.2" width="54.6" height="15.8" as="geometry" />

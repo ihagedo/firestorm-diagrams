@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2040 1410" width="2040" height="1410" role="img" aria-label="Prefetchers, L1D ways and power, dTLB extras" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" data-kinds="dataflow fsm structure"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker><marker id="arrowrev" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M10,0 L0,5 L10,10 z" fill="#1f2937"/></marker></defs><rect x="0" y="0" width="2040" height="1410" fill="#ffffff"/><text x="20" y="30" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#1f2937">Prefetchers, L1D ways and power, dTLB extras</text><text x="20" y="48" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#4b5563">Where the prefetchers train and what holds them back. How a line gets its L1D way and how the SRAM sleeps. What a TLB entry carries and how it is invalidated. Dashed outlines are inferred, dotted are speculative.</text><rect x="50.0" y="70.0" width="1940.0" height="500.0" rx="9" fill="#fefcf5" stroke="#dac991" stroke-width="1"/>
-<text x="60.0" y="87.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#eab308" text-anchor="start">Prefetch: trained on virtual addresses at the LSU, throttled by the L2</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2040 1410" width="2040" height="1410" role="img" aria-label="Prefetchers, L1D ways and power, dTLB extras" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" data-kinds="dataflow fsm structure"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker><marker id="arrowrev" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M10,0 L0,5 L10,10 z" fill="#1f2937"/></marker></defs><rect x="0" y="0" width="2040" height="1410" fill="#ffffff"/><text x="20" y="30" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#1f2937">Prefetchers, L1D ways and power, dTLB extras</text><text x="20" y="48" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#4b5563">This shows where the prefetchers train and what holds them back, how a line gets its L1D way, how the SRAM sleeps, and what a TLB entry carries. Dashed outlines are inferred and dotted ones speculative.</text><rect x="50.0" y="70.0" width="1940.0" height="500.0" rx="9" fill="#fefcf5" stroke="#dac991" stroke-width="1"/>
+<text x="60.0" y="87.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#eab308" text-anchor="start">Prefetch, trained on virtual addresses at the LSU and throttled by the L2</text>
 <text x="1980.0" y="87.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">inferred and speculative</text>
 <rect x="50.0" y="600.0" width="1940.0" height="430.0" rx="9" fill="#fefcf5" stroke="#dac991" stroke-width="1"/>
-<text x="60.0" y="617.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#eab308" text-anchor="start">L1D: a hashed way, no way mispredict, sleeping sub arrays, and the coherence ceiling</text>
+<text x="60.0" y="617.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#eab308" text-anchor="start">L1D, with a hashed way, no way mispredict, sleeping sub arrays and the coherence ceiling</text>
 <text x="1980.0" y="617.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">inferred and speculative</text>
 <rect x="50.0" y="1060.0" width="1940.0" height="260.0" rx="9" fill="#fefcf5" stroke="#dac991" stroke-width="1"/>
-<text x="60.0" y="1077.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#eab308" text-anchor="start">dTLB: page size in the entry, invalidation by the cheaper route</text>
+<text x="60.0" y="1077.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#eab308" text-anchor="start">dTLB, the page size in the entry and the cheaper invalidation</text>
 <text x="1980.0" y="1077.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">speculative</text>
 <rect x="70.0" y="120.0" width="140.0" height="84.0" rx="5" fill="#f7e4a6" stroke="#eab308" stroke-width="2.2"/>
 <line x1="75.0" y1="150.5" x2="205.0" y2="150.5" stroke="#d7cca6" stroke-width="1"/>
@@ -217,13 +217,13 @@
 <text x="187.0" y="340.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">page 1</text>
 <text x="297.0" y="340.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">page 2</text>
 <text x="456.0" y="280.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="4">follows</text>
-<text x="70.0" y="402.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">a chase that crosses pages keeps its L1 latency</text>
+<text x="70.0" y="402.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">~ A chase that crosses pages keeps its L1 latency.</text>
 <text x="740.0" y="137.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">temporal history</text>
 <text x="740.0" y="199.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">&lt; 256 entries, GHB like</text>
 <text x="496.0" y="154.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="5">misses</text>
-<text x="560.0" y="232.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">random accesses inside a region</text>
-<text x="750.0" y="258.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">15 KiB: covered</text>
-<text x="765.0" y="286.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start">16 KiB: not</text>
+<text x="560.0" y="232.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Random accesses inside a region</text>
+<text x="750.0" y="258.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">15 KiB is covered</text>
+<text x="765.0" y="286.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start">16 KiB is not</text>
 <text x="622.0" y="374.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">line</text>
 <text x="738.0" y="374.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">count</text>
 <text x="680.0" y="357.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">deny list</text>
@@ -238,7 +238,7 @@
 <text x="1237.0" y="142.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">L2 prefetch rater</text>
 <text x="1237.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
 <text x="1250.4" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">rates the per core queues</text>
-<text x="1350.0" y="291.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">~4 in flight per region</text>
+<text x="1350.0" y="291.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">about 4 in flight per region</text>
 <text x="1362.0" y="232.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="8">credits</text>
 <text x="964.0" y="148.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="9">prefetch requests</text>
 <text x="1230.0" y="358.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">rated every 32 clk</text>
@@ -253,11 +253,11 @@
 <text x="1237.0" y="422.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">L2</text>
 <text x="1447.0" y="422.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">NT filter</text>
 <text x="1447.0" y="446.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="1460.4" y="446.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">LDNP: no L1 fill</text>
+<text x="1460.4" y="446.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">LDNP skips the L1 fill</text>
 <text x="1727.0" y="422.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">register file</text>
 <text x="1384.0" y="434.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="14">fill</text>
 <text x="1646.0" y="434.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="15">data</text>
-<text x="1234.0" y="522.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="16">normal load: fill the L1D</text>
+<text x="1234.0" y="522.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="16">a normal load fills the L1D</text>
 <text x="197.5" y="678.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">PA 47:14, page frame</text>
 <text x="72.0" y="702.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">47</text>
 <text x="323.0" y="702.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="end">14</text>
@@ -281,12 +281,12 @@
 <text x="274.0" y="760.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="18">way</text>
 <polyline points="310.4,775.0 318.4,765.0" fill="none" stroke="#1f2937" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="320.4" y="766.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="slash">3</text>
-<text x="70.0" y="850.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">speculative: the way is fixed by a hash of page bits,</text>
-<text x="70.0" y="868.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">2^k + 64 B chains: one way per set</text>
+<text x="70.0" y="850.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">? A hash of page bits may fix the way.</text>
+<text x="70.0" y="868.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">? Chains of 2^k + 64 B then use one way per set.</text>
 <text x="667.0" y="682.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">Way lookup</text>
 <text x="667.0" y="706.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
 <text x="680.4" y="706.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">no mispredict shows</text>
-<text x="660.0" y="752.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">latency, fixed page vs 8 random pages</text>
+<text x="660.0" y="752.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Latency on one page and on 8 random pages</text>
 <text x="880.0" y="778.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">3 clk</text>
 <text x="880.0" y="806.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">3 clk</text>
 <text x="1180.0" y="677.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">SRAM sub arrays</text>
@@ -307,10 +307,10 @@
 <text x="1620.4" y="826.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">about 1 line per 2 clk</text>
 <polyline points="1606.0,712.3 1614.0,691.7" fill="none" stroke="#1f2937" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="1616.0" y="692.7" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="slash">32 B/clk</text>
-<text x="1420.0" y="884.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">ceilings it sets</text>
-<text x="1670.0" y="910.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">L1 copy ~150 GB/s</text>
-<text x="1590.0" y="938.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">L2 mixed ~100 GB/s</text>
-<text x="70.0" y="1112.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">one TLB entry (field widths are illustrative)</text>
+<text x="1420.0" y="884.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">The ceilings it sets</text>
+<text x="1670.0" y="910.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">L1 copy, about 150 GB/s</text>
+<text x="1590.0" y="938.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="start">L2 mixed, about 100 GB/s</text>
+<text x="70.0" y="1112.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">One TLB entry, its field widths illustrative</text>
 <text x="231.9" y="1141.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">VA tag</text>
 <text x="72.0" y="1166.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">63</text>
 <text x="391.8" y="1166.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="end">36</text>
@@ -333,10 +333,10 @@
 <text x="390.8" y="1216.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">s4</text>
 <text x="250.0" y="1247.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">presence vector, 5 page sizes per context</text>
 <text x="484.0" y="1208.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="28">lookup only sizes in use</text>
-<text x="70.0" y="1300.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">the M1 shows only 16 KiB pages</text>
+<text x="70.0" y="1300.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">The M1 shows only 16 KiB pages.</text>
 <text x="907.0" y="1142.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">Range invalidate</text>
 <text x="907.0" y="1166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
-<text x="920.4" y="1166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">pages x ASID/VMID</text>
+<text x="920.4" y="1166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">pages by ASID or VMID</text>
 <text x="1178.7" y="1165.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="middle">&lt;&gt;</text>
 <text x="1112.0" y="1134.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">pages vs entries</text>
 <text x="1307.0" y="1122.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">scan all entries</text>

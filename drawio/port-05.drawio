@@ -31,25 +31,25 @@
         <mxCell id="v-crq" value="&lt;b&gt;head is the oldest group&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="60" y="115" width="900" height="330" as="geometry" />
         </mxCell>
-        <mxCell id="v-crq-cell" value="load | alu | alu | alu | nop | nop | branch" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-crq">
+        <mxCell id="v-crq-cell" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-crq">
           <mxGeometry x="4.0" y="23.0" width="892.0" height="46.2" as="geometry" />
         </mxCell>
-        <mxCell id="v-crq-cell-2" value="store | alu | alu | branch" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-crq">
+        <mxCell id="v-crq-cell-2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-crq">
           <mxGeometry x="4.0" y="70.8" width="892.0" height="46.2" as="geometry" />
         </mxCell>
-        <mxCell id="v-crq-cell-3" value="alu | alu" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-crq">
+        <mxCell id="v-crq-cell-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-crq">
           <mxGeometry x="4.0" y="118.5" width="892.0" height="46.2" as="geometry" />
         </mxCell>
-        <mxCell id="v-crq-cell-4" value="load | nop | nop | nop | nop | nop | nop" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-crq">
+        <mxCell id="v-crq-cell-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-crq">
           <mxGeometry x="4.0" y="166.2" width="892.0" height="46.2" as="geometry" />
         </mxCell>
-        <mxCell id="v-crq-cell-5" value="nop | alu" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-crq">
+        <mxCell id="v-crq-cell-5" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-crq">
           <mxGeometry x="4.0" y="214.0" width="892.0" height="46.2" as="geometry" />
         </mxCell>
-        <mxCell id="v-crq-cell-6" value="load | alu | branch" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-crq">
+        <mxCell id="v-crq-cell-6" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-crq">
           <mxGeometry x="4.0" y="261.8" width="892.0" height="46.2" as="geometry" />
         </mxCell>
-        <mxCell id="v-crq-count" value="330 groups" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-crq">
+        <mxCell id="v-crq-count" value="330 groups, 7 slots each" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-crq">
           <mxGeometry x="0" y="314" width="900" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-commit" value="&lt;b&gt;Retire&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 groups per cycle&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;in program order&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -109,8 +109,8 @@
         <mxCell id="v-rrq_entry-cell-3" value="new physical 9:1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6f4f0;strokeColor=#75b9a8;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-rrq_entry">
           <mxGeometry x="280.0" y="0.0" width="180.0" height="30.0" as="geometry" />
         </mxCell>
-        <mxCell id="v-walkback" value="&lt;b&gt;On a flush&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;walk the map back from the tail&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;mispredict 13 clk, ordering 25 clk&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
-          <mxGeometry x="1750" y="245" width="480" height="110" as="geometry" />
+        <mxCell id="v-walkback" value="&lt;b&gt;On a flush&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;walk the map back from the tail&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;a mispredict costs 13 clk&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;an ordering flush costs 25 clk&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1750" y="235" width="480" height="128" as="geometry" />
         </mxCell>
         <mxCell id="v-free" value="&lt;b&gt;At retire&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;old physical register freed&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;16 entries per cycle&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f5fbf9;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1750" y="400" width="480" height="110" as="geometry" />
@@ -145,17 +145,17 @@
         <mxCell id="e-rename-rrq" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=2 3;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.50000;exitY=1.00000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.50000;entryY=0.00000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-rename" target="v-rrq">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e-rrq-walkback" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.17241;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.50000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-rrq" target="v-walkback">
+        <mxCell id="e-rrq-walkback" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.17241;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.50781;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-rrq" target="v-walkback">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e-rrq-free" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=2 3;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.70690;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.50000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-rrq" target="v-free">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="n-slots_5_to_7_take_only_non_issui" value="slots 5 to 7 take only non issuing uops" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="420.0" y="491.5" width="250.5" height="16.5" as="geometry" />
+        <mxCell id="n-_Slots_5_to_7_take_only_non-iss" value="○ Slots 5 to 7 take only non-issuing uops." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="420.0" y="491.5" width="272.1" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-nop_b_and_eliminated_moves" value="nop, b and eliminated moves" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="420.0" y="509.0" width="186.5" height="16.5" as="geometry" />
+        <mxCell id="n-_Those_are_nop_b_and_eliminate" value="○ Those are nop, b and eliminated moves." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="420.0" y="509.0" width="271.5" height="16.5" as="geometry" />
         </mxCell>
         <mxCell id="n-map_changes" value="map changes" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-rename-rrq;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1610.0" y="217.5" width="93.1" height="18.5" as="geometry" />
@@ -163,55 +163,55 @@
         <mxCell id="n-one_entry_field_widths_illustra" value="one entry, field widths illustrative" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1750.0" y="108.5" width="219.0" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-nine_measurements_agree_on_the_s" value="nine measurements agree on the size" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1490.0" y="561.5" width="240.9" height="16.5" as="geometry" />
+        <mxCell id="n-_Nine_measurements_agree_on_the" value="● Nine measurements agree on the size." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1490.0" y="561.5" width="259.5" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-the_mechanism_reading_is_inferre" value="the mechanism reading is inferred" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1490.0" y="579.0" width="219.6" height="16.5" as="geometry" />
+        <mxCell id="n-_The_mechanism_reading_is_infer" value="~ The mechanism reading is inferred." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1490.0" y="579.0" width="241.2" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-2277" value="2277 ●" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+        <mxCell id="n-_2277" value="● 2277" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1688.0" y="736.8" width="47.1" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-coalesced_queue_330_7_non_iss" value="coalesced queue, 330 x 7 non issuing uops" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1760.0" y="736.8" width="294.6" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-1000" value="1000 ○" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+        <mxCell id="n-_1000" value="○ 1000" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="992.6" y="802.8" width="43.3" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-coalesced_queue_about_3_issuing" value="coalesced queue, about 3 issuing uops per group" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1760.0" y="802.8" width="331.1" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-623" value="623 ●" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+        <mxCell id="n-_623" value="● 623" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="787.3" y="868.8" width="38.5" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-rename_retire_queue" value="rename retire queue" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1760.0" y="868.8" width="134.3" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-362" value="362 ○" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+        <mxCell id="n-_362" value="○ 362" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="645.1" y="934.8" width="38.5" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-free_integer_physical_registers" value="free integer physical registers" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1760.0" y="934.8" width="202.4" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-382" value="382 ○" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+        <mxCell id="n-_382" value="○ 382" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="656.0" y="1000.8" width="38.5" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-free_FP_physical_registers" value="free FP physical registers" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1760.0" y="1000.8" width="176.4" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-144" value="144 ○" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+        <mxCell id="n-_144" value="○ 144" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="526.4" y="1066.8" width="34.7" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-in_flight_branch_limit" value="in flight branch limit" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1760.0" y="1066.8" width="138.7" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-130" value="130 ◆" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+        <mxCell id="n-_130" value="◆ 130" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="518.8" y="1132.8" width="34.7" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-load_queue" value="load queue" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1760.0" y="1132.8" width="73.5" height="17.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-60" value="60 ◆" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+        <mxCell id="n-_60" value="◆ 60" style="text;html=1;fontSize=9.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="480.7" y="1198.8" width="29.9" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-store_queue" value="store queue" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
