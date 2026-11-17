@@ -30,9 +30,9 @@
 <text x="1753.5" y="487.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">instruction</text>
 <text x="1753.5" y="503.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">cache</text>
 <text x="130.6" y="473.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.arrive">arrives</text>
-<text x="648.2" y="376.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.page_split">the group crosses a page</text>
-<text x="554.4" y="469.3" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.ends_at_taken">predicted taken and found in the BTB</text>
-<text x="706.5" y="559.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.group_ends">the group ends</text>
+<text x="711.4" y="357.4" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.page_split">the group crosses a page</text>
+<text x="665.4" y="458.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.ends_at_taken">predicted taken and found in the BTB</text>
+<text x="729.2" y="561.4" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.group_ends">the group ends</text>
 <text x="70.0" y="937.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m-exits">Solid arcs rest on measurements or two sources.</text>
 <text x="70.0" y="955.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m-exits">Dashed arcs rest on one source or are derived or inferred.</text>
 <text x="70.0" y="972.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m-exits">The exits of the room:</text>

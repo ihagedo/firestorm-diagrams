@@ -535,6 +535,7 @@
      "figs": [
       "f1-fsm",
       "x10-amx-slc",
+      "fsm-l2",
       "x4-l2-more",
       "x11-prefetch-l1d-tlb",
       "x5-lsu-ordering",
@@ -574,6 +575,7 @@
     "d4-hierarchy",
     "f1-fsm",
     "x10-amx-slc",
+    "fsm-l2",
     "x4-l2-more",
     "l10-l2",
     "l12-slc",
@@ -873,6 +875,7 @@
     "fsm": {
      "figs": [
       "f1-fsm",
+      "fsm-lsu",
       "l11-prefetch",
       "x11-prefetch-l1d-tlb",
       "x5-lsu-ordering",
@@ -906,6 +909,7 @@
     "m6-lsu",
     "r1-load-rtl",
     "f1-fsm",
+    "fsm-lsu",
     "l8-memdep",
     "l11-prefetch",
     "x11-prefetch-l1d-tlb",
@@ -2104,7 +2108,8 @@
      "figs": [
       "01-core-overview",
       "04-issue",
-      "p1-pipeline"
+      "p1-pipeline",
+      "s24-sched-fp-queue"
      ],
      "status": "have",
      "planned": null
@@ -2145,7 +2150,8 @@
    "figures": [
     "01-core-overview",
     "04-issue",
-    "p1-pipeline"
+    "p1-pipeline",
+    "s24-sched-fp-queue"
    ]
   },
   "sched_ls": {
@@ -2183,8 +2189,10 @@
      "planned": null
     },
     "fsm": {
-     "figs": [],
-     "status": "gap",
+     "figs": [
+      "fsm-sched-ls"
+     ],
+     "status": "have",
      "planned": null
     },
     "storyboard": {
@@ -2207,6 +2215,7 @@
     "04-issue",
     "m4-sched",
     "r1-load-rtl",
+    "fsm-sched-ls",
     "l6-scheduler",
     "p1-pipeline"
    ]
@@ -2288,7 +2297,8 @@
       "01-core-overview",
       "04-issue",
       "x9-backend",
-      "p1-pipeline"
+      "p1-pipeline",
+      "s24-sched-fp-queue"
      ],
      "status": "have",
      "planned": null
@@ -2334,7 +2344,8 @@
     "01-core-overview",
     "04-issue",
     "x9-backend",
-    "p1-pipeline"
+    "p1-pipeline",
+    "s24-sched-fp-queue"
    ]
   },
   "retire": {
@@ -2463,6 +2474,7 @@
     },
     "fsm": {
      "figs": [
+      "fsm-lq",
       "x5-lsu-ordering",
       "x6-lsu-queues"
      ],
@@ -2495,6 +2507,7 @@
     "m5-retire",
     "m6-lsu",
     "r1-load-rtl",
+    "fsm-lq",
     "l8-memdep",
     "x5-lsu-ordering",
     "x6-lsu-queues",
@@ -2554,6 +2567,7 @@
     "fsm": {
      "figs": [
       "x10-amx-slc",
+      "fsm-sq",
       "x5-lsu-ordering",
       "x6-lsu-queues"
      ],
@@ -2588,6 +2602,7 @@
     "d1-l1d",
     "r1-load-rtl",
     "x10-amx-slc",
+    "fsm-sq",
     "l8-memdep",
     "x5-lsu-ordering",
     "x6-lsu-queues",
@@ -2651,6 +2666,7 @@
     "fsm": {
      "figs": [
       "f1-fsm",
+      "fsm-l1d",
       "x11-prefetch-l1d-tlb",
       "x5-lsu-ordering",
       "x6-lsu-queues"
@@ -2689,6 +2705,7 @@
     "d4-hierarchy",
     "r1-load-rtl",
     "f1-fsm",
+    "fsm-l1d",
     "l9-l1d-way",
     "x11-prefetch-l1d-tlb",
     "x5-lsu-ordering",
@@ -2744,6 +2761,7 @@
     },
     "fsm": {
      "figs": [
+      "fsm-dtlb",
       "x11-prefetch-l1d-tlb"
      ],
      "status": "have",
@@ -2777,6 +2795,7 @@
     "c1-l1d",
     "d1-l1d",
     "r1-load-rtl",
+    "fsm-dtlb",
     "l9-l1d-way",
     "l13-tlb",
     "x11-prefetch-l1d-tlb",
@@ -2818,6 +2837,7 @@
     },
     "fsm": {
      "figs": [
+      "fsm-prefetch",
       "l11-prefetch",
       "x11-prefetch-l1d-tlb"
      ],
@@ -2844,6 +2864,7 @@
     "01-core-overview",
     "06-lsu",
     "m7-miss",
+    "fsm-prefetch",
     "l11-prefetch",
     "x11-prefetch-l1d-tlb"
    ]
@@ -2881,8 +2902,10 @@
      "planned": null
     },
     "fsm": {
-     "figs": [],
-     "status": "gap",
+     "figs": [
+      "fsm-mshr"
+     ],
+     "status": "have",
      "planned": null
     },
     "storyboard": {
@@ -2903,7 +2926,8 @@
     "01-core-overview",
     "06-lsu",
     "m7-miss",
-    "d1-l1d"
+    "d1-l1d",
+    "fsm-mshr"
    ]
   }
  }

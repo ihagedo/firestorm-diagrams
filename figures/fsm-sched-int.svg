@@ -41,9 +41,9 @@
 <text x="1753.5" y="716.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">register</text>
 <text x="1753.5" y="733.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">file</text>
 <text x="130.6" y="626.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.arrive">arrives</text>
-<text x="730.7" y="504.7" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.enter_queue">no queue yet</text>
-<text x="629.8" y="614.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.issue_partner">the partner queue takes it</text>
-<text x="701.0" y="711.9" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.issue_twice">it issues twice</text>
+<text x="745.5" y="500.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.enter_queue">no queue yet</text>
+<text x="700.7" y="607.7" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.issue_partner">the partner queue takes it</text>
+<text x="727.8" y="714.6" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.issue_twice">it issues twice</text>
 <text x="535.6" y="376.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.enter_queue.next">next step</text>
 <text x="952.9" y="168.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.wait_operand.stay">still waiting</text>
 <text x="952.9" y="1108.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.wait_select.stay">still waiting</text>

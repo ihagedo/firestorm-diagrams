@@ -23,8 +23,8 @@
 <text x="990.0" y="563.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">execute</text>
 <text x="1753.5" y="410.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">retire</text>
 <text x="130.6" y="396.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.arrive">arrives</text>
-<text x="791.4" y="313.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.divide">div</text>
-<text x="506.4" y="425.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.mispredict">a mispredict and a branch that can redirect</text>
+<text x="770.0" y="317.3" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.divide">div</text>
+<text x="637.4" y="425.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.mispredict">a mispredict and a branch that can redirect</text>
 <text x="70.0" y="784.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m-exits">Solid arcs rest on measurements or two sources.</text>
 <text x="70.0" y="802.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m-exits">Dashed arcs rest on one source or are derived or inferred.</text>
 <text x="70.0" y="819.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m-exits">The exits of the room:</text>

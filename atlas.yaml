@@ -1111,7 +1111,6 @@ maps:
     - st.to_fetch
     - tr.arrive
     - tr.fall_through
-    - tr.fall_through.to_dirpred
     - tr.fall_through.to_fetch
     - tr.l0_hit
     - tr.l0_hit.to_dirpred
@@ -1227,10 +1226,10 @@ maps:
     hot:
     - fm
     - machine
+    - st.done
     - st.fuse
     - st.fused_second
     - st.in
-    - st.leaves
     - st.one_uop
     - st.split
     - st.to_rename
@@ -1238,7 +1237,7 @@ maps:
     - tr.fuse
     - tr.fuse.to_rename
     - tr.fused_second
-    - tr.fused_second.leaves
+    - tr.fused_second.done
     - tr.one_uop
     - tr.one_uop.to_rename
     - tr.split
@@ -1564,6 +1563,7 @@ maps:
     - tr.never_issues
     - tr.never_issues.to_retire
     - tr.no_dest
+    - tr.no_dest.to_dispatch
     - tr.no_dest.to_retire
     - tr.stall_branches
     - tr.stall_branches.stay
@@ -1604,11 +1604,14 @@ maps:
     - st.in
     - st.read
     - st.to_eu_int
+    - st.to_lsu
     - tr.arrive
     - tr.bypass
     - tr.bypass.to_eu_int
+    - tr.bypass.to_lsu
     - tr.read
     - tr.read.to_eu_int
+    - tr.read.to_lsu
     drawio:
       file: drawio/fsm-rooms.drawio
       page: fsm int_prf
@@ -1988,6 +1991,104 @@ maps:
     drawio:
       file: drawio/structures.drawio
       page: S1 scheduler queue
+  - id: s24-sched-fp-queue
+    title: One FP and SIMD scheduler queue, entry by entry
+    subtitle: ''
+    file: figures/s24-sched-fp-queue.svg
+    level: structure
+    up: sched_fp
+    kinds:
+    - structure
+    blocks:
+    - sched_fp
+    - eu_fp
+    mechanisms:
+    - paired_sched_queues
+    hot:
+    - fq
+    - fs
+    - q
+    - q.e0
+    - q.e0.ready
+    - q.e0.srcA
+    - q.e0.srcB
+    - q.e1
+    - q.e1.ready
+    - q.e1.srcA
+    - q.e1.srcB
+    - q.e10
+    - q.e10.ready
+    - q.e10.srcA
+    - q.e10.srcB
+    - q.e11
+    - q.e11.ready
+    - q.e11.srcA
+    - q.e11.srcB
+    - q.e12
+    - q.e12.ready
+    - q.e12.srcA
+    - q.e12.srcB
+    - q.e13
+    - q.e13.ready
+    - q.e13.srcA
+    - q.e13.srcB
+    - q.e14
+    - q.e14.ready
+    - q.e14.srcA
+    - q.e14.srcB
+    - q.e15
+    - q.e15.ready
+    - q.e15.srcA
+    - q.e15.srcB
+    - q.e16
+    - q.e16.ready
+    - q.e16.srcA
+    - q.e16.srcB
+    - q.e17
+    - q.e17.ready
+    - q.e17.srcA
+    - q.e17.srcB
+    - q.e2
+    - q.e2.ready
+    - q.e2.srcA
+    - q.e2.srcB
+    - q.e3
+    - q.e3.ready
+    - q.e3.srcA
+    - q.e3.srcB
+    - q.e4
+    - q.e4.ready
+    - q.e4.srcA
+    - q.e4.srcB
+    - q.e5
+    - q.e5.ready
+    - q.e5.srcA
+    - q.e5.srcB
+    - q.e6
+    - q.e6.ready
+    - q.e6.srcA
+    - q.e6.srcB
+    - q.e7
+    - q.e7.ready
+    - q.e7.srcA
+    - q.e7.srcB
+    - q.e8
+    - q.e8.ready
+    - q.e8.srcA
+    - q.e8.srcB
+    - q.e9
+    - q.e9.ready
+    - q.e9.srcA
+    - q.e9.srcB
+    - select
+    - tags
+    - unit
+    structure:
+      block: sched_fp
+      slots: q.e{0..17}[.srcA|.srcB|.ready]
+    drawio:
+      file: drawio/structures.drawio
+      page: S24 FP and SIMD scheduler queue
   - id: s2-int-prf
     title: The integer register file, register by register
     subtitle: ''
@@ -2533,6 +2634,7 @@ maps:
     - st.in
     - st.to_sched_fp
     - st.to_sched_int
+    - st.to_sched_ls
     - st.wait_buffer_full
     - st.wait_inflow
     - st.wait_older
@@ -2542,21 +2644,25 @@ maps:
     - tr.enter_buffer
     - tr.enter_buffer.to_sched_fp
     - tr.enter_buffer.to_sched_int
+    - tr.enter_buffer.to_sched_ls
     - tr.wait_buffer_full
     - tr.wait_buffer_full.stay
     - tr.wait_buffer_full.until
     - tr.wait_inflow
     - tr.wait_inflow.to_sched_fp
     - tr.wait_inflow.to_sched_int
+    - tr.wait_inflow.to_sched_ls
     - tr.wait_older
     - tr.wait_older.stay
     - tr.wait_older.until
     - tr.wait_queue_full
     - tr.wait_queue_full.to_sched_fp
     - tr.wait_queue_full.to_sched_int
+    - tr.wait_queue_full.to_sched_ls
     - tr.wait_width
     - tr.wait_width.to_sched_fp
     - tr.wait_width.to_sched_int
+    - tr.wait_width.to_sched_ls
     drawio:
       file: drawio/fsm-rooms.drawio
       page: fsm dispatch
@@ -2603,6 +2709,36 @@ maps:
     drawio:
       file: drawio/fsm-rooms.drawio
       page: fsm sched_int
+  - id: fsm-sched-ls
+    title: 'Load-store scheduler: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-sched-ls.svg
+    level: structure
+    up: sched_ls
+    kinds:
+    - fsm
+    blocks:
+    - sched_ls
+    mechanisms: []
+    hot:
+    - fm
+    - machine
+    - st.enter_queue
+    - st.in
+    - st.issue_ready
+    - st.to_int_prf
+    - st.wait_operand
+    - tr.arrive
+    - tr.enter_queue
+    - tr.enter_queue.next
+    - tr.issue_ready
+    - tr.issue_ready.to_int_prf
+    - tr.wait_operand
+    - tr.wait_operand.stay
+    - tr.wait_operand.until
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm sched_ls
   - id: fsm-eu-int
     title: 'Integer units: the machine behind its exits'
     subtitle: ''
@@ -2672,6 +2808,7 @@ maps:
     - 01-core-overview
     - 04-issue
     - p1-pipeline
+    - s24-sched-fp-queue
   - block: sched_ls
     name: Load-store scheduler
     file: sheets/sched_ls.svg
@@ -2681,6 +2818,7 @@ maps:
     - 04-issue
     - m4-sched
     - r1-load-rtl
+    - fsm-sched-ls
     - l6-scheduler
     - p1-pipeline
   - block: eu_int
@@ -2704,6 +2842,7 @@ maps:
     - 04-issue
     - x9-backend
     - p1-pipeline
+    - s24-sched-fp-queue
 - n: 6
   id: retire
   name: Retire
@@ -2857,11 +2996,13 @@ maps:
     - st.done
     - st.in
     - st.in_group
+    - st.to_l1d
     - st.wait_group
     - st.wait_older
     - tr.arrive
     - tr.in_group
     - tr.in_group.done
+    - tr.in_group.to_l1d
     - tr.wait_group
     - tr.wait_group.stay
     - tr.wait_group.until
@@ -3491,6 +3632,182 @@ maps:
       file: walkthroughs/m7-miss.yaml
       steps: 9
       agreed: 0
+  - id: fsm-lsu
+    title: 'Load-store pipelines: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-lsu.svg
+    level: structure
+    up: lsu
+    kinds:
+    - fsm
+    blocks:
+    - lsu
+    mechanisms:
+    - zero_cycle_loads
+    - split_access_handling
+    - store_address_data_uops
+    - agu_same_page_check
+    hot:
+    - fm
+    - machine
+    - st.agen
+    - st.in
+    - st.split_line
+    - st.split_page
+    - st.to_dtlb
+    - st.to_lq
+    - st.to_retire
+    - st.zero_cycle
+    - tr.agen
+    - tr.agen.to_dtlb
+    - tr.agen.to_lq
+    - tr.arrive
+    - tr.split_line
+    - tr.split_line.to_dtlb
+    - tr.split_line.to_lq
+    - tr.split_page
+    - tr.split_page.to_dtlb
+    - tr.split_page.to_lq
+    - tr.zero_cycle
+    - tr.zero_cycle.to_retire
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm lsu
+  - id: fsm-lq
+    title: 'Load queue: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-lq.svg
+    level: structure
+    up: lq
+    kinds:
+    - fsm
+    blocks:
+    - lq
+    mechanisms:
+    - lsq_at_issue
+    - banked_lsq
+    - lsq_early_release
+    hot:
+    - fm
+    - machine
+    - st.allocate
+    - st.in
+    - st.to_dtlb
+    - st.wait_full
+    - tr.allocate
+    - tr.allocate.to_dtlb
+    - tr.arrive
+    - tr.wait_full
+    - tr.wait_full.stay
+    - tr.wait_full.until
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm lq
+  - id: fsm-sq
+    title: 'Store queue: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-sq.svg
+    level: structure
+    up: sq
+    kinds:
+    - fsm
+    blocks:
+    - sq
+    mechanisms:
+    - sq_partial_forwarding
+    - store_load_dep_predictor
+    - sq_32b_slots
+    - store_merge_buffer
+    hot:
+    - fm
+    - machine
+    - st.enter
+    - st.forward_full
+    - st.forward_partial
+    - st.in
+    - st.no_older_store
+    - st.to_l1d
+    - st.to_prefetch
+    - st.to_retire
+    - st.wait_full
+    - st.wait_store_address
+    - tr.arrive
+    - tr.enter
+    - tr.enter.to_retire
+    - tr.forward_full
+    - tr.forward_full.to_prefetch
+    - tr.forward_partial
+    - tr.forward_partial.to_l1d
+    - tr.no_older_store
+    - tr.no_older_store.to_l1d
+    - tr.wait_full
+    - tr.wait_full.stay
+    - tr.wait_full.until
+    - tr.wait_store_address
+    - tr.wait_store_address.stay
+    - tr.wait_store_address.until
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm sq
+  - id: fsm-dtlb
+    title: 'Data TLBs: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-dtlb.svg
+    level: structure
+    up: dtlb
+    kinds:
+    - fsm
+    blocks:
+    - dtlb
+    mechanisms:
+    - mmu_walk_cache
+    - dtlb_random_replacement
+    - dtlb_piggyback
+    hot:
+    - fm
+    - machine
+    - st.in
+    - st.l1_hit
+    - st.l2_hit
+    - st.to_sq
+    - st.walk
+    - tr.arrive
+    - tr.l1_hit
+    - tr.l1_hit.to_sq
+    - tr.l2_hit
+    - tr.l2_hit.to_sq
+    - tr.walk
+    - tr.walk.to_sq
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm dtlb
+  - id: fsm-mshr
+    title: 'Fill buffers: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-mshr.svg
+    level: structure
+    up: mshr
+    kinds:
+    - fsm
+    blocks:
+    - mshr
+    mechanisms:
+    - fill_buffer_pool
+    hot:
+    - fm
+    - machine
+    - st.allocate
+    - st.in
+    - st.merge
+    - st.to_l2
+    - tr.allocate
+    - tr.allocate.to_l2
+    - tr.arrive
+    - tr.merge
+    - tr.merge.to_l2
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm mshr
   sheets:
   - block: lsu
     name: Load-store unit
@@ -3503,6 +3820,7 @@ maps:
     - m6-lsu
     - r1-load-rtl
     - f1-fsm
+    - fsm-lsu
     - l8-memdep
     - l11-prefetch
     - x11-prefetch-l1d-tlb
@@ -3522,6 +3840,7 @@ maps:
     - m5-retire
     - m6-lsu
     - r1-load-rtl
+    - fsm-lq
     - l8-memdep
     - x5-lsu-ordering
     - x6-lsu-queues
@@ -3541,6 +3860,7 @@ maps:
     - d1-l1d
     - r1-load-rtl
     - x10-amx-slc
+    - fsm-sq
     - l8-memdep
     - x5-lsu-ordering
     - x6-lsu-queues
@@ -3558,6 +3878,7 @@ maps:
     - c1-l1d
     - d1-l1d
     - r1-load-rtl
+    - fsm-dtlb
     - l9-l1d-way
     - l13-tlb
     - x11-prefetch-l1d-tlb
@@ -3572,6 +3893,7 @@ maps:
     - 06-lsu
     - m7-miss
     - d1-l1d
+    - fsm-mshr
 - n: 8
   id: caches
   name: The Caches
@@ -3996,6 +4318,122 @@ maps:
       file: walkthroughs/x4-l2-more.yaml
       steps: 12
       agreed: 0
+  - id: fsm-l1d
+    title: 'L1 data cache: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-l1d.svg
+    level: structure
+    up: l1d
+    kinds:
+    - fsm
+    blocks:
+    - l1d
+    mechanisms:
+    - l1d_banked_piggyback
+    - fill_bank_conflicts
+    - l1d_utag_way_predictor
+    - l1d_tree_plru
+    - l1d_page_offset_index
+    - l1d_write_allocate
+    hot:
+    - fm
+    - machine
+    - st.bank_conflict
+    - st.done
+    - st.hit
+    - st.in
+    - st.miss
+    - st.to_mshr
+    - st.to_prefetch
+    - st.utag_miss
+    - st.write
+    - st.write_miss
+    - tr.arrive
+    - tr.bank_conflict
+    - tr.bank_conflict.next
+    - tr.hit
+    - tr.hit.to_prefetch
+    - tr.miss
+    - tr.miss.to_mshr
+    - tr.utag_miss
+    - tr.utag_miss.next
+    - tr.write
+    - tr.write.done
+    - tr.write_miss
+    - tr.write_miss.to_mshr
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm l1d
+  - id: fsm-l2
+    title: 'Shared L2: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-l2.svg
+    level: structure
+    up: l2
+    kinds:
+    - fsm
+    blocks:
+    - l2
+    mechanisms:
+    - fill_forwarding
+    - l2_half_lines
+    - slc_victim_fill
+    - l2_physical_index
+    - l2_hashed_way_filter
+    - l2_core_lru
+    - l2_autolock
+    hot:
+    - fm
+    - machine
+    - st.done
+    - st.hit
+    - st.in
+    - st.ship_dram
+    - st.ship_slc
+    - st.to_prefetch
+    - tr.arrive
+    - tr.hit
+    - tr.hit.done
+    - tr.hit.to_prefetch
+    - tr.ship_dram
+    - tr.ship_dram.done
+    - tr.ship_dram.to_prefetch
+    - tr.ship_slc
+    - tr.ship_slc.done
+    - tr.ship_slc.to_prefetch
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm l2
+  - id: fsm-prefetch
+    title: 'Prefetchers: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-prefetch.svg
+    level: structure
+    up: prefetch
+    kinds:
+    - fsm
+    blocks:
+    - prefetch
+    mechanisms:
+    - content_directed_prefetch
+    - ampm_prefetcher
+    - temporal_prefetch
+    - lsu_virtual_prefetch
+    hot:
+    - fm
+    - machine
+    - st.dmp_candidate
+    - st.in
+    - st.to_retire
+    - st.trains
+    - tr.arrive
+    - tr.dmp_candidate
+    - tr.dmp_candidate.to_retire
+    - tr.trains
+    - tr.trains.to_retire
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm prefetch
   sheets:
   - block: l1d
     name: L1 data cache
@@ -4013,6 +4451,7 @@ maps:
     - d4-hierarchy
     - r1-load-rtl
     - f1-fsm
+    - fsm-l1d
     - l9-l1d-way
     - x11-prefetch-l1d-tlb
     - x5-lsu-ordering
@@ -4034,6 +4473,7 @@ maps:
     - d4-hierarchy
     - f1-fsm
     - x10-amx-slc
+    - fsm-l2
     - x4-l2-more
     - l10-l2
     - l12-slc
@@ -4050,6 +4490,7 @@ maps:
     - 01-core-overview
     - 06-lsu
     - m7-miss
+    - fsm-prefetch
     - l11-prefetch
     - x11-prefetch-l1d-tlb
 - n: 9

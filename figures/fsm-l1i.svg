@@ -20,7 +20,7 @@
 <text x="1753.5" y="326.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">instruction</text>
 <text x="1753.5" y="342.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">queue</text>
 <text x="130.6" y="320.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.arrive">arrives</text>
-<text x="731.4" y="298.6" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.miss">an L1I miss</text>
+<text x="742.1" y="297.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="tr.miss">an L1I miss</text>
 <text x="70.0" y="631.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m-exits">Solid arcs rest on measurements or two sources.</text>
 <text x="70.0" y="649.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m-exits">Dashed arcs rest on one source or are derived or inferred.</text>
 <text x="70.0" y="666.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m-exits">The exits of the room:</text>
