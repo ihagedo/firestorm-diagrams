@@ -1,6 +1,6 @@
 <mxfile host="svgkit2" version="22.0.0">
   <diagram id="07-beyond" name="07-beyond">
-    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1170" math="0" shadow="0">
+    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1210" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -11,64 +11,64 @@
           <mxGeometry x="17" y="37" width="1274" height="18" as="geometry" />
         </mxCell>
         <mxCell id="f-pcl" value="P-cluster" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#fbfbfc;strokeColor=#bec4cc;fontColor=#9ca3af;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
-          <mxGeometry x="40" y="80" width="1180" height="520" as="geometry" />
+          <mxGeometry x="40" y="80" width="1180" height="535" as="geometry" />
         </mxCell>
-        <mxCell id="f-pcl-note" value="4 Firestorm cores, 3.2 GHz max, one clock domain" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="840.1" y="86" width="372.9" height="14" as="geometry" />
+        <mxCell id="f-pcl-note" value="4 Firestorm cores, &lt;span style=&quot;background-color:#dbdee2;border:1.4px solid #9ca3af;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;3.2 GHz&lt;/span&gt; max, one clock domain" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="854.3" y="86" width="358.7" height="14" as="geometry" />
         </mxCell>
         <mxCell id="f-others" value="Other clusters" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#fbfbfc;strokeColor=#bec4cc;fontColor=#9ca3af;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
-          <mxGeometry x="1260" y="80" width="700" height="520" as="geometry" />
+          <mxGeometry x="1260" y="80" width="700" height="535" as="geometry" />
         </mxCell>
         <mxCell id="f-others-note" value="share the fabric and the memory side" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1681.2" y="86" width="271.8" height="14" as="geometry" />
         </mxCell>
         <mxCell id="f-uncore" value="Chip" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#fef6f6;strokeColor=#d5989c;fontColor=#dc2626;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
-          <mxGeometry x="40" y="670" width="1920" height="250" as="geometry" />
+          <mxGeometry x="40" y="670" width="1920" height="290" as="geometry" />
         </mxCell>
         <mxCell id="f-uncore-note" value="uncore" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1899.9" y="676" width="53.1" height="14" as="geometry" />
         </mxCell>
         <mxCell id="f-ladder" value="Latency ladder from one core" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#fef6f6;strokeColor=#d5989c;fontColor=#dc2626;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
-          <mxGeometry x="40" y="950" width="1180" height="140" as="geometry" />
+          <mxGeometry x="40" y="990" width="1180" height="140" as="geometry" />
         </mxCell>
         <mxCell id="f-ladder-note" value="cycles at 3.2 GHz" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1078.8" y="956" width="134.2" height="14" as="geometry" />
+          <mxGeometry x="1078.8" y="996" width="134.2" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="v-core0" value="&lt;b&gt;Core 0&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;L1I 192 KiB&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;L1D 128 KiB&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;L1 TLBs&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dbdee2;strokeColor=#9ca3af;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-core0" value="&lt;b&gt;Core 0&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Its L1I is 192 KiB.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Its L1D is 128 KiB.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It has its own L1 TLBs.&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dbdee2;strokeColor=#9ca3af;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="60" y="120" width="200" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="v-core1" value="&lt;b&gt;Core 1&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;L1I 192 KiB&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;L1D 128 KiB&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;L1 TLBs&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dbdee2;strokeColor=#9ca3af;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-core1" value="&lt;b&gt;Core 1&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Its L1I is 192 KiB.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Its L1D is 128 KiB.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It has its own L1 TLBs.&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dbdee2;strokeColor=#9ca3af;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="275" y="120" width="200" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="v-core2" value="&lt;b&gt;Core 2&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;L1I 192 KiB&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;L1D 128 KiB&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;L1 TLBs&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dbdee2;strokeColor=#9ca3af;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-core2" value="&lt;b&gt;Core 2&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Its L1I is 192 KiB.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Its L1D is 128 KiB.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It has its own L1 TLBs.&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dbdee2;strokeColor=#9ca3af;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="490" y="120" width="200" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="v-core3" value="&lt;b&gt;Core 3&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;L1I 192 KiB&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;L1D 128 KiB&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;L1 TLBs&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dbdee2;strokeColor=#9ca3af;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-core3" value="&lt;b&gt;Core 3&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Its L1I is 192 KiB.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Its L1D is 128 KiB.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It has its own L1 TLBs.&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dbdee2;strokeColor=#9ca3af;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="705" y="120" width="200" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="v-l2" value="&lt;b&gt;Shared L2&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;12 MiB, 12 ways, 128 B lines in two halves&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8192 sets, physical index, two bits hashed&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;17 clk hit | 85 GB/s load, 100 GB/s store per core&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;inclusive of the L1Ds | spares L1 resident lines&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;four 3 MiB cachelets | a core sees 7.5 MiB&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;per core LRU | three separately powered way groups&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fdcdab;strokeColor=#f97316;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
-          <mxGeometry x="60" y="290" width="840" height="220" as="geometry" />
+        <mxCell id="v-l2" value="&lt;b&gt;Shared L2&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It holds 12 MiB in 12 ways.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Its 128 B lines come in two halves.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Its 8192 sets are physically indexed.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Two index bits are hashed.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;A hit takes 17 clk.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;One core loads 85 GB/s and stores 100 GB/s.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It includes the L1Ds and spares their lines.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Four 3 MiB cachelets give a core 7.5 MiB.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Replacement is LRU per core.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Three way groups power up apart.&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fdcdab;strokeColor=#f97316;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="290" width="840" height="232" as="geometry" />
         </mxCell>
-        <mxCell id="v-amx" value="&lt;b&gt;AMX&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;one unit per cluster&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;4 register sets, one per core&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 x 8 FMA grid&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;2 instr per clk in, via the SQ&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;FMA 4 clk, 30 op window&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dcf0ea;strokeColor=#50b696;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
-          <mxGeometry x="940" y="290" width="260" height="220" as="geometry" />
+        <mxCell id="v-amx" value="&lt;b&gt;AMX&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;There is one per cluster.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It has a register set per core.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Its FMA grid is 8 x 8.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;The SQ feeds it 2 a clock.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;An FMA takes 4 clk.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Its window holds 30 ops.&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dcf0ea;strokeColor=#50b696;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="940" y="290" width="260" height="232" as="geometry" />
         </mxCell>
-        <mxCell id="v-ecl" value="&lt;b&gt;E-cluster, Icestorm&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;4 cores, own L2, own clock domain&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;own AMX unit&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f1f2f4;strokeColor=#babfc7;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
-          <mxGeometry x="1280" y="120" width="660" height="100" as="geometry" />
+        <mxCell id="v-ecl" value="&lt;b&gt;E-cluster, Icestorm&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It has 4 cores and its own L2.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It has its own clock domain.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It has its own AMX unit.&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f1f2f4;strokeColor=#babfc7;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="120" width="660" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="v-gpu" value="&lt;b&gt;GPU, 8 cores&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;shares the SLC and DRAM&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fae1e1;strokeColor=#e66767;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-gpu" value="&lt;b&gt;GPU, 8 cores&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It shares the SLC and DRAM.&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fae1e1;strokeColor=#e66767;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1280" y="250" width="660" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="v-pwr" value="&lt;b&gt;Clocks and power&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;per cluster DVFS | ramp from idle 40 to 100 ms&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;core power up about 10 us&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;closed loop performance controller&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;power estimator throttles vector and AMX issue&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f1f2f4;strokeColor=#babfc7;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-pwr" value="&lt;b&gt;Clocks and power&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;DVFS is per cluster.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It ramps from idle in 40 to 100 ms.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;A core powers up in about 10 us.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;A closed loop controller sets performance.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;A power estimator throttles vector and AMX issue.&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f1f2f4;strokeColor=#babfc7;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1280" y="360" width="660" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="v-fab" value="&lt;b&gt;Fabric and coherence&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;MOESI&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;coherence point with duplicate L2 tags, before the SLC&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;one NoC port per cluster&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;5 QoS classes, 6 virtual channels, credits&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;separate PIO network for device traffic&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fef6f6;strokeColor=#e66767;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
-          <mxGeometry x="60" y="720" width="560" height="170" as="geometry" />
+        <mxCell id="v-fab" value="&lt;b&gt;Fabric and coherence&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Coherence is MOESI.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;The coherence point keeps duplicate L2 tags.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It sits before the SLC.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Each cluster has one NoC port.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It has 5 QoS classes and 6 virtual channels.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Credits control the flow.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Device traffic uses a separate PIO network.&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fef6f6;strokeColor=#e66767;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="720" width="560" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="v-slc" value="&lt;b&gt;System level cache&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 MiB, 16 ways, 4096 sets, 128 B lines&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;memory side, exclusive of the CPU caches&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;filled by L2 victims only&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;hashed set index from PA bit 7 up&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;about 90 clk | replacement pseudo random, disputed&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fedcc5;strokeColor=#f97316;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
-          <mxGeometry x="690" y="720" width="580" height="170" as="geometry" />
+        <mxCell id="v-slc" value="&lt;b&gt;System level cache&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It holds 8 MiB in 16 ways.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It has 4096 sets of 128 B lines.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It sits on the memory side.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It excludes the CPU caches.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Only L2 victims fill it.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Its set index hashes PA bits 7 and up.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;A hit takes about 90 clk.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Replacement may be pseudo random.&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fedcc5;strokeColor=#f97316;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="690" y="720" width="580" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="v-mc" value="&lt;b&gt;Memory controllers and LPDDR4X&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;8 channels&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;91 ns loaded latency&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;68 GB/s peak, 64 GB/s from one core&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;one core saturates DRAM&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;reads and writes share one path&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;DRAM clock scales with demand&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fae1e1;strokeColor=#e66767;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
-          <mxGeometry x="1340" y="720" width="600" height="170" as="geometry" />
+        <mxCell id="v-mc" value="&lt;b&gt;Memory controllers and LPDDR4X&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;It has 8 channels.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Loaded latency is 91 ns.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;The peak is 68 GB/s.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;One core gets 64 GB/s.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;One core saturates DRAM.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;Reads and writes share one path.&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;The DRAM clock scales with demand.&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fae1e1;strokeColor=#e66767;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="720" width="600" height="210" as="geometry" />
         </mxCell>
         <mxCell id="e-core0-l2" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.52650;exitY=1.00000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.12536;entryY=0.00000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-core0" target="v-l2">
           <mxGeometry relative="1" as="geometry" />
@@ -94,25 +94,25 @@
         <mxCell id="e-l2-core3" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.88060;exitY=0.00000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.47350;entryY=1.00000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-l2" target="v-core3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e-l2-amx" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.47591;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.47591;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-l2" target="v-amx">
+        <mxCell id="e-l2-amx" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.47716;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.47716;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-l2" target="v-amx">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e-amx-l2" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.00000;exitY=0.52409;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.00000;entryY=0.52409;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-amx" target="v-l2">
+        <mxCell id="e-amx-l2" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.00000;exitY=0.52284;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.00000;entryY=0.52284;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-amx" target="v-l2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e-l2-fab" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.95631;exitY=1.00000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75946;entryY=0.00000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-l2" target="v-fab">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="863.3" y="635.3" />
-              <mxPoint x="485.3" y="635.3" />
+              <mxPoint x="863.3" y="655.3" />
+              <mxPoint x="485.3" y="655.3" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e-fab-l2" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.74054;exitY=0.00000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.94369;entryY=1.00000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-fab" target="v-l2">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="474.7" y="624.7" />
-              <mxPoint x="852.7" y="624.7" />
+              <mxPoint x="474.7" y="644.7" />
+              <mxPoint x="852.7" y="644.7" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -120,67 +120,67 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="1240.0" y="290.0" />
-              <mxPoint x="1240.0" y="652.0" />
-              <mxPoint x="564.0" y="652.0" />
+              <mxPoint x="1240.0" y="664.0" />
+              <mxPoint x="564.0" y="664.0" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e-fab-slc" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.46882;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.46882;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-fab" target="v-slc">
+        <mxCell id="e-fab-slc" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.47476;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.47476;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-fab" target="v-slc">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e-slc-fab" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.00000;exitY=0.53118;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.00000;entryY=0.53118;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-slc" target="v-fab">
+        <mxCell id="e-slc-fab" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.00000;exitY=0.52524;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.00000;entryY=0.52524;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-slc" target="v-fab">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e-slc-mc" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.46882;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.46882;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-slc" target="v-mc">
+        <mxCell id="e-slc-mc" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.47476;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.47476;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-slc" target="v-mc">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e-mc-slc" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.00000;exitY=0.53118;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.00000;entryY=0.53118;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-mc" target="v-slc">
+        <mxCell id="e-mc-slc" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=2.8;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=0.00000;exitY=0.52524;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.00000;entryY=0.52524;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-mc" target="v-slc">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="n-L1_to_L2_32_B_per_clk_each_way" value="L1 to L2: 32 B per clk each way, per core" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="522.5" width="267.6" height="16.5" as="geometry" />
+        <mxCell id="n-Each_core_moves_derived_shared" value="Each core moves &lt;span style=&quot;background-color:#fff4ec;border:1px dashed #fb9d5c;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;32 B a clock&lt;/span&gt; each way between L1 and L2." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="534.5" width="382.9" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-L2_TLB_and_page_walkers_may_sit" value="L2 TLB and page walkers may sit beside it ~" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="540.0" width="294.6" height="16.5" as="geometry" />
+        <mxCell id="n-_An_L2_TLB_and_page_walkers_may" value="~ An L2 TLB and page walkers may sit beside it." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="552.0" width="320.7" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-E_cores_may_use_this_L2_while_P" value="E cores may use this L2 while P cores sleep ~" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="557.5" width="304.7" height="16.5" as="geometry" />
+        <mxCell id="n-_E_cores_may_use_this_L2_while" value="~ E cores may use this L2 while P cores sleep." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="569.5" width="309.2" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-E-cluster_and_GPU_also_request_t" value="E-cluster and GPU also request through the fabric" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1280.0" y="522.5" width="320.7" height="16.5" as="geometry" />
+        <mxCell id="n-The_E-cluster_and_the_GPU_also_r" value="The E-cluster and the GPU also request through the fabric." style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1280.0" y="534.5" width="378.5" height="16.5" as="geometry" />
         </mxCell>
         <mxCell id="n-cluster_requests" value="cluster requests" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-l2-fab;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="500.0" y="605.5" width="110.8" height="18.5" as="geometry" />
+          <mxGeometry x="500.0" y="617.5" width="110.8" height="18.5" as="geometry" />
         </mxCell>
         <mxCell id="n-E-cluster_GPU" value="E-cluster, GPU" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-gpu-fab;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1000.0" y="629.5" width="106.6" height="18.5" as="geometry" />
+          <mxGeometry x="1000.0" y="642.5" width="106.6" height="18.5" as="geometry" />
         </mxCell>
         <mxCell id="n-miss" value="miss" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-slc-mc;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1285.0" y="775.5" width="40.0" height="18.5" as="geometry" />
+          <mxGeometry x="1285.0" y="800.5" width="40.0" height="18.5" as="geometry" />
         </mxCell>
         <mxCell id="n-L1D_hit" value="L1D hit" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="982.5" width="44.6" height="16.5" as="geometry" />
+          <mxGeometry x="60.0" y="1022.5" width="44.6" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-3" value="3 ●" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="217.6" y="982.5" width="20.2" height="16.5" as="geometry" />
+        <mxCell id="n-_3" value="● 3" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="217.6" y="1022.5" width="20.2" height="16.5" as="geometry" />
         </mxCell>
         <mxCell id="n-L2_hit" value="L2 hit" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="1008.5" width="38.8" height="16.5" as="geometry" />
+          <mxGeometry x="60.0" y="1048.5" width="38.8" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-17" value="17 ○" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="262.4" y="1008.5" width="24.7" height="16.5" as="geometry" />
+        <mxCell id="n-_17" value="○ 17" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="262.4" y="1048.5" width="24.7" height="16.5" as="geometry" />
         </mxCell>
         <mxCell id="n-SLC_hit" value="SLC hit" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="1034.5" width="49.7" height="16.5" as="geometry" />
+          <mxGeometry x="60.0" y="1074.5" width="49.7" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-90" value="90 ~" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="496.0" y="1034.5" width="28.4" height="16.5" as="geometry" />
+        <mxCell id="n-_90" value="~ 90" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="496.0" y="1074.5" width="28.4" height="16.5" as="geometry" />
         </mxCell>
         <mxCell id="n-DRAM_91_ns" value="DRAM, 91 ns" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="1060.5" width="82.3" height="16.5" as="geometry" />
+          <mxGeometry x="60.0" y="1100.5" width="82.3" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-291" value="291 ○" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1139.2" y="1060.5" width="32.9" height="16.5" as="geometry" />
+        <mxCell id="n-_291" value="○ 291" style="text;html=1;fontSize=9;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1139.2" y="1100.5" width="32.9" height="16.5" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

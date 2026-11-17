@@ -1,22 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1230" width="2200" height="1230" role="img" aria-label="Apple M1, the die as a block diagram" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" data-kinds="dataflow structure"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker><marker id="arrowrev" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M10,0 L0,5 L10,10 z" fill="#1f2937"/></marker></defs><rect x="0" y="0" width="2200" height="1230" fill="#ffffff"/><text x="20" y="30" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#1f2937">Apple M1, the die as a block diagram</text><text x="20" y="48" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#4b5563">Two CPU clusters share one memory side through the fabric. Arrow weight is traffic. Dashed is control. Bandwidths are what one core measures.</text><rect x="50.0" y="80.0" width="1000.0" height="560.0" rx="9" fill="#fbfbfc" stroke="#bec4cc" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2200 1230" width="2200" height="1230" role="img" aria-label="Apple M1, the die as a block diagram" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" data-kinds="dataflow structure"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker><marker id="arrowrev" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M10,0 L0,5 L10,10 z" fill="#1f2937"/></marker></defs><rect x="0" y="0" width="2200" height="1230" fill="#ffffff"/><text x="20" y="30" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#1f2937">Apple M1, the die as a block diagram</text><text x="20" y="48" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#4b5563">Two CPU clusters share one memory side through the fabric. Arrow weight is traffic. Dashed is control. Bandwidths are what one core measures.</text><rect x="50.0" y="80.0" width="1000.0" height="580.0" rx="9" fill="#fbfbfc" stroke="#bec4cc" stroke-width="1"/>
 <text x="60.0" y="97.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#9ca3af" text-anchor="start">P-cluster, four Firestorm cores</text>
-<text x="1040.0" y="97.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">3.2 GHz, one clock domain</text>
-<rect x="1090.0" y="80.0" width="640.0" height="560.0" rx="9" fill="#fbfbfc" stroke="#bec4cc" stroke-width="1"/>
+<rect x="845.9" y="83.2" width="68.0" height="18.6" rx="3" fill="#dbdee2" stroke="#9ca3af" stroke-width="1.4"/>
+<text x="852.4" y="97.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="start">3.2 GHz</text>
+<text x="914.9" y="97.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">, one clock domain</text>
+<rect x="1090.0" y="80.0" width="640.0" height="580.0" rx="9" fill="#fbfbfc" stroke="#bec4cc" stroke-width="1"/>
 <text x="1100.0" y="97.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#9ca3af" text-anchor="start">E-cluster, four Icestorm cores</text>
 <text x="1720.0" y="97.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">separate clock domain</text>
-<rect x="1770.0" y="80.0" width="380.0" height="560.0" rx="9" fill="#fef6f6" stroke="#d5989c" stroke-width="1"/>
+<rect x="1770.0" y="80.0" width="380.0" height="580.0" rx="9" fill="#fef6f6" stroke="#d5989c" stroke-width="1"/>
 <text x="1780.0" y="97.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#dc2626" text-anchor="start">Other clients</text>
 <text x="2140.0" y="97.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">not in the KB</text>
 <rect x="50.0" y="900.0" width="2100.0" height="250.0" rx="9" fill="#fef6f6" stroke="#d5989c" stroke-width="1"/>
 <text x="60.0" y="917.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#dc2626" text-anchor="start">Memory side</text>
 <text x="2140.0" y="917.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">exclusive of the CPU caches</text>
-<rect x="70.0" y="120.0" width="225.0" height="130.0" rx="5" fill="#dbdee2" stroke="#9ca3af" stroke-width="2.2"/>
+<rect x="70.0" y="120.0" width="225.0" height="140.0" rx="5" fill="#dbdee2" stroke="#9ca3af" stroke-width="2.2"/>
 <line x1="75.0" y1="150.5" x2="290.0" y2="150.5" stroke="#c4c8d0" stroke-width="1"/>
-<rect x="315.0" y="120.0" width="225.0" height="130.0" rx="5" fill="#dbdee2" stroke="#9ca3af" stroke-width="2.2"/>
+<rect x="315.0" y="120.0" width="225.0" height="140.0" rx="5" fill="#dbdee2" stroke="#9ca3af" stroke-width="2.2"/>
 <line x1="320.0" y1="150.5" x2="535.0" y2="150.5" stroke="#c4c8d0" stroke-width="1"/>
-<rect x="560.0" y="120.0" width="225.0" height="130.0" rx="5" fill="#dbdee2" stroke="#9ca3af" stroke-width="2.2"/>
+<rect x="560.0" y="120.0" width="225.0" height="140.0" rx="5" fill="#dbdee2" stroke="#9ca3af" stroke-width="2.2"/>
 <line x1="565.0" y1="150.5" x2="780.0" y2="150.5" stroke="#c4c8d0" stroke-width="1"/>
-<rect x="805.0" y="120.0" width="225.0" height="130.0" rx="5" fill="#dbdee2" stroke="#9ca3af" stroke-width="2.2"/>
+<rect x="805.0" y="120.0" width="225.0" height="140.0" rx="5" fill="#dbdee2" stroke="#9ca3af" stroke-width="2.2"/>
 <line x1="810.0" y1="150.5" x2="1025.0" y2="150.5" stroke="#c4c8d0" stroke-width="1"/>
 <rect x="70.0" y="310.0" width="730.0" height="200.0" rx="4" fill="#fdcdab" stroke="#f97316" stroke-width="2.2"/>
 <rect x="74.0" y="346.8" width="59.0" height="34.5" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
@@ -67,18 +69,18 @@
 <rect x="615.5" y="453.8" width="59.0" height="34.5" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
 <rect x="675.7" y="453.8" width="59.0" height="34.5" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
 <rect x="735.8" y="453.8" width="59.0" height="34.5" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
-<rect x="850.0" y="310.0" width="180.0" height="150.0" rx="5" fill="#dcf0ea" stroke="#50b696" stroke-width="1"/>
-<line x1="855.0" y1="342.0" x2="1025.0" y2="342.0" stroke="#9ec5be" stroke-width="1"/>
-<rect x="850.0" y="480.0" width="180.0" height="140.0" rx="5" fill="#fbfbfc" stroke="#babfc7" stroke-width="1" stroke-dasharray="4 3"/>
-<line x1="855.0" y1="512.0" x2="1025.0" y2="512.0" stroke="#c4c8d0" stroke-width="1"/>
+<rect x="830.0" y="300.0" width="200.0" height="165.0" rx="5" fill="#dcf0ea" stroke="#50b696" stroke-width="1"/>
+<line x1="835.0" y1="332.0" x2="1025.0" y2="332.0" stroke="#9ec5be" stroke-width="1"/>
+<rect x="830.0" y="475.0" width="200.0" height="165.0" rx="5" fill="#fbfbfc" stroke="#babfc7" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="835.0" y1="507.0" x2="1025.0" y2="507.0" stroke="#c4c8d0" stroke-width="1"/>
 <rect x="1110.0" y="120.0" width="140.0" height="130.0" rx="5" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
-<line x1="1115.0" y1="152.0" x2="1245.0" y2="152.0" stroke="#c4c8d0" stroke-width="1"/>
+<line x1="1115.0" y1="153.5" x2="1245.0" y2="153.5" stroke="#c4c8d0" stroke-width="1"/>
 <rect x="1260.0" y="120.0" width="140.0" height="130.0" rx="5" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
-<line x1="1265.0" y1="152.0" x2="1395.0" y2="152.0" stroke="#c4c8d0" stroke-width="1"/>
+<line x1="1265.0" y1="153.5" x2="1395.0" y2="153.5" stroke="#c4c8d0" stroke-width="1"/>
 <rect x="1410.0" y="120.0" width="140.0" height="130.0" rx="5" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
-<line x1="1415.0" y1="152.0" x2="1545.0" y2="152.0" stroke="#c4c8d0" stroke-width="1"/>
+<line x1="1415.0" y1="153.5" x2="1545.0" y2="153.5" stroke="#c4c8d0" stroke-width="1"/>
 <rect x="1560.0" y="120.0" width="140.0" height="130.0" rx="5" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
-<line x1="1565.0" y1="152.0" x2="1695.0" y2="152.0" stroke="#c4c8d0" stroke-width="1"/>
+<line x1="1565.0" y1="153.5" x2="1695.0" y2="153.5" stroke="#c4c8d0" stroke-width="1"/>
 <rect x="1110.0" y="310.0" width="600.0" height="200.0" rx="4" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
 <rect x="1114.0" y="346.8" width="72.8" height="34.5" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
 <rect x="1188.0" y="346.8" width="72.8" height="34.5" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
@@ -112,7 +114,7 @@
 <rect x="1484.0" y="453.8" width="72.8" height="34.5" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
 <rect x="1558.0" y="453.8" width="72.8" height="34.5" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
 <rect x="1632.0" y="453.8" width="72.8" height="34.5" rx="1" fill="#fff4ec" stroke="#e1ae8c" stroke-width="0.5"/>
-<rect x="1110.0" y="540.0" width="600.0" height="80.0" rx="5" fill="#fbfbfc" stroke="#babfc7" stroke-width="1" stroke-dasharray="4 3"/>
+<rect x="1110.0" y="540.0" width="600.0" height="95.0" rx="5" fill="#fbfbfc" stroke="#babfc7" stroke-width="1" stroke-dasharray="4 3"/>
 <line x1="1115.0" y1="572.0" x2="1705.0" y2="572.0" stroke="#c4c8d0" stroke-width="1"/>
 <rect x="1790.0" y="120.0" width="340.0" height="130.0" rx="5" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
 <line x1="1795.0" y1="150.5" x2="2125.0" y2="150.5" stroke="#d4a9ae" stroke-width="1"/>
@@ -138,12 +140,12 @@
 <rect x="1934.0" y="963.0" width="62.5" height="116.5" rx="1.5" fill="#fce9e9" stroke="#d6868a" stroke-width="0.6"/>
 <rect x="1998.0" y="963.0" width="62.5" height="116.5" rx="1.5" fill="#fce9e9" stroke="#d6868a" stroke-width="0.6"/>
 <rect x="2062.0" y="963.0" width="62.5" height="116.5" rx="1.5" fill="#fce9e9" stroke="#d6868a" stroke-width="0.6"/>
-<polyline points="182.5,250.0 182.5,310.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="0" data-src="core0" data-dst="l2"/>
-<polyline points="427.5,250.0 427.5,310.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="1" data-src="core1" data-dst="l2"/>
-<polyline points="672.5,250.0 672.5,310.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="2" data-src="core2" data-dst="l2"/>
-<polyline points="917.5,250.0 917.5,310.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="3" data-src="core3" data-dst="l2"/>
-<polyline points="996.2,250.0 996.2,280.0 940.0,280.0 940.0,310.0" fill="none" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="4" data-src="core3" data-dst="amx"/>
-<polyline points="850.0,385.0 800.0,385.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="5" data-src="amx" data-dst="l2"/>
+<polyline points="182.5,260.0 182.5,310.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="0" data-src="core0" data-dst="l2"/>
+<polyline points="427.5,260.0 427.5,310.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="1" data-src="core1" data-dst="l2"/>
+<polyline points="672.5,260.0 672.5,310.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="2" data-src="core2" data-dst="l2"/>
+<polyline points="872.5,260.0 872.5,285.0 790.0,285.0 790.0,310.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="3" data-src="core3" data-dst="l2"/>
+<polyline points="996.2,260.0 996.2,300.0" fill="none" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="4" data-src="core3" data-dst="amx"/>
+<polyline points="830.0,382.5 800.0,382.5" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="5" data-src="amx" data-dst="l2"/>
 <polyline points="1180.0,250.0 1180.0,310.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="6" data-src="ecore0" data-dst="el2"/>
 <polyline points="1330.0,250.0 1330.0,310.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="7" data-src="ecore1" data-dst="el2"/>
 <polyline points="1480.0,250.0 1480.0,310.0" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="8" data-src="ecore2" data-dst="el2"/>
@@ -163,27 +165,43 @@
 <polyline points="1530.0,1014.7 1610.0,1014.7" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="22" data-src="mc" data-dst="dram"/>
 <polyline points="1610.0,1025.3 1530.0,1025.3" fill="none" stroke="#1f2937" stroke-width="2.8" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="23" data-src="dram" data-dst="mc"/>
 <polyline points="1290.0,840.0 1290.0,940.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="24" data-src="fab" data-dst="mc"/>
-<polyline points="1030.0,550.0 1070.0,550.0 1070.0,580.0 1110.0,580.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="25" data-src="pwr" data-dst="epwr"/>
+<polyline points="1030.0,587.5 1110.0,587.5" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="25" data-src="pwr" data-dst="epwr"/>
 <text x="77.0" y="142.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Firestorm 0</text>
 <text x="77.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="90.4" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">8 wide, ~630 window</text>
-<text x="77.0" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
-<text x="90.4" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">192 KiB L1I, 128 KiB L1D</text>
+<text x="90.4" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">It is 8 wide.</text>
+<text x="77.0" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
+<text x="90.4" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">Its window is about 630.</text>
+<text x="77.0" y="204.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="90.4" y="204.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">Its L1I is 192 KiB.</text>
+<text x="77.0" y="223.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="90.4" y="223.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">Its L1D is 128 KiB.</text>
 <text x="322.0" y="142.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Firestorm 1</text>
 <text x="322.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="335.4" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">8 wide, ~630 window</text>
-<text x="322.0" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
-<text x="335.4" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">192 KiB L1I, 128 KiB L1D</text>
+<text x="335.4" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">It is 8 wide.</text>
+<text x="322.0" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
+<text x="335.4" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">Its window is about 630.</text>
+<text x="322.0" y="204.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="335.4" y="204.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">Its L1I is 192 KiB.</text>
+<text x="322.0" y="223.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="335.4" y="223.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">Its L1D is 128 KiB.</text>
 <text x="567.0" y="142.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Firestorm 2</text>
 <text x="567.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="580.4" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">8 wide, ~630 window</text>
-<text x="567.0" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
-<text x="580.4" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">192 KiB L1I, 128 KiB L1D</text>
+<text x="580.4" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">It is 8 wide.</text>
+<text x="567.0" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
+<text x="580.4" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">Its window is about 630.</text>
+<text x="567.0" y="204.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="580.4" y="204.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">Its L1I is 192 KiB.</text>
+<text x="567.0" y="223.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="580.4" y="223.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">Its L1D is 128 KiB.</text>
 <text x="812.0" y="142.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Firestorm 3</text>
 <text x="812.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="825.4" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">8 wide, ~630 window</text>
-<text x="812.0" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
-<text x="825.4" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">192 KiB L1I, 128 KiB L1D</text>
+<text x="825.4" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">It is 8 wide.</text>
+<text x="812.0" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
+<text x="825.4" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">Its window is about 630.</text>
+<text x="812.0" y="204.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="825.4" y="204.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">Its L1I is 192 KiB.</text>
+<text x="812.0" y="223.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
+<text x="825.4" y="223.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">Its L1D is 128 KiB.</text>
 <text x="104.1" y="344.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w0</text>
 <text x="164.2" y="344.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w1</text>
 <text x="224.4" y="344.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w2</text>
@@ -197,45 +215,47 @@
 <text x="705.8" y="344.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w10</text>
 <text x="765.9" y="344.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w11</text>
 <text x="435.0" y="327.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">Shared L2, 12 MiB, 12 ways</text>
-<text x="435.0" y="505.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">128 B lines, inclusive, 17 clk</text>
-<text x="857.0" y="332.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">AMX</text>
-<text x="857.0" y="356.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="869.1" y="356.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">8 x 8 FMA grid</text>
-<text x="857.0" y="374.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="869.1" y="374.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">4 register sets</text>
-<text x="857.0" y="391.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="869.1" y="391.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">4 clk FMA</text>
-<text x="857.0" y="409.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="869.1" y="409.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">30 op window</text>
-<text x="857.0" y="502.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Power</text>
-<text x="857.0" y="526.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="869.1" y="526.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">cluster DVFS</text>
-<text x="857.0" y="544.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="869.1" y="544.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">clock ramp</text>
-<text x="857.0" y="561.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="869.1" y="561.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">power up 10 us</text>
-<text x="857.0" y="579.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="869.1" y="579.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">perf controller</text>
+<text x="342.7" y="505.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">128 B lines, inclusive, </text>
+<rect x="477.3" y="492.6" width="49.1" height="16.7" rx="3" fill="#feebde" stroke="#fb9d5c" stroke-width="1"/>
+<text x="483.0" y="505.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">17 clk</text>
+<text x="837.0" y="322.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">AMX</text>
+<text x="837.0" y="346.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
+<text x="849.1" y="346.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Its FMA grid is 8 x 8.</text>
+<text x="837.0" y="364.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
+<text x="849.1" y="364.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">It has 4 register sets.</text>
+<text x="837.0" y="381.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
+<text x="849.1" y="381.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">An FMA takes 4 clocks.</text>
+<text x="837.0" y="399.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
+<text x="849.1" y="399.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Its window holds 30 ops.</text>
+<text x="837.0" y="497.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Power</text>
+<text x="837.0" y="521.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
+<text x="849.1" y="521.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">DVFS is per cluster.</text>
+<text x="837.0" y="539.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
+<text x="849.1" y="539.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Clocks ramp up or down.</text>
+<text x="837.0" y="556.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
+<text x="849.1" y="556.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Power up takes 10 us.</text>
+<text x="837.0" y="574.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
+<text x="849.1" y="574.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">A controller sets speed.</text>
 <text x="1117.0" y="142.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">E core 0</text>
-<text x="1117.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
-<text x="1129.1" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start">3 wide</text>
-<text x="1117.0" y="184.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
-<text x="1129.1" y="184.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start">64 KiB L1D</text>
+<text x="1117.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
+<text x="1127.7" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">It is 3 wide.</text>
+<text x="1117.0" y="182.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
+<text x="1127.7" y="182.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">Its L1D is 64 KiB.</text>
 <text x="1267.0" y="142.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">E core 1</text>
-<text x="1267.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
-<text x="1279.1" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start">3 wide</text>
-<text x="1267.0" y="184.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
-<text x="1279.1" y="184.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start">64 KiB L1D</text>
+<text x="1267.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
+<text x="1277.7" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">It is 3 wide.</text>
+<text x="1267.0" y="182.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
+<text x="1277.7" y="182.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">Its L1D is 64 KiB.</text>
 <text x="1417.0" y="142.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">E core 2</text>
-<text x="1417.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
-<text x="1429.1" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start">3 wide</text>
-<text x="1417.0" y="184.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
-<text x="1429.1" y="184.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start">64 KiB L1D</text>
+<text x="1417.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
+<text x="1427.7" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">It is 3 wide.</text>
+<text x="1417.0" y="182.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
+<text x="1427.7" y="182.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">Its L1D is 64 KiB.</text>
 <text x="1567.0" y="142.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">E core 3</text>
-<text x="1567.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
-<text x="1579.1" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start">3 wide</text>
-<text x="1567.0" y="184.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
-<text x="1579.1" y="184.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start">64 KiB L1D</text>
+<text x="1567.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
+<text x="1577.7" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">It is 3 wide.</text>
+<text x="1567.0" y="182.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="10.5" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
+<text x="1577.7" y="182.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">Its L1D is 64 KiB.</text>
 <text x="1151.0" y="344.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w0</text>
 <text x="1225.0" y="344.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w1</text>
 <text x="1299.0" y="344.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">w2</text>
@@ -248,42 +268,55 @@
 <text x="1410.0" y="505.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">backing L2 for the P cores too</text>
 <text x="1117.0" y="562.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Clocks and power</text>
 <text x="1117.0" y="586.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="1129.1" y="586.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">cluster sleep states, fast IPIs through system registers</text>
+<text x="1129.1" y="586.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Clusters have sleep states.</text>
+<text x="1117.0" y="604.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
+<text x="1129.1" y="604.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Fast IPIs go through system registers.</text>
 <text x="1797.0" y="142.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">GPU</text>
 <text x="1797.0" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
-<text x="1810.4" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#9ca3af" text-anchor="start">8 cores, reads through the SLC</text>
+<text x="1810.4" y="166.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#9ca3af" text-anchor="start">It has 8 cores.</text>
+<text x="1797.0" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
+<text x="1810.4" y="185.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#9ca3af" text-anchor="start">It reads through the SLC.</text>
 <text x="1797.0" y="312.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">Neural engine</text>
 <text x="1797.0" y="336.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#9ca3af" text-anchor="start">?</text>
-<text x="1810.4" y="336.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#9ca3af" text-anchor="start">16 cores</text>
+<text x="1810.4" y="336.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#9ca3af" text-anchor="start">It has 16 cores.</text>
 <text x="1797.0" y="452.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Media, display, IO</text>
 <text x="1797.0" y="476.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="1810.4" y="476.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">IO caches behind the SLC</text>
+<text x="1810.4" y="476.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">IO caches sit behind the SLC.</text>
 <text x="1797.0" y="495.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="1810.4" y="495.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">separate PIO network</text>
+<text x="1810.4" y="495.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">PIO has a network of its own.</text>
 <text x="57.0" y="752.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Fabric and coherence</text>
 <text x="57.0" y="776.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="69.1" y="776.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">NoC port per cluster | hashed address interleave</text>
+<text x="69.1" y="776.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Each cluster has a NoC port.</text>
 <text x="57.0" y="794.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="69.1" y="794.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">MOESI | duplicate tags at the coherence point</text>
+<text x="69.1" y="794.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Addresses interleave by a hash.</text>
 <text x="57.0" y="811.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="69.1" y="811.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">credit gated QoS bands</text>
+<text x="69.1" y="811.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">Coherence is MOESI, with duplicate tags.</text>
+<text x="57.0" y="829.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
+<text x="69.1" y="829.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">QoS bands are credit gated.</text>
 <text x="520.0" y="957.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">System level cache, 8 MiB, 16 ways</text>
 <text x="520.0" y="1095.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">4 planes, 4096 sets, 128 B lines</text>
-<text x="80.0" y="1130.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="slc-policy">L2 victim fill | all index bits hashed</text>
+<text x="80.0" y="1130.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="slc-policy">L2 victims fill the SLC, and every index bit is hashed.</text>
 <text x="1057.0" y="962.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Memory controllers</text>
 <text x="1057.0" y="986.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="1070.4" y="986.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">8 channels</text>
+<text x="1070.4" y="986.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">It has 8 channels.</text>
 <text x="1057.0" y="1005.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="1070.4" y="1005.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">DRAM bank scheduler, read and write turns</text>
+<text x="1070.4" y="1005.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">A bank scheduler turns reads and writes.</text>
 <text x="1057.0" y="1024.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="1070.4" y="1024.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">flexible refresh placement</text>
+<text x="1070.4" y="1024.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">Refresh placement is flexible.</text>
 <text x="1870.0" y="957.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">LPDDR4X, 16 GB, 8 channels</text>
-<text x="1870.0" y="1095.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">91 ns, 68 GB/s peak</text>
-<text x="951.0" y="305.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="4">via the SQ</text>
+<rect x="1794.1" y="1082.6" width="46.0" height="16.7" rx="3" fill="#fae1e1" stroke="#e66767" stroke-width="1"/>
+<text x="1799.8" y="1095.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">91 ns</text>
+<text x="1841.1" y="1095.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">, </text>
+<rect x="1849.6" y="1082.6" width="96.3" height="16.7" rx="3" fill="#fceeee" stroke="#e66767" stroke-width="1" stroke-dasharray="9 3"/>
+<text x="1855.4" y="1095.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="start">68 GB/s peak</text>
+<text x="918.6" y="286.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="4">via the SQ</text>
 <polyline points="424.7,624.0 445.3,616.0" fill="none" stroke="#1f2937" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="448.3" y="623.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="slash">2 x 32 B/clk</text>
+<rect x="449.3" y="611.3" width="80.2" height="15.8" rx="3" fill="#fff4ec" stroke="#fb9d5c" stroke-width="1" stroke-dasharray="9 3"/>
+<text x="454.7" y="623.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="slash">2 x 32 B/clk</text>
 <polyline points="509.7,894.0 530.3,886.0" fill="none" stroke="#1f2937" stroke-width="1.1" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="533.3" y="893.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="slash">64 GB/s per core</text>
+<rect x="534.3" y="881.3" width="58.2" height="15.8" rx="3" fill="#fae1e1" stroke="#e66767" stroke-width="1"/>
+<text x="539.7" y="893.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="slash">64 GB/s</text>
+<text x="597.1" y="893.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="slash">per core</text>
 <text x="1302.0" y="880.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="24">uncached, PIO</text>
 <rect x="60.0" y="1176.0" width="16.0" height="11.0" rx="2" fill="#dbdee2" stroke="#9ca3af" stroke-width="2.2"/>
 <text x="80.0" y="1185.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">● 3+ measurements</text>
@@ -312,4 +345,4 @@
 <polyline points="603.2,1198.0 629.2,1198.0" fill="none" stroke="#1f2937" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="635.2" y="1202.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">wire</text>
 <polyline points="693.7,1198.0 719.7,1198.0" fill="none" stroke="#1f2937" stroke-width="1.0" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="725.7" y="1202.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">signal</text><g class="hot-layer"><rect class="hot" data-bid="core0" x="70.0" y="120.0" width="225.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="core1" x="315.0" y="120.0" width="225.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="core2" x="560.0" y="120.0" width="225.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="core3" x="805.0" y="120.0" width="225.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="l2" x="70.0" y="310.0" width="730.0" height="200.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="amx" x="850.0" y="310.0" width="180.0" height="150.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="pwr" x="850.0" y="480.0" width="180.0" height="140.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="ecore0" x="1110.0" y="120.0" width="140.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="ecore1" x="1260.0" y="120.0" width="140.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="ecore2" x="1410.0" y="120.0" width="140.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="ecore3" x="1560.0" y="120.0" width="140.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="el2" x="1110.0" y="310.0" width="600.0" height="200.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="epwr" x="1110.0" y="540.0" width="600.0" height="80.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="gpu" x="1790.0" y="120.0" width="340.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="npu" x="1790.0" y="290.0" width="340.0" height="100.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="io" x="1790.0" y="430.0" width="340.0" height="190.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="fab" x="50.0" y="730.0" width="2100.0" height="110.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="slc" x="70.0" y="940.0" width="900.0" height="160.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="mc" x="1050.0" y="940.0" width="480.0" height="160.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="dram" x="1610.0" y="940.0" width="520.0" height="160.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot hot-frame" data-bid="pcl" x="50" y="80" width="1000" height="560" fill="transparent" stroke="none" pointer-events="none"/><rect class="hot hot-frame" data-bid="ecl" x="1090" y="80" width="640" height="560" fill="transparent" stroke="none" pointer-events="none"/><rect class="hot hot-frame" data-bid="clients" x="1770" y="80" width="380" height="560" fill="transparent" stroke="none" pointer-events="none"/><rect class="hot hot-frame" data-bid="mem" x="50" y="900" width="2100" height="250" fill="transparent" stroke="none" pointer-events="none"/></g></svg>
+<text x="725.7" y="1202.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">signal</text><g class="hot-layer"><rect class="hot" data-bid="core0" x="70.0" y="120.0" width="225.0" height="140.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="core1" x="315.0" y="120.0" width="225.0" height="140.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="core2" x="560.0" y="120.0" width="225.0" height="140.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="core3" x="805.0" y="120.0" width="225.0" height="140.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="l2" x="70.0" y="310.0" width="730.0" height="200.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="amx" x="830.0" y="300.0" width="200.0" height="165.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="pwr" x="830.0" y="475.0" width="200.0" height="165.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="ecore0" x="1110.0" y="120.0" width="140.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="ecore1" x="1260.0" y="120.0" width="140.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="ecore2" x="1410.0" y="120.0" width="140.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="ecore3" x="1560.0" y="120.0" width="140.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="el2" x="1110.0" y="310.0" width="600.0" height="200.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="epwr" x="1110.0" y="540.0" width="600.0" height="95.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="gpu" x="1790.0" y="120.0" width="340.0" height="130.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="npu" x="1790.0" y="290.0" width="340.0" height="100.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="io" x="1790.0" y="430.0" width="340.0" height="190.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="fab" x="50.0" y="730.0" width="2100.0" height="110.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="slc" x="70.0" y="940.0" width="900.0" height="160.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="mc" x="1050.0" y="940.0" width="480.0" height="160.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot" data-bid="dram" x="1610.0" y="940.0" width="520.0" height="160.0" fill="transparent" stroke="none" pointer-events="all"/><rect class="hot hot-frame" data-bid="pcl" x="50" y="80" width="1000" height="580" fill="transparent" stroke="none" pointer-events="none"/><rect class="hot hot-frame" data-bid="ecl" x="1090" y="80" width="640" height="580" fill="transparent" stroke="none" pointer-events="none"/><rect class="hot hot-frame" data-bid="clients" x="1770" y="80" width="380" height="580" fill="transparent" stroke="none" pointer-events="none"/><rect class="hot hot-frame" data-bid="mem" x="50" y="900" width="2100" height="250" fill="transparent" stroke="none" pointer-events="none"/></g></svg>

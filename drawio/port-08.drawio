@@ -43,22 +43,22 @@
         <mxCell id="v-st10" value="&lt;b&gt;Map history retire&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#a5d9c9;strokeColor=#059669;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="2040" y="90" width="170" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="v-retire_slot" value="&lt;b&gt;330 groups x 7 slots&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-retire_slot" value="&lt;b&gt;330 groups x &lt;span style=&quot;background-color:#ebf7f3;border:1px dashed #50b696;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;7 slots&lt;/span&gt;&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="654" y="230" width="1358" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="v-rrq_entry" value="&lt;b&gt;623 entries, 16 freed per clk&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#a5d9c9;strokeColor=#059669;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-rrq_entry" value="&lt;b&gt;623 entries, &lt;span style=&quot;background-color:#c0e5da;border:1.4px solid #059669;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;16 freed per clk&lt;/span&gt;&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#a5d9c9;strokeColor=#059669;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="654" y="312" width="1556" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="v-preg" value="&lt;b&gt;380 int | 432 FP | 128 flags&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-preg" value="&lt;b&gt;380 int, 432 FP, 128 flags&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="654" y="394" width="1556" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="v-dispatch_entry" value="&lt;b&gt;2 x 24 int | 12 mul | 10 LS | 12 FP&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-dispatch_entry" value="&lt;b&gt;2 x 24 int, &lt;span style=&quot;background-color:#dcf0ea;border:1px solid #50b696;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;12 mul&lt;/span&gt;, 10 LS, 12 FP&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c0e5da;strokeColor=#059669;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="852" y="476" width="368" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="v-sched_entry" value="&lt;b&gt;int 13 per queue | FP 36 | LS 12&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ebf7f3;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=9 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-sched_entry" value="&lt;b&gt;int 13 per queue, FP 18, LS 12&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ebf7f3;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=9 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1050" y="558" width="368" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="v-lsq_entry" value="&lt;b&gt;130 loads | 60 stores&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ebf7f3;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=9 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-lsq_entry" value="&lt;b&gt;&lt;span style=&quot;background-color:#c0e5da;border:1.4px solid #059669;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;130 loads&lt;/span&gt;, &lt;span style=&quot;background-color:#c0e5da;border:1.4px solid #059669;border-radius:3px;padding:0 3px;font-weight:bold;color:#1f2937&quot;&gt;60 stores&lt;/span&gt;&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ebf7f3;strokeColor=#50b696;strokeWidth=1;dashed=1;dashPattern=9 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1248" y="640" width="764" height="44" as="geometry" />
         </mxCell>
         <mxCell id="v-branch_inflight" value="&lt;b&gt;144 in flight&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#dcf0ea;strokeColor=#50b696;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -97,59 +97,62 @@
         <mxCell id="e-st9-st10" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.6;strokeColor=#1f2937;dashed=0;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.50000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.50000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-st9" target="v-st10">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="n-each_bar_is_one_resource_taken" value="each bar is one resource, taken where it starts and given back where it ends" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="149.8" width="520.5" height="17.2" as="geometry" />
+        <mxCell id="n-A_bar_is_one_resource_held_from" value="A bar is one resource, held from its start to its end." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="149.8" width="348.0" height="17.2" as="geometry" />
         </mxCell>
         <mxCell id="n-Retire_group_slot" value="Retire group slot" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="230.2" width="131.3" height="18.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-taken_at_rename_a_memory_op_ope" value="taken at rename | a memory op opens a group, a branch closes it" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="251.8" width="441.0" height="19.2" as="geometry" />
+        <mxCell id="n-Rename_takes_it._Memory_ops_open" value="Rename takes it. Memory ops open groups and branches close them." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="251.8" width="469.2" height="19.2" as="geometry" />
         </mxCell>
         <mxCell id="n-Rename_retire_queue_entry" value="Rename retire queue entry" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="312.2" width="208.4" height="18.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-one_per_register_writing_uop_fr" value="one per register writing uop | freed when its map history retires" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="333.8" width="431.0" height="19.2" as="geometry" />
+        <mxCell id="n-Each_register_writing_uop_holds" value="Each register writing uop holds one until its map history retires." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="333.8" width="436.0" height="19.2" as="geometry" />
         </mxCell>
         <mxCell id="n-Physical_register" value="Physical register" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="394.2" width="135.1" height="18.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-new_register_at_rename_the_old" value="new register at rename | the old one freed at map history retire" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="415.8" width="426.2" height="19.2" as="geometry" />
+        <mxCell id="n-Rename_takes_a_new_one._Map_hist" value="Rename takes a new one. Map history retire frees the old." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="415.8" width="395.1" height="19.2" as="geometry" />
         </mxCell>
         <mxCell id="n-Dispatch_buffer_entry" value="Dispatch buffer entry" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="476.2" width="164.9" height="18.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-held_until_a_scheduler_queue_has" value="held until a scheduler queue has room | one uop per queue per clk" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="497.8" width="447.0" height="19.2" as="geometry" />
+        <mxCell id="n-It_waits_for_scheduler_room._Eac" value="It waits for scheduler room. Each queue takes one a clock." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="497.8" width="401.3" height="19.2" as="geometry" />
         </mxCell>
         <mxCell id="n-Scheduler_queue_entry" value="Scheduler queue entry" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="558.2" width="176.4" height="18.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-held_until_the_operands_are_read" value="held until the operands are ready and the uop is selected" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="579.8" width="384.4" height="19.2" as="geometry" />
+        <mxCell id="n-It_waits_until_its_operands_are" value="It waits until its operands are ready and it is selected." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="579.8" width="369.9" height="19.2" as="geometry" />
         </mxCell>
         <mxCell id="n-Load_or_store_queue_entry" value="Load or store queue entry" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="640.2" width="202.5" height="18.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-taken_at_issue_not_dispatch_lo" value="taken at issue, not dispatch | loads and plain stores give it back before retire" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="661.8" width="522.8" height="19.2" as="geometry" />
+        <mxCell id="n-Issue_takes_it_not_dispatch._Lo" value="Issue takes it, not dispatch. Loads and plain stores free it early." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="661.8" width="437.2" height="19.2" as="geometry" />
         </mxCell>
         <mxCell id="n-Branch_in_flight" value="Branch in flight" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="722.2" width="121.9" height="18.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-counted_from_rename_to_retire" value="counted from rename to retire" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="743.8" width="199.8" height="19.2" as="geometry" />
+        <mxCell id="n-It_is_counted_from_rename_to_ret" value="It is counted from rename to retire." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="743.8" width="236.2" height="19.2" as="geometry" />
         </mxCell>
         <mxCell id="n-Store_data_to_L1D" value="Store data to L1D" style="text;html=1;fontSize=10.5;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="60.0" y="804.2" width="136.1" height="18.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-written_after_the_retire_group_c" value="written after the retire group commits" style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="825.8" width="254.0" height="19.2" as="geometry" />
+        <mxCell id="n-It_is_written_after_the_retire_g" value="It is written after the retire group commits." style="text;html=1;fontSize=9.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="825.8" width="290.5" height="19.2" as="geometry" />
         </mxCell>
-        <mxCell id="n-The_early_release_of_load_and_st" value="The early release of load and store queue entries, and the issue time allocation point, are why the same filler gives different window knees under a cache miss and under an ALU delay." style="text;html=1;fontSize=10;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="60.0" y="881.0" width="1328.2" height="20.0" as="geometry" />
+        <mxCell id="n-Load_and_store_entries_are_taken" value="Load and store entries are taken late and freed early." style="text;html=1;fontSize=10;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="893.0" width="378.1" height="18.0" as="geometry" />
+        </mxCell>
+        <mxCell id="n-That_is_why_misses_and_ALU_delay" value="That is why misses and ALU delays give different window knees." style="text;html=1;fontSize=10;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="912.0" width="476.7" height="18.0" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

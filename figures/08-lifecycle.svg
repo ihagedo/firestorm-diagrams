@@ -54,32 +54,44 @@
 <text x="1651.0" y="111.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="600" fill="#1f2937" text-anchor="start">Writeback</text>
 <text x="1849.0" y="111.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="600" fill="#1f2937" text-anchor="start">Retire group</text>
 <text x="2047.0" y="111.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="600" fill="#1f2937" text-anchor="start">Map history retire</text>
-<text x="60.0" y="164.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">each bar is one resource, taken where it starts and given back where it ends</text>
-<text x="661.0" y="250.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">330 groups x 7 slots</text>
+<text x="60.0" y="164.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">A bar is one resource, held from its start to its end.</text>
+<text x="661.0" y="250.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">330 groups x </text>
+<rect x="763.6" y="236.3" width="63.7" height="19.5" rx="3" fill="#ebf7f3" stroke="#50b696" stroke-width="1" stroke-dasharray="9 3"/>
+<text x="770.5" y="250.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">7 slots</text>
 <text x="60.0" y="246.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="retire_slot-name">Retire group slot</text>
-<text x="60.0" y="266.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">taken at rename | a memory op opens a group, a branch closes it</text>
-<text x="661.0" y="332.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">623 entries, 16 freed per clk</text>
+<text x="60.0" y="266.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">Rename takes it. Memory ops open groups and branches close them.</text>
+<text x="661.0" y="332.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">623 entries, </text>
+<rect x="753.1" y="318.3" width="129.4" height="19.5" rx="3" fill="#c0e5da" stroke="#059669" stroke-width="1.4"/>
+<text x="760.0" y="332.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">16 freed per clk</text>
 <text x="60.0" y="328.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="rrq_entry-name">Rename retire queue entry</text>
-<text x="60.0" y="348.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">one per register writing uop | freed when its map history retires</text>
-<text x="661.0" y="414.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">380 int | 432 FP | 128 flags</text>
+<text x="60.0" y="348.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">Each register writing uop holds one until its map history retires.</text>
+<text x="661.0" y="414.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">380 int, 432 FP, 128 flags</text>
 <text x="60.0" y="410.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="preg-name">Physical register</text>
-<text x="60.0" y="430.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">new register at rename | the old one freed at map history retire</text>
-<text x="859.0" y="496.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">2 x 24 int | 12 mul | 10 LS | 12 FP</text>
+<text x="60.0" y="430.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">Rename takes a new one. Map history retire frees the old.</text>
+<text x="859.0" y="496.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">2 x 24 int, </text>
+<rect x="936.2" y="482.3" width="63.7" height="19.5" rx="3" fill="#dcf0ea" stroke="#50b696" stroke-width="1"/>
+<text x="943.1" y="496.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">12 mul</text>
+<text x="1000.8" y="496.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">, 10 LS, 12 FP</text>
 <text x="60.0" y="492.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="dispatch_entry-name">Dispatch buffer entry</text>
-<text x="60.0" y="512.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">held until a scheduler queue has room | one uop per queue per clk</text>
-<text x="1057.0" y="578.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">int 13 per queue | FP 36 | LS 12</text>
+<text x="60.0" y="512.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">It waits for scheduler room. Each queue takes one a clock.</text>
+<text x="1057.0" y="578.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">int 13 per queue, FP 18, LS 12</text>
 <text x="60.0" y="574.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="sched_entry-name">Scheduler queue entry</text>
-<text x="60.0" y="594.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">held until the operands are ready and the uop is selected</text>
-<text x="1255.0" y="660.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">130 loads | 60 stores</text>
+<text x="60.0" y="594.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">It waits until its operands are ready and it is selected.</text>
+<rect x="1256.0" y="646.3" width="85.6" height="19.5" rx="3" fill="#c0e5da" stroke="#059669" stroke-width="1.4"/>
+<text x="1262.9" y="660.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">130 loads</text>
+<text x="1342.6" y="660.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">, </text>
+<rect x="1352.3" y="646.3" width="83.0" height="19.5" rx="3" fill="#c0e5da" stroke="#059669" stroke-width="1.4"/>
+<text x="1359.2" y="660.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">60 stores</text>
 <text x="60.0" y="656.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="lsq_entry-name">Load or store queue entry</text>
-<text x="60.0" y="676.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">taken at issue, not dispatch | loads and plain stores give it back before retire</text>
+<text x="60.0" y="676.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">Issue takes it, not dispatch. Loads and plain stores free it early.</text>
 <text x="661.0" y="742.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">144 in flight</text>
 <text x="60.0" y="738.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="branch_inflight-name">Branch in flight</text>
-<text x="60.0" y="758.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">counted from rename to retire</text>
+<text x="60.0" y="758.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">It is counted from rename to retire.</text>
 <text x="1849.0" y="824.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">2 per clk</text>
 <text x="60.0" y="820.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="store_commit-name">Store data to L1D</text>
-<text x="60.0" y="840.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">written after the retire group commits</text>
-<text x="60.0" y="896.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">The early release of load and store queue entries, and the issue time allocation point, are why the same filler gives different window knees under a cache miss and under an ALU delay.</text>
+<text x="60.0" y="840.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">It is written after the retire group commits.</text>
+<text x="60.0" y="908.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="closing">Load and store entries are taken late and freed early.</text>
+<text x="60.0" y="927.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="closing">That is why misses and ALU delays give different window knees.</text>
 <rect x="60.0" y="956.0" width="16.0" height="11.0" rx="2" fill="#a5d9c9" stroke="#059669" stroke-width="2.2"/>
 <text x="80.0" y="965.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">● 3+ measurements</text>
 <rect x="230.9" y="956.0" width="16.0" height="11.0" rx="2" fill="#c0e5da" stroke="#059669" stroke-width="1.4"/>

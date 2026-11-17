@@ -930,6 +930,7 @@
       "m1-fetch",
       "d4-hierarchy",
       "x7-fetch-path",
+      "s5-btb",
       "s8-fetch-icache",
       "l3-nfp",
       "l14-trace",
@@ -946,6 +947,7 @@
       "c4-hierarchy",
       "d4-hierarchy",
       "x7-fetch-path",
+      "s5-btb",
       "s8-fetch-icache",
       "l3-nfp",
       "l14-trace",
@@ -956,6 +958,7 @@
     },
     "rtl": {
      "figs": [
+      "s5-btb",
       "s8-fetch-icache",
       "p1-pipeline"
      ],
@@ -964,6 +967,7 @@
     },
     "fsm": {
      "figs": [
+      "m1-fetch",
       "x7-fetch-path",
       "fsm-l1i"
      ],
@@ -996,6 +1000,7 @@
     "c4-hierarchy",
     "d4-hierarchy",
     "x7-fetch-path",
+    "s5-btb",
     "s8-fetch-icache",
     "fsm-l1i",
     "l3-nfp",
@@ -1043,6 +1048,7 @@
     },
     "fsm": {
      "figs": [
+      "m1-fetch",
       "x7-fetch-path"
      ],
      "status": "have",
@@ -1083,6 +1089,7 @@
       "01-core-overview",
       "m1-fetch",
       "x7-fetch-path",
+      "s5-btb",
       "l3-nfp",
       "p1-pipeline"
      ],
@@ -1096,6 +1103,7 @@
       "02-frontend",
       "x7-fetch-path",
       "s4-next-pc",
+      "s5-btb",
       "l3-nfp",
       "p1-pipeline"
      ],
@@ -1105,6 +1113,7 @@
     "rtl": {
      "figs": [
       "s4-next-pc",
+      "s5-btb",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1112,6 +1121,7 @@
     },
     "fsm": {
      "figs": [
+      "m1-fetch",
       "x7-fetch-path",
       "fsm-btb"
      ],
@@ -1140,6 +1150,7 @@
     "m1-fetch",
     "x7-fetch-path",
     "s4-next-pc",
+    "s5-btb",
     "fsm-btb",
     "l3-nfp",
     "p1-pipeline"
@@ -1157,6 +1168,7 @@
       "m2-dirpred",
       "l1-branch",
       "x7-fetch-path",
+      "s6-tage",
       "p1-pipeline",
       "x8-predictors-decode"
      ],
@@ -1171,6 +1183,7 @@
       "m2-dirpred",
       "l1-branch",
       "x7-fetch-path",
+      "s6-tage",
       "p1-pipeline",
       "x8-predictors-decode"
      ],
@@ -1179,6 +1192,7 @@
     },
     "rtl": {
      "figs": [
+      "s6-tage",
       "p1-pipeline",
       "x8-predictors-decode"
      ],
@@ -1215,6 +1229,7 @@
     "m2-dirpred",
     "l1-branch",
     "x7-fetch-path",
+    "s6-tage",
     "p1-pipeline",
     "x8-predictors-decode"
    ]
@@ -1262,6 +1277,7 @@
     },
     "fsm": {
      "figs": [
+      "m1-fetch",
       "x8-predictors-decode"
      ],
      "status": "have",
@@ -1417,6 +1433,7 @@
     },
     "fsm": {
      "figs": [
+      "m1-fetch",
       "f1-fsm",
       "x7-fetch-path",
       "fsm-fetch"
@@ -1557,6 +1574,7 @@
     },
     "fsm": {
      "figs": [
+      "m1-fetch",
       "fsm-decode",
       "x8-predictors-decode"
      ],
@@ -1626,6 +1644,7 @@
     },
     "fsm": {
      "figs": [
+      "m1-fetch",
       "x7-fetch-path",
       "fsm-iq"
      ],
@@ -1765,6 +1784,7 @@
       "01-core-overview",
       "03-rename",
       "x9-backend",
+      "s13-exec-bypass",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1773,6 +1793,7 @@
     "rtl": {
      "figs": [
       "x9-backend",
+      "s13-exec-bypass",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1812,6 +1833,7 @@
     "m4-sched",
     "m5-retire",
     "x9-backend",
+    "s13-exec-bypass",
     "fsm-int-prf",
     "l5-rename",
     "p1-pipeline",
@@ -2241,6 +2263,7 @@
      "figs": [
       "01-core-overview",
       "x9-backend",
+      "s13-exec-bypass",
       "p1-pipeline"
      ],
      "status": "have",
@@ -2249,6 +2272,7 @@
     "rtl": {
      "figs": [
       "x9-backend",
+      "s13-exec-bypass",
       "p1-pipeline"
      ],
      "status": "have",
@@ -2281,6 +2305,7 @@
     "01-core-overview",
     "04-issue",
     "x9-backend",
+    "s13-exec-bypass",
     "fsm-eu-int",
     "l6-scheduler",
     "p1-pipeline",

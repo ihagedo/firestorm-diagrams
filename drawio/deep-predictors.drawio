@@ -61,7 +61,7 @@
         <mxCell id="v-return_fetch_table-cell-8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-return_fetch_table">
           <mxGeometry x="116.0" y="91.3" width="110.8" height="17.0" as="geometry" />
         </mxCell>
-        <mxCell id="v-return_fetch_table-count" value="tag | ends in ret" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-return_fetch_table">
+        <mxCell id="v-return_fetch_table-count" value="tag, ends in ret" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-return_fetch_table">
           <mxGeometry x="0" y="114" width="232" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-two_level_ras" value="&lt;b&gt;mini RAS&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -286,7 +286,7 @@
         <mxCell id="v-loop_predictor-cell-9" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-loop_predictor">
           <mxGeometry x="230.7" y="66.6" width="112.1" height="13.7" as="geometry" />
         </mxCell>
-        <mxCell id="v-loop_predictor-count" value="trip count | iteration" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-loop_predictor">
+        <mxCell id="v-loop_predictor-count" value="trip count and iteration" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-loop_predictor">
           <mxGeometry x="0" y="86" width="348" height="14" as="geometry" />
         </mxCell>
         <mxCell id="v-m_dir" value="" style="shape=stencil(nZPRboMwDEW/Jq9TQlakPnfdf6TUG1aDg5LQdn+/ZAYaOqG1e0G+zvUJxkboXWhND6KSZDoQ+k1UVTdc0zOlWtZK1awvrHOcpQk9NJFzZ+PRHCzwSYjeneCCxzgikFrwGPOp3gu9axxRqkVHYU6kIoOUPPLKRZJhX6N62bDuE6mDCH7hur0+0k/mfR2s/gd2Q/yLPLNmtnzV6jF8ACuf52839fZhvir5Kfg1hoNpTp/eDXRk3Zs8wRx17gyroymxFqkwTrsyOtUz1nrdu7x/WtDpw1kXoGzz1kUS9y1+OA8Ljdby/paIe1dK8Y+j998=);perimeter=none;slant=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=1.1;fontSize=9;" vertex="1" parent="1">
@@ -316,7 +316,7 @@
         <mxCell id="v-bpu_isolation-cell-3" value="u 8:7" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-bpu_isolation">
           <mxGeometry x="380.6" y="0.0" width="50.8" height="36.0" as="geometry" />
         </mxCell>
-        <mxCell id="v-bpu_isolation-cell-4" value="EL / ASID: none 6:0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-bpu_isolation">
+        <mxCell id="v-bpu_isolation-cell-4" value="no EL or ASID 6:0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-bpu_isolation">
           <mxGeometry x="431.4" y="0.0" width="177.6" height="36.0" as="geometry" />
         </mxCell>
         <mxCell id="v-ctx_a" value="&lt;b&gt;process A&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;EL0&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#e0e9fc;strokeColor=#6692f1;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
@@ -394,8 +394,8 @@
         <mxCell id="v-ibp_exec" value="&lt;b&gt;execute&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;only in context&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c1e4ec;strokeColor=#0891b2;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1058" y="906" width="174" height="87" as="geometry" />
         </mxCell>
-        <mxCell id="v-ib_sq" value="squash" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=1.1;fontSize=9;" vertex="1" parent="1">
-          <mxGeometry x="837" y="1069" width="66" height="66" as="geometry" />
+        <mxCell id="v-ib_sq" value="&lt;b&gt;Squashed&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;fetched, not run&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#e0e9fc;strokeColor=#6692f1;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+          <mxGeometry x="790" y="1070" width="160" height="64" as="geometry" />
         </mxCell>
         <mxCell id="v-objc_uop" value="&lt;b&gt;predict uop&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;hot indirect&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9ca3af;strokeWidth=1;dashed=1;dashPattern=2 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="100" y="1160" width="174" height="72" as="geometry" />
@@ -692,8 +692,8 @@
         <mxCell id="n-_pac" value="= pac" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1076.4" y="417.5" width="34.8" height="16.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-call_push" value="call: push" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-ov0-ov0;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1133.0" y="174.2" width="67.9" height="17.8" as="geometry" />
+        <mxCell id="n-a_call_pushes" value="a call pushes" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-ov0-ov0;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1122.3" y="174.2" width="89.4" height="17.8" as="geometry" />
         </mxCell>
         <mxCell id="n-call_at_50" value="call at 50" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-ov0-ras_overflow_clear;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1044.6" y="310.2" width="66.1" height="17.8" as="geometry" />
@@ -704,14 +704,14 @@
         <mxCell id="n-ret_no_target" value="ret, no target" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-return_fetch_table-m_ras;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="357.0" y="217.5" width="89.4" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-push_pop" value="push | pop" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-ras_main-ras_pac_check;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="839.5" y="533.5" width="74.5" height="18.5" as="geometry" />
+        <mxCell id="n-push_and_pop" value="push and pop" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-ras_main-ras_pac_check;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="821.2" y="533.5" width="92.8" height="18.5" as="geometry" />
         </mxCell>
         <mxCell id="n-fault" value="fault" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1168.0" y="445.2" width="27.1" height="15.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-mini_RAS_returns_whose_calls_de" value="mini RAS: returns whose calls decode has not seen" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="100.0" y="541.2" width="315.9" height="15.8" as="geometry" />
+        <mxCell id="n-_The_mini_RAS_holds_returns_who" value="? The mini RAS holds returns whose calls decode has not seen." style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="100.0" y="541.2" width="392.0" height="15.8" as="geometry" />
         </mxCell>
         <mxCell id="n-loop_mode" value="loop mode" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-loop_predictor-m_dir-2;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1690.0" y="455.5" width="74.8" height="18.5" as="geometry" />
@@ -743,8 +743,8 @@
         <mxCell id="n-other_context" value="other context" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-ibp_context_check-ib_sq;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="879.0" y="1035.5" width="91.1" height="18.5" as="geometry" />
         </mxCell>
-        <mxCell id="n-no_EL_or_ASID_a_foreign_target" value="no EL or ASID: a foreign target is fetched, not run" style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="100.0" y="1060.2" width="301.5" height="15.8" as="geometry" />
+        <mxCell id="n-_With_no_EL_or_ASID_a_foreign" value="○ With no EL or ASID, a foreign target is fetched, not run." style="text;html=1;fontSize=8.5;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="100.0" y="1060.2" width="348.7" height="15.8" as="geometry" />
         </mxCell>
         <mxCell id="n-class_sel" value="class, sel" style="text;html=1;fontSize=9;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-objc_uop-objc_hash;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="284.0" y="1168.5" width="71.5" height="18.5" as="geometry" />
@@ -752,8 +752,8 @@
         <mxCell id="n-fetch" value="fetch" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-sb0-sb1;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1532.5" y="1191.3" width="38.0" height="17.8" as="geometry" />
         </mxCell>
-        <mxCell id="n-DMB_DSB_no_effect" value="DMB, DSB: no effect" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-sb1-sb1;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1614.7" y="1092.2" width="134.5" height="17.8" as="geometry" />
+        <mxCell id="n-a_DMB_or_DSB_has_no_effect" value="a DMB or DSB has no effect" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-sb1-sb1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1592.6" y="1092.2" width="178.8" height="17.8" as="geometry" />
         </mxCell>
         <mxCell id="n-CSDB_or_ISB" value="CSDB or ISB" style="text;html=1;fontSize=8.5;fontColor=#1f2937;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;rounded=1;owner=e-sb1-speculation_barriers;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1769.4" y="1191.3" width="86.2" height="17.8" as="geometry" />

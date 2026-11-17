@@ -232,6 +232,7 @@ maps:
     - int_prf
     - iq
     - itlb
+    - l1btb
     - l1d
     - l1i
     - l2
@@ -269,6 +270,7 @@ maps:
     - rename
     - ret
     - rrq
+    - samepage
     - slc
     - split
     - sq
@@ -579,21 +581,13 @@ maps:
     - a5
     - a6
     - a7
-    - b0
-    - b1
-    - b2
-    - b3
-    - b4
-    - c0
-    - c1
-    - c2
-    - c3
-    - c4
-    - c5
+    - a8
+    - a9
     - d0
     - d1
     - d2
     - d3
+    - d4
     - e0
     - e1
     - e2
@@ -601,7 +595,6 @@ maps:
     - e4
     - fa
     - fb
-    - fc
     - fd
     - fe
     drawio:
@@ -695,6 +688,7 @@ maps:
     hot:
     - barriers
     - btb
+    - decfix
     - decode
     - dirpred
     - fcost
@@ -727,6 +721,7 @@ maps:
     level: mechanism
     up: fetch
     kinds:
+    - fsm
     - structure
     blocks:
     - fetch
@@ -762,15 +757,22 @@ maps:
     - l0_index
     - l0_look
     - l0_reading
+    - l0sets
     - l1btb_look
     - l1i_read
     - l1i_tag
     - nfp_entry
     - nfp_look
-    - nfp_training
     - one_taken
-    - phantom_fetch
+    - pf1
+    - pf2
+    - pf3
     - slow_look
+    - tr_absent
+    - tr_over
+    - tr_place
+    - tr_trusted
+    - tr_wrong
     - two_level_ras
     drawio:
       file: drawio/port-m1.drawio
@@ -884,7 +886,6 @@ maps:
     - objc_msgsend_predictor
     hot:
     - alloc
-    - alt
     - base
     - direction
     - fa
@@ -906,8 +907,12 @@ maps:
     - phr
     - provider
     - rebuild
+    - refold
     - retire_time_training
+    - rewind
     - squash
+    - squash2
+    - squash3
     - tage_t1
     - tage_t2
     - tage_t3
@@ -1035,6 +1040,110 @@ maps:
     drawio:
       file: drawio/frontend-rtl.drawio
       page: S4 next PC
+  - id: s5-btb
+    title: The branch target buffer, two tiers
+    subtitle: ''
+    file: figures/s5-btb.svg
+    level: structure
+    up: btb
+    kinds:
+    - dataflow
+    - rtl
+    - structure
+    blocks:
+    - btb
+    - l1i
+    mechanisms:
+    - next_fetch_groups
+    - l1i_coupled_btb
+    - nfp_training
+    - phantom_fetch
+    - biased_branch_filter
+    hot:
+    - fill
+    - l0.cmp0
+    - l0.cmp1
+    - l0.hit
+    - l0.index
+    - l0.tag
+    - l0.target
+    - l0.way
+    - l0_tier
+    - l1.cmp0
+    - l1.cmp1
+    - l1.hit
+    - l1.index
+    - l1.tag
+    - l1.target
+    - l1.way
+    - l1_tier
+    - l1i_line
+    - pc
+    - phantom
+    drawio:
+      file: drawio/frontend-rtl.drawio
+      page: S5 BTB
+  - id: s6-tage
+    title: The direction predictor as TAGE
+    subtitle: ''
+    file: figures/s6-tage.svg
+    level: structure
+    up: dirpred
+    kinds:
+    - dataflow
+    - rtl
+    - structure
+    blocks:
+    - dirpred
+    mechanisms:
+    - tage_tables
+    - path_history_shift_xor
+    - path_history_rewind
+    - retire_time_training
+    hot:
+    - altpred
+    - final
+    - hist
+    - hist_in
+    - hist_rule
+    - hist_xor
+    - history
+    - out
+    - pc
+    - provider
+    - select
+    - t0
+    - t0.ctr
+    - t0.index
+    - t1
+    - t1.ctr
+    - t1.index
+    - t1.tag
+    - t2
+    - t2.ctr
+    - t2.index
+    - t2.tag
+    - t3
+    - t3.ctr
+    - t3.index
+    - t3.tag
+    - t4
+    - t4.ctr
+    - t4.index
+    - t4.tag
+    - t5
+    - t5.ctr
+    - t5.index
+    - t5.tag
+    - t6
+    - t6.ctr
+    - t6.index
+    - t6.tag
+    - tables
+    - update
+    drawio:
+      file: drawio/frontend-rtl.drawio
+      page: S6 TAGE
   - id: s8-fetch-icache
     title: Fetch and the instruction cache, VIPT lookup to the instruction queue
     subtitle: ''
@@ -1058,7 +1167,9 @@ maps:
     - next_fetch_groups
     hot:
     - fill
+    - fp.entry
     - group
+    - holds
     - iq.e0
     - iq.e1
     - iq.e2
@@ -1077,10 +1188,13 @@ maps:
     - l1i.tag
     - l1i.way
     - l1if
+    - linebits
     - predecode
+    - seqway
     - tlbf
     - va
-    - waypred
+    - waysrc
+    - wsf
     drawio:
       file: drawio/frontend-rtl.drawio
       page: S8 fetch and I-cache
@@ -1257,6 +1371,7 @@ maps:
     - m1-fetch
     - x7-fetch-path
     - s4-next-pc
+    - s5-btb
     - fsm-btb
     - l3-nfp
     - p1-pipeline
@@ -1271,6 +1386,7 @@ maps:
     - m2-dirpred
     - l1-branch
     - x7-fetch-path
+    - s6-tage
     - p1-pipeline
     - x8-predictors-decode
   - block: indpred
@@ -1340,6 +1456,7 @@ maps:
     - c4-hierarchy
     - d4-hierarchy
     - x7-fetch-path
+    - s5-btb
     - s8-fetch-icache
     - fsm-l1i
     - l3-nfp
@@ -1645,6 +1762,7 @@ maps:
     - m4-sched
     - m5-retire
     - x9-backend
+    - s13-exec-bypass
     - fsm-int-prf
     - l5-rename
     - p1-pipeline
@@ -2570,6 +2688,59 @@ maps:
     drawio:
       file: drawio/structures.drawio
       page: S3 scheduler entry machine
+  - id: s13-exec-bypass
+    title: 'Execute: six integer pipelines and the bypass network'
+    subtitle: ''
+    file: figures/s13-exec-bypass.svg
+    level: structure
+    up: eu_int
+    kinds:
+    - dataflow
+    - rtl
+    blocks:
+    - eu_int
+    - int_prf
+    mechanisms:
+    - exec_forwarding
+    - divider_pipe
+    hot:
+    - bypass
+    - bypass.u1
+    - bypass.u2
+    - bypass.u3
+    - bypass.u4
+    - bypass.u5
+    - bypass.u6
+    - div
+    - fx
+    - prf.read
+    - u1
+    - u1.opA
+    - u1.opB
+    - u1.result
+    - u2
+    - u2.opA
+    - u2.opB
+    - u2.result
+    - u3
+    - u3.opA
+    - u3.opB
+    - u3.result
+    - u4
+    - u4.opA
+    - u4.opB
+    - u4.result
+    - u5
+    - u5.opA
+    - u5.opB
+    - u5.result
+    - u6
+    - u6.opA
+    - u6.opB
+    - u6.result
+    drawio:
+      file: drawio/backend-rtl.drawio
+      page: S13 execute and bypass
   - id: s22-dispatch-entry-fsm
     title: The life of a dispatch buffer entry
     subtitle: ''
@@ -2829,6 +3000,7 @@ maps:
     - 01-core-overview
     - 04-issue
     - x9-backend
+    - s13-exec-bypass
     - fsm-eu-int
     - l6-scheduler
     - p1-pipeline
