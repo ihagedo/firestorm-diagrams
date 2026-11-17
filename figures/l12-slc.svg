@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2550 1050" width="2550" height="1050" role="img" aria-label="L12  System level cache lineage: a victim cache grown to 8 MiB, with a hashed index" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" data-kinds="dataflow structure"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f2937"/></marker><marker id="arrowrev" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M10,0 L0,5 L10,10 z" fill="#1f2937"/></marker></defs><rect x="0" y="0" width="2550" height="1050" fill="#ffffff"/><text x="20" y="30" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="700" fill="#1f2937">L12  System level cache lineage: a victim cache grown to 8 MiB, with a hashed index</text><text x="20" y="48" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#4b5563">Left, Jouppi&#x27;s victim cache and Seznec&#x27;s skewed index redrawn. Right, the M1 SLC from the measurements. Between them, what was kept, changed and added.</text><rect x="30.0" y="105.0" width="1050.0" height="750.0" rx="9" fill="#fbfbfc" stroke="#bec4cc" stroke-width="1"/>
-<text x="40.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#9ca3af" text-anchor="start">Jouppi 1990, Fig. 3-4; Seznec 1993, Fig. 4</text>
+<text x="40.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#9ca3af" text-anchor="start">Jouppi 1990, Fig. 3-4 | Seznec 1993, Fig. 4</text>
 <text x="1070.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">redrawn</text>
 <rect x="1470.0" y="105.0" width="1050.0" height="750.0" rx="9" fill="#fff9f6" stroke="#dfb396" stroke-width="1"/>
 <text x="1480.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#f97316" text-anchor="start">M1 system level cache, 8 MiB, 16 ways, 128 B lines</text>
-<text x="2510.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">EXAM and SLAC measured; the rest from patents</text>
+<text x="2510.0" y="122.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">EXAM and SLAC measured | the rest from patents</text>
 <rect x="60.0" y="168.0" width="450.0" height="105.0" rx="5" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
 <line x1="65.0" y1="200.0" x2="505.0" y2="200.0" stroke="#c4c8d0" stroke-width="1"/>
 <rect x="60.0" y="345.0" width="450.0" height="135.0" rx="4" fill="#fafafb" stroke="#bec4cc" stroke-width="1"/>
@@ -157,7 +157,7 @@
 <text x="1504.0" y="318.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="10">victims</text>
 <text x="1729.0" y="309.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="11">hit, about 90 clk</text>
 <text x="1500.0" y="495.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">measured: 8 MiB, 16 ways, 128 B, exclusive, victim filled</text>
-<text x="1500.0" y="512.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">replacement disputed; 90 cycles only reported</text>
+<text x="1500.0" y="512.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">replacement disputed | 90 cycles only reported</text>
 <text x="1500.0" y="600.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="m2">every one of the 12 index bits is an XOR of address bits</text>
 <text x="1759.9" y="638.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">PA 39:7, every index bit hashed</text>
 <text x="1502.0" y="663.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">39</text>
@@ -177,7 +177,7 @@
 <text x="2197.0" y="751.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
 <text x="2209.1" y="751.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">killed on a hit</text>
 <text x="1500.0" y="822.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">the idea survives, the structure does not</text>
-<text x="1500.0" y="839.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">Jouppi backed one small cache; the SLC backs a die</text>
+<text x="1500.0" y="839.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">Jouppi backed one small cache | the SLC backs a die</text>
 <rect x="60.0" y="1011.0" width="16.0" height="11.0" rx="2" fill="#fdcdab" stroke="#f97316" stroke-width="2.2"/>
 <text x="80.0" y="1020.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">● 3+ measurements</text>
 <rect x="230.9" y="1011.0" width="16.0" height="11.0" rx="2" fill="#fedcc5" stroke="#f97316" stroke-width="1.4"/>
@@ -187,13 +187,13 @@
 <rect x="470.5" y="1011.0" width="16.0" height="11.0" rx="2" fill="#fff4ec" stroke="#fb9d5c" stroke-width="1" stroke-dasharray="9 3"/>
 <text x="490.5" y="1020.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">◇ derived</text>
 <rect x="570.0" y="1011.0" width="16.0" height="11.0" rx="2" fill="#fff9f6" stroke="#fb9d5c" stroke-width="1" stroke-dasharray="4 3"/>
-<text x="590.0" y="1020.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">~ patent or analogy</text>
-<rect x="736.5" y="1011.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
-<text x="756.5" y="1020.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? KB conjecture</text>
-<rect x="881.7" y="1011.0" width="16.0" height="11.0" rx="2" fill="#fbf2fc" stroke="#c026d3" stroke-width="1.2" stroke-dasharray="6 2"/>
-<text x="901.7" y="1020.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">+ proposed here</text>
-<rect x="1025.9" y="1011.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
-<text x="1045.9" y="1020.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? unknown</text>
+<text x="590.0" y="1020.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">~ inferred: patent reading or author reasoning</text>
+<rect x="910.2" y="1011.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
+<text x="930.2" y="1020.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? KB conjecture</text>
+<rect x="1055.4" y="1011.0" width="16.0" height="11.0" rx="2" fill="#fbf2fc" stroke="#c026d3" stroke-width="1.2" stroke-dasharray="6 2"/>
+<text x="1075.4" y="1020.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">+ proposed here</text>
+<rect x="1199.6" y="1011.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="1219.6" y="1020.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? unknown</text>
 <polyline points="60.0,1033.0 86.0,1033.0" fill="none" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="92.0" y="1037.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">instruction flow</text>
 <polyline points="227.0,1033.0 253.0,1033.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>

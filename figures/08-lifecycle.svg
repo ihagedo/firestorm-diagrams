@@ -55,24 +55,24 @@
 <text x="1849.0" y="111.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="600" fill="#1f2937" text-anchor="start">Retire group</text>
 <text x="2047.0" y="111.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="16.5" font-weight="600" fill="#1f2937" text-anchor="start">Map history retire</text>
 <text x="60.0" y="164.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">each bar is one resource, taken where it starts and given back where it ends</text>
-<text x="661.0" y="250.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">330 groups × 7 slots</text>
+<text x="661.0" y="250.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">330 groups x 7 slots</text>
 <text x="60.0" y="246.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="retire_slot-name">Retire group slot</text>
-<text x="60.0" y="266.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">taken at rename; a memory op opens a group, a branch closes it</text>
+<text x="60.0" y="266.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">taken at rename | a memory op opens a group, a branch closes it</text>
 <text x="661.0" y="332.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">623 entries, 16 freed per clk</text>
 <text x="60.0" y="328.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="rrq_entry-name">Rename retire queue entry</text>
-<text x="60.0" y="348.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">one per register writing uop; freed when its map history retires</text>
-<text x="661.0" y="414.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">380 int · 432 FP · 128 flags</text>
+<text x="60.0" y="348.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">one per register writing uop | freed when its map history retires</text>
+<text x="661.0" y="414.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">380 int | 432 FP | 128 flags</text>
 <text x="60.0" y="410.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="preg-name">Physical register</text>
-<text x="60.0" y="430.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">new register at rename; the old one freed at map history retire</text>
-<text x="859.0" y="496.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">2 × 24 int · 12 mul · 10 LS · 12 FP</text>
+<text x="60.0" y="430.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">new register at rename | the old one freed at map history retire</text>
+<text x="859.0" y="496.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">2 x 24 int | 12 mul | 10 LS | 12 FP</text>
 <text x="60.0" y="492.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="dispatch_entry-name">Dispatch buffer entry</text>
-<text x="60.0" y="512.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">held until a scheduler queue has room; one uop per queue per clk</text>
-<text x="1057.0" y="578.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">int 13 per queue · FP 36 · LS 12</text>
+<text x="60.0" y="512.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">held until a scheduler queue has room | one uop per queue per clk</text>
+<text x="1057.0" y="578.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">int 13 per queue | FP 36 | LS 12</text>
 <text x="60.0" y="574.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="sched_entry-name">Scheduler queue entry</text>
 <text x="60.0" y="594.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">held until the operands are ready and the uop is selected</text>
-<text x="1255.0" y="660.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">130 loads · 60 stores</text>
+<text x="1255.0" y="660.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">130 loads | 60 stores</text>
 <text x="60.0" y="656.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="lsq_entry-name">Load or store queue entry</text>
-<text x="60.0" y="676.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">taken at issue, not dispatch; loads and plain stores give it back before retire</text>
+<text x="60.0" y="676.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">taken at issue, not dispatch | loads and plain stores give it back before retire</text>
 <text x="661.0" y="742.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start">144 in flight</text>
 <text x="60.0" y="738.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15.75" font-weight="600" fill="#1f2937" text-anchor="start" data-owner="branch_inflight-name">Branch in flight</text>
 <text x="60.0" y="758.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" font-style="italic">counted from rename to retire</text>
@@ -89,13 +89,13 @@
 <rect x="470.5" y="956.0" width="16.0" height="11.0" rx="2" fill="#ebf7f3" stroke="#50b696" stroke-width="1" stroke-dasharray="9 3"/>
 <text x="490.5" y="965.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">◇ derived</text>
 <rect x="570.0" y="956.0" width="16.0" height="11.0" rx="2" fill="#f5fbf9" stroke="#50b696" stroke-width="1" stroke-dasharray="4 3"/>
-<text x="590.0" y="965.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">~ patent or analogy</text>
-<rect x="736.5" y="956.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
-<text x="756.5" y="965.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? KB conjecture</text>
-<rect x="881.7" y="956.0" width="16.0" height="11.0" rx="2" fill="#fbf2fc" stroke="#c026d3" stroke-width="1.2" stroke-dasharray="6 2"/>
-<text x="901.7" y="965.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">+ proposed here</text>
-<rect x="1025.9" y="956.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
-<text x="1045.9" y="965.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? unknown</text>
+<text x="590.0" y="965.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">~ inferred: patent reading or author reasoning</text>
+<rect x="910.2" y="956.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
+<text x="930.2" y="965.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? KB conjecture</text>
+<rect x="1055.4" y="956.0" width="16.0" height="11.0" rx="2" fill="#fbf2fc" stroke="#c026d3" stroke-width="1.2" stroke-dasharray="6 2"/>
+<text x="1075.4" y="965.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">+ proposed here</text>
+<rect x="1199.6" y="956.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="1219.6" y="965.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? unknown</text>
 <polyline points="60.0,978.0 86.0,978.0" fill="none" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="92.0" y="982.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">instruction flow</text>
 <polyline points="227.0,978.0 253.0,978.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>

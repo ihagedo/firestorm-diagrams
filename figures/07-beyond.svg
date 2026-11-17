@@ -89,20 +89,20 @@
 <text x="67.0" y="355.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
 <text x="80.4" y="355.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">8192 sets, physical index, two bits hashed</text>
 <text x="67.0" y="374.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="80.4" y="374.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">17 clk hit; 85 GB/s load, 100 GB/s store per core</text>
+<text x="80.4" y="374.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">17 clk hit | 85 GB/s load, 100 GB/s store per core</text>
 <text x="67.0" y="393.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
-<text x="80.4" y="393.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">inclusive of the L1Ds; spares L1 resident lines</text>
+<text x="80.4" y="393.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">inclusive of the L1Ds | spares L1 resident lines</text>
 <text x="67.0" y="412.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="80.4" y="412.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">four 3 MiB cachelets; a core sees 7.5 MiB</text>
+<text x="80.4" y="412.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">four 3 MiB cachelets | a core sees 7.5 MiB</text>
 <text x="67.0" y="431.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="80.4" y="431.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">per core LRU; three separately powered way groups</text>
+<text x="80.4" y="431.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">per core LRU | three separately powered way groups</text>
 <text x="947.0" y="312.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">AMX</text>
 <text x="947.0" y="336.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
 <text x="960.4" y="336.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">one unit per cluster</text>
 <text x="947.0" y="355.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
 <text x="960.4" y="355.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">4 register sets, one per core</text>
 <text x="947.0" y="374.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="960.4" y="374.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">8 × 8 FMA grid</text>
+<text x="960.4" y="374.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">8 x 8 FMA grid</text>
 <text x="947.0" y="393.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
 <text x="960.4" y="393.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">2 instr per clk in, via the SQ</text>
 <text x="947.0" y="412.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
@@ -120,9 +120,9 @@
 <text x="1300.4" y="296.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">shares the SLC and DRAM</text>
 <text x="1287.0" y="382.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Clocks and power</text>
 <text x="1287.0" y="406.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
-<text x="1300.4" y="406.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">per cluster DVFS; ramp from idle 40 to 100 ms</text>
+<text x="1300.4" y="406.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">per cluster DVFS | ramp from idle 40 to 100 ms</text>
 <text x="1287.0" y="425.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="1300.4" y="425.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">core power up about 10 µs</text>
+<text x="1300.4" y="425.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">core power up about 10 us</text>
 <text x="1287.0" y="444.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
 <text x="1300.4" y="444.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">closed loop performance controller</text>
 <text x="1287.0" y="463.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
@@ -149,7 +149,7 @@
 <text x="697.0" y="823.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
 <text x="710.4" y="823.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">hashed set index from PA bit 7 up</text>
 <text x="697.0" y="842.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">~</text>
-<text x="710.4" y="842.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">about 90 clk; replacement pseudo random, disputed</text>
+<text x="710.4" y="842.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">about 90 clk | replacement pseudo random, disputed</text>
 <text x="1347.0" y="742.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Memory controllers and LPDDR4X</text>
 <text x="1347.0" y="766.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">○</text>
 <text x="1360.4" y="766.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="start">8 channels</text>
@@ -183,13 +183,13 @@
 <rect x="470.5" y="1129.0" width="16.0" height="11.0" rx="2" fill="#f7f8f9" stroke="#babfc7" stroke-width="1" stroke-dasharray="9 3"/>
 <text x="490.5" y="1138.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">◇ derived</text>
 <rect x="570.0" y="1129.0" width="16.0" height="11.0" rx="2" fill="#fbfbfc" stroke="#babfc7" stroke-width="1" stroke-dasharray="4 3"/>
-<text x="590.0" y="1138.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">~ patent or analogy</text>
-<rect x="736.5" y="1129.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
-<text x="756.5" y="1138.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? KB conjecture</text>
-<rect x="881.7" y="1129.0" width="16.0" height="11.0" rx="2" fill="#fbf2fc" stroke="#c026d3" stroke-width="1.2" stroke-dasharray="6 2"/>
-<text x="901.7" y="1138.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">+ proposed here</text>
-<rect x="1025.9" y="1129.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
-<text x="1045.9" y="1138.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? unknown</text>
+<text x="590.0" y="1138.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">~ inferred: patent reading or author reasoning</text>
+<rect x="910.2" y="1129.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
+<text x="930.2" y="1138.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? KB conjecture</text>
+<rect x="1055.4" y="1129.0" width="16.0" height="11.0" rx="2" fill="#fbf2fc" stroke="#c026d3" stroke-width="1.2" stroke-dasharray="6 2"/>
+<text x="1075.4" y="1138.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">+ proposed here</text>
+<rect x="1199.6" y="1129.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="1219.6" y="1138.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? unknown</text>
 <polyline points="60.0,1151.0 86.0,1151.0" fill="none" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="92.0" y="1155.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">instruction flow</text>
 <polyline points="227.0,1151.0 253.0,1151.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>

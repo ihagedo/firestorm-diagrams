@@ -18,7 +18,7 @@
 <text x="2465.0" y="851.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">fields inferred</text>
 <rect x="75.0" y="1329.0" width="2400.0" height="210.0" rx="9" fill="#f5fbf9" stroke="#8abfb3" stroke-width="1"/>
 <text x="85.0" y="1346.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="18.75" font-weight="700" fill="#059669" text-anchor="start">Limits</text>
-<text x="2465.0" y="1346.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">measured · one proposed cause</text>
+<text x="2465.0" y="1346.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="400" fill="#4b5563" text-anchor="end">measured | one proposed cause</text>
 <rect x="105.0" y="150.0" width="2340.0" height="66.0" rx="4" fill="#a6d7e3" stroke="#0891b2" stroke-width="2.2"/>
 <rect x="109.0" y="154.0" width="290.0" height="58.0" rx="1.5" fill="#ebf6f9" stroke="#77b6c9" stroke-width="0.6"/>
 <rect x="400.5" y="154.0" width="290.0" height="58.0" rx="1.5" fill="#ebf6f9" stroke="#77b6c9" stroke-width="0.6"/>
@@ -263,8 +263,8 @@
 <text x="1711.5" y="247.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="middle">fused</text>
 <text x="2002.5" y="247.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">retire only</text>
 <text x="2293.5" y="247.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">STA + STD</text>
-<text x="367.1" y="772.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">Map: 8 × 8 compare</text>
-<text x="972.4" y="772.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">Eliminate: mov → p40, #7 → imm pool</text>
+<text x="367.1" y="772.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">Map: 8 x 8 compare</text>
+<text x="972.4" y="772.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">Eliminate: mov -&gt; p40, #7 -&gt; imm pool</text>
 <text x="1577.6" y="772.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">Fuse: cmp + b.ne</text>
 <text x="2182.9" y="772.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">Rename: free list, history</text>
 <text x="265.0" y="395.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">slot reads slot</text>
@@ -281,7 +281,7 @@
 <text x="726.3" y="432.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">dst p40</text>
 <text x="714.2" y="543.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">slot 3 mov x4,x3</text>
 <text x="714.2" y="567.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">●</text>
-<text x="726.3" y="567.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">x4 → p40, no uop</text>
+<text x="726.3" y="567.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">x4 -&gt; p40, no uop</text>
 <text x="834.2" y="491.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="1">p40</text>
 <text x="1121.2" y="448.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">imm pool</text>
 <text x="1121.2" y="591.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">~36</text>
@@ -295,8 +295,8 @@
 <text x="1670.6" y="516.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">b.cc + nzcv</text>
 <text x="1316.5" y="668.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="fuse-lim">4 reads / 6 instr ○</text>
 <text x="1985.2" y="403.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">free</text>
-<text x="1985.2" y="681.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">p41 …</text>
-<text x="2055.8" y="418.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">← head</text>
+<text x="1985.2" y="681.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">p41 ...</text>
+<text x="2055.8" y="418.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#9ca3af" text-anchor="start">&lt;- head</text>
 <text x="2165.0" y="420.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">preg</text>
 <text x="2243.5" y="420.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">sec</text>
 <text x="2204.2" y="403.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">map</text>
@@ -312,9 +312,9 @@
 <text x="482.0" y="987.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">1</text>
 <text x="536.2" y="960.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">v</text>
 <text x="519.5" y="987.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">0</text>
-<text x="109.0" y="918.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="map-e">map entry × 32</text>
+<text x="109.0" y="918.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="map-e">map entry x 32</text>
 <text x="109.0" y="1014.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="sec-note">sec: this process wrote it</text>
-<text x="109.0" y="1047.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="sec-note2">unwritten read → ~4 wide ~</text>
+<text x="109.0" y="1047.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="sec-note2">unwritten read -&gt; ~4 wide ~</text>
 <text x="109.0" y="1086.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#c026d3" text-anchor="start" data-owner="v-note">v: zero idiom, no preg</text>
 <text x="708.8" y="960.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">arch reg</text>
 <text x="632.0" y="987.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">23</text>
@@ -325,19 +325,19 @@
 <text x="1141.9" y="960.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#1f2937" text-anchor="middle">new physical</text>
 <text x="1025.8" y="987.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="start">8</text>
 <text x="1258.0" y="987.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="end">0</text>
-<text x="634.0" y="918.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="hist-e">history entry · 1 per map change</text>
+<text x="634.0" y="918.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="hist-e">history entry | 1 per map change</text>
 <text x="634.0" y="1116.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="hin">8 alloc/clk</text>
-<text x="979.0" y="1116.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="hout">16 retire/clk · old freed</text>
+<text x="979.0" y="1116.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="hout">16 retire/clk | old freed</text>
 <text x="634.0" y="1164.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="win-note">no entry: nop, b, str, cmp</text>
-<text x="979.0" y="1164.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="win-note2">windows: NOP 2277 · writing 623</text>
-<text x="634.0" y="1209.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="mis-note">mispredict: tail → branch, 16/clk</text>
-<text x="979.0" y="1209.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="mis-note2">old → map · new → free</text>
+<text x="979.0" y="1164.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="win-note2">windows: NOP 2277 | writing 623</text>
+<text x="634.0" y="1209.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="mis-note">mispredict: tail -&gt; branch, 16/clk</text>
+<text x="979.0" y="1209.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="mis-note2">old -&gt; map | new -&gt; free</text>
 <text x="634.0" y="1248.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="mis-note3">worst case 39 clk</text>
-<text x="1504.0" y="922.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="pf0">integer 380 ◆ · 362 free</text>
-<text x="1504.0" y="1006.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="pf1">fp / simd 432 ◆ · 382 free</text>
-<text x="1504.0" y="1090.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="pf2">flags 128 ◆ · 123 free</text>
-<text x="1504.0" y="1174.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="pf3">imm pool 36 ○ · 36 free</text>
-<text x="1504.0" y="1269.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="bank-note">4 banks · wake 2–3 clk ~</text>
+<text x="1504.0" y="922.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="pf0">integer 380 ◆ | 362 free</text>
+<text x="1504.0" y="1006.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="pf1">fp / simd 432 ◆ | 382 free</text>
+<text x="1504.0" y="1090.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="pf2">flags 128 ◆ | 123 free</text>
+<text x="1504.0" y="1174.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="pf3">imm pool 36 ○ | 36 free</text>
+<text x="1504.0" y="1269.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#4b5563" text-anchor="start" data-owner="bank-note">4 banks | wake 2-3 clk ~</text>
 <text x="112.0" y="1396.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">2 imm / 8 instr</text>
 <text x="112.0" y="1420.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#4b5563" text-anchor="start">◆</text>
 <text x="124.1" y="1420.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">8 / 8 disputed</text>
@@ -349,9 +349,9 @@
 <text x="1114.1" y="1420.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start">not fused</text>
 <text x="1612.0" y="1396.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">16 read ports</text>
 <text x="1612.0" y="1420.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">+</text>
-<text x="1624.1" y="1420.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">8 uops × 2 src</text>
+<text x="1624.1" y="1420.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start">8 uops x 2 src</text>
 <text x="1054.0" y="1515.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="8">cause?</text>
-<text x="1609.0" y="1500.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#c026d3" text-anchor="start" data-owner="test">test: fewer sources → more fusion?</text>
+<text x="1609.0" y="1500.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#c026d3" text-anchor="start" data-owner="test">test: fewer sources -&gt; more fusion?</text>
 <rect x="60.0" y="1629.0" width="16.0" height="11.0" rx="2" fill="#a5d9c9" stroke="#059669" stroke-width="2.2"/>
 <text x="80.0" y="1638.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">● 3+ measurements</text>
 <rect x="230.9" y="1629.0" width="16.0" height="11.0" rx="2" fill="#c0e5da" stroke="#059669" stroke-width="1.4"/>
@@ -361,13 +361,13 @@
 <rect x="470.5" y="1629.0" width="16.0" height="11.0" rx="2" fill="#ebf7f3" stroke="#50b696" stroke-width="1" stroke-dasharray="9 3"/>
 <text x="490.5" y="1638.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">◇ derived</text>
 <rect x="570.0" y="1629.0" width="16.0" height="11.0" rx="2" fill="#f5fbf9" stroke="#50b696" stroke-width="1" stroke-dasharray="4 3"/>
-<text x="590.0" y="1638.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">~ patent or analogy</text>
-<rect x="736.5" y="1629.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
-<text x="756.5" y="1638.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? KB conjecture</text>
-<rect x="881.7" y="1629.0" width="16.0" height="11.0" rx="2" fill="#fbf2fc" stroke="#c026d3" stroke-width="1.2" stroke-dasharray="6 2"/>
-<text x="901.7" y="1638.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">+ proposed here</text>
-<rect x="1025.9" y="1629.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
-<text x="1045.9" y="1638.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? unknown</text>
+<text x="590.0" y="1638.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">~ inferred: patent reading or author reasoning</text>
+<rect x="910.2" y="1629.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
+<text x="930.2" y="1638.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? KB conjecture</text>
+<rect x="1055.4" y="1629.0" width="16.0" height="11.0" rx="2" fill="#fbf2fc" stroke="#c026d3" stroke-width="1.2" stroke-dasharray="6 2"/>
+<text x="1075.4" y="1638.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">+ proposed here</text>
+<rect x="1199.6" y="1629.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="1219.6" y="1638.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? unknown</text>
 <polyline points="60.0,1651.0 86.0,1651.0" fill="none" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="92.0" y="1655.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">instruction flow</text>
 <polyline points="227.0,1651.0 253.0,1651.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>

@@ -16,6 +16,7 @@ levels:
 - region
 - block
 - mechanism
+- structure
 maps:
 - n: 1
   id: die
@@ -996,6 +997,255 @@ maps:
       file: walkthroughs/x8-predictors-decode.yaml
       steps: 11
       agreed: 0
+  - id: s4-next-pc
+    title: Next PC, the mux and its priority
+    subtitle: ''
+    file: figures/s4-next-pc.svg
+    level: structure
+    up: btb
+    kinds:
+    - dataflow
+    - rtl
+    blocks:
+    - btb
+    - ras
+    - indpred
+    - fetch
+    - decode
+    - ftq
+    mechanisms:
+    - next_fetch_groups
+    - staged_fetch_redirect
+    - nfp_training
+    hot:
+    - check
+    - fetch
+    - ftq
+    - mux
+    - pc
+    - priority
+    - src.decode
+    - src.exec
+    - src.ind
+    - src.l0
+    - src.l1
+    - src.ras
+    - src.seq
+    - srcs
+    drawio:
+      file: drawio/frontend-rtl.drawio
+      page: S4 next PC
+  - id: s8-fetch-icache
+    title: Fetch and the instruction cache, VIPT lookup to the instruction queue
+    subtitle: ''
+    file: figures/s8-fetch-icache.svg
+    level: structure
+    up: fetch
+    kinds:
+    - dataflow
+    - rtl
+    - structure
+    blocks:
+    - fetch
+    - l1i
+    - itlb
+    - iq
+    mechanisms:
+    - l1i_vipt
+    - l1i_way_prediction
+    - l1i_predecode
+    - fetch_page_split
+    - next_fetch_groups
+    hot:
+    - fill
+    - group
+    - iq.e0
+    - iq.e1
+    - iq.e2
+    - iq.e3
+    - iq.e4
+    - iq.e5
+    - iq.e6
+    - iq.e7
+    - iqf
+    - itlb
+    - itlb.hit
+    - itlb.index
+    - l1i.cmp
+    - l1i.data
+    - l1i.index
+    - l1i.tag
+    - l1i.way
+    - l1if
+    - predecode
+    - tlbf
+    - va
+    - waypred
+    drawio:
+      file: drawio/frontend-rtl.drawio
+      page: S8 fetch and I-cache
+  - id: fsm-btb
+    title: 'Branch target buffer: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-btb.svg
+    level: structure
+    up: btb
+    kinds:
+    - fsm
+    blocks:
+    - btb
+    mechanisms:
+    - phantom_fetch
+    - scan_on_fill_nfp
+    - l1i_coupled_btb
+    hot:
+    - fm
+    - machine
+    - st.fall_through
+    - st.in
+    - st.l0_hit
+    - st.l1_hit
+    - st.miss
+    - st.phantom_taken
+    - st.to_dirpred
+    - st.to_fetch
+    - tr.arrive
+    - tr.fall_through
+    - tr.fall_through.to_dirpred
+    - tr.fall_through.to_fetch
+    - tr.l0_hit
+    - tr.l0_hit.to_dirpred
+    - tr.l1_hit
+    - tr.l1_hit.to_dirpred
+    - tr.miss
+    - tr.miss.to_dirpred
+    - tr.phantom_taken
+    - tr.phantom_taken.to_fetch
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm btb
+  - id: fsm-fetch
+    title: 'Fetch: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-fetch.svg
+    level: structure
+    up: fetch
+    kinds:
+    - fsm
+    blocks:
+    - fetch
+    mechanisms:
+    - fetch_page_split
+    - next_fetch_groups
+    hot:
+    - fm
+    - machine
+    - st.ends_at_taken
+    - st.group_ends
+    - st.in
+    - st.in_group
+    - st.page_split
+    - st.to_l1i
+    - tr.arrive
+    - tr.ends_at_taken
+    - tr.ends_at_taken.to_l1i
+    - tr.group_ends
+    - tr.group_ends.to_l1i
+    - tr.in_group
+    - tr.in_group.to_l1i
+    - tr.page_split
+    - tr.page_split.to_l1i
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm fetch
+  - id: fsm-l1i
+    title: 'L1 instruction cache: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-l1i.svg
+    level: structure
+    up: l1i
+    kinds:
+    - fsm
+    blocks:
+    - l1i
+    mechanisms:
+    - l1i_vipt
+    - l1i_predecode
+    hot:
+    - fm
+    - machine
+    - st.hit
+    - st.in
+    - st.miss
+    - st.to_iq
+    - tr.arrive
+    - tr.hit
+    - tr.hit.to_iq
+    - tr.miss
+    - tr.miss.to_iq
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm l1i
+  - id: fsm-iq
+    title: 'Instruction queue: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-iq.svg
+    level: structure
+    up: iq
+    kinds:
+    - fsm
+    blocks:
+    - iq
+    mechanisms:
+    - iq_bypass_fixup
+    hot:
+    - fm
+    - machine
+    - st.in
+    - st.queued
+    - st.to_decode
+    - tr.arrive
+    - tr.queued
+    - tr.queued.to_decode
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm iq
+  - id: fsm-decode
+    title: 'Decode: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-decode.svg
+    level: structure
+    up: decode
+    kinds:
+    - fsm
+    blocks:
+    - decode
+    mechanisms:
+    - macro_op_fusion
+    - uop_split_merge
+    - load_op_fusion
+    hot:
+    - fm
+    - machine
+    - st.fuse
+    - st.fused_second
+    - st.in
+    - st.leaves
+    - st.one_uop
+    - st.split
+    - st.to_rename
+    - tr.arrive
+    - tr.fuse
+    - tr.fuse.to_rename
+    - tr.fused_second
+    - tr.fused_second.leaves
+    - tr.one_uop
+    - tr.one_uop.to_rename
+    - tr.split
+    - tr.split.to_rename
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm decode
   sheets:
   - block: btb
     name: Branch target buffer
@@ -1007,6 +1257,8 @@ maps:
     - 02-frontend
     - m1-fetch
     - x7-fetch-path
+    - s4-next-pc
+    - fsm-btb
     - l3-nfp
     - p1-pipeline
   - block: dirpred
@@ -1032,6 +1284,7 @@ maps:
     - 02-frontend
     - m2-dirpred
     - l1-branch
+    - s4-next-pc
     - l2-indirect
     - p1-pipeline
     - x8-predictors-decode
@@ -1044,6 +1297,7 @@ maps:
     - 01-core-overview
     - 02-frontend
     - m1-fetch
+    - s4-next-pc
     - l4-ras
     - l14-trace
     - p1-pipeline
@@ -1059,6 +1313,9 @@ maps:
     - m1-fetch
     - f1-fsm
     - x7-fetch-path
+    - s4-next-pc
+    - s8-fetch-icache
+    - fsm-fetch
     - l3-nfp
     - l14-trace
     - p1-pipeline
@@ -1069,6 +1326,7 @@ maps:
     figures:
     - 02-frontend
     - x7-fetch-path
+    - s4-next-pc
     - l3-nfp
     - p1-pipeline
   - block: l1i
@@ -1083,6 +1341,8 @@ maps:
     - c4-hierarchy
     - d4-hierarchy
     - x7-fetch-path
+    - s8-fetch-icache
+    - fsm-l1i
     - l3-nfp
     - l14-trace
     - p1-pipeline
@@ -1097,6 +1357,7 @@ maps:
     - m1-fetch
     - m8-tlb
     - x7-fetch-path
+    - s8-fetch-icache
     - p1-pipeline
   - block: decode
     name: Decode
@@ -1107,6 +1368,8 @@ maps:
     - 01-core-overview
     - 02-frontend
     - m1-fetch
+    - s4-next-pc
+    - fsm-decode
     - p1-pipeline
     - x8-predictors-decode
   - block: iq
@@ -1118,6 +1381,8 @@ maps:
     - 02-frontend
     - m1-fetch
     - x7-fetch-path
+    - s8-fetch-icache
+    - fsm-iq
     - l14-trace
     - p1-pipeline
 - n: 4
@@ -1255,6 +1520,98 @@ maps:
       file: walkthroughs/m3-rename.yaml
       steps: 9
       agreed: 0
+  - id: fsm-rename
+    title: 'Rename: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-rename.svg
+    level: structure
+    up: rename
+    kinds:
+    - fsm
+    blocks:
+    - rename
+    mechanisms:
+    - rename_retire_queue
+    - retire_groups
+    - move_elimination
+    - immediate_regs
+    - uop_split_merge
+    - group_map
+    hot:
+    - fm
+    - machine
+    - st.alloc
+    - st.eliminate
+    - st.imm_reg
+    - st.in
+    - st.never_issues
+    - st.no_dest
+    - st.stall_branches
+    - st.stall_no_fp_reg
+    - st.stall_no_reg
+    - st.stall_rename_queue
+    - st.stall_rob
+    - st.to_dispatch
+    - st.to_retire
+    - st.zero_idiom
+    - tr.alloc
+    - tr.alloc.to_dispatch
+    - tr.arrive
+    - tr.eliminate
+    - tr.eliminate.to_retire
+    - tr.imm_reg
+    - tr.imm_reg.to_retire
+    - tr.never_issues
+    - tr.never_issues.to_retire
+    - tr.no_dest
+    - tr.no_dest.to_retire
+    - tr.stall_branches
+    - tr.stall_branches.stay
+    - tr.stall_branches.until
+    - tr.stall_no_fp_reg
+    - tr.stall_no_fp_reg.stay
+    - tr.stall_no_fp_reg.until
+    - tr.stall_no_reg
+    - tr.stall_no_reg.stay
+    - tr.stall_no_reg.until
+    - tr.stall_rename_queue
+    - tr.stall_rename_queue.stay
+    - tr.stall_rename_queue.until
+    - tr.stall_rob
+    - tr.stall_rob.stay
+    - tr.stall_rob.until
+    - tr.zero_idiom
+    - tr.zero_idiom.to_retire
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm rename
+  - id: fsm-int-prf
+    title: 'Integer register file: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-int-prf.svg
+    level: structure
+    up: int_prf
+    kinds:
+    - fsm
+    blocks:
+    - int_prf
+    mechanisms:
+    - exec_forwarding
+    hot:
+    - fm
+    - machine
+    - st.bypass
+    - st.in
+    - st.read
+    - st.to_eu_int
+    - tr.arrive
+    - tr.bypass
+    - tr.bypass.to_eu_int
+    - tr.read
+    - tr.read.to_eu_int
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm int_prf
   sheets:
   - block: rename
     name: Rename and map
@@ -1268,6 +1625,7 @@ maps:
     - 05-retire
     - m3-rename
     - x9-backend
+    - fsm-rename
     - l5-rename
     - l7-retire
     - p1-pipeline
@@ -1284,8 +1642,10 @@ maps:
     - m4-sched
     - m5-retire
     - x9-backend
+    - fsm-int-prf
     - l5-rename
     - p1-pipeline
+    - s2-int-prf
   - block: fp_prf
     name: FP/SIMD register file
     file: sheets/fp_prf.svg
@@ -1548,6 +1908,731 @@ maps:
       file: walkthroughs/x9-backend.yaml
       steps: 11
       agreed: 0
+  - id: s1-sched-int-queue
+    title: One integer scheduler queue, entry by entry
+    subtitle: ''
+    file: figures/s1-sched-int-queue.svg
+    level: structure
+    up: sched_int
+    kinds:
+    - structure
+    blocks:
+    - sched_int
+    - eu_int
+    mechanisms:
+    - matrix_scheduler
+    - paired_sched_queues
+    hot:
+    - age_matrix
+    - fq
+    - fs
+    - q
+    - q.e0
+    - q.e0.ready
+    - q.e0.srcA
+    - q.e0.srcB
+    - q.e1
+    - q.e1.ready
+    - q.e1.srcA
+    - q.e1.srcB
+    - q.e10
+    - q.e10.ready
+    - q.e10.srcA
+    - q.e10.srcB
+    - q.e11
+    - q.e11.ready
+    - q.e11.srcA
+    - q.e11.srcB
+    - q.e12
+    - q.e12.ready
+    - q.e12.srcA
+    - q.e12.srcB
+    - q.e2
+    - q.e2.ready
+    - q.e2.srcA
+    - q.e2.srcB
+    - q.e3
+    - q.e3.ready
+    - q.e3.srcA
+    - q.e3.srcB
+    - q.e4
+    - q.e4.ready
+    - q.e4.srcA
+    - q.e4.srcB
+    - q.e5
+    - q.e5.ready
+    - q.e5.srcA
+    - q.e5.srcB
+    - q.e6
+    - q.e6.ready
+    - q.e6.srcA
+    - q.e6.srcB
+    - q.e7
+    - q.e7.ready
+    - q.e7.srcA
+    - q.e7.srcB
+    - q.e8
+    - q.e8.ready
+    - q.e8.srcA
+    - q.e8.srcB
+    - q.e9
+    - q.e9.ready
+    - q.e9.srcA
+    - q.e9.srcB
+    - select
+    - tags
+    - unit
+    structure:
+      block: sched_int
+      slots: q.e{0..12}[.srcA|.srcB|.ready]
+    drawio:
+      file: drawio/structures.drawio
+      page: S1 scheduler queue
+  - id: s2-int-prf
+    title: The integer register file, register by register
+    subtitle: ''
+    file: figures/s2-int-prf.svg
+    level: structure
+    up: int_prf
+    kinds:
+    - structure
+    blocks:
+    - int_prf
+    mechanisms:
+    - banked_prf_power
+    - exec_forwarding
+    hot:
+    - b0
+    - b0.r0
+    - b0.r1
+    - b0.r10
+    - b0.r11
+    - b0.r12
+    - b0.r13
+    - b0.r14
+    - b0.r15
+    - b0.r16
+    - b0.r17
+    - b0.r18
+    - b0.r19
+    - b0.r2
+    - b0.r20
+    - b0.r21
+    - b0.r22
+    - b0.r23
+    - b0.r24
+    - b0.r25
+    - b0.r26
+    - b0.r27
+    - b0.r28
+    - b0.r29
+    - b0.r3
+    - b0.r30
+    - b0.r31
+    - b0.r32
+    - b0.r33
+    - b0.r34
+    - b0.r35
+    - b0.r36
+    - b0.r37
+    - b0.r38
+    - b0.r39
+    - b0.r4
+    - b0.r40
+    - b0.r41
+    - b0.r42
+    - b0.r43
+    - b0.r44
+    - b0.r45
+    - b0.r46
+    - b0.r47
+    - b0.r48
+    - b0.r49
+    - b0.r5
+    - b0.r50
+    - b0.r51
+    - b0.r52
+    - b0.r53
+    - b0.r54
+    - b0.r55
+    - b0.r56
+    - b0.r57
+    - b0.r58
+    - b0.r59
+    - b0.r6
+    - b0.r60
+    - b0.r61
+    - b0.r62
+    - b0.r63
+    - b0.r64
+    - b0.r65
+    - b0.r66
+    - b0.r67
+    - b0.r68
+    - b0.r69
+    - b0.r7
+    - b0.r70
+    - b0.r71
+    - b0.r72
+    - b0.r73
+    - b0.r74
+    - b0.r75
+    - b0.r76
+    - b0.r77
+    - b0.r78
+    - b0.r79
+    - b0.r8
+    - b0.r80
+    - b0.r81
+    - b0.r82
+    - b0.r83
+    - b0.r84
+    - b0.r85
+    - b0.r86
+    - b0.r87
+    - b0.r88
+    - b0.r89
+    - b0.r9
+    - b0.r90
+    - b0.r91
+    - b0.r92
+    - b0.r93
+    - b0.r94
+    - b1
+    - b1.r0
+    - b1.r1
+    - b1.r10
+    - b1.r11
+    - b1.r12
+    - b1.r13
+    - b1.r14
+    - b1.r15
+    - b1.r16
+    - b1.r17
+    - b1.r18
+    - b1.r19
+    - b1.r2
+    - b1.r20
+    - b1.r21
+    - b1.r22
+    - b1.r23
+    - b1.r24
+    - b1.r25
+    - b1.r26
+    - b1.r27
+    - b1.r28
+    - b1.r29
+    - b1.r3
+    - b1.r30
+    - b1.r31
+    - b1.r32
+    - b1.r33
+    - b1.r34
+    - b1.r35
+    - b1.r36
+    - b1.r37
+    - b1.r38
+    - b1.r39
+    - b1.r4
+    - b1.r40
+    - b1.r41
+    - b1.r42
+    - b1.r43
+    - b1.r44
+    - b1.r45
+    - b1.r46
+    - b1.r47
+    - b1.r48
+    - b1.r49
+    - b1.r5
+    - b1.r50
+    - b1.r51
+    - b1.r52
+    - b1.r53
+    - b1.r54
+    - b1.r55
+    - b1.r56
+    - b1.r57
+    - b1.r58
+    - b1.r59
+    - b1.r6
+    - b1.r60
+    - b1.r61
+    - b1.r62
+    - b1.r63
+    - b1.r64
+    - b1.r65
+    - b1.r66
+    - b1.r67
+    - b1.r68
+    - b1.r69
+    - b1.r7
+    - b1.r70
+    - b1.r71
+    - b1.r72
+    - b1.r73
+    - b1.r74
+    - b1.r75
+    - b1.r76
+    - b1.r77
+    - b1.r78
+    - b1.r79
+    - b1.r8
+    - b1.r80
+    - b1.r81
+    - b1.r82
+    - b1.r83
+    - b1.r84
+    - b1.r85
+    - b1.r86
+    - b1.r87
+    - b1.r88
+    - b1.r89
+    - b1.r9
+    - b1.r90
+    - b1.r91
+    - b1.r92
+    - b1.r93
+    - b1.r94
+    - b2
+    - b2.r0
+    - b2.r1
+    - b2.r10
+    - b2.r11
+    - b2.r12
+    - b2.r13
+    - b2.r14
+    - b2.r15
+    - b2.r16
+    - b2.r17
+    - b2.r18
+    - b2.r19
+    - b2.r2
+    - b2.r20
+    - b2.r21
+    - b2.r22
+    - b2.r23
+    - b2.r24
+    - b2.r25
+    - b2.r26
+    - b2.r27
+    - b2.r28
+    - b2.r29
+    - b2.r3
+    - b2.r30
+    - b2.r31
+    - b2.r32
+    - b2.r33
+    - b2.r34
+    - b2.r35
+    - b2.r36
+    - b2.r37
+    - b2.r38
+    - b2.r39
+    - b2.r4
+    - b2.r40
+    - b2.r41
+    - b2.r42
+    - b2.r43
+    - b2.r44
+    - b2.r45
+    - b2.r46
+    - b2.r47
+    - b2.r48
+    - b2.r49
+    - b2.r5
+    - b2.r50
+    - b2.r51
+    - b2.r52
+    - b2.r53
+    - b2.r54
+    - b2.r55
+    - b2.r56
+    - b2.r57
+    - b2.r58
+    - b2.r59
+    - b2.r6
+    - b2.r60
+    - b2.r61
+    - b2.r62
+    - b2.r63
+    - b2.r64
+    - b2.r65
+    - b2.r66
+    - b2.r67
+    - b2.r68
+    - b2.r69
+    - b2.r7
+    - b2.r70
+    - b2.r71
+    - b2.r72
+    - b2.r73
+    - b2.r74
+    - b2.r75
+    - b2.r76
+    - b2.r77
+    - b2.r78
+    - b2.r79
+    - b2.r8
+    - b2.r80
+    - b2.r81
+    - b2.r82
+    - b2.r83
+    - b2.r84
+    - b2.r85
+    - b2.r86
+    - b2.r87
+    - b2.r88
+    - b2.r89
+    - b2.r9
+    - b2.r90
+    - b2.r91
+    - b2.r92
+    - b2.r93
+    - b2.r94
+    - b3
+    - b3.r0
+    - b3.r1
+    - b3.r10
+    - b3.r11
+    - b3.r12
+    - b3.r13
+    - b3.r14
+    - b3.r15
+    - b3.r16
+    - b3.r17
+    - b3.r18
+    - b3.r19
+    - b3.r2
+    - b3.r20
+    - b3.r21
+    - b3.r22
+    - b3.r23
+    - b3.r24
+    - b3.r25
+    - b3.r26
+    - b3.r27
+    - b3.r28
+    - b3.r29
+    - b3.r3
+    - b3.r30
+    - b3.r31
+    - b3.r32
+    - b3.r33
+    - b3.r34
+    - b3.r35
+    - b3.r36
+    - b3.r37
+    - b3.r38
+    - b3.r39
+    - b3.r4
+    - b3.r40
+    - b3.r41
+    - b3.r42
+    - b3.r43
+    - b3.r44
+    - b3.r45
+    - b3.r46
+    - b3.r47
+    - b3.r48
+    - b3.r49
+    - b3.r5
+    - b3.r50
+    - b3.r51
+    - b3.r52
+    - b3.r53
+    - b3.r54
+    - b3.r55
+    - b3.r56
+    - b3.r57
+    - b3.r58
+    - b3.r59
+    - b3.r6
+    - b3.r60
+    - b3.r61
+    - b3.r62
+    - b3.r63
+    - b3.r64
+    - b3.r65
+    - b3.r66
+    - b3.r67
+    - b3.r68
+    - b3.r69
+    - b3.r7
+    - b3.r70
+    - b3.r71
+    - b3.r72
+    - b3.r73
+    - b3.r74
+    - b3.r75
+    - b3.r76
+    - b3.r77
+    - b3.r78
+    - b3.r79
+    - b3.r8
+    - b3.r80
+    - b3.r81
+    - b3.r82
+    - b3.r83
+    - b3.r84
+    - b3.r85
+    - b3.r86
+    - b3.r87
+    - b3.r88
+    - b3.r89
+    - b3.r9
+    - b3.r90
+    - b3.r91
+    - b3.r92
+    - b3.r93
+    - b3.r94
+    - ff
+    - fi
+    - free
+    - imm
+    - imm.r0
+    - imm.r1
+    - imm.r10
+    - imm.r11
+    - imm.r12
+    - imm.r13
+    - imm.r14
+    - imm.r15
+    - imm.r16
+    - imm.r17
+    - imm.r18
+    - imm.r19
+    - imm.r2
+    - imm.r20
+    - imm.r21
+    - imm.r22
+    - imm.r23
+    - imm.r24
+    - imm.r25
+    - imm.r26
+    - imm.r27
+    - imm.r28
+    - imm.r29
+    - imm.r3
+    - imm.r30
+    - imm.r31
+    - imm.r32
+    - imm.r33
+    - imm.r34
+    - imm.r35
+    - imm.r4
+    - imm.r5
+    - imm.r6
+    - imm.r7
+    - imm.r8
+    - imm.r9
+    - ports
+    structure:
+      block: int_prf
+      slots: b{0..3}.r{0..94} | imm.r{0..35} | free
+    drawio:
+      file: drawio/structures.drawio
+      page: S2 integer register file
+  - id: s3-sched-entry-fsm
+    title: The life of a scheduler entry
+    subtitle: ''
+    file: figures/s3-sched-entry-fsm.svg
+    level: structure
+    up: sched_int
+    kinds:
+    - fsm
+    blocks:
+    - sched_int
+    mechanisms:
+    - matrix_scheduler
+    - paired_sched_queues
+    - load_replay_shadow
+    - uop_split_merge
+    hot:
+    - fm
+    - machine
+    - st.allocated
+    - st.issued
+    - st.ready
+    - st.selected
+    - st.waiting
+    - tr.enter_queue
+    - tr.issue
+    - tr.issue_ready
+    - tr.issue_twice
+    - tr.replay_shadow
+    - tr.sources_ready
+    - tr.still_waiting
+    - tr.wait_operand
+    - tr.wait_select
+    - tr.wakeup
+    drawio:
+      file: drawio/structures.drawio
+      page: S3 scheduler entry machine
+  - id: s22-dispatch-entry-fsm
+    title: The life of a dispatch buffer entry
+    subtitle: ''
+    file: figures/s22-dispatch-entry-fsm.svg
+    level: structure
+    up: dispatch
+    kinds:
+    - fsm
+    blocks:
+    - dispatch
+    - sched_int
+    mechanisms:
+    - dispatch_buffers
+    - paired_sched_queues
+    hot:
+    - fm
+    - machine
+    - st.arrived
+    - st.buffer_wait
+    - st.buffered
+    - st.inflow_used
+    - st.order_wait
+    - st.queue_wait
+    - st.sent
+    - st.width_used
+    - tr.arrive
+    - tr.enter_buffer
+    - tr.queue_frees
+    - tr.to_queue
+    - tr.wait_buffer_full
+    - tr.wait_buffer_full.stay
+    - tr.wait_buffer_full.until
+    - tr.wait_inflow
+    - tr.wait_inflow.on
+    - tr.wait_older
+    - tr.wait_older.stay
+    - tr.wait_older.until
+    - tr.wait_queue_full
+    - tr.wait_queue_full.stay
+    - tr.wait_width
+    - tr.wait_width.on
+    drawio:
+      file: drawio/structures.drawio
+      page: S22 dispatch entry machine
+  - id: fsm-dispatch
+    title: 'Dispatch: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-dispatch.svg
+    level: structure
+    up: dispatch
+    kinds:
+    - fsm
+    blocks:
+    - dispatch
+    mechanisms:
+    - dispatch_buffers
+    - paired_sched_queues
+    hot:
+    - fm
+    - machine
+    - st.enter_buffer
+    - st.in
+    - st.to_sched_fp
+    - st.to_sched_int
+    - st.wait_buffer_full
+    - st.wait_inflow
+    - st.wait_older
+    - st.wait_queue_full
+    - st.wait_width
+    - tr.arrive
+    - tr.enter_buffer
+    - tr.enter_buffer.to_sched_fp
+    - tr.enter_buffer.to_sched_int
+    - tr.wait_buffer_full
+    - tr.wait_buffer_full.stay
+    - tr.wait_buffer_full.until
+    - tr.wait_inflow
+    - tr.wait_inflow.to_sched_fp
+    - tr.wait_inflow.to_sched_int
+    - tr.wait_older
+    - tr.wait_older.stay
+    - tr.wait_older.until
+    - tr.wait_queue_full
+    - tr.wait_queue_full.to_sched_fp
+    - tr.wait_queue_full.to_sched_int
+    - tr.wait_width
+    - tr.wait_width.to_sched_fp
+    - tr.wait_width.to_sched_int
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm dispatch
+  - id: fsm-sched-int
+    title: 'Integer schedulers: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-sched-int.svg
+    level: structure
+    up: sched_int
+    kinds:
+    - fsm
+    blocks:
+    - sched_int
+    mechanisms:
+    - paired_sched_queues
+    - matrix_scheduler
+    - uop_split_merge
+    hot:
+    - fm
+    - machine
+    - st.enter_queue
+    - st.in
+    - st.issue_partner
+    - st.issue_ready
+    - st.issue_twice
+    - st.to_int_prf
+    - st.wait_operand
+    - st.wait_select
+    - tr.arrive
+    - tr.enter_queue
+    - tr.enter_queue.next
+    - tr.issue_partner
+    - tr.issue_partner.to_int_prf
+    - tr.issue_ready
+    - tr.issue_ready.to_int_prf
+    - tr.issue_twice
+    - tr.issue_twice.to_int_prf
+    - tr.wait_operand
+    - tr.wait_operand.stay
+    - tr.wait_operand.until
+    - tr.wait_select
+    - tr.wait_select.stay
+    - tr.wait_select.until
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm sched_int
+  - id: fsm-eu-int
+    title: 'Integer units: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-eu-int.svg
+    level: structure
+    up: eu_int
+    kinds:
+    - fsm
+    blocks:
+    - eu_int
+    mechanisms:
+    - divider_pipe
+    hot:
+    - fm
+    - machine
+    - st.divide
+    - st.execute
+    - st.in
+    - st.mispredict
+    - st.to_retire
+    - tr.arrive
+    - tr.divide
+    - tr.divide.to_retire
+    - tr.execute
+    - tr.execute.to_retire
+    - tr.mispredict
+    - tr.mispredict.to_retire
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm eu_int
   sheets:
   - block: dispatch
     name: Dispatch buffers
@@ -1558,9 +2643,11 @@ maps:
     - 08-lifecycle
     - 03-rename
     - 04-issue
+    - fsm-dispatch
     - l5-rename
     - l6-scheduler
     - p1-pipeline
+    - s22-dispatch-entry-fsm
   - block: sched_int
     name: Integer schedulers
     file: sheets/sched_int.svg
@@ -1571,8 +2658,12 @@ maps:
     - 04-issue
     - m4-sched
     - x9-backend
+    - fsm-sched-int
     - l6-scheduler
     - p1-pipeline
+    - s1-sched-int-queue
+    - s3-sched-entry-fsm
+    - s22-dispatch-entry-fsm
   - block: sched_fp
     name: FP/SIMD schedulers
     file: sheets/sched_fp.svg
@@ -1600,8 +2691,10 @@ maps:
     - 01-core-overview
     - 04-issue
     - x9-backend
+    - fsm-eu-int
     - l6-scheduler
     - p1-pipeline
+    - s1-sched-int-queue
   - block: eu_fp
     name: FP/SIMD units
     file: sheets/eu_fp.svg
@@ -1715,6 +2808,69 @@ maps:
       file: walkthroughs/m5-retire.yaml
       steps: 8
       agreed: 0
+  - id: s23-retire-group-fsm
+    title: The life of a retire group
+    subtitle: ''
+    file: figures/s23-retire-group-fsm.svg
+    level: structure
+    up: retire
+    kinds:
+    - fsm
+    blocks:
+    - retire
+    mechanisms:
+    - retire_groups
+    - rename_retire_queue
+    hot:
+    - fm
+    - machine
+    - st.closed
+    - st.committed
+    - st.flushed
+    - st.open
+    - tr.flush_closed
+    - tr.flush_open
+    - tr.in_group
+    - tr.start
+    - tr.wait_group
+    - tr.wait_group.stay
+    - tr.wait_older.stay
+    drawio:
+      file: drawio/structures.drawio
+      page: S23 retire group machine
+  - id: fsm-retire
+    title: 'Retire: the machine behind its exits'
+    subtitle: ''
+    file: figures/fsm-retire.svg
+    level: structure
+    up: retire
+    kinds:
+    - fsm
+    blocks:
+    - retire
+    mechanisms:
+    - retire_groups
+    - rename_retire_queue
+    hot:
+    - fm
+    - machine
+    - st.done
+    - st.in
+    - st.in_group
+    - st.wait_group
+    - st.wait_older
+    - tr.arrive
+    - tr.in_group
+    - tr.in_group.done
+    - tr.wait_group
+    - tr.wait_group.stay
+    - tr.wait_group.until
+    - tr.wait_older
+    - tr.wait_older.stay
+    - tr.wait_older.until
+    drawio:
+      file: drawio/fsm-rooms.drawio
+      page: fsm retire
   sheets:
   - block: retire
     name: Retire
@@ -1728,9 +2884,11 @@ maps:
     - m5-retire
     - f1-fsm
     - x9-backend
+    - fsm-retire
     - l5-rename
     - l7-retire
     - p1-pipeline
+    - s23-retire-group-fsm
 - n: 7
   id: lsu
   name: Loads and Stores

@@ -7,40 +7,40 @@
         <mxCell id="title" value="Direction predictor, path history, tables and recovery" style="text;html=1;kind=title;fontSize=18;fontStyle=1;fontColor=#1f2937;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="17" y="11" width="725" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="subtitle" value="What is measured is the history update rule and the table layout; the provider logic is standard TAGE; the recovery mechanism is a conjecture." style="text;html=1;kind=title;fontSize=11;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="17" y="37" width="1136" height="18" as="geometry" />
+        <mxCell id="subtitle" value="What is measured is the history update rule and the table layout. The provider logic is standard TAGE. The recovery mechanism is a conjecture." style="text;html=1;kind=title;fontSize=11;fontColor=#4b5563;align=left;verticalAlign=middle;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="17" y="37" width="1148" height="18" as="geometry" />
         </mxCell>
-        <mxCell id="f-fa" value="Path history register, 100 bits" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#95ade1;fontColor=#2563eb;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
+        <mxCell id="f-fa" value="Path history register, 100 bits" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#95ade1;fontColor=#2563eb;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="70" width="1300" height="370" as="geometry" />
         </mxCell>
         <mxCell id="f-fa-note" value="update rule measured" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1173.8" y="76" width="159.2" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="f-fc" value="Recovery after a mispredict" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#95ade1;fontColor=#2563eb;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
+        <mxCell id="f-fc" value="Recovery after a mispredict" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#95ade1;fontColor=#2563eb;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="1370" y="70" width="790" height="370" as="geometry" />
         </mxCell>
         <mxCell id="f-fc-note" value="conjecture" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="2073.1" y="76" width="79.9" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="f-fb" value="Six tagged tables, indexed by PC and history" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#95ade1;fontColor=#2563eb;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
+        <mxCell id="f-fb" value="Six tagged tables, indexed by PC and history" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#95ade1;fontColor=#2563eb;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="470" width="2120" height="560" as="geometry" />
         </mxCell>
-        <mxCell id="f-fb-note" value="layout measured; lengths and widths are ours" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
-          <mxGeometry x="1820.6" y="476" width="332.4" height="14" as="geometry" />
+        <mxCell id="f-fb-note" value="layout measured | lengths and widths are ours" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="1815.7" y="476" width="337.3" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="f-fd" value="Indirect targets" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#95ade1;fontColor=#2563eb;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
+        <mxCell id="f-fd" value="Indirect targets" style="rounded=1;absoluteArcSize=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#95ade1;fontColor=#2563eb;fontStyle=1;fontSize=12;align=left;verticalAlign=top;spacingLeft=6;container=0;" vertex="1" parent="1">
           <mxGeometry x="40" y="1060" width="2120" height="350" as="geometry" />
         </mxCell>
         <mxCell id="f-fd-note" value="capacity measured, structure inferred" style="text;html=1;fontSize=10;fontColor=#4b5563;align=right;verticalAlign=middle;spacing=0;spacingRight=3;connectable=0;" vertex="1" parent="1">
           <mxGeometry x="1881.5" y="1066" width="271.5" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="v-path_history_shift_xor" value="&lt;b&gt;Branch bits folded in&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;taken: PC 2 to 24, offset bits&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;indirect: PC and target bits&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;not taken: nothing&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1c7f8;strokeColor=#2563eb;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-path_history_shift_xor" value="&lt;b&gt;Branch bits folded in&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;taken: PC 2 to 24, offset bits&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;indirect: PC and target bits&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;not taken: nothing&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#b1c7f8;strokeColor=#2563eb;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="60" y="110" width="320" height="118" as="geometry" />
         </mxCell>
         <mxCell id="v-xorin" value="" style="shape=stencil(nZNBcoMwDEVP420HcJoLpOk9XFCKJkb22E6ht6+JaEC0DZluGP9v6UkCofQhtsaDqgoyHSj9oqpqcCE/s9WyrgqWvZQmeqgTeyccoGE7puDO0GOTpnSkFgKm8VYflT7UjignoqN4M3KSQcoxxcBJxdMz4z4nzcpnUgcJgnDn1ulqvD7OLR/jxk2u7Pa7yha33+KW/+PCkpsPP975m6nP78FdqGEN1qKP8OdAv26A3I+52hp+cgGERmt5TW5Z3ozrMp4697FoYye/lqhkkRaR5f5OqISWcrjdHaiMnGrMk85tr+bJh/XU2eJ/TR+/AA==);perimeter=ellipsePerimeter;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=1.1;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="424" y="153" width="32" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="v-phr" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4f7fe;strokeColor=#95ade1;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-phr" value="" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f4f7fe;strokeColor=#95ade1;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="500" y="151" width="810" height="51" as="geometry" />
         </mxCell>
         <mxCell id="v-phr-cell" value="oldest 99:90" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-phr">
@@ -52,13 +52,13 @@
         <mxCell id="v-phr-cell-3" value="newest 9:0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-phr">
           <mxGeometry x="729.0" y="0.0" width="81.0" height="36.0" as="geometry" />
         </mxCell>
-        <mxCell id="v-fold" value="&lt;b&gt;Where each bit lands&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;fold not published&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;ours: bit k to (k - 2) mod 32&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbf2fc;strokeColor=#c026d3;strokeWidth=1.2;dashed=1;dashPattern=6 2;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-fold" value="&lt;b&gt;Where each bit lands&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;fold not published&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;ours: bit k to (k - 2) mod 32&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fbf2fc;strokeColor=#c026d3;strokeWidth=1.2;dashed=1;dashPattern=6 2;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="720" y="258" width="280" height="96" as="geometry" />
         </mxCell>
-        <mxCell id="v-penalty" value="&lt;b&gt;Mispredict&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;13 cycles&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;100 branches of history&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;144 branches in flight&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-penalty" value="&lt;b&gt;Mispredict&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;13 cycles&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;100 branches of history&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;144 branches in flight&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1030" y="258" width="280" height="96" as="geometry" />
         </mxCell>
-        <mxCell id="v-path_history_rewind" value="&lt;b&gt;taken branch footprints&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-path_history_rewind" value="&lt;b&gt;taken branch footprints&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1390" y="104" width="750" height="96" as="geometry" />
         </mxCell>
         <mxCell id="v-path_history_rewind-cell" value="f0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-path_history_rewind">
@@ -94,16 +94,16 @@
         <mxCell id="v-path_history_rewind-count" value="circular, 7 bit head" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-path_history_rewind">
           <mxGeometry x="0" y="80" width="750" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="v-mark" value="&lt;b&gt;Each branch in flight&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;stores the head index&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;7 bits, not 100&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbf2fc;strokeColor=#c026d3;strokeWidth=1.2;dashed=1;dashPattern=6 2;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-mark" value="&lt;b&gt;Each branch in flight&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;stores the head index&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;7 bits, not 100&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fbf2fc;strokeColor=#c026d3;strokeWidth=1.2;dashed=1;dashPattern=6 2;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1390" y="232" width="236" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="v-rebuild" value="&lt;b&gt;On a mispredict&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;rewind to the mark&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;push the corrected footprint&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;refold the history&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fbf2fc;strokeColor=#c026d3;strokeWidth=1.2;dashed=1;dashPattern=6 2;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-rebuild" value="&lt;b&gt;On a mispredict&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;rewind to the mark&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;push the corrected footprint&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;refold the history&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#fbf2fc;strokeColor=#c026d3;strokeWidth=1.2;dashed=1;dashPattern=6 2;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1648" y="232" width="236" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="v-alt" value="&lt;b&gt;Alternative&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;full copies per branch&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;no probe separates them&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#6692f1;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-alt" value="&lt;b&gt;Alternative&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;full copies per branch&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;no probe separates them&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#6692f1;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1906" y="232" width="234" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="v-pc" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4f7fe;strokeColor=#95ade1;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-pc" value="" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f4f7fe;strokeColor=#95ade1;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="60" y="560" width="560" height="51" as="geometry" />
         </mxCell>
         <mxCell id="v-pc-cell" value="tag 47:19" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-pc">
@@ -112,7 +112,7 @@
         <mxCell id="v-pc-cell-2" value="index 18:7 18:7" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-pc">
           <mxGeometry x="338.3" y="0.0" width="140.0" height="36.0" as="geometry" />
         </mxCell>
-        <mxCell id="v-pc-cell-3" value="½ 6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-pc">
+        <mxCell id="v-pc-cell-3" value="1/2 6" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-pc">
           <mxGeometry x="478.3" y="0.0" width="11.7" height="36.0" as="geometry" />
         </mxCell>
         <mxCell id="v-pc-cell-4" value="5:2 5:2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-pc">
@@ -124,7 +124,7 @@
         <mxCell id="v-idx_hash" value="" style="shape=stencil(nZNBcoMwDEVP420HcJoLpOk9XFCKJkb22E6ht6+JaEC0DZluGP9v6UkCofQhtsaDqgoyHSj9oqpqcCE/s9WyrgqWvZQmeqgTeyccoGE7puDO0GOTpnSkFgKm8VYflT7UjignoqN4M3KSQcoxxcBJxdMz4z4nzcpnUgcJgnDn1ulqvD7OLR/jxk2u7Pa7yha33+KW/+PCkpsPP975m6nP78FdqGEN1qKP8OdAv26A3I+52hp+cgGERmt5TW5Z3ozrMp4697FoYye/lqhkkRaR5f5OqISWcrjdHaiMnGrMk85tr+bJh/XU2eJ/TR+/AA==);perimeter=ellipsePerimeter;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#1f2937;strokeWidth=1.1;fontSize=9;" vertex="1" parent="1">
           <mxGeometry x="704" y="562" width="32" height="32" as="geometry" />
         </mxCell>
-        <mxCell id="v-tage_t1" value="&lt;b&gt;T1&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-tage_t1" value="&lt;b&gt;T1&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="820" y="540" width="200" height="200" as="geometry" />
         </mxCell>
         <mxCell id="v-tage_t1-cell" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-tage_t1">
@@ -214,7 +214,7 @@
         <mxCell id="v-tage_t1-count" value="4 b history" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-tage_t1">
           <mxGeometry x="0" y="184" width="200" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="v-tage_t2" value="&lt;b&gt;T2&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-tage_t2" value="&lt;b&gt;T2&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1040" y="540" width="200" height="200" as="geometry" />
         </mxCell>
         <mxCell id="v-tage_t2-cell" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-tage_t2">
@@ -304,7 +304,7 @@
         <mxCell id="v-tage_t2-count" value="8 b history" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-tage_t2">
           <mxGeometry x="0" y="184" width="200" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="v-tage_t3" value="&lt;b&gt;T3&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-tage_t3" value="&lt;b&gt;T3&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1260" y="540" width="200" height="200" as="geometry" />
         </mxCell>
         <mxCell id="v-tage_t3-cell" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-tage_t3">
@@ -394,7 +394,7 @@
         <mxCell id="v-tage_t3-count" value="16 b history" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-tage_t3">
           <mxGeometry x="0" y="184" width="200" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="v-tage_t4" value="&lt;b&gt;T4&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-tage_t4" value="&lt;b&gt;T4&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1480" y="540" width="200" height="200" as="geometry" />
         </mxCell>
         <mxCell id="v-tage_t4-cell" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-tage_t4">
@@ -484,7 +484,7 @@
         <mxCell id="v-tage_t4-count" value="32 b history" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-tage_t4">
           <mxGeometry x="0" y="184" width="200" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="v-tage_t5" value="&lt;b&gt;T5&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-tage_t5" value="&lt;b&gt;T5&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1700" y="540" width="200" height="200" as="geometry" />
         </mxCell>
         <mxCell id="v-tage_t5-cell" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-tage_t5">
@@ -574,7 +574,7 @@
         <mxCell id="v-tage_t5-count" value="64 b history" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-tage_t5">
           <mxGeometry x="0" y="184" width="200" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="v-tage_t6" value="&lt;b&gt;T6&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-tage_t6" value="&lt;b&gt;T6&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1920" y="540" width="200" height="200" as="geometry" />
         </mxCell>
         <mxCell id="v-tage_t6-cell" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-tage_t6">
@@ -664,25 +664,25 @@
         <mxCell id="v-tage_t6-count" value="100 b history" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-tage_t6">
           <mxGeometry x="0" y="184" width="200" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="v-base" value="&lt;b&gt;Base predictor&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;not measured&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;bimodal by PC, likely&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-base" value="&lt;b&gt;Base predictor&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;not measured&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;bimodal by PC, likely&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="840" y="790" width="220" height="104" as="geometry" />
         </mxCell>
-        <mxCell id="v-provider" value="&lt;b&gt;Provider&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;longest history that tags&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;altpred: next longest&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#6692f1;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-provider" value="&lt;b&gt;Provider&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;longest history that tags&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;altpred: next longest&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#6692f1;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1080" y="790" width="220" height="104" as="geometry" />
         </mxCell>
-        <mxCell id="v-alloc" value="&lt;b&gt;Allocate on a mispredict&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;one or two longer tables&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;cold start: four, patent&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-alloc" value="&lt;b&gt;Allocate on a mispredict&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;one or two longer tables&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;cold start: four, patent&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1320" y="790" width="220" height="104" as="geometry" />
         </mxCell>
-        <mxCell id="v-retire_time_training" value="&lt;b&gt;Train at retire&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;branch information tables&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;mispredicts and weak counters&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-retire_time_training" value="&lt;b&gt;Train at retire&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;branch information tables&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;mispredicts and weak counters&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1560" y="790" width="220" height="104" as="geometry" />
         </mxCell>
-        <mxCell id="v-loop_predictor" value="&lt;b&gt;Loop predictor&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;beside TAGE, patent&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;tables gated in loop mode&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-loop_predictor" value="&lt;b&gt;Loop predictor&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;beside TAGE, patent&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;tables gated in loop mode&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#b258c5;strokeWidth=1.3;dashed=1;dashPattern=1 2.5;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1800" y="790" width="220" height="104" as="geometry" />
         </mxCell>
-        <mxCell id="v-direction" value="&lt;b&gt;Direction&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;taken or not&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-direction" value="&lt;b&gt;Direction&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;taken or not&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#c8d8fa;strokeColor=#2563eb;strokeWidth=1.4;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1080" y="920" width="220" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="v-ittage_indirect" value="&lt;b&gt;ITTAGE like&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#6692f1;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-ittage_indirect" value="&lt;b&gt;ITTAGE like&lt;/b&gt;" style="rounded=1;absoluteArcSize=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f6f9fe;strokeColor=#6692f1;strokeWidth=1;dashed=1;dashPattern=4 3;fontSize=10;fontColor=#1f2937;align=center;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="60" y="1110" width="320" height="200" as="geometry" />
         </mxCell>
         <mxCell id="v-ittage_indirect-cell" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e9effd;strokeColor=#84a2e2;strokeWidth=0.6;fontSize=8;fontColor=#1f2937;connectable=0;" vertex="1" parent="v-ittage_indirect">
@@ -742,16 +742,16 @@
         <mxCell id="v-ittage_indirect-count" value="1024 targets" style="text;html=1;fontSize=9;fontColor=#4b5563;align=center;verticalAlign=bottom;connectable=0;" vertex="1" parent="v-ittage_indirect">
           <mxGeometry x="0" y="184" width="320" height="14" as="geometry" />
         </mxCell>
-        <mxCell id="v-ind_hist" value="&lt;b&gt;Indirect history&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;target bits 2 to 30 folded in&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;says where the last calls went&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;one site, many targets, told apart&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e9fc;strokeColor=#6692f1;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-ind_hist" value="&lt;b&gt;Indirect history&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;target bits 2 to 30 folded in&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;says where the last calls went&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;one site, many targets, told apart&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#e0e9fc;strokeColor=#6692f1;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="440" y="1110" width="340" height="118" as="geometry" />
         </mxCell>
-        <mxCell id="v-ind_ctx" value="&lt;b&gt;Shared across contexts&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;no ASID or EL on an entry&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;foreign target fetched, not run&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;kept until it misses twice&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0e9fc;strokeColor=#6692f1;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-ind_ctx" value="&lt;b&gt;Shared across contexts&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;no ASID or EL on an entry&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;foreign target fetched, not run&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;kept until it misses twice&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#e0e9fc;strokeColor=#6692f1;strokeWidth=1;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="820" y="1110" width="340" height="118" as="geometry" />
         </mxCell>
-        <mxCell id="v-objc_msgsend_predictor" value="&lt;b&gt;objc_msgSend method cache&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;M2 and later&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;absent on the M1&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9ca3af;strokeWidth=1;dashed=1;dashPattern=2 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-objc_msgsend_predictor" value="&lt;b&gt;objc_msgSend method cache&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;M2 and later&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;absent on the M1&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#9ca3af;strokeWidth=1;dashed=1;dashPattern=2 3;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1200" y="1110" width="320" height="118" as="geometry" />
         </mxCell>
-        <mxCell id="v-squash" value="&lt;b&gt;Wrong path indirects&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;squashed as the target computes&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;fetch moves to it at once&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;not serialised on the oldest&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1c7f8;strokeColor=#2563eb;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+        <mxCell id="v-squash" value="&lt;b&gt;Wrong path indirects&lt;/b&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;squashed as the target computes&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;fetch moves to it at once&lt;/span&gt;&lt;br&gt;&lt;span style='font-weight:normal;color:#4b5563'&gt;not serialised on the oldest&lt;/span&gt;" style="rounded=1;absoluteArcSize=1;arcSize=10;whiteSpace=wrap;html=1;fillColor=#b1c7f8;strokeColor=#2563eb;strokeWidth=2.2;dashed=0;fontSize=10;fontColor=#1f2937;align=left;verticalAlign=top;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
           <mxGeometry x="1560" y="1110" width="340" height="118" as="geometry" />
         </mxCell>
         <mxCell id="e-path_history_shift_xor-xorin" style="edgeStyle=none;noEdgeStyle=1;rounded=0;html=1;strokeWidth=1.2;strokeColor=#1f2937;dashed=1;dashPattern=5 3;endArrow=block;endFill=1;startArrow=none;startFill=1;exitX=1.00000;exitY=0.50000;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.00000;entryY=0.50000;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="v-path_history_shift_xor" target="v-xorin">

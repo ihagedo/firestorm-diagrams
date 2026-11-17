@@ -69,12 +69,12 @@
 <polyline points="1600.0,205.0 1600.0,250.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="2 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="1" data-src="rename" data-dst="rrq"/>
 <polyline points="1710.0,300.0 1750.0,300.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="2" data-src="rrq" data-dst="walkback"/>
 <polyline points="1710.0,455.0 1750.0,455.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="2 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round" data-eid="3" data-src="rrq" data-dst="free"/>
-<text x="510.0" y="164.9" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">load · alu · alu · alu · nop · nop · branch</text>
-<text x="510.0" y="212.6" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">store · alu · alu · branch</text>
-<text x="510.0" y="260.4" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">alu · alu</text>
-<text x="510.0" y="308.1" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">load · nop · nop · nop · nop · nop · nop</text>
-<text x="510.0" y="355.9" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">nop · alu</text>
-<text x="510.0" y="403.6" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">load · alu · branch</text>
+<text x="510.0" y="164.9" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">load | alu | alu | alu | nop | nop | branch</text>
+<text x="510.0" y="212.6" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">store | alu | alu | branch</text>
+<text x="510.0" y="260.4" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">alu | alu</text>
+<text x="510.0" y="308.1" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">load | nop | nop | nop | nop | nop | nop</text>
+<text x="510.0" y="355.9" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">nop | alu</text>
+<text x="510.0" y="403.6" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">load | alu | branch</text>
 <text x="510.0" y="132.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">head is the oldest group</text>
 <text x="510.0" y="440.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">330 groups</text>
 <text x="87.0" y="512.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">Retire</text>
@@ -134,7 +134,7 @@
 <text x="1490.0" y="592.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="rrq-tags">the mechanism reading is inferred</text>
 <text x="67.0" y="737.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">NOP filler</text>
 <text x="1688.0" y="751.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="w_nop">2277 ●</text>
-<text x="1760.0" y="751.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="w_nop">coalesced queue, 330 × 7 non issuing uops</text>
+<text x="1760.0" y="751.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="w_nop">coalesced queue, 330 x 7 non issuing uops</text>
 <text x="67.0" y="803.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">issuing ALU uops</text>
 <text x="992.6" y="817.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#1f2937" text-anchor="start" data-owner="w_issuing">1000 ○</text>
 <text x="1760.0" y="817.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start" data-owner="w_issuing">coalesced queue, about 3 issuing uops per group</text>
@@ -165,13 +165,13 @@
 <rect x="470.5" y="1321.0" width="16.0" height="11.0" rx="2" fill="#ebf7f3" stroke="#50b696" stroke-width="1" stroke-dasharray="9 3"/>
 <text x="490.5" y="1330.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">◇ derived</text>
 <rect x="570.0" y="1321.0" width="16.0" height="11.0" rx="2" fill="#f5fbf9" stroke="#50b696" stroke-width="1" stroke-dasharray="4 3"/>
-<text x="590.0" y="1330.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">~ patent or analogy</text>
-<rect x="736.5" y="1321.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
-<text x="756.5" y="1330.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? KB conjecture</text>
-<rect x="881.7" y="1321.0" width="16.0" height="11.0" rx="2" fill="#fbf2fc" stroke="#c026d3" stroke-width="1.2" stroke-dasharray="6 2"/>
-<text x="901.7" y="1330.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">+ proposed here</text>
-<rect x="1025.9" y="1321.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
-<text x="1045.9" y="1330.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? unknown</text>
+<text x="590.0" y="1330.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">~ inferred: patent reading or author reasoning</text>
+<rect x="910.2" y="1321.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
+<text x="930.2" y="1330.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? KB conjecture</text>
+<rect x="1055.4" y="1321.0" width="16.0" height="11.0" rx="2" fill="#fbf2fc" stroke="#c026d3" stroke-width="1.2" stroke-dasharray="6 2"/>
+<text x="1075.4" y="1330.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">+ proposed here</text>
+<rect x="1199.6" y="1321.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="1219.6" y="1330.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? unknown</text>
 <polyline points="60.0,1343.0 86.0,1343.0" fill="none" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="92.0" y="1347.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">instruction flow</text>
 <polyline points="227.0,1343.0 253.0,1343.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>

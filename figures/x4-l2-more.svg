@@ -344,7 +344,7 @@
 <text x="226.0" y="556.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">R A.1</text>
 <text x="314.0" y="556.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">W B.0</text>
 <text x="402.0" y="556.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">R A.0</text>
-<text x="90.0" y="606.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#4b5563" text-anchor="start">R A.0 waits for W A.0; R A.1 may pass W A.0</text>
+<text x="90.0" y="606.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#4b5563" text-anchor="start">R A.0 waits for W A.0 | R A.1 may pass W A.0</text>
 <text x="560.0" y="537.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">normal</text>
 <text x="760.0" y="529.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">starvation</text>
 <text x="760.0" y="545.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">mode</text>
@@ -358,14 +358,14 @@
 <text x="1345.0" y="197.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">3 MiB</text>
 <text x="1427.0" y="132.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#1f2937" text-anchor="start">core 3</text>
 <text x="1475.0" y="197.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">3 MiB</text>
-<text x="1030.0" y="280.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#4b5563" text-anchor="start">3 MiB per core; steps at 3 and 7.5 MiB</text>
+<text x="1030.0" y="280.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#4b5563" text-anchor="start">3 MiB per core | steps at 3 and 7.5 MiB</text>
 <text x="1587.0" y="132.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="17.25" font-weight="600" fill="#4b5563" text-anchor="start">E cluster</text>
 <text x="1587.0" y="156.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
 <text x="1599.1" y="156.5" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">uses this L2 while P cores sleep</text>
 <text x="1587.0" y="174.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#c026d3" text-anchor="start">?</text>
 <text x="1599.1" y="174.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#c026d3" text-anchor="start" font-style="italic">L2 DVFS follows the E cores</text>
 <text x="1240.0" y="327.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">ways in three power groups</text>
-<text x="1240.0" y="405.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">idle → sleep, concentrated → off</text>
+<text x="1240.0" y="405.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">idle -&gt; sleep, concentrated -&gt; off</text>
 <text x="1530.0" y="435.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">active</text>
 <text x="1690.0" y="435.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">sleep</text>
 <text x="1850.0" y="435.2" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="600" fill="#1f2937" text-anchor="middle">off</text>
@@ -384,7 +384,7 @@
 <text x="1030.0" y="490.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#4b5563" text-anchor="start">z: an all-zero line, a tag bit and no data write</text>
 <text x="1695.0" y="507.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="15" font-weight="600" fill="#1f2937" text-anchor="middle">loser bank, powered off</text>
 <text x="1695.0" y="561.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="400" fill="#4b5563" text-anchor="middle">invalid and zero lines live here</text>
-<text x="1030.0" y="572.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#4b5563" text-anchor="start">zero: data read returns zeros; a real write wakes the loser bank</text>
+<text x="1030.0" y="572.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#4b5563" text-anchor="start">zero: data read returns zeros | a real write wakes the loser bank</text>
 <text x="1030.0" y="602.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#9ca3af" text-anchor="start">? patent readings</text>
 <text x="101.2" y="706.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">MRU</text>
 <text x="698.8" y="706.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12" font-weight="400" fill="#1f2937" text-anchor="middle">LRU</text>
@@ -397,7 +397,7 @@
 <text x="70.0" y="920.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#4b5563" text-anchor="start">bits carried by the victim from the L1</text>
 <text x="474.0" y="794.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="25">stream: near LRU</text>
 <text x="304.0" y="818.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="13.5" font-weight="500" fill="#1f2937" text-anchor="start" data-owner="26">demand</text>
-<text x="70.0" y="1010.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#4b5563" text-anchor="start">streams hold few ways; a sweep evicts 1/8 to 1/4</text>
+<text x="70.0" y="1010.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="12.75" font-weight="400" fill="#4b5563" text-anchor="start">streams hold few ways | a sweep evicts 1/8 to 1/4</text>
 <text x="411.7" y="894.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">ins</text>
 <text x="467.0" y="894.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">p1</text>
 <text x="522.3" y="894.8" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="11.25" font-weight="400" fill="#9ca3af" text-anchor="middle">p2</text>
@@ -441,13 +441,13 @@
 <rect x="470.5" y="1056.0" width="16.0" height="11.0" rx="2" fill="#fff4ec" stroke="#fb9d5c" stroke-width="1" stroke-dasharray="9 3"/>
 <text x="490.5" y="1065.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">◇ derived</text>
 <rect x="570.0" y="1056.0" width="16.0" height="11.0" rx="2" fill="#fff9f6" stroke="#fb9d5c" stroke-width="1" stroke-dasharray="4 3"/>
-<text x="590.0" y="1065.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">~ patent or analogy</text>
-<rect x="736.5" y="1056.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
-<text x="756.5" y="1065.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? KB conjecture</text>
-<rect x="881.7" y="1056.0" width="16.0" height="11.0" rx="2" fill="#fbf2fc" stroke="#c026d3" stroke-width="1.2" stroke-dasharray="6 2"/>
-<text x="901.7" y="1065.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">+ proposed here</text>
-<rect x="1025.9" y="1056.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
-<text x="1045.9" y="1065.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? unknown</text>
+<text x="590.0" y="1065.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">~ inferred: patent reading or author reasoning</text>
+<rect x="910.2" y="1056.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#b258c5" stroke-width="1.3" stroke-dasharray="1 2.5"/>
+<text x="930.2" y="1065.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? KB conjecture</text>
+<rect x="1055.4" y="1056.0" width="16.0" height="11.0" rx="2" fill="#fbf2fc" stroke="#c026d3" stroke-width="1.2" stroke-dasharray="6 2"/>
+<text x="1075.4" y="1065.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">+ proposed here</text>
+<rect x="1199.6" y="1056.0" width="16.0" height="11.0" rx="2" fill="none" stroke="#9ca3af" stroke-width="1" stroke-dasharray="2 3"/>
+<text x="1219.6" y="1065.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">? unknown</text>
 <polyline points="60.0,1078.0 86.0,1078.0" fill="none" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="92.0" y="1082.0" font-family="Inter, 'Helvetica Neue', Arial, sans-serif" font-size="14.25" font-weight="400" fill="#4b5563" text-anchor="start">instruction flow</text>
 <polyline points="227.0,1078.0 253.0,1078.0" fill="none" stroke="#1f2937" stroke-width="1.2" stroke-dasharray="5 3" marker-end="url(#arrow)" stroke-linejoin="round" stroke-linecap="round"/>

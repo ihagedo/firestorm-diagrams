@@ -926,6 +926,7 @@
       "m1-fetch",
       "d4-hierarchy",
       "x7-fetch-path",
+      "s8-fetch-icache",
       "l3-nfp",
       "l14-trace",
       "p1-pipeline"
@@ -941,6 +942,7 @@
       "c4-hierarchy",
       "d4-hierarchy",
       "x7-fetch-path",
+      "s8-fetch-icache",
       "l3-nfp",
       "l14-trace",
       "p1-pipeline"
@@ -950,6 +952,7 @@
     },
     "rtl": {
      "figs": [
+      "s8-fetch-icache",
       "p1-pipeline"
      ],
      "status": "have",
@@ -957,7 +960,8 @@
     },
     "fsm": {
      "figs": [
-      "x7-fetch-path"
+      "x7-fetch-path",
+      "fsm-l1i"
      ],
      "status": "have",
      "planned": null
@@ -988,6 +992,8 @@
     "c4-hierarchy",
     "d4-hierarchy",
     "x7-fetch-path",
+    "s8-fetch-icache",
+    "fsm-l1i",
     "l3-nfp",
     "l14-trace",
     "p1-pipeline"
@@ -1005,6 +1011,7 @@
       "m1-fetch",
       "m8-tlb",
       "x7-fetch-path",
+      "s8-fetch-icache",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1016,6 +1023,7 @@
       "01-core-overview",
       "02-frontend",
       "x7-fetch-path",
+      "s8-fetch-icache",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1023,6 +1031,7 @@
     },
     "rtl": {
      "figs": [
+      "s8-fetch-icache",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1055,6 +1064,7 @@
     "m1-fetch",
     "m8-tlb",
     "x7-fetch-path",
+    "s8-fetch-icache",
     "p1-pipeline"
    ]
   },
@@ -1081,6 +1091,7 @@
       "01-core-overview",
       "02-frontend",
       "x7-fetch-path",
+      "s4-next-pc",
       "l3-nfp",
       "p1-pipeline"
      ],
@@ -1089,6 +1100,7 @@
     },
     "rtl": {
      "figs": [
+      "s4-next-pc",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1096,7 +1108,8 @@
     },
     "fsm": {
      "figs": [
-      "x7-fetch-path"
+      "x7-fetch-path",
+      "fsm-btb"
      ],
      "status": "have",
      "planned": null
@@ -1122,6 +1135,8 @@
     "02-frontend",
     "m1-fetch",
     "x7-fetch-path",
+    "s4-next-pc",
+    "fsm-btb",
     "l3-nfp",
     "p1-pipeline"
    ]
@@ -1223,6 +1238,7 @@
       "poster",
       "01-core-overview",
       "02-frontend",
+      "s4-next-pc",
       "l4-ras",
       "l14-trace",
       "p1-pipeline",
@@ -1233,6 +1249,7 @@
     },
     "rtl": {
      "figs": [
+      "s4-next-pc",
       "p1-pipeline",
       "x8-predictors-decode"
      ],
@@ -1267,6 +1284,7 @@
     "01-core-overview",
     "02-frontend",
     "m1-fetch",
+    "s4-next-pc",
     "l4-ras",
     "l14-trace",
     "p1-pipeline",
@@ -1298,6 +1316,7 @@
       "02-frontend",
       "m2-dirpred",
       "l1-branch",
+      "s4-next-pc",
       "l2-indirect",
       "p1-pipeline",
       "x8-predictors-decode"
@@ -1307,6 +1326,7 @@
     },
     "rtl": {
      "figs": [
+      "s4-next-pc",
       "p1-pipeline",
       "x8-predictors-decode"
      ],
@@ -1342,6 +1362,7 @@
     "02-frontend",
     "m2-dirpred",
     "l1-branch",
+    "s4-next-pc",
     "l2-indirect",
     "p1-pipeline",
     "x8-predictors-decode"
@@ -1358,6 +1379,7 @@
       "01-core-overview",
       "m1-fetch",
       "x7-fetch-path",
+      "s8-fetch-icache",
       "l3-nfp",
       "l14-trace",
       "p1-pipeline"
@@ -1371,6 +1393,8 @@
       "01-core-overview",
       "02-frontend",
       "x7-fetch-path",
+      "s4-next-pc",
+      "s8-fetch-icache",
       "l3-nfp",
       "l14-trace",
       "p1-pipeline"
@@ -1380,6 +1404,8 @@
     },
     "rtl": {
      "figs": [
+      "s4-next-pc",
+      "s8-fetch-icache",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1388,7 +1414,8 @@
     "fsm": {
      "figs": [
       "f1-fsm",
-      "x7-fetch-path"
+      "x7-fetch-path",
+      "fsm-fetch"
      ],
      "status": "have",
      "planned": null
@@ -1416,6 +1443,9 @@
     "m1-fetch",
     "f1-fsm",
     "x7-fetch-path",
+    "s4-next-pc",
+    "s8-fetch-icache",
+    "fsm-fetch",
     "l3-nfp",
     "l14-trace",
     "p1-pipeline"
@@ -1439,6 +1469,7 @@
      "figs": [
       "02-frontend",
       "x7-fetch-path",
+      "s4-next-pc",
       "l3-nfp",
       "p1-pipeline"
      ],
@@ -1447,6 +1478,7 @@
     },
     "rtl": {
      "figs": [
+      "s4-next-pc",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1477,6 +1509,7 @@
    "figures": [
     "02-frontend",
     "x7-fetch-path",
+    "s4-next-pc",
     "l3-nfp",
     "p1-pipeline"
    ]
@@ -1502,6 +1535,7 @@
       "poster",
       "01-core-overview",
       "02-frontend",
+      "s4-next-pc",
       "p1-pipeline",
       "x8-predictors-decode"
      ],
@@ -1510,6 +1544,7 @@
     },
     "rtl": {
      "figs": [
+      "s4-next-pc",
       "p1-pipeline",
       "x8-predictors-decode"
      ],
@@ -1518,6 +1553,7 @@
     },
     "fsm": {
      "figs": [
+      "fsm-decode",
       "x8-predictors-decode"
      ],
      "status": "have",
@@ -1541,6 +1577,8 @@
     "01-core-overview",
     "02-frontend",
     "m1-fetch",
+    "s4-next-pc",
+    "fsm-decode",
     "p1-pipeline",
     "x8-predictors-decode"
    ]
@@ -1555,6 +1593,7 @@
       "poster",
       "m1-fetch",
       "x7-fetch-path",
+      "s8-fetch-icache",
       "l14-trace",
       "p1-pipeline"
      ],
@@ -1566,6 +1605,7 @@
       "poster",
       "02-frontend",
       "x7-fetch-path",
+      "s8-fetch-icache",
       "l14-trace",
       "p1-pipeline"
      ],
@@ -1574,6 +1614,7 @@
     },
     "rtl": {
      "figs": [
+      "s8-fetch-icache",
       "p1-pipeline"
      ],
      "status": "have",
@@ -1581,7 +1622,8 @@
     },
     "fsm": {
      "figs": [
-      "x7-fetch-path"
+      "x7-fetch-path",
+      "fsm-iq"
      ],
      "status": "have",
      "planned": null
@@ -1606,6 +1648,8 @@
     "02-frontend",
     "m1-fetch",
     "x7-fetch-path",
+    "s8-fetch-icache",
+    "fsm-iq",
     "l14-trace",
     "p1-pipeline"
    ]
@@ -1651,7 +1695,8 @@
     },
     "fsm": {
      "figs": [
-      "x9-backend"
+      "x9-backend",
+      "fsm-rename"
      ],
      "status": "have",
      "planned": null
@@ -1682,6 +1727,7 @@
     "05-retire",
     "m3-rename",
     "x9-backend",
+    "fsm-rename",
     "l5-rename",
     "l7-retire",
     "p1-pipeline"
@@ -1703,7 +1749,8 @@
       "m5-retire",
       "x9-backend",
       "l5-rename",
-      "p1-pipeline"
+      "p1-pipeline",
+      "s2-int-prf"
      ],
      "status": "have",
      "planned": null
@@ -1729,7 +1776,8 @@
     },
     "fsm": {
      "figs": [
-      "x9-backend"
+      "x9-backend",
+      "fsm-int-prf"
      ],
      "status": "have",
      "planned": null
@@ -1760,8 +1808,10 @@
     "m4-sched",
     "m5-retire",
     "x9-backend",
+    "fsm-int-prf",
     "l5-rename",
-    "p1-pipeline"
+    "p1-pipeline",
+    "s2-int-prf"
    ]
   },
   "fp_prf": {
@@ -1936,8 +1986,11 @@
      "planned": null
     },
     "fsm": {
-     "figs": [],
-     "status": "gap",
+     "figs": [
+      "fsm-dispatch",
+      "s22-dispatch-entry-fsm"
+     ],
+     "status": "have",
      "planned": null
     },
     "storyboard": {
@@ -1961,9 +2014,11 @@
     "08-lifecycle",
     "03-rename",
     "04-issue",
+    "fsm-dispatch",
     "l5-rename",
     "l6-scheduler",
-    "p1-pipeline"
+    "p1-pipeline",
+    "s22-dispatch-entry-fsm"
    ]
   },
   "sched_int": {
@@ -1978,7 +2033,8 @@
       "m4-sched",
       "x9-backend",
       "l6-scheduler",
-      "p1-pipeline"
+      "p1-pipeline",
+      "s1-sched-int-queue"
      ],
      "status": "have",
      "planned": null
@@ -2002,7 +2058,10 @@
     },
     "fsm": {
      "figs": [
-      "x9-backend"
+      "x9-backend",
+      "fsm-sched-int",
+      "s3-sched-entry-fsm",
+      "s22-dispatch-entry-fsm"
      ],
      "status": "have",
      "planned": null
@@ -2028,8 +2087,12 @@
     "04-issue",
     "m4-sched",
     "x9-backend",
+    "fsm-sched-int",
     "l6-scheduler",
-    "p1-pipeline"
+    "p1-pipeline",
+    "s1-sched-int-queue",
+    "s3-sched-entry-fsm",
+    "s22-dispatch-entry-fsm"
    ]
   },
   "sched_fp": {
@@ -2159,7 +2222,8 @@
       "04-issue",
       "x9-backend",
       "l6-scheduler",
-      "p1-pipeline"
+      "p1-pipeline",
+      "s1-sched-int-queue"
      ],
      "status": "have",
      "planned": null
@@ -2183,7 +2247,8 @@
     },
     "fsm": {
      "figs": [
-      "x9-backend"
+      "x9-backend",
+      "fsm-eu-int"
      ],
      "status": "have",
      "planned": null
@@ -2207,8 +2272,10 @@
     "01-core-overview",
     "04-issue",
     "x9-backend",
+    "fsm-eu-int",
     "l6-scheduler",
-    "p1-pipeline"
+    "p1-pipeline",
+    "s1-sched-int-queue"
    ]
   },
   "eu_fp": {
@@ -2310,7 +2377,9 @@
     "fsm": {
      "figs": [
       "f1-fsm",
-      "x9-backend"
+      "x9-backend",
+      "fsm-retire",
+      "s23-retire-group-fsm"
      ],
      "status": "have",
      "planned": null
@@ -2329,7 +2398,7 @@
      "planned": null
     }
    },
-   "mechanisms": 4,
+   "mechanisms": 5,
    "drawn": 4,
    "figures": [
     "poster",
@@ -2339,9 +2408,11 @@
     "m5-retire",
     "f1-fsm",
     "x9-backend",
+    "fsm-retire",
     "l5-rename",
     "l7-retire",
-    "p1-pipeline"
+    "p1-pipeline",
+    "s23-retire-group-fsm"
    ]
   },
   "lq": {
